@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Swifteddemo';
+  font-weight: 400;
+  src: url('../fonts/Swifteddemo.woff2') format('woff2'),
+    url('../fonts/Swifteddemo.woff') format('woff');
+  font-style: normal;
+  font-display: swap;
+}
+
+// @font-face {
+//   font-family: 'Rubik';
+//   font-weight: 400;
+//   src: url('../fonts/Swifteddemo-2OL4w.woff2') format('woff2'),
+//     url('../fonts/Swifteddemo-2OL4w.woff') format('woff');
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+
+// @font-face {
+//   font-family: 'Rubik';
+//   font-weight: 400;
+//   src: url('../fonts/Rubik-Regular.woff2') format('woff2'),
+//     url('../fonts/Rubik-Regular.woff') format('woff');
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+.title {
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 1.3;
+  color: red;
+}

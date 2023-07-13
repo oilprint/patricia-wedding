@@ -12,12 +12,11 @@
   &__language {
     display: flex;
     align-items: center;
-
   }
 
   &__icon {
     fill: $primary;
-    margin-right: 4px;
+    margin-right: 8px;
   }
 
   &__lang {
@@ -30,7 +29,6 @@
       content: '';
       width: 24px;
       height: 24px;
-
       top: -2px;
       background-image: url('../../images/icons/chevron.svg');
       background-repeat: no-repeat;
@@ -40,18 +38,15 @@
   }
 
   &__menu {
-    
-     max-width: 900px;
-     width: 100%;
-     margin-right: 80px;
+    max-width: 900px;
+    width: 100%;
+    margin-right: 80px;
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
-    
   }
 
   &__item:not(:last-child) {
@@ -112,16 +107,15 @@
   &__form {
     display: flex;
     justify-content: space-between;
-   max-width: 190px;
-   width: 100%;
+    max-width: 190px;
+    width: 100%;
     border-bottom: 1px solid $accent;
-    
   }
 
   &__input {
     width: 100%;
     border-radius: 4px;
-    
+
     &::placeholder {
       font-size: 15px;
       text-transform: uppercase;
@@ -178,13 +172,35 @@
   align-items: center;
 
   &__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     &:not(:last-child) {
       margin-right: 42px;
     }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__number {
+    position: absolute;
+    bottom: -5px;
+    left: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+
+    font-size: 12px;
+    text-align: center;
+    color: $light;
+    background-color: $accent;
+    border-radius: 50%;  
+
+    
   }
 
   &__icon {
