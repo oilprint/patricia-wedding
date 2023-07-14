@@ -196,6 +196,13 @@
     &:focus {
       outline: solid 1px $accent;
     }
+
+    &:hover {
+    
+      &::placeholder {
+        color: $primary;
+      }
+    }
   }
 
   &__btn {

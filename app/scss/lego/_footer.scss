@@ -1,0 +1,107 @@
+.footer {
+  background-color: $accent;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 80px 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--list {
+      padding-top: 37px;
+    }
+  }
+
+  &__top {
+    margin-bottom: 40px;
+  }
+
+  &__logo {
+    margin-bottom: 60px;
+  }
+
+  &__contacts-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    display: block;
+    width: fit-content;
+    color: $light;
+    transition: outline 0.4s, ;
+
+    &:focus {
+      outline: solid 1px $light;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    &:hover {
+      color: $secondary;
+    }
+
+    &:active {
+      background-color: $secondary;
+      color: $light;
+    }
+
+    &--big {
+      font-size: 28px;
+    }
+
+    &--color {
+      color: $secondary;
+
+      &:hover {
+        color: $light;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__contacts-city {
+    display: block;
+    margin-top: 4px;
+  }
+
+  &__txt {
+    color: $secondary;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: $light;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__payment {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 170px;
+  }
+
+  &__payment-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+
+}
