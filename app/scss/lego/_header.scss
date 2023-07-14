@@ -49,18 +49,30 @@
     align-items: center;
   }
 
-  &__item:not(:last-child) {
-    margin-right: 30px;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &:hover {
+      .submenu {
+        transform: rotateX(0deg);
+        visibility: visible;
+        opacity: 1;
+      }
+    }
   }
 
   &__link {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 4px;
     font-size: 15px;
     text-transform: uppercase;
     color: $primary;
-    transition: outline 0.4s, color 0.4s;
+    transition: outline 0.4s,
+    color 0.4s,
+    background-color 0.4s;
 
     &::before {
       position: absolute;
@@ -96,6 +108,10 @@
       border-radius: 4px;
       background-color: $accent;
     }
+  }
+
+  &__link-icon {
+    margin-left: 4px;
   }
 
   &__bottom {
@@ -206,4 +222,21 @@
   &__icon {
     fill: $primary;
   }
+}
+
+.submenu {
+  position: absolute;
+  background-color: $light;
+  padding: 40px 0;
+  width: 100%;
+  height: 300px;
+  left: 0;
+  top: 175px;
+  background-color: red;
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 0.3s linear;
+
 }
