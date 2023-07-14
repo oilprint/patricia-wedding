@@ -53,17 +53,15 @@
     max-width: 570px;
     width: 100%;
     margin-bottom: 40px;
-
   }
 
   &__txt:not(:last-child) {
-      margin-bottom: 8px;
-    }
-  
+    margin-bottom: 8px;
+  }
+
 
   &__photo {
     position: relative;
-
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -81,10 +79,13 @@
     }
   }
 
+  &--big {
+    padding: 120px 0;
+  }
+
 }
 
 .accessories {
-  padding-bottom: 120px;
   background-color: $bg-accent;
 
 
@@ -129,4 +130,99 @@
     margin-bottom: 40px;
   }
 
+}
+
+.gallery {
+
+  &__inner {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    height: 1390px;
+  }
+
+  &__content {
+    max-width: 500px;
+    width: 100%;
+    margin-left: auto;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+  }
+
+  &__txt {
+    margin-bottom: 40px;
+  }
+
+}
+
+.subscribe {
+
+  &__inner {
+    padding: 80px 190px;
+    max-width: 1070px;
+    width: 100%;
+    background-color: $bg-accent;
+    margin: 0 auto;
+    margin-bottom: 120px;
+  }
+
+  &__title {
+    font-size: 46px;
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $accent;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    flex-grow: 1;
+    padding: 10px 0;
+    background-color: transparent;
+
+    &::placeholder {
+      color: $secondary;
+    }
+
+    &:focus {
+      outline: solid 1px $accent;
+    }
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    color: $primary;
+    transition: color 0.4s,
+      background-color 0.4s;
+
+    &:focus {
+      border: 1px solid $accent;
+    }
+
+    &:hover {
+      outline: solid 1px $accent;
+      border-radius: 4px;
+      background-color: $accent;
+      color: $light;
+    }
+
+    &:active {
+      background-color: transparent;
+      color: $primary;
+      outline: solid 1px $accent;
+    }
+  }
+
+  &__txt {
+    font-size: 15px;
+  }
 }

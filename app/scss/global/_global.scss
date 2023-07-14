@@ -37,7 +37,11 @@ main {
 }
 
 .section {
-  padding-top: 120px;
+  padding: 120px 0;
+
+  &--small {
+    padding-bottom: 0;
+  }
 }
 
 .title {

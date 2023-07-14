@@ -105,4 +105,19 @@
     background-color: $accent;
     color: $light;
   }
+
+  &--txt {
+    text-transform: lowercase;
+
+    &::before {
+      width: 0;
+    }
+
+    &::hover {
+
+      &::before {
+        width: 100%;
+      }
+    }
+  }
 }
