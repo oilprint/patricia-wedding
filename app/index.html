@@ -21,13 +21,20 @@
   <header class="header">
   <div class="container">
     <div class="header__top">
-      <div class="header__language">
-        <svg class="header__icon" width="28" height="28">
-          <use href="./images/symbol-defs.svg#icon-lang"></use>
-        </svg>
-        <p class="header__lang">
+      <div class="language">
+        <button class="language__button" type="button" data-value="en">
           En
-        </p>
+        </button>
+
+        <ul class="language__list">
+          <li class="language__item">
+            <a class="language__link" href="#">
+              Uk
+            </a>
+          </li>
+
+        </ul>
+
       </div>
       <a class="logo" href="#">
         <img class="logo__img" src="images/logo.svg" alt="Patriia Wedding Logo" width="320" height="80">
@@ -45,7 +52,8 @@
           <a class="usernav__link" href="#">
             <span class="sr-only">Wishlist</span>
             <svg class="usernav__icon" width="28" height="28">
-              <use href="./images/symbol-defs.svg#icon-wishlist"></use>
+              <use href="./images/symbol-defs.svg#icon-wishlist">
+              </use>
             </svg>
             <span class="usernav__number">
               10
@@ -53,7 +61,7 @@
           </a>
         </li>
         <li class="usernav__item">
-          <button class="usernav__link" type="button">
+          <button class="usernav__link" type="button" data-modal-button>
             <span class="sr-only">shopping bag</span>
             <svg class="usernav__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-bag"></use>
@@ -62,6 +70,134 @@
               2
             </span>
           </button>
+          <div class="modal" data-modal>
+
+            <h2 class="modal__title">
+              Shopping bag (
+              <span class="modal__quantity">
+                2
+              </span>
+              )
+            </h2>
+            <ul class="modal__list">
+              <li class="modal__item">
+                <img class="modal__img" src="images/product/small/calliope.jpg" alt="Wedding dress Calliope" width="130"
+                  height="150">
+                <div class="modal__inner">
+                  <div class="modal__top">
+                    <div class="modal__description">
+                      <h3 class="modal__headline">
+                        Calliope
+                      </h3>
+                      <p class="modal__txt">
+                        Flared satin wedding dress with halter neck and slit.
+                      </p>
+                    </div>
+                    <span class="modal__price">
+                      <span class="curency">
+                        $
+                      </span>
+                      1,200.00
+                    </span>
+                  </div>
+                  <div class="modal__bottom">
+                    <ul class="modal__info">
+                      <li class="modal__info-item">
+                        Color:
+                        <span class="modal__data">
+                          White
+                        </span>
+                      </li>
+                      <li class="modal__info-item">
+                        Size:
+                        <span class="modal__data">
+                          M
+                        </span>
+                      </li>
+                      <li class="modal__info-item">
+                        QTY:
+                        <span class="modal__data">
+                          1
+                        </span>
+                      </li>
+                    </ul>
+                    <button class="modal__remove" type="button">
+                      Remove
+                    </button>
+                  </div>
+
+                </div>
+              </li>
+              <li class="modal__item">
+                <img class="modal__img" src="images/product/small/iona.jpg" alt="Iona" width="130" height="150">
+                <div class="modal__inner">
+                  <div class="modal__top">
+                    <div class="modal__description">
+                      <h3 class="modal__headline">
+                        Iona
+                      </h3>
+                      <p class="modal__txt">
+                        Nicola Bathie Perry Earrings
+                      </p>
+                    </div>
+                    <span class="modal__price">
+                      <span class="curency">
+                        $
+                      </span>
+                      25.00
+                    </span>
+                  </div>
+                  <div class="modal__bottom">
+                    <ul class="modal__info">
+                      <li class="modal__info-item">
+                        Color:
+                        <span class="modal__data">
+                          White
+                        </span>
+                      </li>
+                      <li class="modal__info-item">
+                        Size:
+                        <span class="modal__data">
+                          M
+                        </span>
+                      </li>
+                      <li class="modal__info-item">
+                        QTY:
+                        <span class="modal__data">
+                          1
+                        </span>
+                      </li>
+                    </ul>
+                    <button class="modal__remove" type="button">
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="modal__sum">
+              <p class="modal__subtitle">
+                TOTAL:
+              </p>
+              <span class="modal__price modal__price--big">
+                <span class="curency">
+                  $
+                </span>
+                1,225.00
+              </span>
+            </div>
+            <button class="button modal__button" type="button" data-modal-close>
+              Proceed to checkout
+            </button>
+
+            <button class="modal__btn" type="button" data-modal-close>
+              <svg class="modal__icon" width="24" height="24">
+                <use href="images/symbol-defs.svg#icon-close">
+                </use>
+              </svg>
+            </button>
+          </div>
+
         </li>
       </ul>
     </div>
@@ -90,19 +226,19 @@
                     </h2>
                     <ul class="dropdown__category">
                       <li class="dropdown__box">
-                        <a class="dropdown__box-link" href="#">
+                        <a class="dropdown__box-link" href="catalog.html">
                           <img class="dropdown__img" src="images/dropdown/ball.jpg" alt="Ball Gown style" width="130">
-                            Ball Gown
+                          Ball Gown
                         </a>
                       </li>
                       <li class="dropdown__box">
-                        <a href="#" class="dropdown__box-link">
+                        <a class="dropdown__box-link" href="catalog.html">
                           <img class="dropdown__img" src="images/dropdown/mermaid.jpg" alt="Mermaid style">
                           Mermaid
                         </a>
                       </li>
                       <li class="dropdown__box">
-                        <a class="dropdown__box-link" href="#">
+                        <a class="dropdown__box-link" href="catalog.html">
                           <img class="dropdown__img" src="images/dropdown/line.jpg" alt="A-line style">
                           A-line
                         </a>
@@ -256,6 +392,8 @@
       </form>
 
     </div>
+
+
   </div>
 
 </header>
@@ -276,6 +414,7 @@
         </div>
       </div>
     </section>
+
 
     <section class="collection section section--small">
       <div class="container ">
@@ -298,8 +437,7 @@
             </a>
           </div>
           <div class="collection__photo">
-            <img class="collection__img" src="images/decor/about-1.jpg" alt="The wilderly bride collection" width="340"
-              height="470">
+            <img class="collection__img" src="images/decor/about-1.jpg" alt="The wilderly bride collection" width="340" height="470">
             <img class="collection__img" src="images/decor/about-2.jpg" alt="The wilderly bride collection" width="300"
               height="580">
             <img class="collection__img collection__img--corner" src="images/decor/about-3.jpg"
@@ -404,29 +542,28 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="subscribe">
+    </section> 
+  <section class="subscribe">
       <div class="container">
         <div class="subscribe__inner">
-        <h2 class="title subscribe__title">
-Sign up to our newsletter
-        </h2>
-        <form class="subscribe__form">
-          <label for="email" class="sr-only">
-            Your email address
-          </label>
-          <input type="email" class="subscribe__input" id="email" name="email" placeholder="Your email address">
-          <button class="subscribe__btn">
-            Subscribe
-          </button>
-        </form>
-        <p class="subscribe__txt">
-          Sign up to receive style advice on wedding wear that just fits — your style, your vision, you.
-        </p>
+          <h2 class="title subscribe__title">
+            Sign up to our newsletter
+          </h2>
+          <form class="subscribe__form">
+            <label for="email" class="sr-only">
+              Your email address
+            </label>
+            <input type="email" class="subscribe__input" id="email" name="email" placeholder="Your email address">
+            <button class="subscribe__btn">
+              Subscribe
+            </button>
+          </form>
+          <p class="subscribe__txt">
+            Sign up to receive style advice on wedding wear that just fits — your style, your vision, you.
+          </p>
         </div>
       </div>
-    </section>
+    </section> 
 
 
 

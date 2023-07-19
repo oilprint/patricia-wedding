@@ -9,33 +9,6 @@
     margin-bottom: 46px;
   }
 
-  &__language {
-    display: flex;
-    align-items: center;
-  }
-
-  &__icon {
-    fill: $primary;
-    margin-right: 8px;
-  }
-
-  &__lang {
-    font-size: 15px;
-    text-transform: uppercase;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: '';
-      width: 24px;
-      height: 24px;
-      top: -2px;
-      background-image: url('../../images/icons/chevron.svg');
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      background-size: cover;
-    }
-  }
 
   &__menu {
     max-width: 900px;
@@ -179,12 +152,126 @@
   }
 }
 
+.language {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: $light;
+  margin-left: 32px;
+  width: 60px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 28px;
+    height: 28px;
+    top: -2px;
+    right: 60px;
+    background-image: url('../../images/icons/lang.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    transition: colors 0.4s,
+      background-colors 0.4s;
+  }
+
+  &__icon {
+    fill: $primary;
+    margin-right: 8px;
+  }
+
+  &__button {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 4px;
+    font-size: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    color: $primary;
+    background-color: $light;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 24px;
+      top: 0;
+      left: 32px;
+      background-image: url('../../images/icons/chevron.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      transition: colors 0.4s, background-colors 0.4s;
+    }
+
+    &:focus {
+      outline: soli 1px $grey;
+    }
+
+    &:hover {
+      background-color: $bg-accent;
+      box-shadow: 1px 1px 1px rgba($grey, 0.5);
+    }
+  }
+
+  &:active {
+    outline: solid 1px $accent;
+  }
+
+
+  &__list {
+    position: absolute;
+    left: 0;
+    top: 28px;
+    width: 100%;
+    transform-origin: 0 0;
+    transform: rotateX(-90deg);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.4s, opacity 0.4s;
+
+    &--show {
+      transform: rotateX(-0deg);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 4px;
+    font-size: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    color: $primary;
+    
+
+    &:focus {
+      outline: solid 1px $grey;
+    }
+
+    &:hover {
+      background-color: $bg-accent;
+      box-shadow: 1px 1px 1px rgba($grey, 0.5);
+    }
+
+    &:active {
+      outline: solid 1px $accent;
+    }
+  }
+
+
+}
+
 .usernav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
   &__item {
+    position: relative;
+
     &:not(:last-child) {
       margin-right: 42px;
     }
@@ -212,8 +299,6 @@
     color: $light;
     background-color: $accent;
     border-radius: 50%;
-
-
   }
 
   &__icon {
@@ -249,7 +334,6 @@
     background-position: right top;
     background-size: contain;
     display: flex;
-
   }
 
   &__column1 {
@@ -271,16 +355,15 @@
 
   &__img {
     margin-bottom: 4px;
-    
   }
 
   &__box-link {
     display: block;
     transition: color 0.4s,
-    outline 0.4s,
-    transform 0.4s,
-    background-color 0.4s;
-    
+      outline 0.4s,
+      transform 0.4s,
+      background-color 0.4s;
+
 
     &:focus {
       outline: solid 1px $accent;
@@ -326,8 +409,8 @@
     align-items: center;
     color: $primary;
     transition: outline 0.4s,
-    color 0.4s,
-    background-color 0.4s;
+      color 0.4s,
+      background-color 0.4s;
 
     &::before {
       position: absolute;
@@ -368,17 +451,4 @@
     }
 
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

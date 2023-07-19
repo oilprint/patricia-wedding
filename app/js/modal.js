@@ -14,9 +14,7 @@
 			let currentBtn = e.currentTarget;
 			let drop = currentBtn.closest('.header__item').querySelector('.dropdown');
 
-     
-
-
+    
 			menuBtns.forEach(el => {
 				if (el !== currentBtn) {
 					el.classList.remove('header__link--active');
@@ -46,6 +44,55 @@
 			});
 		}
 	});
+
+
+  // modal
+
+  const button = document.querySelector('[data-modal-button]');
+  const modal = document.querySelector('[data-modal]');
+  const buttonClose = document.querySelectorAll('[data-modal-close]');
+
+  button.addEventListener('click', function () {
+    modal.classList.toggle('modal--active');
+  });
+
+  buttonClose.forEach(function (item) {
+    item.addEventListener('click', function () {
+    
+      modal.classList.remove('modal--active');
+    })
+  });
+
+  document.addEventListener('click', (e) => {
+		if (!e.target.closest('.usernav')) {
+			modal.classList.remove('modal--active');
+      
+		}
+	});
+
+//lang
+  const buttonLang = document.querySelector('.language__button');
+  const lang = document.querySelector('.language__list');
+
+  console.log(buttonLang);
+  console.log(lang);
+
+  buttonLang.addEventListener('click', (e) => {
+    lang.classList.toggle('language__list--show');
+  });
+
+  document.addEventListener('click', (e) => {
+		if (!e.target.closest('.language')) {
+			lang.classList.remove('language__list--show');
+      
+		}
+	});
+
+
+
+
+
+ 
 
 
   

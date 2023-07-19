@@ -18,6 +18,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.3",
     "mixitup": "^3.3.1",
     "sass": "^1.57.1",

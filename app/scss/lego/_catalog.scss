@@ -1,0 +1,246 @@
+.filter {
+  max-width: 250px;
+  width: 100%;
+  margin-right: 80px;
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.filter-price {
+
+  &__inner {
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+
+    &:checked+.filter-price__fake-checkbox {
+      background-image: url('../images/icons/check-on.svg');
+      background-repeat: no-repeat;
+      background-size: 10px 8px;
+      background-position: center;
+      background-color: $accent;
+    }
+  }
+
+  &__fake-checkbox {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $primary;
+  }
+
+  &__extra-controls {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input-box {
+    display: flex;
+    width: 100px;
+    padding: 12px 10px;
+    border: 1px solid $grey;
+    background-color: $light;
+    color: $primary;
+  }
+
+  &__input {
+    display: block;
+    width: 70px;
+    background-color: transparent;
+    color: $primary;
+    margin-left: 4px;
+  }
+
+  &__txt {
+    margin: 0 5px;
+  }
+
+  &__extra-controls {
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    padding: 10px 73px;
+  }
+
+}
+
+.irs--round {
+  margin-bottom: 16px;
+}
+
+.irs--round .irs-min,
+.irs--round .irs-max {
+
+  display: none;
+}
+
+.irs-handle {
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: $accent;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.irs--round .irs-from,
+.irs--round .irs-to,
+.irs--round .irs-single {
+  background-color: $accent;
+}
+
+.irs--round .irs-bar {
+  background-color: $accent;
+}
+
+.irs--round .irs-handle {
+  border: 3px solid $accent;
+  box-shadow: none;
+}
+
+.irs--round .irs-from:before,
+.irs--round .irs-to:before,
+.irs--round .irs-single:before {
+  border-top-color: $accent;
+}
+
+.filter-color {
+
+  &__label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+
+
+    &:checked+.filter-color__fake-checkbox {
+      width: 17px;
+      height: 17px;
+      background-color: $accent;
+      border: 2px solid $light;
+      outline: solid 2px $accent;
+    }
+  }
+
+  &__fake-checkbox {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $light;
+    border: 1px solid $primary;
+  }
+
+
+
+}
+
+.filter-size {
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+
+    &:checked+.filter-size__fake-checkbox {
+      background-color: $accent;
+      border-color: $accent;
+      color: $light;
+    }
+
+  }
+
+  &__fake-checkbox {
+    border: 1px solid $primary;
+    padding: 12px 20px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary;
+  }
+
+}
+
+.filter-style {
+
+  &__label {
+    position: relative;
+    padding-left: 30px;
+    display: block; 
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+
+    &:checked+.filter-style__fake-checkbox {
+      background-color: $accent;
+      border-color: $accent;
+      background-image: url('../images/icons/check-on.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px 8px;
+    }
+
+  }
+
+  &__fake-checkbox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $primary;
+
+  }
+}

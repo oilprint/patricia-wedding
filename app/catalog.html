@@ -5,27 +5,34 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Marketing Agency DolGuldur | Our works Page</title>
+  <title>Patricia Wedding | Dresses</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Rubik:wght@400;700&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="css/works.min.css">
+  <link rel="stylesheet" href="css/catalog.min.css">
 </head>
 
 <body>
   <header class="header">
   <div class="container">
     <div class="header__top">
-      <div class="header__language">
-        <svg class="header__icon" width="28" height="28">
-          <use href="./images/symbol-defs.svg#icon-lang"></use>
-        </svg>
-        <p class="header__lang">
+      <div class="language">
+        <button class="language__button" type="button" data-value="en">
           En
-        </p>
+        </button>
+
+        <ul class="language__list">
+          <li class="language__item">
+            <a class="language__link" href="#">
+              Uk
+            </a>
+          </li>
+
+        </ul>
+
       </div>
       <a class="logo" href="#">
         <img class="logo__img" src="images/logo.svg" alt="Patriia Wedding Logo" width="320" height="80">
@@ -43,7 +50,8 @@
           <a class="usernav__link" href="#">
             <span class="sr-only">Wishlist</span>
             <svg class="usernav__icon" width="28" height="28">
-              <use href="./images/symbol-defs.svg#icon-wishlist"></use>
+              <use href="./images/symbol-defs.svg#icon-wishlist">
+              </use>
             </svg>
             <span class="usernav__number">
               10
@@ -51,7 +59,7 @@
           </a>
         </li>
         <li class="usernav__item">
-          <button class="usernav__link" type="button">
+          <button class="usernav__link" type="button" data-modal-button>
             <span class="sr-only">shopping bag</span>
             <svg class="usernav__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-bag"></use>
@@ -60,6 +68,134 @@
               2
             </span>
           </button>
+          <div class="modal" data-modal>
+
+            <h2 class="modal__title">
+              Shopping bag (
+              <span class="modal__quantity">
+                2
+              </span>
+              )
+            </h2>
+            <ul class="modal__list">
+              <li class="modal__item">
+                <img class="modal__img" src="images/product/small/calliope.jpg" alt="Wedding dress Calliope" width="130"
+                  height="150">
+                <div class="modal__inner">
+                  <div class="modal__top">
+                    <div class="modal__description">
+                      <h3 class="modal__headline">
+                        Calliope
+                      </h3>
+                      <p class="modal__txt">
+                        Flared satin wedding dress with halter neck and slit.
+                      </p>
+                    </div>
+                    <span class="modal__price">
+                      <span class="curency">
+                        $
+                      </span>
+                      1,200.00
+                    </span>
+                  </div>
+                  <div class="modal__bottom">
+                    <ul class="modal__info">
+                      <li class="modal__info-item">
+                        Color:
+                        <span class="modal__data">
+                          White
+                        </span>
+                      </li>
+                      <li class="modal__info-item">
+                        Size:
+                        <span class="modal__data">
+                          M
+                        </span>
+                      </li>
+                      <li class="modal__info-item">
+                        QTY:
+                        <span class="modal__data">
+                          1
+                        </span>
+                      </li>
+                    </ul>
+                    <button class="modal__remove" type="button">
+                      Remove
+                    </button>
+                  </div>
+
+                </div>
+              </li>
+              <li class="modal__item">
+                <img class="modal__img" src="images/product/small/iona.jpg" alt="Iona" width="130" height="150">
+                <div class="modal__inner">
+                  <div class="modal__top">
+                    <div class="modal__description">
+                      <h3 class="modal__headline">
+                        Iona
+                      </h3>
+                      <p class="modal__txt">
+                        Nicola Bathie Perry Earrings
+                      </p>
+                    </div>
+                    <span class="modal__price">
+                      <span class="curency">
+                        $
+                      </span>
+                      25.00
+                    </span>
+                  </div>
+                  <div class="modal__bottom">
+                    <ul class="modal__info">
+                      <li class="modal__info-item">
+                        Color:
+                        <span class="modal__data">
+                          White
+                        </span>
+                      </li>
+                      <li class="modal__info-item">
+                        Size:
+                        <span class="modal__data">
+                          M
+                        </span>
+                      </li>
+                      <li class="modal__info-item">
+                        QTY:
+                        <span class="modal__data">
+                          1
+                        </span>
+                      </li>
+                    </ul>
+                    <button class="modal__remove" type="button">
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="modal__sum">
+              <p class="modal__subtitle">
+                TOTAL:
+              </p>
+              <span class="modal__price modal__price--big">
+                <span class="curency">
+                  $
+                </span>
+                1,225.00
+              </span>
+            </div>
+            <button class="button modal__button" type="button" data-modal-close>
+              Proceed to checkout
+            </button>
+
+            <button class="modal__btn" type="button" data-modal-close>
+              <svg class="modal__icon" width="24" height="24">
+                <use href="images/symbol-defs.svg#icon-close">
+                </use>
+              </svg>
+            </button>
+          </div>
+
         </li>
       </ul>
     </div>
@@ -88,19 +224,19 @@
                     </h2>
                     <ul class="dropdown__category">
                       <li class="dropdown__box">
-                        <a class="dropdown__box-link" href="#">
+                        <a class="dropdown__box-link" href="catalog.html">
                           <img class="dropdown__img" src="images/dropdown/ball.jpg" alt="Ball Gown style" width="130">
-                            Ball Gown
+                          Ball Gown
                         </a>
                       </li>
                       <li class="dropdown__box">
-                        <a href="#" class="dropdown__box-link">
+                        <a class="dropdown__box-link" href="catalog.html">
                           <img class="dropdown__img" src="images/dropdown/mermaid.jpg" alt="Mermaid style">
                           Mermaid
                         </a>
                       </li>
                       <li class="dropdown__box">
-                        <a class="dropdown__box-link" href="#">
+                        <a class="dropdown__box-link" href="catalog.html">
                           <img class="dropdown__img" src="images/dropdown/line.jpg" alt="A-line style">
                           A-line
                         </a>
@@ -254,11 +390,250 @@
       </form>
 
     </div>
+
+
   </div>
 
 </header>
 
-  <main>
+  <div class="breadcrumbs">
+
+  </div>
+
+  <main class="catalog">
+    <div class="container">
+      <h1 class="title">
+        The wilderly bride catalog
+      </h1>
+      <div class="catalog__wrapper">
+        <aside class="filter">
+          <div class="filter__item filter-price">
+            <h3 class="filter__title">
+              Price filter
+            </h3>
+            <form class="filter-price__form" action="#">
+              <div class="filter-price__inner">
+                <label class="filter-price__label filter-price__label--check" for="sale">
+                  <input class="filter-price__checkbox" id="sale" type="checkbox">
+                  <span class="filter-price__fake-checkbox"></span>
+                  <span class="filter-price__checkbox-txt">
+                    Sale
+                  </span>
+                </label>
+                <label class="filter-price__label" for="price-1">
+                  <input class="filter-price__checkbox" id="price-1" type="checkbox">
+                  <span class="filter-price__fake-checkbox"></span>
+                  <span class="filter-price__checkbox-txt">
+                    $0 - $200
+                  </span>
+                </label>
+                <label class="filter-price__label" for="price-2">
+                  <input class="filter-price__checkbox" id="price-2" type="checkbox">
+                  <span class="filter-price__fake-checkbox"></span>
+                  <span class="filter-price__checkbox-txt">
+                    $200 - $500
+                  </span>
+                </label>
+
+              </div>
+              <input class="filter-price__slider" type="text">
+              <div class="filter-price__extra-controls">
+                <div class="filter-price__input-box">
+                  $
+                  <input type="text" class="filter-price__input filter-price__input-from" value="0" />
+                </div>
+
+                <span class="filter-price__txt">
+                  to
+                </span>
+
+                <div class="filter-price__input-box">
+                  $
+                  <input type="text" class="filter-price__input filter-price__input-to" value="0" />
+                </div>
+
+
+              </div>
+              <button class="button button--light filter-price__button" type="submit">
+                Filter
+              </button>
+            </form>
+          </div>
+
+          <div class="filter__item filter-color">
+            <h3 class="filter__title">
+              Color
+            </h3>
+            <form class="filter-color__form" action="#">
+              <label class="filter-color__label">
+                <input class="filter-color__checkbox" type="checkbox" checked>
+                <span class="filter-color__fake-checkbox">
+                </span>
+                <span class="filter-color__text">
+                  White
+                </span>
+              </label>
+
+              <label class="filter-color__label">
+                <input class="filter-color__checkbox" type="checkbox">
+                <span class="filter-color__fake-checkbox">
+                </span>
+                <span class="filter-color__text">
+                  Ivory
+                </span>
+              </label>
+              <label class="filter-color__label">
+                <input class="filter-color__checkbox" type="checkbox">
+                <span class="filter-color__fake-checkbox">
+                </span>
+                <span class="filter-color__text">
+                  Pink
+                </span>
+              </label>
+              <label class="filter-color__label">
+                <input class="filter-color__checkbox" type="checkbox">
+                <span class="filter-color__fake-checkbox">
+                </span>
+                <span class="filter-color__text">
+                  Blue
+                </span>
+              </label>
+            </form>
+          </div>
+
+          <div class="filter__item filter-size">
+            <h3 class="filter__title">
+              Size
+            </h3>
+            <form class="filter-size__form" action="#">
+              <label class="filter-size__label">
+                <input class="filter-size__checkbox" type="checkbox">
+                <span class="filter-size__fake-checkbox">
+                  XS
+                </span>
+              </label>
+              <label class="filter-size__label">
+                <input class="filter-size__checkbox" type="checkbox">
+                <span class="filter-size__fake-checkbox">
+                  S
+                </span>
+              </label>
+              <label class="filter-size__label">
+                <input class="filter-size__checkbox" type="checkbox" checked>
+                <span class="filter-size__fake-checkbox">
+                  M
+                </span>
+              </label>
+              <label class="filter-size__label">
+                <input class="filter-size__checkbox" type="checkbox">
+                <span class="filter-size__fake-checkbox">
+                  L
+                </span>
+
+              </label>
+              <label class="filter-size__label">
+                <input class="filter-size__checkbox" type="checkbox">
+                <span class="filter-size__fake-checkbox">
+                  XL
+                </span>
+
+              </label>
+              <label class="filter-size__label">
+                <input class="filter-size__checkbox" type="checkbox">
+                <span class="filter-size__fake-checkbox">2L</span>
+
+              </label>
+
+            </form>
+          </div>
+
+          <div class="filter__item filter-style">
+            <h3 class="filter__title">
+              Style
+            </h3>
+
+            <form class="filter-style__form" action="#">
+              <label class="filter-style__label">
+                <input class="filter-style__checkbox" type="checkbox">
+                <span class="filter-style__fake-checkbox"></span>
+                <span class="filter-style__txt">
+                  Civil Wedding
+                </span>
+              </label>
+              <label class="filter-style__label">
+                <input class="filter-style__checkbox" type="checkbox">
+                <span class="filter-style__fake-checkbox"></span>
+                <span class="filter-style__txt">
+                  Simple
+                </span>
+              </label>
+              <label class="filter-style__label">
+                <input class="filter-style__checkbox" type="checkbox">
+                <span class="filter-style__fake-checkbox"></span>
+                <span class="filter-style__txt">
+                  Elegant
+                </span>
+              </label>
+              <label class="filter-style__label">
+                <input class="filter-style__checkbox" type="checkbox">
+                <span class="filter-style__fake-checkbox"></span>
+                <span class="filter-style__txt">
+                  Boho
+                </span>
+              </label>
+              <label class="filter-style__label">
+                <input class="filter-style__checkbox" type="checkbox">
+                <span class="filter-style__fake-checkbox"></span>
+                <span class="filter-style__txt">
+                  Beach
+                </span>
+              </label>
+              <label class="filter-style__label">
+                <input class="filter-style__checkbox" type="checkbox">
+                <span class="filter-style__fake-checkbox"></span>
+                <span class="filter-style__txt">
+                  Romantic
+                </span>
+              </label>
+              <label class="filter-style__label">
+                <input class="filter-style__checkbox" type="checkbox">
+                <span class="filter-style__fake-checkbox"></span>
+                <span class="filter-style__txt">
+                  Embroidery
+                </span>
+              </label>
+              <label class="filter-style__label">
+                <input class="filter-style__checkbox" type="checkbox">
+                <span class="filter-style__fake-checkbox"></span>
+                <span class="filter-style__txt">
+                  Modern
+                </span>
+              </label>
+            </form>
+          </div>
+
+
+
+        </aside>
+
+        <div class="catalog__content">
+          <div class="catalog__top">
+
+          </div>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <article class="dress-card">
+
+              </article>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+    </div>
+
+
 
   </main>
 
