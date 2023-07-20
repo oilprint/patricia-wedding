@@ -26,7 +26,7 @@
 
   <main class="catalog">
     <div class="container">
-      <h1 class="title">
+      <h1 class="title catalog__title">
         The wilderly bride catalog
       </h1>
       <div class="catalog__wrapper">
@@ -241,15 +241,323 @@
         </aside>
 
         <div class="catalog__content">
-          <div class="catalog__top">
+
+          <div class="catalog__sort">
+            <select class="catalog__sort-filter" name="sort" id="sort">
+              <option value="">Sort by Most Popular</option>
+              <option value="">Sort by New</option>
+              <option value="">Sort by 1</option>
+            </select>
+
+            <button class="catalog__sort-btn catalog__sort-btn--active">
+              <svg class="catalog__sort-icon" width="24" height="24">
+                <use href="./images/symbol-defs.svg#icon-tile"></use>
+              </svg>
+            </button>
+            <button class="catalog__sort-btn">
+              <svg class="catalog__sort-icon" width="24" height="24">
+                <use href="./images/symbol-defs.svg#icon-tabl"></use>
+              </svg>
+            </button>
 
           </div>
           <ul class="catalog__list">
             <li class="catalog__item">
-              <article class="dress-card">
+              <article class="product-card">
+                <div class="product-card__top">
+                  <img class="product-card__image" src="images/product/catalog/dress-01.jpg"
+                    alt="Aurora Collection Emanuela" width="300" height="450">
+                  <div class="product-card__link-box">
+                    <button class="product-card__btn" type="button">
+                      <svg class="product-card__icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-wishlist"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card__btn" type="button">
+                      <svg class="product-card__icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-bag"></use>
+                      </svg>
+                    </button>
+                  </div>
 
+                </div>
+                <a href="#" class="product-card__link">
+                  <p class="product-card__subtitle">
+                    New Aurora Collection
+                  </p>
+                  <h2 class="product-card__title">
+                    Emanuela
+                  </h2>
+                  <div class="product-card__rating">
+                    <div class="product-card__stars" id="rateYo" data-rateyo-rating="4.6"></div>
+                    <span class="product-card__rating-txt">
+                      (
+                      <span class="product-card__value-number">
+                        10
+                      </span>
+                      )
+                    </span>
+                  </div>
+
+                  <div class="product-card__price">
+                    <span class="product-card__price-curent">
+                      <span class="currency">
+                        $
+                      </span>
+                      900.00
+                    </span>
+                    <span class="product-card__price-old">
+                      1,100.00
+                    </span>
+                  </div>
+                </a>
               </article>
             </li>
+            <li class="catalog__item">
+              <article class="product-card">
+                <div class="product-card__top">
+                  <img class="product-card__image" src="images/product/catalog/dress-02.jpg"
+                    alt="Aurora Collection Calliope" width="300" height="450">
+                  <div class="product-card__link-box">
+                    <button class="product-card__btn" type="button">
+                      <svg class="product-card__icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-wishlist"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card__btn" type="button">
+                      <svg class="product-card__icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-bag"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                </div>
+                <a href="#" class="product-card__link">
+                  <p class="product-card__subtitle">
+                    New Aurora Collection
+                  </p>
+                  <h2 class="product-card__title">
+                    Calliope
+                  </h2>
+                  <div class="product-card__rating">
+                    <div class="product-card__stars" id="rateYo" data-rateyo-rating="5"></div>
+                    <span class="product-card__rating-txt">
+                      (
+                      <span class="product-card__value-number">
+                        5
+                      </span>
+                      )
+                    </span>
+                  </div>
+
+                  <div class="product-card__price">
+                    <span class="product-card__price-curent">
+                      <span class="currency">
+                        $
+                      </span>
+                      449.00
+                    </span>
+                    <span class="product-card__price-old">
+                      600.00
+                    </span>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product-card">
+                <div class="product-card__top">
+                  <img class="product-card__image" src="images/product/catalog/dress-03.jpg"
+                    alt="Aurora Collection Iona" width="300" height="450">
+                  <div class="product-card__link-box">
+                    <button class="product-card__btn" type="button">
+                      <svg class="product-card__icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-wishlist"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card__btn" type="button">
+                      <svg class="product-card__icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-bag"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                </div>
+                <a href="#" class="product-card__link">
+                  <p class="product-card__subtitle">
+                    New Aurora Collection
+                  </p>
+                  <h2 class="product-card__title">
+                    Iona
+                  </h2>
+                  <div class="product-card__rating">
+                    <div class="product-card__stars" id="rateYo" data-rateyo-rating="4"></div>
+                    <span class="product-card__rating-txt">
+                      (
+                      <span class="product-card__value-number">
+                        8
+                      </span>
+                      )
+                    </span>
+                  </div>
+
+                  <div class="product-card__price">
+                    <span class="product-card__price-curent">
+                      <span class="currency">
+                        $
+                      </span>
+                      948.00
+                    </span>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product-card">
+                <div class="product-card__top">
+                  <img class="product-card__image" src="images/product/catalog/dress-04.jpg"
+                    alt="Aurora Collection Menhit" width="300" height="450">
+                  <div class="product-card__link-box">
+                    <button class="product-card__btn" type="button">
+                      <svg class="product-card__icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-wishlist"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card__btn" type="button">
+                      <svg class="product-card__icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-bag"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                </div>
+                <a href="#" class="product-card__link">
+                  <p class="product-card__subtitle">
+                    New Aurora Collection
+                  </p>
+                  <h2 class="product-card__title">
+                    Menhit
+                  </h2>
+                  <div class="product-card__rating">
+                    <div class="product-card__stars" id="rateYo" data-rateyo-rating="5"></div>
+                    <span class="product-card__rating-txt">
+                      (
+                      <span class="product-card__value-number">
+                        22
+                      </span>
+                      )
+                    </span>
+                  </div>
+
+                  <div class="product-card__price">
+                    <span class="product-card__price-curent">
+                      <span class="currency">
+                        $
+                      </span>
+                      850.00
+                    </span>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product-card">
+                <div class="product-card__top">
+                  <img class="product-card__image" src="images/product/catalog/dress-05.jpg"
+                    alt="Aurora Collection Jumala" width="300" height="450">
+                  <div class="product-card__link-box">
+                    <button class="product-card__btn" type="button">
+                      <svg class="product-card__icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-wishlist"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card__btn" type="button">
+                      <svg class="product-card__icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-bag"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                </div>
+                <a href="#" class="product-card__link">
+                  <p class="product-card__subtitle">
+                    New Aurora Collection
+                  </p>
+                  <h2 class="product-card__title">
+                    Jumala
+                  </h2>
+                  <div class="product-card__rating">
+                    <div class="product-card__stars" id="rateYo" data-rateyo-rating="4"></div>
+                    <span class="product-card__rating-txt">
+                      (
+                      <span class="product-card__value-number">
+                        10
+                      </span>
+                      )
+                    </span>
+                  </div>
+
+                  <div class="product-card__price">
+                    <span class="product-card__price-curent">
+                      <span class="currency">
+                        $
+                      </span>
+                      235.00
+                    </span>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li class="catalog__item">
+              <article class="product-card">
+                <div class="product-card__top">
+                  <img class="product-card__image" src="images/product/catalog/dress-06.jpg"
+                    alt="Aurora Collection Giglio" width="300" height="450">
+                  <div class="product-card__link-box">
+                    <button class="product-card__btn" type="button">
+                      <svg class="product-card__icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-wishlist"></use>
+                      </svg>
+                    </button>
+                    <button class="product-card__btn" type="button">
+                      <svg class="product-card__icon" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#icon-bag"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                </div>
+                <a href="#" class="product-card__link">
+                  <p class="product-card__subtitle">
+                    New Aurora Collection
+                  </p>
+                  <h2 class="product-card__title">
+                    Giglio
+                  </h2>
+                  <div class="product-card__rating">
+                    <div class="product-card__stars" id="rateYo" data-rateyo-rating="4.5"></div>
+                    <span class="product-card__rating-txt">
+                      (
+                      <span class="product-card__value-number">
+                        3
+                      </span>
+                      )
+                    </span>
+                  </div>
+
+                  <div class="product-card__price">
+                    <span class="product-card__price-curent">
+                      <span class="currency">
+                        $
+                      </span>
+                      1,150.00
+                    </span>
+                    
+                  </div>
+                </a>
+              </article>
+            </li>
+
           </ul>
         </div>
 

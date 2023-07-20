@@ -21,20 +21,20 @@
   <path fill="#c56b8a" style="fill: var(--color1, #c56b8a)" d="M16.457 13.63c-0.206 0.003-1.045 0-1.045 0-0.188 0-0.429 0.152-0.549 0.333 0 0-1.248 2.142-1.369 2.357l-0.145-0.002-0.389-2.341c-0.043-0.184-0.236-0.342-0.475-0.342l-0.781 0.001c-0.188 0-0.303 0.15-0.261 0.333 0 0 0.593 3.374 0.712 4.168 0.055 0.438-0.007 0.516-0.007 0.516l-0.772 1.345c-0.114 0.183-0.053 0.332 0.135 0.332l0.903-0.001c0.188 0 0.435-0.148 0.547-0.331l3.472-5.873c0 0.001 0.334-0.502 0.023-0.495z"></path>
 </symbol>
 <symbol id="icon-tabl" viewBox="0 0 32 32">
-  <path fill="#e9e3e2" style="fill: var(--color2, #e9e3e2)" d="M0 0h32v9.412h-32v-9.412z"></path>
-  <path fill="#e9e3e2" style="fill: var(--color2, #e9e3e2)" d="M0 11.294h32v9.412h-32v-9.412z"></path>
-  <path fill="#e9e3e2" style="fill: var(--color2, #e9e3e2)" d="M0 22.588h32v9.412h-32v-9.412z"></path>
+  <path d="M0 0h32v9.412h-32v-9.412z"></path>
+  <path d="M0 11.294h32v9.412h-32v-9.412z"></path>
+  <path d="M0 22.588h32v9.412h-32v-9.412z"></path>
 </symbol>
 <symbol id="icon-tile" viewBox="0 0 32 32">
-  <path fill="#82334e" style="fill: var(--color3, #82334e)" d="M0 0h9.412v9.412h-9.412v-9.412z"></path>
-  <path fill="#82334e" style="fill: var(--color3, #82334e)" d="M0 11.294h9.412v9.412h-9.412v-9.412z"></path>
-  <path fill="#82334e" style="fill: var(--color3, #82334e)" d="M0 22.588h9.412v9.412h-9.412v-9.412z"></path>
-  <path fill="#82334e" style="fill: var(--color3, #82334e)" d="M11.294 0h9.412v9.412h-9.412v-9.412z"></path>
-  <path fill="#82334e" style="fill: var(--color3, #82334e)" d="M11.294 11.294h9.412v9.412h-9.412v-9.412z"></path>
-  <path fill="#82334e" style="fill: var(--color3, #82334e)" d="M11.294 22.588h9.412v9.412h-9.412v-9.412z"></path>
-  <path fill="#82334e" style="fill: var(--color3, #82334e)" d="M22.589 0h9.412v9.412h-9.412v-9.412z"></path>
-  <path fill="#82334e" style="fill: var(--color3, #82334e)" d="M22.589 11.294h9.412v9.412h-9.412v-9.412z"></path>
-  <path fill="#82334e" style="fill: var(--color3, #82334e)" d="M22.589 22.588h9.412v9.412h-9.412v-9.412z"></path>
+  <path d="M0 0h9.412v9.412h-9.412v-9.412z"></path>
+  <path d="M0 11.294h9.412v9.412h-9.412v-9.412z"></path>
+  <path d="M0 22.588h9.412v9.412h-9.412v-9.412z"></path>
+  <path d="M11.294 0h9.412v9.412h-9.412v-9.412z"></path>
+  <path d="M11.294 11.294h9.412v9.412h-9.412v-9.412z"></path>
+  <path d="M11.294 22.588h9.412v9.412h-9.412v-9.412z"></path>
+  <path d="M22.589 0h9.412v9.412h-9.412v-9.412z"></path>
+  <path d="M22.589 11.294h9.412v9.412h-9.412v-9.412z"></path>
+  <path d="M22.589 22.588h9.412v9.412h-9.412v-9.412z"></path>
 </symbol>
 <symbol id="icon-check" viewBox="0 0 32 32">
   <path fill="#fff" style="fill: var(--color4, #fff)" d="M28.175 6.492c0.833 0.833 0.833 2.184 0 3.017l-14.667 14.667c-0.833 0.833-2.184 0.833-3.017 0l-6.667-6.667c-0.833-0.833-0.833-2.184 0-3.017s2.184-0.833 3.017 0l5.158 5.158 13.158-13.158c0.833-0.833 2.184-0.833 3.017 0z"></path>

@@ -1,6 +1,66 @@
+.catalog {
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 52px;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__sort {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 16px;
+  }
+
+  &__sort-filter {
+    margin-right: 44px;
+  }
+
+  &__sort-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &--active {
+      .catalog__sort-icon {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__sort-icon {
+    fill: $grey;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__item {
+    width: calc((100% - 2 * 30px) / 3);
+  }
+}
+
+
 .filter {
   max-width: 250px;
   width: 100%;
+  padding-top: 40px;
   margin-right: 80px;
 
   &__title {
@@ -23,6 +83,7 @@
     position: relative;
     display: block;
     padding-left: 30px;
+    cursor: pointer;
 
     &:not(:last-child) {
       margin-bottom: 9px;
@@ -137,6 +198,7 @@
     position: relative;
     display: block;
     padding-left: 30px;
+    cursor: pointer;
 
     &:not(:last-child) {
       margin-bottom: 9px;
@@ -194,7 +256,6 @@
       border-color: $accent;
       color: $light;
     }
-
   }
 
   &__fake-checkbox {
@@ -206,15 +267,16 @@
     align-items: center;
     color: $primary;
   }
-
 }
 
 .filter-style {
 
   &__label {
     position: relative;
+    display: block;
     padding-left: 30px;
-    display: block; 
+    cursor: pointer;
+
     &:not(:last-child) {
       margin-bottom: 10px;
     }
@@ -231,7 +293,6 @@
       background-position: center;
       background-size: 10px 8px;
     }
-
   }
 
   &__fake-checkbox {
@@ -241,6 +302,5 @@
     width: 20px;
     height: 20px;
     border: 1px solid $primary;
-
   }
 }

@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Montserrat',
-  sans-serif;
+    sans-serif;
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
@@ -47,7 +47,7 @@ main {
 
 .title {
   font-family: 'Swifteddemo',
-  sans-serif;
+    sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 72px;
@@ -57,9 +57,171 @@ main {
 
 .subtitle {
   font-family: 'Drive-Hearts',
-  sans-serif;
+    sans-serif;
   font-size: 120px;
   font-style: normal;
   color: $grey;
   line-height: 0.7;
+}
+
+.product-card {
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0px 4px 8px 0px rgba(187, 185, 185, 0.20);
+  transition: outline 0.4s;
+
+  &__top {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      content: '';
+      right: 20px;
+      top: 20px;
+      width: 24px;
+      height: 24px;
+      background-image: url('../images/icons/heart.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+    }
+
+    &:hover {
+      outline: solid 1px $accent;
+      outline-offset: -1px;
+
+      .product-card__link-box {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+  }
+
+  &__link-box {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    transform: translateY(101%);
+    transition: transform 0.4s;
+  }
+
+  &__btn {
+    flex-grow: 1;
+    padding: 14px;
+    background-color: rgba($light, 0.7);
+    border: 1px solid $accent;
+
+    &:focus {
+      background-color: rgba($light, 1);
+      border-color: $primary;
+
+      .product-card__icon {
+        fill: $accent;
+      }
+    }
+
+    &:hover {
+      background-color: $accent;
+
+      .product-card__icon {
+        fill: $light;
+      }
+    }
+
+    &__active {
+      background-color: $light;
+
+      .product-card__icon {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__icon {
+    fill: $primary;
+  }
+
+  &__link {
+    padding: 20px 10px;
+    display: block;
+     border-left: 1px solid $light;
+     border-bottom: 1px solid $light;
+     border-right: 1px solid $light;
+    transition: outline 0.4s, background-color 0.4s, border-color 1s;
+
+    &:focus {
+      outline: solid 1px $accent;
+      outline-offset: -1px;
+    }
+
+    &:hover {
+       border-left: 1px solid $accent;
+       border-bottom: 1px solid $accent;
+       border-right: 1px solid $accent;
+    
+       background-color: $bg-accent;
+       
+       .product-card__title {
+        color: $accent;
+       }
+
+       &.product-card {
+        outline: solid 1px $accent;
+        outline-offset: -1px;
+       }
+    }
+  }
+
+  &__subtitle {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    transition: color 0.4s;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__rating-txt {
+    display: flex;
+  }
+
+  &__stars {
+    margin-right: 10px;
+  }
+
+  &__price {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    color: $accent;
+  }
+
+  &__price-curent {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  &__price-old {
+    color: $primary;
+        text-decoration: line-through;
+  }
+
 }
