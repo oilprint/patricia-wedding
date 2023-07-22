@@ -74,9 +74,6 @@
   const buttonLang = document.querySelector('.language__button');
   const lang = document.querySelector('.language__list');
 
-  console.log(buttonLang);
-  console.log(lang);
-
   buttonLang.addEventListener('click', (e) => {
     lang.classList.toggle('language__list--show');
   });

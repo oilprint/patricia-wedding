@@ -64,120 +64,69 @@ main {
   line-height: 0.7;
 }
 
+
 .product-card {
-  max-width: 300px;
+  position: relative;
   width: 100%;
   box-shadow: 0px 4px 8px 0px rgba(187, 185, 185, 0.20);
-  transition: outline 0.4s;
 
-  &__top {
-    position: relative;
-    overflow: hidden;
+  &__link {
 
-    &::before {
-      position: absolute;
-      content: '';
-      right: 20px;
-      top: 20px;
-      width: 24px;
-      height: 24px;
-      background-image: url('../images/icons/heart.svg');
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      background-size: cover;
+    &:focus {
+      outline: solid 1px $grey;
     }
 
     &:hover {
-      outline: solid 1px $accent;
-      outline-offset: -1px;
 
-      .product-card__link-box {
-        transform: translateY(0);
+      .product-card__top {
+        outline: solid 1px $accent;
+      }
+
+      .product-card__image {
+        transform: scale(1.1);
+
       }
     }
+  }
+
+  &__wishlist {
+    position: absolute;
+    content: '';
+    top: 10px;
+    right: 10px;
+    width: 44px;
+    height: 44px;
+    z-index: 2;
+
+    &.active {
+      .product-card__wishlist-icon {
+        fill: $light;
+      }
+    }
+  }
+
+  &__wishlist-icon {
+    fill: transparent;
+    stroke: $light;  
+  }
+
+  &__top {
+    overflow: hidden;
+    height: 100%;
   }
 
   &__image {
     object-fit: cover;
-  }
-
-  &__link-box {
-    position: absolute;
-    content: '';
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    display: flex;
-    transform: translateY(101%);
     transition: transform 0.4s;
-  }
-
-  &__btn {
-    flex-grow: 1;
-    padding: 14px;
-    background-color: rgba($light, 0.7);
-    border: 1px solid $accent;
-
-    &:focus {
-      background-color: rgba($light, 1);
-      border-color: $primary;
-
-      .product-card__icon {
-        fill: $accent;
-      }
-    }
-
-    &:hover {
-      background-color: $accent;
-
-      .product-card__icon {
-        fill: $light;
-      }
-    }
-
-    &__active {
-      background-color: $light;
-
-      .product-card__icon {
-        fill: $accent;
-      }
-    }
+    height: 100%;
   }
 
   &__icon {
     fill: $primary;
   }
 
-  &__link {
+  &__content-box {
     padding: 20px 10px;
-    display: block;
-     border-left: 1px solid $light;
-     border-bottom: 1px solid $light;
-     border-right: 1px solid $light;
-    transition: outline 0.4s, background-color 0.4s, border-color 1s;
-
-    &:focus {
-      outline: solid 1px $accent;
-      outline-offset: -1px;
-    }
-
-    &:hover {
-       border-left: 1px solid $accent;
-       border-bottom: 1px solid $accent;
-       border-right: 1px solid $accent;
-    
-       background-color: $bg-accent;
-       
-       .product-card__title {
-        color: $accent;
-       }
-
-       &.product-card {
-        outline: solid 1px $accent;
-        outline-offset: -1px;
-       }
-    }
   }
 
   &__subtitle {
@@ -187,7 +136,7 @@ main {
 
   &__title {
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 10px;
     transition: color 0.4s;
@@ -208,20 +157,115 @@ main {
   }
 
   &__price {
-    display: block;
-    font-size: 17px;
+    display: flex;
+    font-size: 20px;
     font-weight: 500;
     color: $accent;
   }
 
-  &__price-curent {
+  &__price-actual {
     display: inline-block;
     margin-right: 20px;
   }
 
   &__price-old {
     color: $primary;
-        text-decoration: line-through;
+    text-decoration: line-through;
+  }
+
+  &__content-extra {
+    display: none;
+  }
+
+  &__description {
+    margin-bottom: 20px;
+  }
+
+  &__info {
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 32px;
+    border: 1px solid $accent;
+    background-color: $light;
+    height: 100%;
+
+    &:focus {
+      border: 1px solid $primary;
+      background-color: $bg-accent;
+    }
+
+    &:hover {
+      background-color: $accent;
+
+      .product-card__icon {
+        fill: $light;
+      }
+    }
+  }
+
+  &__btn {
+    padding: 10px 34px;
+    height: 100%;
+  }
+
+  &--line {
+    display: flex;
+    align-items: stretch;
+    min-width: 100%;
+
+    .product-card__top {
+      flex-shrink: 0;
+      width: 220px;
+    }
+
+    .product-card__content-box {
+      padding: 20px 30px;
+    }
+
+    .product-card__content {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .product-card__rating {
+      margin-bottom: 0;
+    }
+
+    .product-card__content-extra {
+      display: block;
+    }
+
+    .product-card__price-actual {
+      margin-right: 0;
+      order: 1;
+      margin-left: 20px;
+    }
+
+    .product-card__wishlist {
+      position: absolute;
+      content: '';
+      top: 20px;
+      right: 30px;
+
+      &.active {
+        .product-card__wishlist-icon {
+          fill: $accent;
+        }
+      }
+    }
+
+    .product-card__wishlist-icon {
+      fill: transparent;
+      stroke: $accent;
+    }
+
   }
 
 }
