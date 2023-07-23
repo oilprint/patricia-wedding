@@ -17,7 +17,7 @@
 
     &--list {
       max-width: 220px;
-      padding-top: 37px;  
+      padding-top: 37px;
     }
 
     &:not(:last-child) {
@@ -38,10 +38,25 @@
   }
 
   &__link {
+    position: relative;
     display: block;
     width: fit-content;
     color: $light;
-    transition: outline 0.4s, ;
+    transition: outline 0.4s;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      bottom: -2px;
+      left: 0;
+      height: 1px;
+      background-color: $light;
+      transform: scaleX(0);
+
+      transition: transform 0.4s;
+    }
+
 
     &:focus {
       outline: solid 1px $light;
@@ -50,7 +65,10 @@
     }
 
     &:hover {
-      color: $secondary;
+
+      &::before {
+        transform: scaleX(1);
+      }
     }
 
     &:active {

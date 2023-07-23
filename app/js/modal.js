@@ -1,5 +1,39 @@
 
-	/*
+	//dropdown-sort
+
+  const sortButton = document.querySelector('.dropdown-sort__button');
+  const sortList = document.querySelector('.dropdown-sort__list');
+  const sortItem = sortList.querySelectorAll('.dropdown-sort__item');
+
+  sortButton.addEventListener('click', function() {
+    sortList.classList.toggle('visible');
+    this.classList.toggle('active');
+
+  });
+
+  sortItem.forEach(function (listItem) {
+    listItem.addEventListener('click', function(e) {
+      e.stopPropagation();
+      sortButton.innerText = this.innerText;
+
+      sortItem.forEach(function (item) {
+        item.classList.remove('active');
+      });
+
+      this.classList.add('active');
+    });  
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target !== document.querySelector('.dropdown-sort__button')) {
+      sortButton.classList.remove('active');
+      sortList.classList.remove('visible');
+    };
+  });
+
+  //END dropdown-sort
+  
+  /*
   всплывающее меню
 		1. по клику на пункты верхнего меню открывать дропдаун
 		2. по клику (повторному) на эти пункты - закрывать дропдаун
@@ -7,12 +41,12 @@
 	*/
 
 	const menuBtns = document.querySelectorAll('.header__link');
-	const drops = document.querySelectorAll('.dropdown');
+	const drops = document.querySelectorAll('.dropdown-menu');
 
 	menuBtns.forEach(el => {
 		el.addEventListener('click', (e) => {
 			let currentBtn = e.currentTarget;
-			let drop = currentBtn.closest('.header__item').querySelector('.dropdown');
+			let drop = currentBtn.closest('.header__item').querySelector('.dropdown-menu');
 
     
 			menuBtns.forEach(el => {
@@ -24,11 +58,11 @@
 
 			drops.forEach(el => {
 				if (el !== drop) {
-					el.classList.remove('dropdown--active');
+					el.classList.remove('dropdown-menu--active');
 				}
 			});
 
-      drop.classList.toggle('dropdown--active');
+      drop.classList.toggle('dropdown-menu--active');
       currentBtn.classList.toggle('header__link--active');
 		});
 	});
@@ -40,7 +74,7 @@
 			});
 
 			drops.forEach(el => {
-				el.classList.remove('dropdown--active');
+				el.classList.remove('dropdown-menu--active');
 			});
 		}
 	});
