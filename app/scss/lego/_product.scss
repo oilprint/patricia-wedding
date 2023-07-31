@@ -141,18 +141,17 @@
   z-index: 10;
   left: 0;
   right: 0;
-   width: 100px;
-   height: 30px;
-   background-color: rgba($light, 0.7);
+  width: 100px;
+  height: 30px;
+  background-color: rgba($light, 0.7);
 
-   &:hover {
+  &:hover {
     .swiper-button__icon {
       fill: $accent;
     }
-   }
- 
-}
+  }
 
+}
 
 .swiper-button__icon {
   fill: $primary;
@@ -166,7 +165,40 @@
   }
 }
 
-
 .swiper-button-next {
   top: 692px;
+}
+
+
+.extra-item {
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__item {
+    max-width: 237px;
+    width: 100%;
+
+    &--big {
+      max-width: 370px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
