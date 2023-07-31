@@ -1,0 +1,548 @@
+.catalog {
+  margin-bottom: 200px;
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 52px;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  &__sort {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 16px;
+  }
+
+  &__sort-filter {
+    margin-right: 44px;
+  }
+
+  &__sort-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &.active {
+      .catalog__sort-icon {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__sort-icon {
+    fill: $grey;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    &--line {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+}
+
+.filter {
+  max-width: 250px;
+  width: 100%;
+  padding-top: 40px;
+  margin-right: 80px;
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.filter-price {
+
+  &__inner {
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+
+    &:checked+.filter-price__fake-checkbox {
+      background-image: url('../images/icons/check-on.svg');
+      background-repeat: no-repeat;
+      background-size: 10px 8px;
+      background-position: center;
+      background-color: $accent;
+    }
+  }
+
+  &__fake-checkbox {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $primary;
+  }
+
+  &__extra-controls {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input-box {
+    display: flex;
+    width: 100px;
+    padding: 12px 10px;
+    border: 1px solid $grey;
+    background-color: $light;
+    color: $primary;
+  }
+
+  &__input {
+    display: block;
+    width: 70px;
+    background-color: transparent;
+    color: $primary;
+    margin-left: 4px;
+  }
+
+  &__txt {
+    margin: 0 5px;
+  }
+
+  &__extra-controls {
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    padding: 10px 73px;
+  }
+
+}
+
+.irs--round {
+  margin-bottom: 16px;
+}
+
+.irs--round .irs-min,
+.irs--round .irs-max {
+
+  display: none;
+}
+
+.irs-handle {
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: $accent;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.irs--round .irs-from,
+.irs--round .irs-to,
+.irs--round .irs-single {
+  background-color: $accent;
+}
+
+.irs--round .irs-bar {
+  background-color: $accent;
+}
+
+.irs--round .irs-handle {
+  border: 3px solid $accent;
+  box-shadow: none;
+}
+
+.irs--round .irs-from:before,
+.irs--round .irs-to:before,
+.irs--round .irs-single:before {
+  border-top-color: $accent;
+}
+
+.filter-color {
+
+  &__label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+
+
+    &:checked+.filter-color__fake-checkbox {
+      width: 17px;
+      height: 17px;
+      background-color: $accent;
+      border: 2px solid $light;
+      outline: solid 2px $accent;
+    }
+  }
+
+  &__fake-checkbox {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $light;
+    border: 1px solid $primary;
+  }
+
+
+
+}
+
+.filter-size {
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+
+    &:checked+.filter-size__fake-checkbox {
+      background-color: $accent;
+      border-color: $accent;
+      color: $light;
+    }
+  }
+
+  &__fake-checkbox {
+    border: 1px solid $primary;
+    padding: 12px 20px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary;
+  }
+}
+
+.filter-style {
+
+  &__label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+
+    &:checked+.filter-style__fake-checkbox {
+      background-color: $accent;
+      border-color: $accent;
+      background-image: url('../images/icons/check-on.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px 8px;
+    }
+  }
+
+  &__fake-checkbox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $primary;
+  }
+}
+
+.breadcrumbs {
+  position: relative;
+  display: inline-flex;
+  padding: 30px 0;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding: 0 10px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url(../../images/icons/breadcrumbs.svg);
+      background-repeat: no-repeat;
+      background-size: 6px 18px;
+      background-position: center;
+      width: 6px;
+      height: 18px;
+      bottom: 1px;
+      right: -3px;
+    }
+
+    &:last-child {
+      color: $secondary;
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: inherit;
+  }
+}
+
+.pagination {
+
+  &__txt {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    padding: 20px 0;
+    border-top: 1px solid $devider;
+    border-bottom: 1px solid $devider;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: $primary;
+    border-radius: 10px;
+    transition: color 0.2s;
+
+    &:disabled {
+      color: $grey;
+      pointer-events: none;
+    }
+
+    .pagination__icon {
+      fill: currentColor;
+      margin-right: 4px;
+    }
+
+    &--prev {
+      .pagination__icon {
+        transform: rotate(90deg);
+        margin-right: 10px;
+      }
+    }
+
+    &--next {
+      .pagination__icon {
+        transform: rotate(-90deg);
+        margin-left: 10px;
+      }
+    }
+
+    &:focus {
+      outline: solid 1px $grey;
+      outline-offset: 4px;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      color: $accent;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    width: 40px;
+    height: 40px;
+    background-position: 0 -40px;
+    color: $primary;
+    transition: background-position 0.5s, color 0.5s;
+
+    &--active {
+      background-image: linear-gradient($accent, $accent);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      color: $light;
+    }
+
+    &:focus {
+      outline: solid 1px $grey;
+    }
+
+    &:hover {
+      outline: solid 1px $accent;
+
+    }
+  }
+}
+
+.dropdown-sort {
+  position: relative;
+  max-width: 220px;
+  width: 100%;
+  margin-right: 44px;
+
+  &__button {
+    padding: 10px 8px 10px 16px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: $primary;
+    transition: background-color 0.4s,
+    outline 0.4s;
+
+    &.active {
+      color: $accent;
+      .dropdown-sort__icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:focus {
+      outline: solid 1px $grey;
+    }
+
+    &:hover {
+      outline: solid 1px $accent;
+      color: $accent;
+    }
+
+    &:active  {
+      background-color: $bg-accent;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    transition: fill 0.4s;
+  }
+
+  &__list {
+    position: absolute;
+    content: '';
+    z-index: 5;
+    width: 100%;
+    background-color: $light;
+    border-radius: 10px;
+    box-shadow: 4px 5px 12px rgba(0, 0, 0, .12);
+    transform-origin: 0 0;
+    transform: rotateX(-90deg);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-in-out,
+    visibility 0.4s ease-in-out;
+
+    &.visible {
+      transform: rotateX(0deg);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    padding: 10px 16px;
+    border-bottom: 1px solid $devider;
+    font-size: 15px;
+    cursor: pointer;
+
+    &:first-child {
+      border-radius: 10px 10px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 10px 10px;
+      border-bottom: none;
+    }
+
+    &.active {
+      border-left: 2px solid $accent;
+    }
+
+    &:hover {
+      background-color: $bg-accent;
+    }
+  }
+}

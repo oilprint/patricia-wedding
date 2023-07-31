@@ -1,3 +1,375 @@
 <header class="header">
-  
+  <div class="container">
+    <div class="header__top">
+      <div class="language">
+        <button class="language__button" type="button" data-value="en">
+          En
+        </button>
+
+        <ul class="language__list">
+          <li class="language__item">
+            <a class="language__link" href="#">
+              Uk
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+      <a class="logo" href="#">
+        <img class="logo__img" src="images/logo.svg" alt="Patriia Wedding Logo" width="320" height="80">
+      </a>
+      <ul class="usernav">
+        <li class="usernav__item">
+          <a class="usernav__link" href="#">
+            <span class="sr-only">Your account page</span>
+            <svg class="usernav__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-account"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="usernav__item">
+          <a class="usernav__link" href="#">
+            <span class="sr-only">Wishlist</span>
+            <svg class="usernav__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-wishlist">
+              </use>
+            </svg>
+            <span class="usernav__number">
+              10
+            </span>
+          </a>
+        </li>
+        <li class="usernav__item">
+          <button class="usernav__link" type="button" data-modal-button>
+            <span class="sr-only">shopping bag</span>
+            <svg class="usernav__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-bag"></use>
+            </svg>
+            <span class="usernav__number">
+              2
+            </span>
+          </button>
+          <div class="modal" data-modal>
+
+            <h2 class="modal__title">
+              Shopping bag (
+              <span class="modal__quantity">
+                2
+              </span>
+              )
+            </h2>
+            <ul class="modal__list">
+              <li class="modal__item">
+                <img class="modal__img" src="images/product/small/calliope.jpg" alt="Wedding dress Calliope" width="130"
+                  height="150">
+                <div class="modal__inner">
+                  <div class="modal__top">
+                    <div class="modal__description">
+                      <h3 class="modal__headline">
+                        Calliope
+                      </h3>
+                      <p class="modal__txt">
+                        Flared satin wedding dress with halter neck and slit.
+                      </p>
+                    </div>
+                    <span class="modal__price">
+                      <span class="curency">
+                        $
+                      </span>
+                      1,200.00
+                    </span>
+                  </div>
+                  <div class="modal__bottom">
+                    <ul class="modal__info">
+                      <li class="modal__info-item">
+                        Color:
+                        <span class="modal__data">
+                          White
+                        </span>
+                      </li>
+                      <li class="modal__info-item">
+                        Size:
+                        <span class="modal__data">
+                          M
+                        </span>
+                      </li>
+                      <li class="modal__info-item">
+                        QTY:
+                        <span class="modal__data">
+                          1
+                        </span>
+                      </li>
+                    </ul>
+                    <button class="modal__remove" type="button">
+                      Remove
+                    </button>
+                  </div>
+
+                </div>
+              </li>
+              <li class="modal__item">
+                <img class="modal__img" src="images/product/small/iona.jpg" alt="Iona" width="130" height="150">
+                <div class="modal__inner">
+                  <div class="modal__top">
+                    <div class="modal__description">
+                      <h3 class="modal__headline">
+                        Iona
+                      </h3>
+                      <p class="modal__txt">
+                        Nicola Bathie Perry Earrings
+                      </p>
+                    </div>
+                    <span class="modal__price">
+                      <span class="curency">
+                        $
+                      </span>
+                      25.00
+                    </span>
+                  </div>
+                  <div class="modal__bottom">
+                    <ul class="modal__info">
+                      <li class="modal__info-item">
+                        Color:
+                        <span class="modal__data">
+                          White
+                        </span>
+                      </li>
+                      <li class="modal__info-item">
+                        Size:
+                        <span class="modal__data">
+                          M
+                        </span>
+                      </li>
+                      <li class="modal__info-item">
+                        QTY:
+                        <span class="modal__data">
+                          1
+                        </span>
+                      </li>
+                    </ul>
+                    <button class="modal__remove" type="button">
+                      Remove
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="modal__sum">
+              <p class="modal__subtitle">
+                TOTAL:
+              </p>
+              <span class="modal__price modal__price--big">
+                <span class="curency">
+                  $
+                </span>
+                1,225.00
+              </span>
+            </div>
+            <button class="button modal__button" type="button" data-modal-close>
+              Proceed to checkout
+            </button>
+
+            <button class="modal__btn" type="button" data-modal-close>
+              <svg class="modal__icon" width="24" height="24">
+                <use href="images/symbol-defs.svg#icon-close">
+                </use>
+              </svg>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="header__bottom">
+      <nav class="header__menu">
+        <ul class="header__list list-reset">
+          <li class="header__item">
+            <a class="header__link" href="#">
+              Home
+            </a>
+          </li>
+          <li class="header__item">
+            <button class="header__link" type="button">
+              Dresses
+              <svg class="header__link-icon" width="16" height="16">
+                <use href="./images/symbol-defs.svg#icon-chevron"></use>
+              </svg>
+            </button>
+            <div class="dropdown-menu">
+              <div class="container">
+                <div class="dropdown-menu__inner" style="background-image: url('images/dropdown/drobdown-bg.jpg');">
+                  <div class="dropdown-menu__column1">
+                    <h2 class="dropdown-menu__title">
+                      View by silhouette
+                    </h2>
+                    <ul class="dropdown-menu__category">
+                      <li class="dropdown-menu__box">
+                        <a class="dropdown-menu__box-link" href="catalog.html">
+                          <img class="dropdown-menu__img" src="images/dropdown/ball.jpg" alt="Ball Gown style" width="130">
+                          Ball Gown
+                        </a>
+                      </li>
+                      <li class="dropdown-menu__box">
+                        <a class="dropdown-menu__box-link" href="catalog.html">
+                          <img class="dropdown-menu__img" src="images/dropdown/mermaid.jpg" alt="Mermaid style">
+                          Mermaid
+                        </a>
+                      </li>
+                      <li class="dropdown-menu__box">
+                        <a class="dropdown-menu__box-link" href="catalog.html">
+                          <img class="dropdown-menu__img" src="images/dropdown/line.jpg" alt="A-line style">
+                          A-line
+                        </a>
+                      </li>
+                      <li class="dropdown-menu__box">
+                        <a class="dropdown-menu__box-link" href="#">
+                          <img class="dropdown-menu__img" src="images/dropdown/sheath.jpg" alt="Sheath style">
+                          Sheath
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown-menu__column2">
+                    <div class="dropdown-menu__top">
+                      <ul class="dropdown-menu__top-column">
+                        <h3 class="dropdown-menu__title">
+                          View by styles
+                        </h3>
+                        <ul class="dropdown-menu__list">
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Civil Wedding
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Simple
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Elegant
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Boho
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Beach
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Romantic
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Embroidery
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Modern
+                            </a>
+                          </li>
+                        </ul>
+                      </ul>
+                      <ul class="dropdown-menu__top-column">
+                        <h3 class="dropdown-menu__title">
+                          View by trands
+                        </h3>
+                        <ul class="dropdown-menu__list">
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Long sleeves
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Open Back
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Champagne
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Effetto Tattooz
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Pink
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Lace
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Effetto Tattoo
+                            </a>
+                          </li>
+
+                        </ul>
+                      </ul>
+                    </div>
+                    <a class="dropdown-menu__link dropdown-menu__link--big" href="#">
+                      Shop All Dresses
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+            </div>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">
+              Wedding party
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">
+              Accessories
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">
+              Gallery
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">
+              Contact us
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <form class="header__form" action="#">
+        <label class="sr-only" for="search">Search</label>
+        <input class="header__input" type="text" name="search" id="search" placeholder="Search">
+        <button class="header__btn">
+          <svg class="usernav__btn-icon" width="28" height="20">
+            <use href="./images/symbol-defs.svg#icon-search"></use>
+          </svg>
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
 </header>

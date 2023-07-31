@@ -1,0 +1,132 @@
+.footer {
+  background-color: $accent;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 80px 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 300px;
+    width: 100%;
+
+    &--list {
+      max-width: 220px;
+      padding-top: 37px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+
+  &__top {
+    margin-bottom: 40px;
+  }
+
+  &__logo {
+    margin-bottom: 60px;
+  }
+
+  &__contacts-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    width: fit-content;
+    color: $light;
+    transition: outline 0.4s;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      bottom: -2px;
+      left: 0;
+      height: 1px;
+      background-color: $light;
+      transform: scaleX(0);
+
+      transition: transform 0.4s;
+    }
+
+
+    &:focus {
+      outline: solid 1px $light;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    &:hover {
+
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+
+    &:active {
+      background-color: $secondary;
+      color: $light;
+    }
+
+    &--big {
+      font-size: 28px;
+    }
+
+    &--color {
+      color: $secondary;
+
+      &:hover {
+        color: $light;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__contacts-city {
+    display: block;
+    margin-top: 4px;
+  }
+
+  &__txt {
+    color: $secondary;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: $light;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__payment {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 170px;
+  }
+
+  &__payment-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 18px;
+    }
+  }
+
+}

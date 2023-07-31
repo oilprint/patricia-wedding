@@ -1,0 +1,32 @@
+$primary: #4F4C4C;
+$accent: #82334E;
+$secondary: #C56B8A;
+$grey: #BBB9B9;
+$devider: #E9E3E2;
+$bg-accent: #FFF5F3;
+
+$light: #FFFFFF;
+
+
+
+%swift {
+  font-family: 'Swifteddemo-2OL4w';
+  font-weight: 400;
+}
+
+
+
+%drive {
+  font-family: 'Patricia Signature Italic';
+  font-weight: 400;
+}
+
+
+%checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
