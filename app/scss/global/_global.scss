@@ -64,7 +64,6 @@ main {
   line-height: 0.7;
 }
 
-
 .product-card {
   position: relative;
   width: 100%;
@@ -97,17 +96,6 @@ main {
     width: 44px;
     height: 44px;
     z-index: 2;
-
-    &.active {
-      .product-card__wishlist-icon {
-        fill: $light;
-      }
-    }
-  }
-
-  &__wishlist-icon {
-    fill: transparent;
-    stroke: $light;  
   }
 
   &__top {
@@ -142,18 +130,8 @@ main {
     transition: color 0.4s;
   }
 
-  &__rating {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-
-  &__rating-txt {
-    display: flex;
-  }
-
   &__stars {
-    margin-right: 10px;
+    margin-bottom: 10px;
   }
 
   &__price {
@@ -163,7 +141,7 @@ main {
     color: $accent;
   }
 
-  &__price-actual {
+  &__price-new {
     display: inline-block;
     margin-right: 20px;
   }
@@ -255,17 +233,306 @@ main {
       right: 30px;
 
       &.active {
-        .product-card__wishlist-icon {
+        .wishlist__icon {
           fill: $accent;
         }
       }
     }
 
-    .product-card__wishlist-icon {
+    .wishlist__icon {
       fill: transparent;
       stroke: $accent;
     }
 
   }
+}
 
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__txt {
+    display: flex;
+  }
+
+  &__stars {
+    margin-right: 10px;
+  }
+}
+
+.wishlist {
+
+  &.active {
+    .wishlist__icon {
+      fill: $light;
+    }
+  }
+
+  &__icon {
+    fill: transparent;
+    stroke: $light;
+  }
+}
+
+.pagination {
+
+  &__txt {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    padding: 20px 0;
+    border-top: 1px solid $devider;
+    border-bottom: 1px solid $devider;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: $primary;
+    border-radius: 10px;
+    transition: color 0.2s;
+
+    &:disabled {
+      color: $grey;
+      pointer-events: none;
+    }
+
+    .pagination__icon {
+      fill: currentColor;
+      margin-right: 4px;
+    }
+
+    &--prev {
+      .pagination__icon {
+        transform: rotate(90deg);
+        margin-right: 10px;
+      }
+    }
+
+    &--next {
+      .pagination__icon {
+        transform: rotate(-90deg);
+        margin-left: 10px;
+      }
+    }
+
+    &:focus {
+      outline: solid 1px $grey;
+      outline-offset: 4px;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      color: $accent;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+    width: 40px;
+    height: 40px;
+    background-position: 0 -40px;
+    color: $primary;
+    transition: background-position 0.5s, color 0.5s;
+
+    &--active {
+      background-image: linear-gradient($accent, $accent);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      color: $light;
+    }
+
+    &:focus {
+      outline: solid 1px $grey;
+    }
+
+    &:hover {
+      outline: solid 1px $accent;
+
+    }
+  }
+}
+
+.filter-color {
+
+  &__label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__input {
+    @extend %checkbox;
+
+    &:checked+.filter-color__fake-input {
+      width: 17px;
+      height: 17px;
+      background-color: $accent;
+      border: 2px solid $light;
+      outline: solid 2px $accent;
+    }
+  }
+
+  &__fake-input {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $light;
+    border: 1px solid $primary;
+  }
+}
+
+.filter-size {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__label {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  &__input {
+    @extend %checkbox;
+
+    &:checked+.filter-size__fake-size {
+      background-color: $accent;
+      border-color: $accent;
+      color: $light;
+    }
+
+    &:disabled+.filter-size__fake-size {
+      border-color: $grey;
+      color: $grey;
+    }
+  }
+
+
+  &__fake-size {
+    border: 1px solid $primary;
+    padding: 12px 20px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary;
+  }
+}
+
+.filter-style {
+
+  &__label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+
+    &:checked+.filter-style__fake-checkbox {
+      background-color: $accent;
+      border-color: $accent;
+      background-image: url('../images/icons/check-on.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 10px 8px;
+    }
+  }
+
+  &__fake-checkbox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $primary;
+  }
+}
+
+.breadcrumbs {
+  position: relative;
+  display: inline-flex;
+  padding: 30px 0;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding: 0 10px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url(../../images/icons/breadcrumbs.svg);
+      background-repeat: no-repeat;
+      background-size: 6px 18px;
+      background-position: center;
+      width: 6px;
+      height: 18px;
+      bottom: 1px;
+      right: -3px;
+    }
+
+    &:last-child {
+      color: $secondary;
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: inherit;
+  }
 }

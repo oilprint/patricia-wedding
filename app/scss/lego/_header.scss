@@ -198,12 +198,20 @@
       width: 24px;
       height: 24px;
       top: 0;
-      left: 32px;
+      right: 0;
       background-image: url('../../images/icons/chevron.svg');
       background-repeat: no-repeat;
       background-position: 0 0;
       background-size: cover;
       transition: colors 0.4s, background-colors 0.4s;
+    }
+
+    &.active {
+      color: $accent;
+
+      &:after {
+        transform: rotate(180deg);
+      }
     }
 
     &:focus {
@@ -241,12 +249,12 @@
 
   &__link {
     display: block;
-    padding: 4px;
+    padding: 2px 4px;
     font-size: 15px;
     text-align: left;
     text-transform: uppercase;
     color: $primary;
-    
+
 
     &:focus {
       outline: solid 1px $grey;

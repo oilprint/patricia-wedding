@@ -1,0 +1,172 @@
+.product-item {
+
+  &__inner {
+    display: flex;
+  }
+
+  &__slider {
+    margin-right: 30px;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__stars {
+    margin-bottom: 30px;
+  }
+
+  &__txt {
+    margin-bottom: 30px;
+  }
+
+  &__price {
+    margin-bottom: 40px;
+  }
+
+  &__price-new {
+    font-size: 30px;
+    color: $accent;
+    margin-right: 20px;
+  }
+
+  &__price-old {
+    font-size: 24px;
+    text-decoration: line-through;
+  }
+
+  &__color {
+    display: flex;
+  }
+
+  &__color-txt {
+    margin-right: 20px;
+  }
+
+  &__filter-color {
+    display: flex;
+    margin-bottom: 30px;
+
+    .filter-color__label:not(:last-child) {
+      margin: 0 30px 0 0;
+    }
+  }
+
+  &__filter-size {
+    margin-bottom: 40px;
+  }
+
+  &__note {
+    font-style: italic;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  &__wishlist {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+
+    .wishlist__icon {
+      fill: transparent;
+      stroke: $accent;
+    }
+
+    &.active {
+      .wishlist__icon {
+        fill: $accent;
+      }
+    }
+  }
+}
+
+.slider {
+  display: flex;
+
+  &__nav {
+    position: relative;
+    overflow: hidden;
+    width: 100px;
+    height: 700px;
+    flex-shrink: 0;
+    margin-right: 30px;
+
+    .swiper-slide {
+      width: 100px;
+      height: 160px;
+    }
+  }
+
+  &__main {
+    overflow: hidden;
+    height: 700px;
+    width: 440px;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+}
+
+.swiper-slide-thumb-active {
+  outline: 1px solid $accent;
+  outline-offset: -1px;
+}
+
+
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  content: '';
+  z-index: 10;
+  left: 0;
+  right: 0;
+   width: 100px;
+   height: 30px;
+   background-color: rgba($light, 0.7);
+
+   &:hover {
+    .swiper-button__icon {
+      fill: $accent;
+    }
+   }
+ 
+}
+
+
+.swiper-button__icon {
+  fill: $primary;
+}
+
+.swiper-button-prev {
+  top: 22px;
+
+  .swiper-button__icon {
+    transform: rotate(180deg);
+  }
+}
+
+
+.swiper-button-next {
+  top: 692px;
+}
