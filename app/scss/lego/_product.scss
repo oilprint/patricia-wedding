@@ -202,3 +202,19 @@
     }
   }
 }
+
+.viewed {
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__item {
+    width: calc((100% - 30px * 4) / 5);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
