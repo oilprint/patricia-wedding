@@ -85,13 +85,27 @@ console.log("test");
       }
     });
 
-    // const swiper = new Swiper('.swiper', {
-  
-    //   loop: true,
-    //   slidesPerView: 2,
+    //swiper review
 
-  
-    // });
+    const sliderReview = document.querySelector('.review__swiper');
+
+    let mySwiperReview = new Swiper(sliderReview, {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+        
+    });
+
+
 
 $(function () {
 
@@ -161,7 +175,7 @@ $(function () {
 
   //Rate Yo!
 
-  $('.stars__rating').rateYo({
+  $('.rating').rateYo({
     starWidth: "21px",
     normalFill: "#BBB9B9",
     ratedFill: "#82334E",

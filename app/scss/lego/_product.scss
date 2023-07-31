@@ -203,7 +203,90 @@
   }
 }
 
+.review {
+  background-color: $bg-accent;
+
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__btn-box {
+    display: flex;
+  }
+
+  &__btn-prev,
+  &__btn-next {
+    position: static;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid $accent;
+
+    &:hover {
+      background-color: $accent;
+
+      .review__btn-icon {
+        fill: $light;
+      }
+    }
+  }
+
+  &__btn-prev {
+    margin-right: 20px;
+    transform: rotate(180deg);
+  }
+
+  &__btn-icon {
+    transform: rotate(-90deg);
+    fill: $primary;
+    transition: fill 0.4s;
+  }
+
+  &__rating {
+    margin-bottom: 20px;
+  }
+
+  &__swiper-wrapper {
+    margin-bottom: 90px;
+  }
+
+  &__headline {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__txt {
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    font-style: italic;
+    font-size: 15px;
+  }
+
+}
+
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  width: 410px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.swiper-scrollbar-drag {
+  background-color: $accent;
+}
+
 .viewed {
+
+  &__title {
+    font-size: 51px;
+    margin-bottom: 30px;
+  }
 
   &__list {
     display: flex;
@@ -213,6 +296,7 @@
 
   &__item {
     width: calc((100% - 30px * 4) / 5);
+
     &:not(:last-child) {
       margin-right: 30px;
     }
