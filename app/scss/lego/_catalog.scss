@@ -55,7 +55,6 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
-
 }
 
 .filter {
@@ -193,269 +192,7 @@
   border-top-color: $accent;
 }
 
-.filter-color {
 
-  &__label {
-    position: relative;
-    display: block;
-    padding-left: 30px;
-    cursor: pointer;
-
-    &:not(:last-child) {
-      margin-bottom: 9px;
-    }
-  }
-
-  &__checkbox {
-    @extend %checkbox;
-
-
-    &:checked+.filter-color__fake-checkbox {
-      width: 17px;
-      height: 17px;
-      background-color: $accent;
-      border: 2px solid $light;
-      outline: solid 2px $accent;
-    }
-  }
-
-  &__fake-checkbox {
-    position: absolute;
-    left: 0;
-    top: 2px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background-color: $light;
-    border: 1px solid $primary;
-  }
-
-
-
-}
-
-.filter-size {
-
-  &__form {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &__label {
-    position: relative;
-    display: block;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-  }
-
-  &__checkbox {
-    @extend %checkbox;
-
-    &:checked+.filter-size__fake-checkbox {
-      background-color: $accent;
-      border-color: $accent;
-      color: $light;
-    }
-  }
-
-  &__fake-checkbox {
-    border: 1px solid $primary;
-    padding: 12px 20px;
-    width: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $primary;
-  }
-}
-
-.filter-style {
-
-  &__label {
-    position: relative;
-    display: block;
-    padding-left: 30px;
-    cursor: pointer;
-
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
-  }
-
-  &__checkbox {
-    @extend %checkbox;
-
-    &:checked+.filter-style__fake-checkbox {
-      background-color: $accent;
-      border-color: $accent;
-      background-image: url('../images/icons/check-on.svg');
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 10px 8px;
-    }
-  }
-
-  &__fake-checkbox {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: 1px solid $primary;
-  }
-}
-
-.breadcrumbs {
-  position: relative;
-  display: inline-flex;
-  padding: 30px 0;
-
-  &__list {
-    display: flex;
-  }
-
-  &__item {
-    padding: 0 10px;
-    position: relative;
-
-    &::after {
-      position: absolute;
-      content: "";
-      background-image: url(../../images/icons/breadcrumbs.svg);
-      background-repeat: no-repeat;
-      background-size: 6px 18px;
-      background-position: center;
-      width: 6px;
-      height: 18px;
-      bottom: 1px;
-      right: -3px;
-    }
-
-    &:last-child {
-      color: $secondary;
-      padding-right: 0;
-
-      &::after {
-        display: none;
-      }
-    }
-
-    &:first-child {
-      padding-left: 0;
-    }
-  }
-
-  &__link {
-    font-size: 14px;
-    text-transform: uppercase;
-    color: inherit;
-  }
-}
-
-.pagination {
-
-  &__txt {
-    text-align: center;
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 80px;
-    padding: 20px 0;
-    border-top: 1px solid $devider;
-    border-bottom: 1px solid $devider;
-  }
-
-  &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    color: $primary;
-    border-radius: 10px;
-    transition: color 0.2s;
-
-    &:disabled {
-      color: $grey;
-      pointer-events: none;
-    }
-
-    .pagination__icon {
-      fill: currentColor;
-      margin-right: 4px;
-    }
-
-    &--prev {
-      .pagination__icon {
-        transform: rotate(90deg);
-        margin-right: 10px;
-      }
-    }
-
-    &--next {
-      .pagination__icon {
-        transform: rotate(-90deg);
-        margin-left: 10px;
-      }
-    }
-
-    &:focus {
-      outline: solid 1px $grey;
-      outline-offset: 4px;
-    }
-
-    &:hover {
-      color: $accent;
-    }
-
-    &:active {
-      color: $accent;
-    }
-  }
-
-  &__list {
-    display: flex;
-    justify-content: space-between;
-
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 20px;
-  }
-
-  &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-
-    width: 40px;
-    height: 40px;
-    background-position: 0 -40px;
-    color: $primary;
-    transition: background-position 0.5s, color 0.5s;
-
-    &--active {
-      background-image: linear-gradient($accent, $accent);
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      color: $light;
-    }
-
-    &:focus {
-      outline: solid 1px $grey;
-    }
-
-    &:hover {
-      outline: solid 1px $accent;
-
-    }
-  }
-}
 
 .dropdown-sort {
   position: relative;
@@ -464,8 +201,10 @@
   margin-right: 44px;
 
   &__button {
+    position: relative;
     padding: 10px 8px 10px 16px;
     width: 100%;
+    height: 44px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -474,9 +213,23 @@
     transition: background-color 0.4s,
     outline 0.4s;
 
+    &:before {
+      position: absolute;
+      content: '';
+      z-index: 1;
+      right: 8px;
+      top: 9px;
+      background-image: url('../../images/icons/chevron.svg');
+      background-repeat: no-repeat;
+      background-size: 24px 24px;
+      background-position: center right;
+      width: 24px;
+      height: 24px;
+    }
+
     &.active {
       color: $accent;
-      .dropdown-sort__icon {
+      &:before {
         transform: rotate(180deg);
       }
     }
@@ -498,6 +251,7 @@
   &__icon {
     fill: currentColor;
     transition: fill 0.4s;
+    pointer-events: none;
   }
 
   &__list {
@@ -526,6 +280,7 @@
     padding: 10px 16px;
     border-bottom: 1px solid $devider;
     font-size: 15px;
+    
     cursor: pointer;
 
     &:first-child {

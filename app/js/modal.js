@@ -1,38 +1,5 @@
 
-	//dropdown-sort
 
-  const sortButton = document.querySelector('.dropdown-sort__button');
-  const sortList = document.querySelector('.dropdown-sort__list');
-  const sortItem = sortList.querySelectorAll('.dropdown-sort__item');
-
-  sortButton.addEventListener('click', function() {
-    sortList.classList.toggle('visible');
-    this.classList.toggle('active');
-
-  });
-
-  sortItem.forEach(function (listItem) {
-    listItem.addEventListener('click', function(e) {
-      e.stopPropagation();
-      sortButton.innerText = this.innerText;
-
-      sortItem.forEach(function (item) {
-        item.classList.remove('active');
-      });
-
-      this.classList.add('active');
-    });  
-  });
-
-  document.addEventListener('click', function (e) {
-    if (e.target !== document.querySelector('.dropdown-sort__button')) {
-      sortButton.classList.remove('active');
-      sortList.classList.remove('visible');
-    };
-  });
-
-  //END dropdown-sort
-  
   /*
   всплывающее меню
 		1. по клику на пункты верхнего меню открывать дропдаун
@@ -40,7 +7,7 @@
 		3. по клику в любое место сайта, кроме меню - закрывать дропдаун
 	*/
 
-	const menuBtns = document.querySelectorAll('.header__link');
+	const menuBtns = document.querySelectorAll('#dropmenu');
 	const drops = document.querySelectorAll('.dropdown-menu');
 
 	menuBtns.forEach(el => {
@@ -105,20 +72,30 @@
 	});
 
 //lang
-  const buttonLang = document.querySelector('.language__button');
-  const lang = document.querySelector('.language__list');
+  const langButton = document.querySelector('.language__button');
+  const langList = document.querySelector('.language__list');
+  const langItem = langList.querySelectorAll('.language__link');
 
-  buttonLang.addEventListener('click', (e) => {
-    lang.classList.toggle('language__list--show');
+  langButton.addEventListener('click', function() {
+    langList.classList.toggle('language__list--show');
+    this.classList.toggle('active');
   });
 
-  document.addEventListener('click', (e) => {
-		if (!e.target.closest('.language')) {
-			lang.classList.remove('language__list--show');
-      
-		}
-	});
+  langItem.forEach(function (listItem) {
+    listItem.addEventListener('click', function(e) {
+      langButton.innerText = this.innerText;
 
+      langButton.classList.remove('active');
+      this.classList.add('active');
+    });  
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target !== document.querySelector('.language__button')) {
+      langList.classList.remove('language__list--show');
+      // langItem.classList.remove('active');
+    };
+  });
 
 
 
