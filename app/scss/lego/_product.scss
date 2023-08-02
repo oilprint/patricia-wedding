@@ -1,4 +1,5 @@
 .product-item {
+  padding-top: 40px;
 
   &__inner {
     display: flex;
@@ -78,8 +79,8 @@
     content: '';
     top: 0;
     right: 0;
-    width: 24px;
-    height: 24px;
+    width: 44px;
+    height: 44px;
 
     .wishlist__icon {
       fill: transparent;
@@ -142,9 +143,12 @@
   right: 0;
   width: 100px;
   height: 30px;
-  background-color: rgba($light, 0.7);
+  background-color: rgba($accent, 0.7);
+  transition: background-color 0.4s;
 
   &:hover {
+    background-color: rgba($light, 0.7);
+
     .swiper-button__icon {
       fill: $accent;
     }
@@ -153,7 +157,9 @@
 }
 
 .swiper-button__icon {
-  fill: $primary;
+  fill: $light;
+  transition: fill 0.4s;
+
 }
 
 .swiper-button-prev {
@@ -179,7 +185,6 @@
 
   &__item {
     position: relative;
-    display: block;
     width: calc((100% - 2 * 30px) / 3);
     padding: 10px 0;
     font-size: 24px;
@@ -188,12 +193,13 @@
     &:before {
       position: absolute;
       content: '';
+      z-index: 5;
       bottom: 0;
       left: 0;
       width: 100%;
       height: 2px;
       background-color: $accent;
-      transform: scaleX(0);
+      transform: scaleX(0.1);
       transform-origin: left;
       transition: transform 0.4s;
     }
