@@ -43,7 +43,7 @@ function scripts() {
     'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
     'app/js/modal.js',  
-    'app/js/tab.js',  
+    'app/js/tab.js',
     'app/js/main.js'  
   ])
   .pipe(concat('main.min.js')) 
