@@ -91,7 +91,7 @@ console.log("test");
 
     let mySwiperReview = new Swiper(sliderReview, {
         slidesPerView: 3,
-        spaceBetween: 30,
+        spaceBetween: 50,
         loop: true,
 
         navigation: {

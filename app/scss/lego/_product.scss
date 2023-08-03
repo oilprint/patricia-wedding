@@ -1,4 +1,5 @@
 .product-item {
+  padding-top: 40px;
 
   &__inner {
     display: flex;
@@ -78,8 +79,8 @@
     content: '';
     top: 0;
     right: 0;
-    width: 24px;
-    height: 24px;
+    width: 44px;
+    height: 44px;
 
     .wishlist__icon {
       fill: transparent;
@@ -142,9 +143,12 @@
   right: 0;
   width: 100px;
   height: 30px;
-  background-color: rgba($light, 0.7);
+  background-color: rgba($accent, 0.7);
+  transition: background-color 0.4s;
 
   &:hover {
+    background-color: rgba($light, 0.7);
+
     .swiper-button__icon {
       fill: $accent;
     }
@@ -153,7 +157,9 @@
 }
 
 .swiper-button__icon {
-  fill: $primary;
+  fill: $light;
+  transition: fill 0.4s;
+
 }
 
 .swiper-button-prev {
@@ -179,7 +185,6 @@
 
   &__item {
     position: relative;
-    display: block;
     width: calc((100% - 2 * 30px) / 3);
     padding: 10px 0;
     font-size: 24px;
@@ -188,6 +193,7 @@
     &:before {
       position: absolute;
       content: '';
+      z-index: 5;
       bottom: 0;
       left: 0;
       width: 100%;
@@ -239,7 +245,71 @@
 
   &__button {
     margin-left: auto;
+  } 
+
+  &__info-inner {
+    display: flex;
+    justify-content: space-between;
   }
+
+  &__txt-content {
+    max-width: 770px;
+    width: 100%;
+    margin-right: 100px; 
+  }
+
+  &__tabs-item {
+    position: relative;
+    padding-left: 20px;
+    max-width: 410px;
+    width: 100%;
+    
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $accent;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__size-link {
+    display: block;
+    width: fit-content;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+
+  &__size {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 10px;
+  }
+
+  &__size-item {
+    width: calc((100% - 30px) / 2);
+    
+  }
+ 
+  &__size-txt {
+    font-weight: 500;
+    color: $accent;
+  }
+
+
+
+
 
 
 
@@ -336,6 +406,7 @@
   }
 
   &__txt {
+    font-size: 16px;
     margin-bottom: 10px;
   }
 

@@ -4,6 +4,7 @@
   top: 0;
   right: 0;
   padding: 50px 40px;
+  width: 700px;
   background-color: $light;
   border-radius: 6px;
   box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
@@ -20,7 +21,7 @@
   }
 
   &__title {
-    font-size: 32px;
+    font-size: 24px;
     margin-bottom: 20px;
   }
 
@@ -29,10 +30,6 @@
   }
 
   &__item {
-    display: flex;
-    align-items: stretch;
-    width: 500px;
-    padding: 20px 0;
     border-top: 1px solid $grey;
 
     &:last-child {
@@ -44,102 +41,54 @@
     }
   }
 
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-  }
-
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
-  }
-
-  &__img {
-    margin-right: 20px;
-  }
-
-  &__description {
-    max-width: 250px;
-    width: 100%;
-  }
-
-  &__headline {
-    font-size: 20px;
-    text-transform: uppercase;
-    margin-bottom: 4px;
-  }
-
-  &__price {
-    font-size: 20px;
-
-    &--big {
-      font-weight: 700;
-      font-size: 17px;
-    }
-  }
-
-  &__info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-
-  &__info-item {
-    font-size: 15px;
-
-    &:not(:last-child) {
-      margin-right: 38px;
-    }
-  }
-
-  &__remove {
-    display: block;
-    width: fit-content;
-    color: $grey;
-    border-bottom: 1px solid $grey;
-    transition: outline 0.4s,
-      color 0.4s,
-      border-color 0.4s;
-
-    &:focus {
-      outline: solid 1px $grey;
-    }
-
-    &:hover {
-      color: $accent;
-      border-color: $accent;
-    }
-
-    &:active {
-      color: $primary;
-      border-color: $primary;
-    }
-  }
-
   &__sum {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
   }
 
+  &__box-txt {
+    margin-bottom: 20px;
+  }
+
+  &__txt {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
   &__subtitle {
     font-weight: 700;
     text-transform: uppercase;
+
+    &--color {
+      color: $secondary;
+      margin-bottom: 10px;
+    }
   }
 
   &__button {
-    width: 100%;
+    width: fit-content;
+    margin: 0 auto 10px;
+  }
+
+  &__link {
+    display: block;
+    margin: 0 auto;
+
   }
 
   &__btn {
     position: absolute;
-    top: 30px;
+    top: 10px;
     right: 30px;
-    width: 24px;
-    height: 24px;
+    width: 44px;
+    height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,7 +103,8 @@
 
     &:hover {
       border-color: $accent;
-      .modal__icon {
+
+      .modal__btn-icon {
         fill: $accent;
       }
     }
@@ -163,14 +113,54 @@
       border: 0px solid rgba($primary, 0.1);
       box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.12);
 
-      .modal__icon {
+      .modal__btn-icon {
         fill: $accent;
       }
     }
   }
 
-  &__icon {
-    fill: $primary;
+  &__btn-icon {
+    fill: $grey;
     transition: fill 0.3s;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: rgba($black, 0.3);
+  backdrop-filter: blur(1px);
+  transition: opacity 0.5s;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    .modal-sold {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+}
+
+.modal-sold {
+  position: relative;
+  max-width: 450px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  box-shadow: none;
+  transition: transform 0.5s, opacity 0.5s;
+
+  &.modal__txt {
+    margin-bottom: 20px;
   }
 }
