@@ -1,4 +1,10 @@
 .shopping-bag {
+  padding:0  0 200px;
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 51px;
+  }
 
   &__inner {
     display: flex;
@@ -7,11 +13,12 @@
 
   &__list {
     flex-grow: 1;
-    margin-right: 30px;
+    margin-right: 50px;
   }
 
   &__item {
-    padding:  10px 40px 10px 0;
+    position: relative;
+    padding-right: 70px;
     border-top: 1px solid $grey;
 
     &:last-child {
@@ -21,5 +28,76 @@
 
   &__checkout {
     width: 370px;
+  }
+
+  &__btn-close {
+    position: absolute;
+    content: '';
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 4px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: border 0.4s;
+
+     &:focus {
+      outline: solid 1px $grey;
+     }
+
+    &:hover {
+      .shopping-bag__icon {
+        fill: $accent;
+      }
+    }
+
+     &:focus {
+       border: 1px solid $primary;
+       .shopping-bag__icon {
+         fill: $primary;
+       }
+     }
+  }
+
+  &__icon {
+    fill: $grey;
+    transition: fill 0.4s;
+  }
+
+  &__checkout-list {
+    margin-bottom: 20px;
+  }
+
+  &__checkout-item {
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__checkout-txt {
+    margin-right: 5px;
+  }
+
+  &__sum {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+     margin-bottom: 40px;
+  }
+
+  &__checkout-price {
+    text-transform: uppercase;
+  }
+  
+
+  &__button {
+    width: 100%;
   }
 }

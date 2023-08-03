@@ -678,7 +678,21 @@ main {
     font-size: 14px;
     text-transform: uppercase;
     color: inherit;
+
+    &:focus {
+      outline: solid 1px $grey;
+    }
+
+    &:hover {
+      color: $secondary;
+      ;
+    }
+
+    &:active {
+      color: $primary
+    }
   }
+
 }
 
 .shopping-card {
@@ -695,7 +709,7 @@ main {
 
   &__content {
     flex-grow: 1;
-    margin-right: 20px; 
+    margin-right: 20px;
   }
 
   &__headline {
@@ -710,17 +724,17 @@ main {
     font-size: 15px;
     margin-bottom: 15px;
   }
-  
+
   &__info {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
   }
-  
+
   &__info-item {
     font-size: 15px;
     font-weight: 500;
-    
+
     &:not(:last-child) {
       margin-right: 40px;
     }
@@ -729,7 +743,7 @@ main {
   &__value {
     font-weight: 400;
   }
-  
+
   &__links {
     display: flex;
     justify-content: space-between;
@@ -771,6 +785,8 @@ main {
 
     &:focus {
       outline: solid 1px $grey;
+      outline-offset: 1px;
+      border-radius: 2px;
     }
 
     &:hover {
@@ -786,7 +802,7 @@ main {
 
   &--big {
     .shopping-card__headline {
-      font-size: 30px;
+      font-size: 24px;
     }
 
     .shopping-card__price-current {
