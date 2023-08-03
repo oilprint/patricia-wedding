@@ -47,6 +47,16 @@
     margin-bottom: 30px;
   }
 
+  &__box-txt {
+    margin-bottom: 20px;
+  }
+
+  &__txt {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
   &__price {
     font-size: 20px;
     font-weight: 500;
@@ -55,11 +65,16 @@
   &__subtitle {
     font-weight: 700;
     text-transform: uppercase;
+
+    &--color {
+      color: $secondary;
+      margin-bottom: 10px;
+    }
   }
 
   &__button {
     width: fit-content;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
   }
 
   &__link {
@@ -70,10 +85,10 @@
 
   &__btn {
     position: absolute;
-    top: 30px;
+    top: 10px;
     right: 30px;
-    width: 24px;
-    height: 24px;
+    width: 44px;
+    height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +104,7 @@
     &:hover {
       border-color: $accent;
 
-      .modal__icon {
+      .modal__btn-icon {
         fill: $accent;
       }
     }
@@ -98,14 +113,54 @@
       border: 0px solid rgba($primary, 0.1);
       box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.12);
 
-      .modal__icon {
+      .modal__btn-icon {
         fill: $accent;
       }
     }
   }
 
-  &__icon {
-    fill: $primary;
+  &__btn-icon {
+    fill: $grey;
     transition: fill 0.3s;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: rgba($black, 0.3);
+  backdrop-filter: blur(1px);
+  transition: opacity 0.5s;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    .modal-sold {
+      transform: scale(0);
+      opacity: 0;
+    }
+  }
+}
+
+.modal-sold {
+  position: relative;
+  max-width: 450px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  box-shadow: none;
+  transition: transform 0.5s, opacity 0.5s;
+
+  &.modal__txt {
+    margin-bottom: 20px;
   }
 }

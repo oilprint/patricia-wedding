@@ -223,9 +223,46 @@
               This item is in stock & ready to ship!
             </p>
 
-            <button class="button" type="button">
+            <button class="button" type="button" data-sold-open>
               Add to card
             </button>
+
+            <div class="backdrop hidden" data-sold>
+              <div class="modal modal-sold">
+                <h2 class="modal__subtitle  modal__subtitle--color">
+                  Product Successfully Added To Your Shopping Cart
+                </h2>
+                <div class="modal__box-txt">
+                  <p class="modal__txt">
+                    There are 2 items in your cart
+                  </p>
+                  <p class="modal__txt">
+                    Total Price:
+                    <span class="modal__price-current">
+                      <span class="currency">
+                        $
+                      </span>
+                      1,200.00
+                    </span>
+                  </p>
+                </div>
+                <a class="button modal__button" href="shopping-bag.html" data-sold-close>
+                  Checkout
+                </a>
+                <button class="modal__link link" data-sold-close>
+                  Keep shopping
+                </button>
+
+                <button class="modal__btn" type="button" data-sold-close>
+                  <svg class="modal__btn-icon" width="24" height="24">
+                    <use href="images/symbol-defs.svg#icon-close"></use>
+                  </svg>
+                  <span class="sr-only">
+                    Close this window
+                  </span>
+                </button>
+              </div>
+            </div>
 
             <button class="wishlist product-item__wishlist" type="button">
               <span class="sr-only">
@@ -235,7 +272,6 @@
                 <use href="images/symbol-defs.svg#icon-wish"></use>
               </svg>
             </button>
-
 
           </div>
         </div>
@@ -569,9 +605,7 @@
                   <p class="review__txt">
                     This dress was a great find when I was rushing to find a wedding dress, so happy with how
                     comfortable
-                    it is to wear and the beautiful simplicity of it. Thank you to the wonderful staff at review
-                    Parramatta
-                    for their advice and help.
+                    it is to wear and the beautiful simplicity of it. 
                   </p>
                   <cite class="review__name">
                     Teestir
@@ -584,14 +618,12 @@
                 <div class="review__rating rating" data-rateyo-rating="5"></div>
                 <blockquote class="review__blockquote">
                   <h3 class="review__headline">
-                   I highly recommend this shop!
+                    I highly recommend this shop!
                   </h3>
                   <p class="review__txt">
                     I had an amazing experience shopping for my wedding dress at this store! The staff was incredibly
                     helpful and patient throughout the process. They listened to my preferences and brought out dresses
-                    that matched my style perfectly. The selection of wedding dresses was diverse and beautiful. I found
-                    my dream dress, and I couldn't be happier with my choice. If you're looking for a stress-free and
-                    enjoyable wedding dress shopping experience, I highly recommend this shop!
+                    that matched my style perfectly. 
                   </p>
                   <cite class="review__name">
                     Teestir
@@ -609,9 +641,7 @@
                   <p class="review__txt">
                     This wedding dress shop has a wonderful collection of gowns, and the quality of their dresses is
                     impressive. The consultants were friendly and knowledgeable, offering valuable advice to help me
-                    narrow down my options. The reason I'm giving 4 stars instead of 5 is that the prices were a bit on
-                    the higher side. However, the service and the stunning dresses made it worth the investment.
-                    Overall, I had a great time choosing my wedding dress here.
+                    narrow down my options. 
                   </p>
                   <cite class="review__name">
                     Teestir
@@ -630,9 +660,7 @@
                   <p class="review__txt">
                     I visited this bridal store hoping to find the perfect wedding dress, but I left feeling a bit
                     disappointed. While the staff was courteous, I felt rushed during my appointment, and I didn't get
-                    enough time to try on different styles. Additionally, the selection of dresses was limited, and I
-                    struggled to find one that matched my vision. It might work for someone with a more traditional
-                    taste, but it wasn't the right fit for me and my wedding theme.
+                    enough time to try on different styles. 
                   </p>
                   <cite class="review__name">
                     Teestir
@@ -650,9 +678,7 @@
                   <p class="review__txt">
                     I can't thank this bridal shop enough for making my wedding dress shopping experience so memorable!
                     From the moment I stepped in, I was greeted warmly, and the team went above and beyond to understand
-                    my preferences. They had a fantastic variety of dresses, and I found the one that made me feel like
-                    a princess. The alterations were also spot-on, and I received countless compliments on my big day. I
-                    highly recommend this store for anyone looking for their dream wedding dress!
+                    my preferences. 
                   </p>
                   <cite class="review__name">
                     Teestir
@@ -669,9 +695,7 @@
                     quality of the dresses was outstanding
                   </h3>
                   <p class="review__txt">
-                    I had an exceptional time shopping for my wedding dress at this store. The staff was attentive and
-                    made me feel comfortable throughout the entire process. I loved the fact that they had a wide range
-                    of sizes and styles, making it easy for me to find something that flattered my body shape. The
+                    I had an exceptional time shopping for my wedding dress at this store. The
                     quality of the dresses was outstanding, and I felt like I was getting a luxurious experience without
                     breaking the bank. Thank you for helping me find my dream wedding dress!
                   </p>

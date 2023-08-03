@@ -71,6 +71,40 @@
 		}
 	});
 
+  //modal sold
+
+   const btnSoldOpen = document.querySelector('[data-sold-open]');
+      const modalSold = document.querySelector('[data-sold]');
+      const btnSoldClose = document.querySelectorAll('[data-sold-close]');
+      const bodyLock = document.querySelector('body'); 
+
+      
+     
+      btnSoldOpen.addEventListener('click', function () {
+        modalSold.classList.remove('hidden');
+         bodyLock.classList.add('lock');
+      });
+
+      btnSoldClose.forEach(function (item) {
+        item.addEventListener('click', function () {
+          modalSold.classList.add('hidden');
+          bodyLock.classList.remove('lock');
+        });
+      });
+
+      modalSold.addEventListener('click', function ( ) {
+        modalSold.classList.add('hidden');
+        bodyLock.classList.remove('lock');
+      });
+
+      modalSold.querySelector('.modal').addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+
+
+
+
+
 //lang
   const langButton = document.querySelector('.language__button');
   const langList = document.querySelector('.language__list');
