@@ -1,0 +1,25 @@
+.shopping-bag {
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__list {
+    flex-grow: 1;
+    margin-right: 30px;
+  }
+
+  &__item {
+    padding:  10px 40px 10px 0;
+    border-top: 1px solid $grey;
+
+    &:last-child {
+      border-bottom: 1px solid $grey;
+    }
+  }
+
+  &__checkout {
+    width: 370px;
+  }
+}

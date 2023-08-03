@@ -388,6 +388,7 @@ main {
   &:hover {
     background-color: rgba($light, 0.7);
     box-shadow: 0 0 0 1px $accent;
+
     .wishlist__icon {
       fill: $accent;
     }
@@ -401,8 +402,9 @@ main {
     .wishlist__icon {
       fill: $light;
     }
+
     &:hover {
-  
+
       .wishlist__icon {
         fill: $accent;
       }
@@ -676,5 +678,119 @@ main {
     font-size: 14px;
     text-transform: uppercase;
     color: inherit;
+  }
+}
+
+.shopping-card {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 20px 0;
+
+  &__img {
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+
+  &__content {
+    flex-grow: 1;
+    margin-right: 20px; 
+  }
+
+  &__headline {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $accent;
+  }
+
+  &__txt {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  &__info-item {
+    font-size: 15px;
+    font-weight: 500;
+    
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__value {
+    font-weight: 400;
+  }
+  
+  &__links {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price {
+    flex-shrink: 0;
+    margin-left: auto;
+    width: 120px;
+    font-size: 20px;
+    text-align: right;
+  }
+
+  &__price-current {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__price-old {
+    display: block;
+    font-size: 17px;
+    text-decoration: line-through;
+
+  }
+
+  &__btn {
+    display: block;
+    width: fit-content;
+    color: $grey;
+    border-bottom: 1px solid $light;
+
+    transition: outline 0.4s,
+      color 0.4s,
+      border-color 0.4s;
+
+    &--border {
+      border-bottom: 1px solid $grey;
+    }
+
+    &:focus {
+      outline: solid 1px $grey;
+    }
+
+    &:hover {
+      color: $accent;
+      border-color: $accent;
+    }
+
+    &:active {
+      color: $primary;
+      border-color: $primary;
+    }
+  }
+
+  &--big {
+    .shopping-card__headline {
+      font-size: 30px;
+    }
+
+    .shopping-card__price-current {
+      font-size: 24px;
+    }
   }
 }
