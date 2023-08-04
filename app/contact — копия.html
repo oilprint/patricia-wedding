@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patricia Wedding | Contact</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/contact.min.css">
+</head>
+
+<body>
+  <header class="header">
+  <div class="container">
+    <div class="header__top">
+      <div class="language">
+        <button class="language__button" type="button" data-value="en">
+          En
+        </button>
+
+        <ul class="language__list">
+          <li class="language__item">
+            <a class="language__link" href="#">
+              Uk
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="images/logo.svg" alt="Patriia Wedding Logo" width="320" height="80">
+      </a>
+      <ul class="usernav">
+        <li class="usernav__item">
+          <a class="usernav__link" href="#">
+            <span class="sr-only">Your account page</span>
+            <svg class="usernav__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-account"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="usernav__item">
+          <a class="usernav__link" href="#">
+            <span class="sr-only">Wishlist</span>
+            <svg class="usernav__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-wishlist">
+              </use>
+            </svg>
+            <span class="usernav__number">
+              10
+            </span>
+          </a>
+        </li>
+        <li class="usernav__item">
+          <button class="usernav__link" type="button" data-modal-button="modal-1">
+            <span class="sr-only">shopping bag</span>
+            <svg class="usernav__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-bag"></use>
+            </svg>
+            <span class="usernav__number">
+              2
+            </span>
+          </button>
+          <div class="modal" id="modal-1" data-modal>
+
+            <h2 class="modal__title">
+              Shopping bag (
+              <span class="modal__quantity">
+                2
+              </span>
+              )
+            </h2>
+            <ul class="modal__list">
+              <li class="modal__item">
+                <article class="shopping-card">
+                  <img class="shopping-card__img" src="images/product/small/calliope.jpg" alt="Wedding dress Calliope"
+                    width="100" height="150">
+                  <div class="shopping-card__content">
+                    <h3 class="shopping-card__headline">
+                      Calliope
+                    </h3>
+                    <p class="shopping-card__txt">
+                      Flared satin wedding dress with halter neck and slit.
+                    </p>
+                    <ul class="shopping-card__info">
+                      <li class="shopping-card__info-item">
+                        Color:
+                        <span class="shopping-card__value">
+                          White
+                        </span>
+                      </li>
+                      <li class="shopping-card__info-item">
+                        Size:
+                        <span class="shopping-card__value">
+                          M
+                        </span>
+                      </li>
+                    </ul>
+                    <div class="shopping-card__links">
+                      <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
+                        Edit
+                      </a>
+                      <button class="shopping-card__btn" type="button">
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                  <div class="shopping-card__price">
+                    <span class="shopping-card__price-current">
+                      <span class="currency">
+                        $
+                      </span>
+                      900.00
+                    </span>
+                    <span class="shopping-card__price-old">
+                      <span class="currency">
+                        $
+                      </span>
+                      900.00
+                    </span>
+                </article>
+              </li>
+
+            </ul>
+            <div class="modal__sum">
+              <p class="modal__subtitle">
+                TOTAL:
+              </p>
+              <span class="modal__price">
+                <span class="curency">
+                  $
+                </span>
+                1,225.00
+              </span>
+            </div>
+            <a class="button modal__button" href="shopping-bag.html" data-modal-close>
+              Proceed to checkout
+            </a>
+            <button class="modal__link link" data-modal-close>
+              Keep shopping
+            </button>
+
+            <button class="modal__btn" type="button" data-modal-close>
+              <svg class="modal__icon" width="24" height="24">
+                <use href="images/symbol-defs.svg#icon-close">
+                </use>
+              </svg>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="header__bottom">
+      <nav class="header__menu">
+        <ul class="header__list list-reset">
+          <li class="header__item">
+            <a class="header__link" href="index.html">
+              Home
+            </a>
+          </li>
+          <li class="header__item">
+            <button class="header__link" id="dropmenu" type="button">
+              Dresses
+              <svg class="header__link-icon" width="16" height="16">
+                <use href="./images/symbol-defs.svg#icon-chevron"></use>
+              </svg>
+            </button>
+            <div class="dropdown-menu">
+              <div class="container">
+                <div class="dropdown-menu__inner" style="background-image: url('images/dropdown/drobdown-bg.jpg');">
+                  <div class="dropdown-menu__column1">
+                    <h2 class="dropdown-menu__title">
+                      View by silhouette
+                    </h2>
+                    <ul class="dropdown-menu__category">
+                      <li class="dropdown-menu__box">
+                        <a class="dropdown-menu__box-link" href="catalog.html">
+                          <img class="dropdown-menu__img" src="images/dropdown/ball.jpg" alt="Ball Gown style"
+                            width="130">
+                          Ball Gown
+                        </a>
+                      </li>
+                      <li class="dropdown-menu__box">
+                        <a class="dropdown-menu__box-link" href="catalog.html">
+                          <img class="dropdown-menu__img" src="images/dropdown/mermaid.jpg" alt="Mermaid style">
+                          Mermaid
+                        </a>
+                      </li>
+                      <li class="dropdown-menu__box">
+                        <a class="dropdown-menu__box-link" href="catalog.html">
+                          <img class="dropdown-menu__img" src="images/dropdown/line.jpg" alt="A-line style">
+                          A-line
+                        </a>
+                      </li>
+                      <li class="dropdown-menu__box">
+                        <a class="dropdown-menu__box-link" href="#">
+                          <img class="dropdown-menu__img" src="images/dropdown/sheath.jpg" alt="Sheath style">
+                          Sheath
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="dropdown-menu__column2">
+                    <div class="dropdown-menu__top">
+                      <ul class="dropdown-menu__top-column">
+                        <h3 class="dropdown-menu__title">
+                          View by styles
+                        </h3>
+                        <ul class="dropdown-menu__list">
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Civil Wedding
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Simple
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Elegant
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Boho
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Beach
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Romantic
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Embroidery
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Modern
+                            </a>
+                          </li>
+                        </ul>
+                      </ul>
+                      <ul class="dropdown-menu__top-column">
+                        <h3 class="dropdown-menu__title">
+                          View by trands
+                        </h3>
+                        <ul class="dropdown-menu__list">
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Long sleeves
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Open Back
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Champagne
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Effetto Tattooz
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Pink
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Lace
+                            </a>
+                          </li>
+                          <li class="dropdown-menu__item">
+                            <a class="dropdown-menu__link" href="#">
+                              Effetto Tattoo
+                            </a>
+                          </li>
+
+                        </ul>
+                      </ul>
+                    </div>
+                    <a class="dropdown-menu__link dropdown-menu__link--big" href="#">
+                      Shop All Dresses
+                    </a>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+            </div>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">
+              Wedding party
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">
+              Accessories
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="#">
+              Gallery
+            </a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="contact.html">
+              Contact us
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <form class="header__form" action="#">
+        <label class="sr-only" for="search">Search</label>
+        <input class="header__input" type="text" name="search" id="search" placeholder="Search">
+        <button class="header__btn">
+          <svg class="usernav__btn-icon" width="28" height="20">
+            <use href="./images/symbol-defs.svg#icon-search"></use>
+          </svg>
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+</header>
+
+  <main>
+    <section class="contact">
+      <div class="container">
+        <h1 class="title contact__title">
+          Contact
+        </h1>
+        <div class="contact__inner">
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d755.7604007354279!2d-73.99163168378331!3d40.73911007608543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3b24b424f%3A0x618680d3f8c2f773!2zMTIzIDV0aCBBdmUsIE5ldyBZb3JrLCBOWSAxMDAwMywg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1suk!2sua!4v1690982498008!5m2!1suk!2sua"
+              width="700" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="contact__content">
+            <ul class="contact__list">
+              <li class="contact__item">
+                <a class="contact__link" href="tel: +19179586921">
+                  +1-917-958-69-21
+                </a>
+              </li>
+              <li class="contact__item">
+                <a class="contact__link" href="googleapis: +19179586921">
+                  123 5th Ave, 3th floor,
+                  New York, NY 10003, USA
+                </a>
+              </li>
+              <li class="contact__item">
+                <a class="contact__link" href="mailto: info@patriciaweddig.com">
+                  info@patriciaweddig.com
+                </a>
+              </li>
+            </ul>
+
+            <h3 class=" title contact__headline">
+              Get in touch
+            </h3>
+            <form class="contact__form" action="#">
+              <label class="form__label">
+                <span class="sr-only">
+                  Your email address
+                </span>
+                <input class="form__input" id="email" type="email" name="email" placeholder="Your email address">
+              </label>
+              <label class="form__label">
+                <span class="sr-only">
+                  Your massage
+                </span>
+                <textarea class="form__input form__input--textarea" id="text" name="text"
+                  placeholder="Your massage"></textarea>
+              </label>
+              <button class="button form__button" type="submit">
+                Send message
+              </button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__content">
+        <div class="footer__top">
+          <a class="logo" href="#">
+            <img class="logo footer__logo"  src="images/logo-white.svg" alt="Logo Patricia Wedding" width="300" height="75">
+          </a>
+          <address class="footer__address">
+            <ul class="footer__contacts">
+              <li class="footer__contacts-item">
+                <a class="footer__link footer__link--big" href="tel:+19179586921"
+                  class="footer__link">
+                  +19179586921
+                </a>
+              </li>
+              <li class="footer__contacts-item">
+                <a href="#" class="footer__link">
+                  123 5th Ave, 3th floor,
+                  <span class="footer__contacts-city">
+                    New York, NY 10003, USA
+                  </span>
+                </a>
+              </li>
+              <li class="footer__contacts-item">
+                <a href="mailto:info@patriciaweddig.com" class="footer__link">
+                  info@patriciaweddig.com
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <p class="footer__txt">
+          2021@PatriciaWedding
+        </p>
+      </div>
+
+      <div class="footer__content footer__content--list">
+        <ul class="footer__top">
+          <li class="footer__info">
+            <h2 class="footer__title">
+              Online orders
+            </h2>
+            <ul class="footer__list">
+               <li class="footer__item">
+                 <a class="footer__link" href="#">
+                   Order Status
+                 </a>
+               </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Shipping Information
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Secure payment
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Returns and Exchanges
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  International Orders
+                </a>
+              </li>
+            </ul>
+        </ul>
+        <a class="footer__link footer__link--color" href="#">
+          Privacy policy
+        </a>
+      </div>
+
+      <div class="footer__content footer__content--list">
+        <ul class="footer__top">
+          <li class="footer__info">
+            <h2 class="footer__title">
+              Help center
+            </h2>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  FAQ
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Site map
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Virtual Appointment
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Share your wedding pictures
+                </a>
+              </li>
+            </ul>
+        </ul>
+        <a class="footer__link footer__link--color" href="#">
+          Website Terms of Use
+        </a>
+      </div>
+
+      <div class="footer__content footer__content--list">
+        <ul class="footer__top">
+          <li class="footer__info">
+            <h2 class="footer__title">
+              Follow us
+            </h2>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Instagram
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Facebook
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Pinterest
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Twitter
+                </a>
+              </li>
+            </ul>
+        </ul>
+
+        <ul class="footer__payment">
+          <li class="footer__payment-item">
+            <svg class="footer__icon" width="44" height="44">
+              <use href="./images/symbol-defs.svg#icon-mastercard"></use>
+            </svg>
+          </li>
+          <li class="footer__payment-item">
+            <svg class="footer__icon" width="44" height="44">
+              <use href="./images/symbol-defs.svg#icon-visa"></use>
+            </svg>
+          </li>
+          <li class="footer__payment-item">
+            <svg class="footer__icon" width="44" height="44">
+              <use href="./images/symbol-defs.svg#icon-paypal"></use>
+            </svg>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

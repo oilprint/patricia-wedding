@@ -73,7 +73,10 @@
 
   //modal sold
 
-   const btnSoldOpen = document.querySelector('[data-sold-open]');
+   $(function () {
+    if (window.location.pathname === '/product-one.html') {
+
+      const btnSoldOpen = document.querySelector('[data-sold-open]');
       const modalSold = document.querySelector('[data-sold]');
       const btnSoldClose = document.querySelectorAll('[data-sold-close]');
       const bodyLock = document.querySelector('body'); 
@@ -101,8 +104,9 @@
         e.stopPropagation();
       });
 
-
-
+    }
+  });
+  
 
 
 //lang

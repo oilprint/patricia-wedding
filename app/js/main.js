@@ -1,5 +1,6 @@
 console.log("test");
- // pagination
+ 
+// pagination
 
   const prevNext = document.querySelectorAll('.pagination__btn');
   const  numbers = document.querySelectorAll('.pagination__link');
@@ -35,8 +36,7 @@ console.log("test");
     button.addEventListener('click', (e) => {
       currentStep += e.target.id === 'next' ? 1 : -1;
       numbers.forEach((number, numIndex) => {
-        console.log(numIndex, currentStep);
-
+       
         number.classList.toggle('pagination__link--active', numIndex === currentStep);
         updateBtn();
 
@@ -193,7 +193,6 @@ $(function () {
       const sortButton = document.querySelector('.dropdown-sort__button');
       const sortList = document.querySelector('.dropdown-sort__list');
       const sortItem = document.querySelectorAll('.dropdown-sort__item');
-      console.log(sortItem);
 
       sortButton.addEventListener('click', function() {
         sortList.classList.toggle('visible');
@@ -254,12 +253,7 @@ $(function () {
 
         catalogList.classList.add('catalog__list--line');
       });
-
-
-
       }
     });
 
-});
-
-  
+  });
