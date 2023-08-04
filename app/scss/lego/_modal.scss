@@ -102,16 +102,15 @@
     }
 
     &:hover {
-      border-color: $accent;
+      box-shadow: 1px 1px 1px rgba($grey, 0.5);
 
-      .modal__btn-icon {
+      .modal__icon {
         fill: $accent;
       }
     }
 
     &:active {
-      border: 0px solid rgba($primary, 0.1);
-      box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.12);
+      box-shadow: inset 3px 3px 3px rgba($black, 0.12);
 
       .modal__btn-icon {
         fill: $accent;
@@ -119,7 +118,7 @@
     }
   }
 
-  &__btn-icon {
+  &__icon {
     fill: $grey;
     transition: fill 0.3s;
   }

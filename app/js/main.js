@@ -257,3 +257,34 @@ $(function () {
     });
 
   });
+
+
+  //lang
+  const langButton = document.querySelector('.language__button');
+  const langList = document.querySelector('.language__list');
+  const langItem = langList.querySelectorAll('.language__link');
+
+  langButton.addEventListener('click', function() {
+    langList.classList.toggle('language__list--show');
+    this.classList.toggle('active');
+  });
+
+  langItem.forEach(function (listItem) {
+    listItem.addEventListener('click', function(e) {
+      langButton.innerText = this.innerText;
+
+      langItem.forEach(function (item) {
+        item.classList.remove('active');
+      });
+      
+      langButton.classList.remove('active');
+      this.classList.add('active');
+    });  
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target !== document.querySelector('.language__button')) {
+      langList.classList.remove('language__list--show');
+      // langItem.classList.remove('active');
+    };
+  });

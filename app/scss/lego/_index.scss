@@ -4,28 +4,31 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
   }
 
-  &__container {
+  &__inner {
+    height: 80vh;
     display: flex;
     align-items: center;
-    height: 70vh;
+
   }
 
   &__content {
     max-width: 750px;
     width: 100%;
+    padding-bottom: 30px;
   }
 
   &__title {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 
   &__text {
     max-width: 500px;
     font-size: 40px;
     font-style: italic;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
   }
 }
 
@@ -200,7 +203,7 @@
     }
 
     &:hover {
-    
+
       &::placeholder {
         color: $primary;
       }

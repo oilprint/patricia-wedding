@@ -25,7 +25,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 10px;
     }
   }
 
@@ -53,9 +53,6 @@
       transition: transform 0.4s;
     }
 
-
-
-
     &:focus {
       outline: solid 1px $accent;
       outline-offset: 4px;
@@ -68,19 +65,17 @@
       &::before {
         transform: scale(1);
       }
+ 
     }
 
     &:active {
-      color: $grey;
-      outline: solid 1px $accent;
-      outline-offset: 4px;
-      border-radius: 4px;
-      background-color: $accent;
+      box-shadow: inset 3px 3px 3px rgba($black, 0.12);
     }
   }
 
   &__link-icon {
     margin-left: 4px;
+    fill: currentColor;
   }
 
   &__button {}
@@ -191,6 +186,7 @@
     text-transform: uppercase;
     color: $primary;
     background-color: $light;
+    transition: box-shadow 0.4s;
 
     &::after {
       position: absolute;
@@ -215,19 +211,17 @@
     }
 
     &:focus {
-      outline: soli 1px $grey;
+      outline: soli 1px $accent;
     }
 
     &:hover {
-      background-color: $bg-accent;
       box-shadow: 1px 1px 1px rgba($grey, 0.5);
     }
-  }
 
-  &:active {
-    outline: solid 1px $accent;
+    &:active {
+      box-shadow: inset 3px 3px 3px rgba($black, 0.12);
+    }
   }
-
 
   &__list {
     position: absolute;
@@ -254,6 +248,10 @@
     text-align: left;
     text-transform: uppercase;
     color: $primary;
+
+    &.active {
+      border-left: 2px solid $accent;
+    }
 
 
     &:focus {
@@ -369,9 +367,7 @@
     display: block;
     transition: color 0.4s,
       outline 0.4s,
-      transform 0.4s,
-      background-color 0.4s;
-
+      transform 0.4s;
 
     &:focus {
       outline: solid 1px $accent;
@@ -384,7 +380,6 @@
 
     &:active {
       outline: solid 1px $accent;
-      background-color: $bg-accent;
     }
   }
 
@@ -429,7 +424,9 @@
       height: 1px;
       background-color: $accent;
       transform: scaleX(0);
-      transition: transform 0.4s;
+      transition: transform 0.4s,
+        box-shadow 0.4s,
+        outline 0.4s;
     }
 
     &--big {
@@ -451,11 +448,7 @@
     }
 
     &:active {
-      color: $accent;
-      outline: solid 1px $accent;
-      outline-offset: 4px;
-      border-radius: 4px;
-      background-color: $bg-accent;
+      box-shadow: inset 3px 3px 3px rgba($black, 0.12);
     }
 
   }

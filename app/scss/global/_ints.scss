@@ -105,8 +105,7 @@
   }
 
   &:active {
-    background-color: $accent;
-    color: $light;
+    box-shadow: inset 3px 3px 3px rgba($black, 0.12);
   }
 
   &--txt {
