@@ -1,4 +1,6 @@
 console.log("test");
+
+  AOS.init();
  
 // pagination
 

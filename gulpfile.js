@@ -43,6 +43,7 @@ function scripts() {
     'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
     'node_modules/fslightbox/index.js',
+    'node_modules/aos/dist/aos.js',
     'app/js/modal.js',  
     'app/js/tab.js',
     'app/js/main.js'  
