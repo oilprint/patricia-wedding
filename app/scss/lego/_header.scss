@@ -2,12 +2,26 @@
   background-color: $light;
   padding: 20px 0 16px;
   border-bottom: 1px solid $devider;
+   
+
+  &.fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    background-color: rgba($light, 0.7);
+    backdrop-filter: blur(5px);
+  }
 
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 46px;
+
+    &.hidden {
+      display: none;
+    }
   }
 
 
@@ -65,7 +79,7 @@
       &::before {
         transform: scale(1);
       }
- 
+
     }
 
     &:active {
@@ -77,8 +91,6 @@
     margin-left: 4px;
     fill: currentColor;
   }
-
-  &__button {}
 
   &__bottom {
     display: flex;
@@ -97,6 +109,7 @@
   &__input {
     width: 100%;
     border-radius: 4px;
+    background-color: transparent;
 
     &::placeholder {
       font-size: 15px;
