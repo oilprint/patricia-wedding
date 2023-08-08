@@ -10,6 +10,10 @@
 
   &__logo {
     margin-bottom: 60px;
+
+    @include tablet {
+      width: 230px;
+    }
   }
 
   &__address {
@@ -23,17 +27,21 @@
   }
 
   &__info {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     padding-top: 56px;
     max-width: 770px;
     width: 100%;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    width: fit-content;
     width: 100%;
 
     &:not(:last-child) {
@@ -41,7 +49,38 @@
     }
 
     &:last-child {
-      width: 120px;
+      width: fit-content;
+
+      @include tablet {
+        width: 100%;
+        border-bottom: 1px solid rgba($light, 0.5);
+      }
+    }
+  }
+
+  &__list {
+    opacity: 1;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    transition: height 0.4s ease-out,
+      opacity 0.4s ease-out,
+      overflow 0.4s ease-out;
+
+    will-change: max-height;
+    overflow: hidden;
+    // background-color: #fff;
+
+    &.hidden {
+      max-height: 0;
+      opacity: 0;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 0;
     }
   }
 
@@ -64,7 +103,6 @@
       transform-origin: left;
       transition: transform 0.4s;
     }
-
 
     &:focus {
       outline: solid 1px $secondary;
@@ -95,26 +133,31 @@
       }
     }
 
-    &:not(:last-child) {
-      margin-bottom: 20px;
+    @include tablet {
+      padding: 10px 0;
     }
   }
 
-  &__contacts-city {
-    display: block;
-    margin-top: 4px;
-  }
+
 
   &__title {
-    display: inline-block;
+    display: block;
+    max-width: 300px;
+    width: 100%;
     margin-bottom: 30px;
     font-size: 24px;
+    text-align: left;
     color: $light;
+
+    @include tablet {
+      pointer-events: auto;
+      padding: 10px 0;
+      margin-bottom: 0;
+    }
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: 20px;
-  }
+
+
 
   &__bottom {
     display: flex;

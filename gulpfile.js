@@ -46,6 +46,7 @@ function scripts() {
     'node_modules/aos/dist/aos.js',
     'app/js/modal.js',  
     'app/js/tab.js',
+    'app/js/accordeon.js',
     'app/js/main.js'  
   ])
   .pipe(concat('main.min.js')) 
