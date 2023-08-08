@@ -1,31 +1,10 @@
 .footer {
   background-color: $accent;
-
-  &__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    padding: 80px 0;
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 300px;
-    width: 100%;
-
-    &--list {
-      max-width: 220px;
-      padding-top: 37px;
-    }
-
-    &:not(:last-child) {
-      margin-right: 50px;
-    }
-  }
+  padding: 80px 0;
 
   &__top {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 40px;
   }
 
@@ -33,8 +12,37 @@
     margin-bottom: 60px;
   }
 
-  &__contacts-item:not(:last-child) {
-    margin-bottom: 20px;
+  &__address {
+    width: 270px;
+  }
+
+  &__contacts {
+    max-width: 300px;
+    width: 100%;
+    margin-right: 50px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 56px;
+    max-width: 770px;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+
+    &:last-child {
+      width: 120px;
+    }
   }
 
   &__link {
@@ -59,7 +67,7 @@
 
 
     &:focus {
-      outline: solid 1px $light;
+      outline: solid 1px $secondary;
       outline-offset: 2px;
       border-radius: 4px;
     }
@@ -72,8 +80,7 @@
     }
 
     &:active {
-      background-color: $secondary;
-      color: $light;
+      color: $secondary;
     }
 
     &--big {
@@ -98,11 +105,8 @@
     margin-top: 4px;
   }
 
-  &__txt {
-    color: $secondary;
-  }
-
   &__title {
+    display: inline-block;
     margin-bottom: 30px;
     font-size: 24px;
     color: $light;
@@ -110,6 +114,17 @@
 
   &__item:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  &__txt {
+    color: $secondary;
+    margin-right: 40px;
   }
 
   &__payment {
@@ -127,6 +142,25 @@
     &:not(:last-child) {
       margin-right: 18px;
     }
+  }
+
+  &__bottom-link {
+    color: $secondary;
+
+    &:focus {
+      outline: solid 1px $secondary;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    &:hover {
+      color: $light;
+    }
+
+    &:active {
+      color: $secondary;
+    }
+
   }
 
 }

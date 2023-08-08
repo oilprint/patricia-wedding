@@ -1,3 +1,20 @@
+.logo {
+  width: 100%;
+
+  &__img {
+    height: auto;
+    object-fit: contain;
+  }
+
+  @include tablet {
+    width: 195px;
+  }
+
+  @include mini {
+    width: 150px;
+  }
+}
+
 .button {
   position: relative;
   z-index: 10;
@@ -124,5 +141,3 @@
     }
   }
 }
-
-

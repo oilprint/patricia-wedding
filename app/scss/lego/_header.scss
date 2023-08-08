@@ -2,7 +2,6 @@
   background-color: $light;
   padding: 20px 0 16px;
   border-bottom: 1px solid $devider;
-   
 
   &.fixed {
     position: fixed;
@@ -12,7 +11,7 @@
     background-color: rgba($light, 0.7);
     backdrop-filter: blur(5px);
   }
-
+  
   &__top {
     display: flex;
     justify-content: space-between;
@@ -22,8 +21,15 @@
     &.hidden {
       display: none;
     }
+
+    @include tablet {
+      margin-bottom: 0;
+    }
   }
 
+  &__logo {
+   max-width: 320px;
+  }
 
   &__menu {
     max-width: 900px;
@@ -79,7 +85,6 @@
       &::before {
         transform: scale(1);
       }
-
     }
 
     &:active {
@@ -96,6 +101,10 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__form {
@@ -281,7 +290,9 @@
     }
   }
 
-
+  @include minitablet {
+    display: none;
+  }
 }
 
 .usernav {
@@ -292,8 +303,32 @@
   &__item {
     position: relative;
 
-    &:not(:last-child) {
+    &:not(:nth-last-child(2)) {
       margin-right: 42px;
+
+      @include tablet {
+        display: none;
+        margin-right: 0;
+      }
+    }
+
+    &:nth-last-child(2) {
+     
+       @include tablet {
+         margin-right: 20px;
+       }
+
+       @include mobile {
+        display: none;
+       }
+    }
+
+    &:last-child {
+      display: none;
+
+      @include tablet {
+        display: block;
+      }
     }
   }
 
@@ -302,28 +337,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 44px;
+    height: 44px;
+
   }
 
   &__number {
     position: absolute;
-    bottom: -5px;
-    left: -3px;
+    bottom: 2px;
+    right: 24px;
+    display: inline-block;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 18px;
+    padding: 1px 4px;
+    min-width: 18px;
     height: 18px;
-
     font-size: 12px;
     text-align: center;
     color: $light;
     background-color: $accent;
-    border-radius: 50%;
+    border-radius: 9px;
   }
 
   &__icon {
     fill: $primary;
   }
+
 }
 
 .dropdown-menu {
@@ -465,4 +505,21 @@
     }
 
   }
+}
+
+.burger {
+  width: 44px;
+  height: 44px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    fill: $primary;
+  }
+
+  @include minitablet {
+    display: flex;
+  }
+
 }

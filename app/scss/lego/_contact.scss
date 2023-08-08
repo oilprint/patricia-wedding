@@ -21,50 +21,8 @@
     width: 100%;
   }
 
-  &__list {
+  &__address {
     margin-bottom: 40px;
-  }
-
-  &__item:not(:last-child) {
-    margin-bottom: 20px;
-
-  }
-
-  &__link {
-    position: relative;
-    display: block;
-    font-size: 20px;
-
-    &:before {
-      position: absolute;
-      content: '';
-      bottom: -4px;
-      left: 0;
-      height: 1px;
-      width: 100%;
-      background-color: $accent;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s;
-    }
-
-    &:focus {
-      outline: solid 1px $accent;
-      outline-offset: 4px;
-      border-radius: 4px;
-    }
-
-    &:hover {
-      color: $accent;
-
-      &:before {
-        transform: scaleX(1);
-      }
-    }
-
-    &:active {
-      color: $primary;
-    }
   }
 
   &__headline {

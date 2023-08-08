@@ -38,7 +38,12 @@
         </ul>
 
       </div>
-      <a class="logo" href="index.html">
+      <button class="burger">
+        <svg class="burger__icon" width="32" height="32">
+          <use href="./images/symbol-defs.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <a class="logo header__logo" href="index.html">
         <img class="logo__img" src="images/logo.svg" alt="Patriia Wedding Logo" width="320" height="80">
       </a>
       <ul class="usernav">
@@ -134,8 +139,7 @@
               <li class="modal__item">
                 <article class="shopping-card">
                   <img class="shopping-card__img" src="images/product/accessories/nicola.jpg"
-                    alt="Wedding accessories nicola"
-                    width="100" height="150">
+                    alt="Wedding accessories nicola" width="100" height="150">
                   <div class="shopping-card__content">
                     <h3 class="shopping-card__headline">
                       Nicola Bathie Perry
@@ -171,7 +175,7 @@
                       <span class="currency">
                         $
                       </span>
-                     25.00
+                      25.00
                     </span>
                     <span class="shopping-card__price-old">
                       <span class="currency">
@@ -209,6 +213,15 @@
             </button>
           </div>
         </li>
+
+        <li class="usernav__item">
+          <button class="usernav__link" type="button">
+            <span class="sr-only">Search</span>
+            <svg class="usernav__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-search"></use>
+            </svg>
+          </button>
+          </li>
       </ul>
     </div>
     <div class="header__bottom">
@@ -394,7 +407,7 @@
         <label class="sr-only" for="search">Search</label>
         <input class="header__input" type="text" name="search" id="search" placeholder="Search">
         <button class="header__btn">
-          <svg class="usernav__btn-icon" width="28" height="20">
+          <svg class="header__btn-icon" width="28" height="20">
             <use href="./images/symbol-defs.svg#icon-search"></use>
           </svg>
         </button>
@@ -403,7 +416,6 @@
 
     </div>
   </div>
-
 </header>
 
   <main>
@@ -483,53 +495,47 @@
 
   <footer class="footer">
   <div class="container">
-    <div class="footer__inner">
-      <div class="footer__content">
-        <div class="footer__top">
+   
+      <div class="footer__top">
+        <div class="footer__contacts">
           <a class="logo" href="#">
-            <img class="logo footer__logo"  src="images/logo-white.svg" alt="Logo Patricia Wedding" width="300" height="75">
+            <img class="logo footer__logo" src="images/logo-white.svg" alt="Logo Patricia Wedding" width="300"
+              height="75">
           </a>
           <address class="footer__address">
-            <ul class="footer__contacts">
-              <li class="footer__contacts-item">
-                <a class="footer__link footer__link--big" href="tel:+19179586921"
-                  class="footer__link">
-                  +19179586921
+            <ul class="address address--white">
+              <li class="address__item">
+                <a class="address__link" href="tel: +19179586921">
+                  +1 (917) 958-69-21
                 </a>
               </li>
-              <li class="footer__contacts-item">
-                <a href="#" class="footer__link">
+              <li class="address__item">
+                <a class="address__link" href="googleapis: +19179586921">
                   123 5th Ave, 3th floor,
-                  <span class="footer__contacts-city">
-                    New York, NY 10003, USA
-                  </span>
+                  New York, NY 10003, USA
                 </a>
               </li>
-              <li class="footer__contacts-item">
-                <a href="mailto:info@patriciaweddig.com" class="footer__link">
+              <li class="address__item">
+                <a class="address__link" href="mailto: info@patriciaweddig.com">
                   info@patriciaweddig.com
                 </a>
               </li>
             </ul>
           </address>
         </div>
-        <p class="footer__txt">
-          2021@PatriciaWedding
-        </p>
-      </div>
 
-      <div class="footer__content footer__content--list">
-        <ul class="footer__top">
-          <li class="footer__info">
+        <ul class="footer__info">
+
+          <li class="footer__content">
             <h2 class="footer__title">
               Online orders
             </h2>
             <ul class="footer__list">
-               <li class="footer__item">
-                 <a class="footer__link" href="#">
-                   Order Status
-                 </a>
-               </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Order Status
+                </a>
+              </li>
               <li class="footer__item">
                 <a class="footer__link" href="#">
                   Shipping Information
@@ -551,15 +557,9 @@
                 </a>
               </li>
             </ul>
-        </ul>
-        <a class="footer__link footer__link--color" href="#">
-          Privacy policy
-        </a>
-      </div>
+          </li>
 
-      <div class="footer__content footer__content--list">
-        <ul class="footer__top">
-          <li class="footer__info">
+          <li class="footer__content">
             <h2 class="footer__title">
               Help center
             </h2>
@@ -584,16 +584,21 @@
                   Share your wedding pictures
                 </a>
               </li>
-            </ul>
-        </ul>
-        <a class="footer__link footer__link--color" href="#">
-          Website Terms of Use
-        </a>
-      </div>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                   Privacy policy
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                   Website Terms of Use
+                </a>
+              </li>
 
-      <div class="footer__content footer__content--list">
-        <ul class="footer__top">
-          <li class="footer__info">
+            </ul>
+          </li>
+
+          <li class="footer__content">
             <h2 class="footer__title">
               Follow us
             </h2>
@@ -619,31 +624,44 @@
                 </a>
               </li>
             </ul>
+          </li>
         </ul>
+      </div>
 
+
+      <div class="footer__bottom">    
         <ul class="footer__payment">
           <li class="footer__payment-item">
-            <svg class="footer__icon" width="44" height="44">
+            <svg class="footer__icon" width="44" height="28">
               <use href="./images/symbol-defs.svg#icon-mastercard"></use>
             </svg>
           </li>
           <li class="footer__payment-item">
-            <svg class="footer__icon" width="44" height="44">
+            <svg class="footer__icon" width="44" height="28">
               <use href="./images/symbol-defs.svg#icon-visa"></use>
             </svg>
           </li>
           <li class="footer__payment-item">
-            <svg class="footer__icon" width="44" height="44">
+            <svg class="footer__icon" width="44" height="28">
               <use href="./images/symbol-defs.svg#icon-paypal"></use>
             </svg>
           </li>
 
 
         </ul>
-      </div>
-    </div>
-  </div>
+          <p class="footer__txt">
+            2021@PatriciaWedding
+          </p>
+       
+            
 
+          <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=irynakozlova.k@gmail.com"
+            class="footer__bottom-link"
+            target="_blank">
+            created by iryna kozlova
+          </a>
+      </div>
+  </div>
 </footer>
 
 
