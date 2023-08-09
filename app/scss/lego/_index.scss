@@ -30,7 +30,7 @@
     @include minitablet {
       position: static;
       max-width: 768px;
-      padding: 20px 0 40px;
+      padding-top: 20px;
       transform: translateY(0);
       text-align: center;
     }
@@ -85,6 +85,10 @@
 
   &__title {
     margin-bottom: 24px;
+
+    @include tablet {
+      margin-bottom: 10px;
+    }
   }
 
   &__inner {
@@ -95,46 +99,153 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    @include tablet {
+      position: static;
+    }
+  }
+
+  &__content-two {
+     position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &__subtitle {
     margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 10px;
+    }
+
+
   }
 
   &__info {
     max-width: 570px;
     width: 100%;
     margin-bottom: 40px;
+
+    @include minidesk {
+      max-width: 360px;
+    }
+
+    @include tablet {
+
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
   }
 
-  &__txt:not(:last-child) {
-    margin-bottom: 8px;
+  &__txt {
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    @include minitablet {
+      margin-bottom: 10px;
+    }
   }
 
+  &__button {
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
 
   &__photo {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    max-width: 100%;
+    width: 100%;
+
+    @include tablet {
+      align-items: stretch;
+      height: 500px;
+    }
   }
 
-  &__img {
-    max-width: 100%;
-    object-fit: cover;
-
-    &--corner {
-      border-radius: 300px 0 0 0;
+  &__item {
+    padding-top: 120px;
+    &:not(:last-child) {
+      margin-right: 30px;
     }
 
+    @include tablet {
+      width: calc((100% - 2 * 30px) / 3);
+    }
+
+    &--first {
+      @include tablet {
+        width: calc(((100% - 30px) / 3) * 2);
+        height: auto;
+      }
+    }
+  }
+
+  &__images-item {
     &:not(:last-child) {
       margin-right: 30px;
     }
   }
 
+  &__images {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  &__img {
+    object-fit: cover;
+    height: auto;
+
+    @include tablet {
+      height: 100%;
+    }
+
+    &--corner {
+      border-radius: 300px 0 0 0;
+
+      @include minitablet {
+        border-radius: 0;
+      }
+    }
+
+    &--big {
+      padding: 120px 0;
+
+      @include tablet {
+        padding: 0;
+      }
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+    height: auto;
+
+    &--corner {
+      border-radius: 300px 0 0 0;
+    }
+  }
+
   &--big {
     padding: 120px 0;
+
+    @include tablet {
+      padding: 0;
+    }
   }
 
 }

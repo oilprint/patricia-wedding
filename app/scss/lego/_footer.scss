@@ -158,6 +158,7 @@
   }
 
   &__btn {
+    cursor: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -176,6 +177,7 @@
 
     @include tablet {
       pointer-events: auto;
+       cursor: pointer;
       padding: 10px 0;
       margin-bottom: 0;
     }
