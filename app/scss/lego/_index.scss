@@ -1,27 +1,57 @@
 .hero {
+  position: relative;
 
-  &__section {
+  &__inner {
+    height: 700px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
-  }
 
-  &__inner {
-    height: 80vh;
-    display: flex;
-    align-items: center;
+    @include tablet {
+      height: 450px;
+    }
 
+    @include minitablet {
+      height: 200px;
+    }
   }
 
   &__content {
-    max-width: 750px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 620px;
     width: 100%;
-  
+
+    @include tablet {
+      max-width: 460px;
+    }
+
+    @include minitablet {
+      position: static;
+      max-width: 768px;
+      padding: 20px 0 40px;
+      transform: translateY(0);
+      text-align: center;
+    }
   }
 
   &__title {
     margin-bottom: 50px;
+
+    @include tablet {
+      font-size: 48px;
+      margin-bottom: 40px
+    }
+
+    @include minitablet {
+      margin-bottom: 10px;
+      font-size: 36px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+    }
   }
 
   &__text {
@@ -29,6 +59,25 @@
     font-size: 40px;
     font-style: italic;
     margin-bottom: 40px;
+
+    @include tablet {
+      font-size: 24px;
+      max-width: 280px;
+      margin-bottom: 30px;
+    }
+
+    @include minitablet {
+      margin-bottom: 20px;
+      max-width: 768px;
+
+    }
+  }
+
+  &__button {
+
+    @include minitablet {
+      margin: 0 auto;
+    }
   }
 }
 
