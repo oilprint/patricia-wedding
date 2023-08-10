@@ -1,6 +1,10 @@
 .hero {
   position: relative;
 
+  @include minitablet {
+    background-color: $bg-accent;
+  }
+
   &__inner {
     height: 700px;
     background-repeat: no-repeat;
@@ -24,13 +28,13 @@
     width: 100%;
 
     @include tablet {
-      max-width: 460px;
+      max-width: 490px;
     }
 
     @include minitablet {
       position: static;
       max-width: 768px;
-      padding-top: 20px;
+      padding: 20px 0 30px;
       transform: translateY(0);
       text-align: center;
     }
@@ -40,17 +44,17 @@
     margin-bottom: 50px;
 
     @include tablet {
-      font-size: 48px;
+      font-size: 57px;
       margin-bottom: 40px
     }
 
     @include minitablet {
       margin-bottom: 10px;
-      font-size: 36px;
+      font-size: 48px;
     }
 
     @include mobile {
-      font-size: 32px;
+      font-size: 40px;
     }
   }
 
@@ -105,12 +109,6 @@
     }
   }
 
-  &__content-two {
-     position: absolute;
-    top: 0;
-    left: 0;
-  }
-
   &__subtitle {
     margin-bottom: 20px;
 
@@ -126,12 +124,13 @@
     width: 100%;
     margin-bottom: 40px;
 
-    @include minidesk {
-      max-width: 360px;
+    &--dresses {
+      @include minidesk {
+        max-width: 460px;
+      }
     }
 
     @include tablet {
-
       margin-bottom: 20px;
     }
 
@@ -157,8 +156,12 @@
       margin-bottom: 30px;
     }
 
+  }
+
+  &__wrapper {
+
     @include mobile {
-      width: 100%;
+      margin-right: -15px;
     }
   }
 
@@ -168,33 +171,68 @@
     align-items: flex-end;
     width: 100%;
 
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
     @include tablet {
       align-items: stretch;
-      height: 500px;
+    }
+
+    @include mobile {
+      height: 340px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
     }
   }
 
   &__item {
-    padding-top: 120px;
+
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include tablet {
+        margin-right: 20px;
+      }
     }
 
     @include tablet {
       width: calc((100% - 2 * 30px) / 3);
     }
 
-    &--first {
-      @include tablet {
-        width: calc(((100% - 30px) / 3) * 2);
-        height: auto;
-      }
+    @include mobile {
+      min-width: 200px;
+      scroll-snap-align: start;
     }
   }
 
-  &__images-item {
-    &:not(:last-child) {
-      margin-right: 30px;
+  &__img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+
+    @include tablet {
+      height: 100%;
+    }
+
+    &--corner {
+      border-radius: 300px 0 0 0;
+
+      @include tablet {
+        border-radius: 0;
+      }
+    }
+
+  }
+
+  &__content-dresses {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include minitablet {
+      position: static;
     }
   }
 
@@ -204,84 +242,156 @@
     align-items: flex-end;
     width: 100%;
     padding-top: 30px;
-  }
 
-  &__img {
-    object-fit: cover;
-    height: auto;
 
     @include tablet {
-      height: 100%;
+      padding-top: 70px;
     }
 
-    &--corner {
-      border-radius: 300px 0 0 0;
+    @include minitablet {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 0;
+    }
+  }
 
+  &__images-item {
+    overflow: hidden;
+
+    &:last-child {
       @include minitablet {
-        border-radius: 0;
+        order: -1;
+        height: 400px;
+        margin-bottom: 20px;
       }
     }
 
-    &--big {
-      padding: 120px 0;
+    &:not(:last-child) {
+      margin-right: 30px;
 
-      @include tablet {
-        padding: 0;
+      @include minitablet {
+        margin-right: 0;
       }
     }
   }
 
   &__image {
+    display: block;
     object-fit: cover;
     height: auto;
 
     &--corner {
       border-radius: 300px 0 0 0;
+
+      @include tablet {
+        border-radius: 240px 0 0 0;
+      }
+
+      @include minitablet {
+        border-radius: 0;
+      }
     }
   }
-
-  &--big {
-    padding: 120px 0;
-
-    @include tablet {
-      padding: 0;
-    }
-  }
-
 }
 
 .accessories {
   background-color: $bg-accent;
 
-
   &__title {
     margin-bottom: 40px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include minitablet {
+      text-align: center;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
+
+    @include tablet {
+      justify-content: center;
+    }
   }
 
   &__content {
     margin-right: 30px;
+    max-width: 570px;
+    width: 100%;
+
+    @include tablet {
+      margin-right: 20px;
+    }
+
+    @include minitablet {
+      margin-right: 0;
+    }
+  }
+
+  &__img-big {
+    max-width: 570px;
+    width: 100%;
+
+    @include minitablet {
+      display: none;
+    }
   }
 
   &__top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 70px;
+    
+    @include tablet {
+      justify-content: center;
+    }
+
+    @include minitablet {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      justify-content: center;
+    }
+  }
+
+  &__img-box {
+
+    @include tablet {
+      height: 380px;
+      overflow: hidden;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include tablet {
+        margin-right: 20px;
+      }
+    }
+
+    &--hidden {
+      @include mobile {
+        display: none;
+      }
+    }
   }
 
   &__img {
     object-fit: cover;
 
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-
     &--corner {
       border-radius: 0 300px 0 0;
+
+      @include tablet {
+        border-radius: 0 240px 0 0;
+      }
     }
   }
 
@@ -289,10 +399,19 @@
     color: $accent;
     font-size: 90px;
     margin-bottom: 20px;
+
+    @include minitablet {
+      margin-bottom: 4px;
+    }
+
   }
 
   &__txt {
     margin-bottom: 40px;
+
+    @include minitablet {
+      margin-bottom: 10px;
+    }
   }
 
 }
