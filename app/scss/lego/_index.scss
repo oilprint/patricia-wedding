@@ -2,8 +2,13 @@
   position: relative;
 
   @include minitablet {
-    background-color: $bg-accent;
+    margin-top: 81px;
   }
+
+  @include mobile {
+    margin-top: 76px;
+  }
+
 
   &__inner {
     height: 700px;
@@ -96,16 +101,29 @@
   }
 
   &__inner {
-    position: relative;
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__inner-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 30px;
+
+    @include tablet {
+      margin-right: 20px;
+    }
+
+    @include minitablet {
+      margin-right: 0;
+    }
   }
 
   &__content {
-    position: absolute;
-    top: 0;
-    left: 0;
 
-    @include tablet {
-      position: static;
+    @include minitablet {
+      margin-bottom: 30px;
     }
   }
 
@@ -115,8 +133,6 @@
     @include tablet {
       margin-bottom: 10px;
     }
-
-
   }
 
   &__info {
@@ -124,17 +140,11 @@
     width: 100%;
     margin-bottom: 40px;
 
-    &--dresses {
-      @include minidesk {
-        max-width: 460px;
-      }
-    }
-
     @include tablet {
       margin-bottom: 20px;
     }
 
-    @include mobile {
+    @include minitablet {
       max-width: 100%;
     }
   }
@@ -150,148 +160,68 @@
     }
   }
 
-  &__button {
-
-    @include tablet {
-      margin-bottom: 30px;
-    }
-
-  }
-
-  &__wrapper {
-
-    @include mobile {
-      margin-right: -15px;
-    }
-  }
-
   &__photo {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
 
-    &::-webkit-scrollbar {
-      width: 0;
-    }
-
-    @include tablet {
+    @include minitablet {
       align-items: stretch;
-    }
-
-    @include mobile {
-      height: 340px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
     }
   }
 
-  &__item {
+  &__photo-item {
+    width: calc((100% - 30px) / 2);
+    height: auto;
 
     &:not(:last-child) {
       margin-right: 30px;
 
       @include tablet {
         margin-right: 20px;
+        width: calc((100% - 20px) / 2);
       }
     }
 
-    @include tablet {
-      width: calc((100% - 2 * 30px) / 3);
-    }
-
-    @include mobile {
-      min-width: 200px;
-      scroll-snap-align: start;
-    }
-  }
-
-  &__img {
-    display: block;
-    object-fit: cover;
-    width: 100%;
-
-    @include tablet {
+    @include minitablet {
       height: 100%;
     }
-
-    &--corner {
-      border-radius: 300px 0 0 0;
-
-      @include tablet {
-        border-radius: 0;
-      }
-    }
-
   }
 
-  &__content-dresses {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    @include minitablet {
-      position: static;
-    }
-  }
-
-  &__images {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+  &__photo-img {
     width: 100%;
-    padding-top: 30px;
-
-
-    @include tablet {
-      padding-top: 70px;
-    }
+    object-fit: cover;
 
     @include minitablet {
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding-top: 0;
+      height: 100%;
     }
   }
 
-  &__images-item {
+  &__inner-right {
+    width: 38%;
+    height: auto;
+    flex-shrink: 0;
     overflow: hidden;
 
-    &:last-child {
-      @include minitablet {
-        order: -1;
-        height: 400px;
-        margin-bottom: 20px;
-      }
+    &--big {
+      width: 48%;
     }
 
-    &:not(:last-child) {
-      margin-right: 30px;
-
-      @include minitablet {
-        margin-right: 0;
-      }
+    @include minitablet {
+      display: none;
     }
   }
 
-  &__image {
-    display: block;
+  &__right-img {
+    border-radius: 300px 0 0 0;
     object-fit: cover;
-    height: auto;
 
-    &--corner {
-      border-radius: 300px 0 0 0;
-
-      @include tablet {
-        border-radius: 240px 0 0 0;
-      }
-
-      @include minitablet {
-        border-radius: 0;
-      }
+    @include tablet {
+      border-radius: 240px 0 0 0;
     }
+    
+
   }
 }
 
@@ -439,14 +369,14 @@
   &__inner-left {
     display: flex;
     flex-direction: column;
-
+    justify-content: space-between;
     margin-right: 50px;
     max-width: 570px;
     width: 100%;
 
     @include tablet {
-      margin-right: 30px;
-    } 
+      margin-right: 20px;
+    }
 
     @include minitablet {
       flex-direction: row;
@@ -476,15 +406,16 @@
       border-radius: 0 300px 0 0;
       margin-bottom: 50px;
 
+
       @include tablet {
         border-radius: 0 240px 0 0;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
 
       @include minitablet {
         border-radius: 0;
         margin-bottom: 0;
-      } 
+      }
     }
 
     &--third {
@@ -494,9 +425,9 @@
         border-radius: 240px 0 0 0
       }
 
-       @include minitablet {
+      @include minitablet {
         display: none;
-       }
+      }
     }
 
     @include minitablet {
@@ -545,17 +476,25 @@
 .subscribe {
 
   &__inner {
-    padding: 80px 190px;
-    max-width: 1070px;
-    width: 100%;
+    padding: 80px 140px;
     background-color: $bg-accent;
     margin: 0 auto;
-    margin-bottom: 120px;
+
+    @include tablet {
+      padding: 60px 80px;
+    }
+
+    @include minitablet {
+      padding: 30px 20px;
+    }
   }
 
   &__title {
-    font-size: 46px;
     margin-bottom: 40px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__form {
@@ -563,6 +502,12 @@
     justify-content: space-between;
     border-bottom: 1px solid $accent;
     margin-bottom: 10px;
+
+    @include mobile {
+      flex-direction: column;
+      border-bottom: none;
+      margin-bottom: 20px;
+    }
   }
 
   &__input {
@@ -576,6 +521,10 @@
 
     &:focus {
       outline: solid 1px $accent;
+
+      &::placeholder {
+        color: $bg-accent;
+      }
     }
 
     &:hover {
@@ -583,6 +532,12 @@
       &::placeholder {
         color: $primary;
       }
+    }
+
+    @include mobile {
+      border: 1px solid $accent;
+      margin-bottom: 10px;
+      text-align: center;
     }
   }
 
@@ -607,6 +562,13 @@
       background-color: transparent;
       color: $primary;
       outline: solid 1px $accent;
+    }
+
+    @include mobile {
+      text-align: center;
+      padding: 10px;
+      background-color: $accent;
+      color: $light;
     }
   }
 

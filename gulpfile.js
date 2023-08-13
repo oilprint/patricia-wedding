@@ -44,6 +44,7 @@ function scripts() {
     'node_modules/rateyo/src/jquery.rateyo.js',
     'node_modules/fslightbox/index.js',
     'node_modules/aos/dist/aos.js',
+    'app/js/header.js',  
     'app/js/modal.js',  
     'app/js/tab.js',
     'app/js/accordeon.js',

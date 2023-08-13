@@ -38,6 +38,10 @@ main {
 
   &.scroll {
     margin-top: 163px;
+
+    @include tablet {
+      margin-top: 147px;
+    }
   }
 }
 
@@ -98,7 +102,11 @@ main {
    }
 
    @include mobile {
-     font-size: 37px;
+     font-size: 32px;
+   }
+
+   @include mini {
+    font-size: 30px;
    }
 }
 
@@ -117,6 +125,10 @@ main {
   
    @include minitablet {
      font-size: 80px;
+   }
+
+   @include mini {
+    font-size: 60px;
    }
 }
 

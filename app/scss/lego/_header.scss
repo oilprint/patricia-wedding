@@ -1,6 +1,5 @@
 .header {
   background-color: $light;
-  padding: 20px 0 16px;
   border-bottom: 1px solid $devider;
 
   &.fixed {
@@ -11,30 +10,50 @@
     background-color: rgba($light, 0.7);
     backdrop-filter: blur(5px);
   }
-  
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 46px;
-
+    padding: 20px 0 26px;
+    
     &.hidden {
       display: none;
     }
 
     @include tablet {
-      margin-bottom: 0;
+      padding-bottom: 6px;
+    }
+
+    @include minitablet {
+      padding: 16px 0 16px;
     }
   }
 
   &__logo {
-   max-width: 320px;
+    max-width: 320px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px 0 20px;
+
+    @include minitablet {
+      display: none;
+    }
   }
 
   &__menu {
     max-width: 900px;
     width: 100%;
     margin-right: 80px;
+
+    @include tablet {
+      max-width: 1024px;
+      margin-right: 0;
+    }
   }
 
   &__list {
@@ -97,22 +116,16 @@
     fill: currentColor;
   }
 
-  &__bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-
-    @include tablet {
-      display: none;
-    }
-  }
-
   &__form {
     display: flex;
     justify-content: space-between;
     max-width: 190px;
     width: 100%;
     border-bottom: 1px solid $accent;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__input {
@@ -174,7 +187,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  background-color: $light;
   margin-left: 32px;
   width: 60px;
 
@@ -207,7 +219,6 @@
     text-align: left;
     text-transform: uppercase;
     color: $primary;
-    background-color: $light;
     transition: box-shadow 0.4s;
 
     &::after {
@@ -304,23 +315,22 @@
     position: relative;
 
     &:not(:nth-last-child(2)) {
-      margin-right: 42px;
-
-      @include tablet {
+      margin-right: 20px;
+    
+      @include minitablet {
         display: none;
         margin-right: 0;
       }
     }
 
     &:nth-last-child(2) {
-     
        @include tablet {
-         margin-right: 20px;
+        margin-right: 20px;
        }
 
-       @include mobile {
+      @include mobile {
         display: none;
-       }
+      }
     }
 
     &:last-child {
@@ -521,5 +531,4 @@
   @include minitablet {
     display: flex;
   }
-
 }
