@@ -42,6 +42,14 @@ main {
     @include tablet {
       margin-top: 147px;
     }
+
+    @include minitablet {
+      margin-top: 81px;
+    }
+
+    @include mini {
+      margin-top: 76px;
+    }
   }
 }
 
@@ -78,6 +86,38 @@ main {
    @include tablet {
     padding-top: 50px;
    }
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 190px;
+  width: 100%;
+
+  &__input {
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid $accent;
+
+    &::placeholder {
+      font-size: 15px;
+      text-transform: uppercase;
+      color: $grey;
+    }
+
+    &:focus {
+      outline: solid 1px $accent;
+    }
+
+    &:hover {
+      background-color: $bg-accent;
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+  }
 }
 
 .title {
@@ -131,6 +171,7 @@ main {
     font-size: 60px;
    }
 }
+
 
 .product-card {
   position: relative;

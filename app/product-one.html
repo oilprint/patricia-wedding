@@ -20,7 +20,8 @@
   <header class="header">
   <div class="container">
     <div class="header__top">
-      <div class="language">
+
+      <div class="language header__language">
         <button class="language__button" type="button" data-value="en">
           En
         </button>
@@ -38,27 +39,33 @@
         </ul>
 
       </div>
-      <button class="burger">
+
+      <button class="burger header__burger">
         <svg class="burger__icon" width="32" height="32">
           <use href="./images/symbol-defs.svg#icon-burger"></use>
         </svg>
       </button>
+      
       <a class="logo header__logo" href="index.html">
         <img class="logo__img" src="images/logo.svg" alt="Patriia Wedding Logo" width="320" height="80">
       </a>
-      <ul class="usernav">
+      <ul class="usernav header__usernav">
         <li class="usernav__item">
-          <a class="usernav__link" href="#">
-            <span class="sr-only">Your account page</span>
-            <svg class="usernav__icon" width="28" height="28">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Your account page
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-account"></use>
             </svg>
           </a>
         </li>
         <li class="usernav__item">
-          <a class="usernav__link" href="#">
-            <span class="sr-only">Wishlist</span>
-            <svg class="usernav__icon" width="28" height="28">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Wishlist
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-wishlist">
               </use>
             </svg>
@@ -68,9 +75,11 @@
           </a>
         </li>
         <li class="usernav__item">
-          <button class="usernav__link" type="button" data-modal-button="modal-1">
-            <span class="sr-only">shopping bag</span>
-            <svg class="usernav__icon" width="28" height="28">
+          <button class="icon-button" type="button" data-modal-button="modal-1">
+            <span class="sr-only">
+              shopping bag
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-bag"></use>
             </svg>
             <span class="usernav__number">
@@ -205,30 +214,19 @@
               Keep shopping
             </button>
 
-            <button class="modal__btn" type="button" data-modal-close>
-              <svg class="modal__icon" width="24" height="24">
+            <button class="close-btn modal__close-btn" type="button" data-modal-close>
+              <svg class="close-btn__icon" width="24" height="24">
                 <use href="images/symbol-defs.svg#icon-close">
                 </use>
               </svg>
             </button>
           </div>
         </li>
-
-        <li class="usernav__item">
-          <button class="usernav__link" type="button">
-            <span class="sr-only">
-              Search
-            </span>
-            <svg class="usernav__icon" width="28" height="28">
-              <use href="./images/symbol-defs.svg#icon-search"></use>
-            </svg>
-          </button>
-          </li>
       </ul>
     </div>
     <div class="header__bottom">
       <nav class="header__menu">
-        <ul class="header__list list-reset">
+        <ul class="header__list">
           <li class="header__item">
             <a class="header__link" href="index.html">
               Home
@@ -405,18 +403,118 @@
         </ul>
       </nav>
 
-      <form class="header__form" action="#">
+      <form class="header__form form" action="#">
         <label class="sr-only" for="search">Search</label>
-        <input class="header__input" type="text" name="search" id="search" placeholder="Search">
-        <button class="header__btn">
-          <svg class="header__btn-icon" width="28" height="20">
+        <input class="form__input header__input " type="text" name="search" id="search" placeholder="Search">
+        <button class="icon-button form__btn">
+          <svg class="icon-button__icon" width="28" height="28">
             <use href="./images/symbol-defs.svg#icon-search"></use>
           </svg>
         </button>
-
       </form>
 
+      <button class="icon-button header__btn" type="button">
+        <span class="sr-only">
+          Search
+        </span>
+        <svg class="icon-button__icon" width="28" height="28">
+          <use href="./images/symbol-defs.svg#icon-search"></use>
+        </svg>
+      </button>
     </div>
+  </div>
+
+  <div class="burger-menu">
+    <div class="burger-menu__top">
+      <div class="language">
+        <button class="language__button" type="button" data-value="en">
+          En
+        </button>
+
+        <ul class="language__list">
+          <li class="language__item">
+            <a class="language__link active" href="#">
+              En
+            </a>
+            <a class="language__link" href="#">
+              Uk
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+      <ul class="usernav">
+        <li class="usernav__item">
+          <a class="icon-button" href="#">
+            <span class="sr-only">Your account page</span>
+            <svg class="icon-button__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-account"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="usernav__item">
+          <a class="icon-button" href="#">
+            <span class="sr-only">Wishlist</span>
+            <svg class="icon-button__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-wishlist">
+              </use>
+            </svg>
+            <span class="usernav__number">
+              10
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <ul class="burger-menu__list">
+      <li class="burger-menu__item">
+        <a class="burger-menu__link" href="#">
+          Home
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link" href="#">
+          Dresses
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link" href="#">
+          Wedding party
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link" href="#">
+          Accessories
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link" href="#">
+          Gallery
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link" href="#">
+          Contact us
+        </a>
+      </li>
+    </ul>
+    <form class="burger-menu__form form" action="#">
+      <label class="sr-only" for="search">Search</label>
+      <input class="form__input" type="text" name="search" id="search" placeholder="Search">
+      <button class="icon-button form__btn">
+        <svg class="icon-button__icon" width="28" height="28">
+          <use href="./images/symbol-defs.svg#icon-search"></use>
+        </svg>
+      </button>
+    </form>
+
+    <button class="close-btn burger-menu__close-btn" type="button">
+      <svg class="close-btn__icon" width="24" height="24">
+        <use href="images/symbol-defs.svg#icon-close">
+        </use>
+      </svg>
+    </button>
   </div>
 </header>
 

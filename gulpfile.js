@@ -47,7 +47,7 @@ function scripts() {
     'app/js/header.js',  
     'app/js/modal.js',  
     'app/js/tab.js',
-    'app/js/accordeon.js',
+    'app/js/footer-accordeon.js',
     'app/js/main.js'  
   ])
   .pipe(concat('main.min.js')) 

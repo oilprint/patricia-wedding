@@ -1,14 +1,6 @@
 .hero {
   position: relative;
-
-  @include minitablet {
-    margin-top: 81px;
-  }
-
-  @include mobile {
-    margin-top: 76px;
-  }
-
+  background-color: $bg-accent;
 
   &__inner {
     height: 700px;

@@ -83,44 +83,10 @@
 
   }
 
-  &__btn {
+  &__close-btn {
     position: absolute;
     top: 10px;
     right: 30px;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid rgba($grey, 0.1);
-    transition: border-color 0.4s, border 0.4s,
-      box-shadow 0.4s, ;
-
-    &:focus {
-      border-color: $accent;
-    }
-
-    &:hover {
-      box-shadow: 1px 1px 1px rgba($grey, 0.5);
-
-      .modal__icon {
-        fill: $accent;
-      }
-    }
-
-    &:active {
-      box-shadow: inset 3px 3px 3px rgba($black, 0.12);
-
-      .modal__btn-icon {
-        fill: $accent;
-      }
-    }
-  }
-
-  &__icon {
-    fill: $grey;
-    transition: fill 0.3s;
   }
 }
 

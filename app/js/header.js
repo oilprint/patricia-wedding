@@ -5,11 +5,11 @@ const headerTop=document.querySelector('.header__top');
 
 window.addEventListener('scroll', ()=> {
 
+  let scrollTop=window.scrollY;
+  let headerTopLength=headerTop.offsetHeight;
+
   if (window.innerWidth >= 768) {
-    let scrollTop=window.scrollY;
-    let headerTopLength=headerTop.offsetHeight;
-
-
+    
     if (scrollTop > headerTopLength) {
 
       header.classList.add('fixed');
@@ -35,6 +35,24 @@ window.addEventListener('scroll', ()=> {
   }
 
   else {
+
+    if (scrollTop > headerTopLength) {
     header.classList.add('fixed');
+
+     wrapper.forEach(item=> {
+          item.classList.add('scroll');
+        }
+      )
+    }
+    else {
+      header.classList.remove('fixed');
+
+      wrapper.forEach(item=> {
+          item.classList.remove('scroll');
+        }
+
+      );
+    }
+
   }
 })
