@@ -109,13 +109,14 @@ main {
   font-style: normal;
   color: $grey;
   line-height: 0.7;
+  display: block;
 
   @include tablet {
     font-size: 100px;
   }
   
    @include minitablet {
-     font-size: 60px;
+     font-size: 80px;
    }
 }
 

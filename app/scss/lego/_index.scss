@@ -347,7 +347,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 70px;
-    
+
     @include tablet {
       justify-content: center;
     }
@@ -418,31 +418,128 @@
 
 .gallery {
 
+  &__title {
+    margin-bottom: 40px;
+
+    @include minitablet {
+      margin-bottom: 20px;
+    }
+  }
+
   &__inner {
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: cover;
-    height: 1390px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @include minitablet {
+      flex-direction: column;
+    }
+  }
+
+  &__inner-left {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 50px;
+    max-width: 570px;
+    width: 100%;
+
+    @include tablet {
+      margin-right: 30px;
+    } 
+
+    @include minitablet {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__inner-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 570px;
+    width: 100%;
+
+    @include minitablet {
+      order: -1;
+      max-width: 100%;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+
+    &--first {
+      border-radius: 0 300px 0 0;
+      margin-bottom: 50px;
+
+      @include tablet {
+        border-radius: 0 240px 0 0;
+        margin-bottom: 30px;
+      }
+
+      @include minitablet {
+        border-radius: 0;
+        margin-bottom: 0;
+      } 
+    }
+
+    &--third {
+      border-radius: 300px 0 0 0;
+
+      @include tablet {
+        border-radius: 240px 0 0 0
+      }
+
+       @include minitablet {
+        display: none;
+       }
+    }
+
+    @include minitablet {
+      height: auto;
+      width: calc((100% - 20px) / 2);
+    }
   }
 
   &__content {
-    max-width: 500px;
-    width: 100%;
-    margin-left: auto;
-  }
+    margin-bottom: 62px;
 
-  &__title {
-    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 52px;
+    }
+
+    @include minitablet {
+      margin-bottom: 30px;
+    }
   }
 
   &__subtitle {
     margin-bottom: 30px;
+
+    @include minitablet {
+      margin-bottom: 20px;
+    }
+
+    @include minitablet {
+      margin-bottom: 10px;
+    }
   }
 
   &__txt {
     margin-bottom: 40px;
-  }
 
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include minitablet {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .subscribe {
