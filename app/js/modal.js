@@ -54,13 +54,15 @@
   const buttonClose = document.querySelectorAll('[data-modal-close]');
 
   button.addEventListener('click', function () {
-    modal.classList.toggle('modal--active');
+    modal.classList.toggle('modal--active')
+    bodyLock.classList.add('lock')
   });
 
   buttonClose.forEach(function (item) {
     item.addEventListener('click', function () {
     
-      modal.classList.remove('modal--active');
+      modal.classList.remove('modal--active')
+      bodyLock.classList.remove('lock')
     })
   });
 

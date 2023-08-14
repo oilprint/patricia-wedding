@@ -35,24 +35,30 @@ window.addEventListener('scroll', ()=> {
   }
 
   else {
-
-    if (scrollTop > headerTopLength) {
     header.classList.add('fixed');
 
      wrapper.forEach(item=> {
           item.classList.add('scroll');
         }
       )
-    }
-    else {
-      header.classList.remove('fixed');
-
-      wrapper.forEach(item=> {
-          item.classList.remove('scroll');
-        }
-
-      );
-    }
-
   }
+
+  
+})
+
+//burger 
+
+const openBurger = document.querySelector('[data-open-burger]');
+const closeBurger = document.querySelector ('[data-close-burger]');
+const menuBurger = document.querySelector('[data-menu-burger]');
+const bodyLock = document.querySelector('body'); 
+
+openBurger.addEventListener('click', function() {
+  menuBurger.classList.add('active')
+  bodyLock.classList.add('lock')
+})
+
+closeBurger.addEventListener('click', function() {
+  menuBurger.classList.remove('active')
+  bodyLock.classList.remove('lock');
 })

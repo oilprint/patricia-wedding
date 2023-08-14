@@ -101,7 +101,7 @@ main {
     border-bottom: 1px solid $accent;
 
     &::placeholder {
-      font-size: 15px;
+      font-size: 17px;
       text-transform: uppercase;
       color: $grey;
     }
@@ -171,7 +171,6 @@ main {
     font-size: 60px;
    }
 }
-
 
 .product-card {
   position: relative;
@@ -863,12 +862,12 @@ main {
   }
 
   &__price-current {
-    display: block;
+    display: flex;
     margin-bottom: 10px;
   }
 
   &__price-old {
-    display: block;
+    display: flex;
     font-size: 17px;
     text-decoration: line-through;
 

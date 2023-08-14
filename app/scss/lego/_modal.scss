@@ -14,6 +14,21 @@
   opacity: 0;
   transition: transform 0.5s;
 
+  @include minitablet {
+    width: 568px;
+  }
+
+  @include mini {
+   position: fixed;
+   left: 0;
+   right: 0;
+   top: 0;
+   width: 100%;
+   padding: 40px 20px 20px;
+
+  }
+
+
   &--active {
     transform: rotateX(0deg);
     visibility: visible;
@@ -38,6 +53,54 @@
 
     &--none {
       display: none;
+    }
+  }
+
+  &__shopping-card {
+    @include mobile {
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .shopping-card__img {
+      @include mini {
+        width: 60px;
+        height: auto;
+      }
+    }
+
+    .shopping-card__content {
+      max-width: 200px;
+      margin-right: 0;
+    }
+
+    .shopping-card__txt {
+      @include mini {
+        display: none;
+      }
+    }
+
+    .shopping-card__info {
+      @include mini {
+        justify-content: space-between;
+      }
+    }
+
+    .shopping-card__price {
+      @include mini {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+
+    .shopping-card__price-current {
+      @include mini {
+        margin-bottom: 0;
+        margin-right: 30px;
+      }
     }
   }
 
