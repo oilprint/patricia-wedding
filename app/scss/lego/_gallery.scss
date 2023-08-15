@@ -1,9 +1,17 @@
 .gallery {
   padding: 40px 0 120px;
 
+  @include tablet {
+    padding: 20px 0 50px;
+  }
+
   &__title {
     font-size: 72px;
     margin-bottom: 20px;
+
+    @include tablet {
+      font-size: 48px;
+    }
   }
 
   &__inner {
@@ -13,6 +21,11 @@
     grid-template-rows: minmax(277px, auto);
     grid-auto-flow: dense;
     gap: 20px;
+
+    @include minitablet {
+      grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+      gap: 15px;
+    }
   }
 
   &__box {
@@ -30,6 +43,13 @@
     &.tall {
       grid-column: span 1;
       grid-row: span 2;
+    }
+
+    &.hidden {
+      @include tablet {
+        display: none;
+      }
+
     }
   }
 
