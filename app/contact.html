@@ -534,7 +534,7 @@
           </h1>
           <div class="contact__inner">
             <div class="contact__map">
-              <iframe
+              <iframe class="contact__map-box"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d755.7604007354279!2d-73.99163168378331!3d40.73911007608543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a3b24b424f%3A0x618680d3f8c2f773!2zMTIzIDV0aCBBdmUsIE5ldyBZb3JrLCBOWSAxMDAwMywg0KHQv9C-0LvRg9GH0LXQvdGWINCo0YLQsNGC0Lgg0JDQvNC10YDQuNC60Lg!5e0!3m2!1suk!2sua!4v1690982498008!5m2!1suk!2sua"
                 width="700" height="600" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -558,29 +558,30 @@
                   </a>
                 </li>
               </ul>
-
-              <h3 class=" title contact__headline">
-                Get in touch
-              </h3>
-              <form class="contact__form" action="#">
-                <label class="form__label">
-                  <span class="sr-only">
-                    Your email address
-                  </span>
-                  <input class="form__input" id="email" type="email" name="email" placeholder="Your email address">
-                </label>
-                <label class="form__label">
-                  <span class="sr-only">
-                    Your massage
-                  </span>
-                  <textarea class="form__input form__input--textarea" id="text" name="text"
-                    placeholder="Your massage"></textarea>
-                </label>
-                <button class="button form__button" type="submit">
-                  Send message
-                </button>
-              </form>
-
+              <div class="contact__form-box">
+                <h3 class="title contact__headline">
+                  Get in touch
+                </h3>
+                <form class="contact__form form-contact" action="#">
+                  <label class="form-contact__label">
+                    <span class="sr-only">
+                      Your email address
+                    </span>
+                    <input class="form-contact__input" id="email" type="email" name="email"
+                      placeholder="Your email address">
+                  </label>
+                  <label class="form-contact__label">
+                    <span class="sr-only">
+                      Your massage
+                    </span>
+                    <textarea class="form-contact__input form-contact__input--textarea" id="text" name="text"
+                      placeholder="Your massage"></textarea>
+                  </label>
+                  <button class="button form-contact__button" type="submit">
+                    Send message
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>

@@ -40,8 +40,6 @@
   }
 }
 
-
-
 @mixin mini {
   @media (max-width: (374px)) {
     @content;
