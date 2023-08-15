@@ -306,7 +306,8 @@
 }
 
 .burger-menu {
- position: fixed;
+  position: fixed;
+  z-index: 200;
   padding: 65px 50px;
   background-color: $light;
   margin: 0 auto;
@@ -314,9 +315,12 @@
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 200;
+  height: 100vh;
   transform: translateX(-100%);
   transition: transform 0.4s ease-in-out;
+
+
+
 
   &.active {
     transform: translateX(0);
@@ -324,9 +328,19 @@
 
   &__top {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 20px;
+
+    @include mobile {
+      @media (orientation: landscape) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__language {
+    margin-right: 20px;
   }
 
   &__list {
@@ -341,17 +355,17 @@
     font-size: 20px;
     text-transform: uppercase;
 
-      &::before {
-        position: absolute;
-        content: '';
-        bottom: 3px;
-        left: 0;
-        width: 100%;
-        height: 1px;
-        background-color: $accent;
-        transform: scale(0);
-        transition: transform 0.4s;
-      }
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $accent;
+      transform: scale(0);
+      transition: transform 0.4s;
+    }
 
     &:focus {
       outline: solid 1px $accent;
@@ -368,9 +382,11 @@
       color: $accent;
 
       &::before {
-        transform: scale(1);  
+        transform: scale(1);
       }
     }
+
+
   }
 
   &__form {
@@ -380,13 +396,20 @@
 
   &__close-btn {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 10px;
   }
 
   @include mobile {
-    padding: 45px 2px;
+    padding: 150px 20px;
+
+    @media (orientation: landscape) {
+      background-color: red;
+    }
+
+
   }
+
 }
 
 .header {
@@ -431,7 +454,7 @@
     align-items: flex-end;
     padding: 20px 0 20px;
 
-    @include minitablet {
+    @include tablet {
       display: none;
     }
   }
@@ -559,7 +582,7 @@
 }
 
 .burger {
-  
+
   display: none;
   justify-content: center;
   align-items: center;
@@ -575,3 +598,16 @@
   }
 }
 
+// .block {
+//   height: 200px;
+//   width: 100%;
+//   background-color: yellow;
+ 
+//   @media (max-width: 576px) {
+//     background-color: red;
+//   }
+
+//   @media (max-width: 1024px)and (orientation: landscape){
+//     background-color: green;
+//   }
+// }

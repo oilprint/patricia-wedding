@@ -22,6 +22,12 @@
   }
 }
 
+@mixin tablet-land {
+  @media (max-width: 1024px)and (orientation: landscape) {
+    @content;
+  }
+}
+
 @mixin minitablet {
   @media (max-width: (768px)) {
     @content;
@@ -33,6 +39,8 @@
     @content;
   }
 }
+
+
 
 @mixin mini {
   @media (max-width: (374px)) {

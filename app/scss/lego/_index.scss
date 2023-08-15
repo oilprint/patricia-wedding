@@ -15,6 +15,10 @@
     @include minitablet {
       height: 200px;
     }
+
+    @include tablet-land {
+      height: 200px;
+    }
   }
 
   &__content {
@@ -35,6 +39,14 @@
       transform: translateY(0);
       text-align: center;
     }
+
+    @include tablet-land {
+      position: static;
+      max-width: 100%;
+      padding: 20px 0 30px;
+      transform: translateY(0);
+      text-align: center;
+    }
   }
 
   &__title {
@@ -48,6 +60,11 @@
     @include minitablet {
       margin-bottom: 10px;
       font-size: 48px;
+    }
+
+    @include tablet-land {
+      font-size: 40px;
+      margin-bottom: 10px;
     }
 
     @include mobile {
@@ -70,13 +87,21 @@
     @include minitablet {
       margin-bottom: 20px;
       max-width: 768px;
+    }
 
+    @include tablet-land {
+      margin-bottom: 20px;
+      max-width: 100%;
     }
   }
 
   &__button {
 
     @include minitablet {
+      margin: 0 auto;
+    }
+
+    @include tablet-land {
       margin: 0 auto;
     }
   }
@@ -88,6 +113,10 @@
     margin-bottom: 24px;
 
     @include tablet {
+      margin-bottom: 10px;
+    }
+
+    @include tablet-land {
       margin-bottom: 10px;
     }
   }
@@ -110,6 +139,10 @@
     @include minitablet {
       margin-right: 0;
     }
+
+    @include tablet-land {
+      flex-direction: row;
+    }
   }
 
   &__content {
@@ -117,12 +150,21 @@
     @include minitablet {
       margin-bottom: 30px;
     }
+
+    @include tablet-land {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
   }
 
   &__subtitle {
     margin-bottom: 20px;
 
     @include tablet {
+      margin-bottom: 10px;
+    }
+
+    @include tablet-land {
       margin-bottom: 10px;
     }
   }
@@ -139,6 +181,10 @@
     @include minitablet {
       max-width: 100%;
     }
+
+    @include tablet-land {
+      max-width: 100%;
+    }
   }
 
   &__txt {
@@ -148,6 +194,10 @@
     }
 
     @include minitablet {
+      margin-bottom: 10px;
+    }
+
+    @include tablet-land {
       margin-bottom: 10px;
     }
   }
@@ -160,6 +210,10 @@
 
     @include minitablet {
       align-items: stretch;
+    }
+
+    @include tablet-land {
+      width: 180%;
     }
   }
 
@@ -174,9 +228,18 @@
         margin-right: 20px;
         width: calc((100% - 20px) / 2);
       }
+
+      @include tablet-land {
+        margin-right: 20px;
+        width: calc((100% - 20px) / 2);
+      }
     }
 
     @include minitablet {
+      height: 100%;
+    }
+
+    @include tablet-land {
       height: 100%;
     }
   }
@@ -186,6 +249,10 @@
     object-fit: cover;
 
     @include minitablet {
+      height: 100%;
+    }
+
+    @include tablet-land {
       height: 100%;
     }
   }
@@ -203,6 +270,10 @@
     @include minitablet {
       display: none;
     }
+
+    @include tablet-land {
+      display: none;
+    }
   }
 
   &__right-img {
@@ -212,7 +283,7 @@
     @include tablet {
       border-radius: 240px 0 0 0;
     }
-    
+
 
   }
 }
@@ -228,6 +299,11 @@
     }
 
     @include minitablet {
+      text-align: center;
+    }
+
+    @include tablet-land {
+      margin-bottom: 20px;
       text-align: center;
     }
   }
@@ -254,6 +330,14 @@
     @include minitablet {
       margin-right: 0;
     }
+
+    @include tablet-land {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+      max-width: 100%;
+      margin-bottom: 0;
+    }
   }
 
   &__img-big {
@@ -261,6 +345,10 @@
     width: 100%;
 
     @include minitablet {
+      display: none;
+    }
+
+    @include tablet-land {
       display: none;
     }
   }
@@ -278,14 +366,20 @@
       margin-bottom: 30px;
     }
 
+    @include tablet-land {
+      margin-bottom: 0;
+    }
+
     @include mobile {
       justify-content: center;
+
     }
   }
 
   &__img-box {
 
     @include tablet {
+      width: auto;
       height: 380px;
       overflow: hidden;
     }
@@ -296,10 +390,24 @@
       @include tablet {
         margin-right: 20px;
       }
+
+      @include mobile {
+        margin-right: 0;
+      }
+
+      @include tablet-land {
+        width: 270px;
+        margin-right: 20px;
+      }
+
     }
 
     &--hidden {
       @include mobile {
+        display: none;
+      }
+
+      @include tablet-land {
         display: none;
       }
     }
@@ -325,13 +433,16 @@
     @include minitablet {
       margin-bottom: 4px;
     }
-
   }
 
   &__txt {
     margin-bottom: 40px;
 
     @include minitablet {
+      margin-bottom: 10px;
+    }
+
+    @include tablet-land {
       margin-bottom: 10px;
     }
   }
@@ -346,6 +457,10 @@
     @include minitablet {
       margin-bottom: 20px;
     }
+
+    @include tablet-land {
+      margin-bottom: 20px;
+    }
   }
 
   &__inner {
@@ -354,6 +469,10 @@
     align-items: stretch;
 
     @include minitablet {
+      flex-direction: column;
+    }
+
+    @include tablet-land {
       flex-direction: column;
     }
   }
@@ -376,6 +495,13 @@
       max-width: 100%;
       margin-right: 0;
     }
+
+    @include tablet-land {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 100%;
+      margin-right: 0;
+    }
   }
 
   &__inner-right {
@@ -386,6 +512,11 @@
     width: 100%;
 
     @include minitablet {
+      order: -1;
+      max-width: 100%;
+    }
+
+    @include tablet-land {
       order: -1;
       max-width: 100%;
     }
@@ -408,6 +539,11 @@
         border-radius: 0;
         margin-bottom: 0;
       }
+
+      @include tablet-land {
+        border-radius: 0;
+        margin-bottom: 0;
+      }
     }
 
     &--third {
@@ -420,9 +556,18 @@
       @include minitablet {
         display: none;
       }
+
+      @include tablet-land {
+        display: none;
+      }
     }
 
     @include minitablet {
+      height: auto;
+      width: calc((100% - 20px) / 2);
+    }
+
+    @include tablet-land {
       height: auto;
       width: calc((100% - 20px) / 2);
     }
@@ -438,6 +583,11 @@
     @include minitablet {
       margin-bottom: 30px;
     }
+
+    @include tablet-land {
+      margin-bottom: 30px;
+    }
+
   }
 
   &__subtitle {
@@ -449,6 +599,10 @@
 
     @include minitablet {
       margin-bottom: 10px;
+    }
+
+    @include tablet-land {
+       margin-bottom: 10px;
     }
   }
 
@@ -462,6 +616,10 @@
     @include minitablet {
       margin-bottom: 10px;
     }
+
+     @include tablet-land {
+      margin-bottom: 10px;
+     }
   }
 }
 
@@ -534,6 +692,7 @@
   }
 
   &__btn {
+    width: fit-content;
     text-transform: uppercase;
     color: $primary;
     transition: color 0.4s,
@@ -557,11 +716,20 @@
     }
 
     @include mobile {
+      margin: 0 auto;
+      padding: 10px 20px;
       text-align: center;
-      padding: 10px;
       background-color: $accent;
       color: $light;
     }
+
+      @include tablet-land {
+        margin: 0 auto;
+        padding: 10px 20px;
+        text-align: center;
+        background-color: $accent;
+        color: $light;
+      }
   }
 
   &__txt {

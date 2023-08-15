@@ -40,10 +40,6 @@ main {
     margin-top: 163px;
 
     @include tablet {
-      margin-top: 147px;
-    }
-
-    @include minitablet {
       margin-top: 81px;
     }
 
@@ -77,6 +73,10 @@ main {
       @include tablet {
         padding: 50px 0;
       }
+
+      @include tablet-land {
+        padding: 50px 0;
+      }
   }
 
   @include minidesk {
@@ -84,6 +84,10 @@ main {
   }
 
    @include tablet {
+    padding-top: 50px;
+   }
+   
+   @include tablet-land {
     padding-top: 50px;
    }
 }
@@ -141,6 +145,10 @@ main {
      font-size: 38px;
    }
 
+   @include tablet-land {
+     font-size: 32px; 
+   }
+
    @include mobile {
      font-size: 32px;
    }
@@ -164,6 +172,10 @@ main {
   }
   
    @include minitablet {
+     font-size: 80px;
+   }
+
+   @include tablet-land {
      font-size: 80px;
    }
 

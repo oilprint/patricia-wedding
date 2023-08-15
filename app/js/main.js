@@ -2,7 +2,7 @@ console.log("test");
 
   AOS.init({
     disable: function () {
-      var maxWidth = 768;
+      var maxWidth = 1024;
       return window.innerWidth < maxWidth;
     }
   });
