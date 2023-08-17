@@ -4,10 +4,15 @@
   &__inner {
     display: flex;
     align-items: start;
-    margin-bottom: 90px;
+    margin-bottom: 60px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
 
     @include minitablet {
       flex-direction: column;
+
     }
   }
 
@@ -119,7 +124,7 @@
   display: flex;
   max-width: 570px;
   width: 100%;
-  
+
 
   @include tablet {
     max-width: 360px;
@@ -240,6 +245,7 @@
     width: calc((100% - 2 * 30px) / 3);
     padding: 10px 0;
     font-size: 24px;
+    text-transform: uppercase;
     cursor: pointer;
 
     &:before {
@@ -266,46 +272,86 @@
   }
 
   &__box {
-   position: relative;
-   border-bottom: 1px solid $grey;
-   margin-bottom: 30px;
+    position: relative;
+    margin-bottom: 20px;
+
+    @include tablet {
+      border-bottom: 1px solid $grey;
+    }
+
   }
 
   &__title {
-    margin-bottom: 30px;
+    display: none;
+    padding: 10px 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+
+
+    @include tablet {
+      display: inline-block;
+      width: fit-content;
+    }
   }
 
   &__info {
+    padding-top: 0;
     display: block;
+    margin-bottom: 20px;
 
     &.hidden {
       display: none;
     }
 
-    margin-bottom: 20px;
+    @include tablet {
+      padding-top: 30px;
+    }
 
+    @include minitablet {
+      padding-top: 10px;
+    }
 
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
 
   &__info-list {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     margin-bottom: 20px;
+
+    @include minitablet {
+      flex-wrap: wrap;
+    }
   }
 
   &__info-item {
-    width: calc((100% - 2 * 30px) / 3);
+    width: calc((100% - 2 * 20px) / 3);
+
+    @include minitablet {
+      width: calc((100% - 20px) / 2);
+    }
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__info-title {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   &__info-txt {
-    margin-bottom: 10px;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 
   &__button {
@@ -315,18 +361,26 @@
   &__info-inner {
     display: flex;
     justify-content: space-between;
+
+    @include minitablet {
+      flex-direction: column;
+    }
   }
 
   &__txt-content {
-    max-width: 770px;
+    max-width: 700px;
     width: 100%;
-    margin-right: 100px;
+    margin-right: 30px;
+
+    @include minitablet {
+      margin: 0 0 10px;
+    }
   }
 
   &__tabs-item {
     position: relative;
     padding-left: 20px;
-    max-width: 410px;
+    max-width: 370px;
     width: 100%;
 
 
@@ -346,25 +400,29 @@
     }
   }
 
-  &__size-link {
-    display: block;
-    width: fit-content;
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 30px;
-  }
-
   &__size {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     column-gap: 30px;
     row-gap: 10px;
+    margin-bottom: 20px;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__size-link {
+    margin-left: auto;
   }
 
   &__size-item {
     width: calc((100% - 30px) / 2);
 
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__size-txt {

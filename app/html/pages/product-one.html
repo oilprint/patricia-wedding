@@ -25,7 +25,7 @@
   <main>
     <div class="wrapper">
 
-      <div class="breadcrumbs ">
+      <!-- <div class="breadcrumbs ">
         <div class="container">
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
@@ -52,7 +52,7 @@
 
           </ul>
         </div>
-      </div>
+      </div> -->
 
       <section class="product-item section">
         <div class="container">
@@ -284,23 +284,23 @@
 
           <div class="product-tabs">
             <ul class="product-tabs__list">
-              <li class="product-tabs__item" data-tab="tab-1">
+              <li class="product-tabs__item active" data-tab="tab-1">
                 Product description
               </li>
               <li class="product-tabs__item" data-tab="tab-2">
                 Size and Fit
               </li>
-              <li class="product-tabs__item active" data-tab="tab-3">
+              <li class="product-tabs__item" data-tab="tab-3">
                 Delivery & Returns
               </li>
             </ul>
             <div class="product-tabs__content">
 
               <div class="product-tabs__box">
-                <h2 class="product-tabs__item product-tabs__title hidden" data-tab="tab-1">
+                <h2 class="product-tabs__title hidden" data-tab="tab-1">
                   Product description
                 </h2>
-                <div class="product-tabs__info hidden" id="tab-1" data-tab-content>
+                <div class="product-tabs__info active" id="tab-1" data-tab-content>
                   <div class="product-tabs__info-inner">
                     <div class="product-tabs__txt-content">
                       <p class="product-tabs__info-txt">
@@ -341,13 +341,11 @@
               </div>
 
               <div class="product-tabs__box">
-                <h2 class="product-tabs__item product-tabs__title hidden" data-tab="tab-2">
+                <h2 class="product-tabs__title hidden" data-tab="tab-2">
                   Size and Fit
                 </h2>
                 <div class="product-tabs__info hidden" id="tab-2" data-tab-content>
-                  <a class="product-tabs__size-link link" href="#">
-                    SIZE CHART
-                  </a>
+
                   <ul class="product-tabs__size">
                     <li class="product-tabs__size-item">
                       <span class="product-tabs__size-txt"> Fit:
@@ -385,14 +383,18 @@
                       Fabric is very stretchy.
                     </li>
                   </ul>
+
+                  <a class="product-tabs__size-link button button--light" href="#">
+                    Size chart
+                  </a>
                 </div>
               </div>
 
               <div class="product-tabs__box">
-                <h2 class="product-tabs__item product-tabs__title  hidden" data-tab="tab-3">
+                <h2 class="product-tabs__title  hidden" data-tab="tab-3">
                   Delivery & Returns
                 </h2>
-                <div class="product-tabs__info" id="tab-3" data-tab-content>
+                <div class="product-tabs__info hidden" id="tab-3" data-tab-content>
                   <ul class="product-tabs__info-list">
                     <li class="product-tabs__info-item">
                       <h2 class="product-tabs__info-title">
