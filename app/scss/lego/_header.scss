@@ -436,10 +436,6 @@
     }
 
     @include tablet {
-      padding-bottom: 6px;
-    }
-
-    @include minitablet {
       padding: 16px 0 16px;
     }
   }
@@ -452,7 +448,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 20px 0 20px;
+    padding: 10px 0 20px;
 
     @include tablet {
       display: none;
@@ -561,7 +557,7 @@
 
   &__language {
 
-    @include minitablet {
+    @include tablet {
       display: none;
     }
   }
@@ -593,21 +589,7 @@
     fill: $primary;
   }
 
-  @include minitablet {
+  @include tablet {
     display: flex;
   }
 }
-
-// .block {
-//   height: 200px;
-//   width: 100%;
-//   background-color: yellow;
- 
-//   @media (max-width: 576px) {
-//     background-color: red;
-//   }
-
-//   @media (max-width: 1024px)and (orientation: landscape){
-//     background-color: green;
-//   }
-// }

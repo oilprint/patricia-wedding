@@ -37,14 +37,14 @@ main {
 .wrapper {
 
   &.scroll {
-    margin-top: 163px;
+    margin-top: 183px;
 
     @include tablet {
       margin-top: 81px;
     }
 
     @include mini {
-      margin-top: 76px;
+      margin-top: 66px;
     }
   }
 }
@@ -66,30 +66,30 @@ main {
   &--big {
     padding: 90px 0;
 
-     @include minidesk {
-       padding: 70px 0;
-     }
+    @include minidesk {
+      padding: 70px 0;
+    }
 
-      @include tablet {
-        padding: 50px 0;
-      }
+    @include tablet {
+      padding: 50px 0;
+    }
 
-      @include tablet-land {
-        padding: 50px 0;
-      }
+    @include tablet-land {
+      padding: 50px 0;
+    }
   }
 
   @include minidesk {
     padding-top: 70px;
   }
 
-   @include tablet {
+  @include tablet {
     padding-top: 50px;
-   }
-   
-   @include tablet-land {
+  }
+
+  @include tablet-land {
     padding-top: 50px;
-   }
+  }
 }
 
 .form {
@@ -137,25 +137,25 @@ main {
     font-size: 68px;
   }
 
-   @include tablet {
-     font-size: 52px;
-   }
+  @include tablet {
+    font-size: 52px;
+  }
 
-   @include minitablet {
-     font-size: 38px;
-   }
+  @include minitablet {
+    font-size: 38px;
+  }
 
-   @include tablet-land {
-     font-size: 32px; 
-   }
+  @include tablet-land {
+    font-size: 32px;
+  }
 
-   @include mobile {
-     font-size: 32px;
-   }
+  @include mobile {
+    font-size: 32px;
+  }
 
-   @include mini {
+  @include mini {
     font-size: 30px;
-   }
+  }
 }
 
 .subtitle {
@@ -170,18 +170,18 @@ main {
   @include tablet {
     font-size: 100px;
   }
-  
-   @include minitablet {
-     font-size: 80px;
-   }
 
-   @include tablet-land {
-     font-size: 80px;
-   }
+  @include minitablet {
+    font-size: 80px;
+  }
 
-   @include mini {
+  @include tablet-land {
+    font-size: 80px;
+  }
+
+  @include mini {
     font-size: 60px;
-   }
+  }
 }
 
 .product-card {
@@ -391,18 +391,6 @@ main {
     justify-content: space-between;
     height: 100%;
 
-    &:before {
-      position: absolute;
-      content: '';
-      z-index: 2;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background-color: transparent;
-      transition: background-color 0.2s;
-    }
-
     &:focus {
       box-shadow: 0px 0px 0px 1px $accent;
     }
@@ -416,14 +404,13 @@ main {
     }
 
     &:active {
-      &:before {
-        background-color: rgba($bg-accent, 0.7);
-      }
+      opacity: 0.7;
     }
   }
 
   &__img-box {
     overflow: hidden;
+  
   }
 
   &__img {

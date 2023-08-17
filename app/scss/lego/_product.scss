@@ -3,7 +3,12 @@
 
   &__inner {
     display: flex;
+    align-items: start;
     margin-bottom: 90px;
+
+    @include minitablet {
+      flex-direction: column;
+    }
   }
 
   &__slider {
@@ -12,6 +17,7 @@
 
   &__content {
     position: relative;
+
   }
 
   &__subtitle {
@@ -30,10 +36,18 @@
 
   &__txt {
     margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 15px;
+    }
   }
 
   &__price {
     margin-bottom: 40px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__price-new {
@@ -49,6 +63,8 @@
 
   &__color {
     display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   &__color-txt {
@@ -66,6 +82,10 @@
 
   &__filter-size {
     margin-bottom: 40px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__note {
@@ -97,6 +117,19 @@
 
 .slider {
   display: flex;
+  max-width: 570px;
+  width: 100%;
+  
+
+  @include tablet {
+    max-width: 360px;
+    padding-bottom: 20px;
+  }
+
+  @include minitablet {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
 
   &__nav {
     position: relative;
@@ -110,12 +143,27 @@
       width: 100px;
       height: 160px;
     }
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__main {
     overflow: hidden;
-    height: 700px;
-    width: 440px;
+    padding-bottom: 30px;
+
+    @include minitablet {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__main-scrollbar {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   &__img {
@@ -181,6 +229,10 @@
     justify-content: space-between;
     border-bottom: 1px solid $grey;
     margin-bottom: 30px;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__item {
@@ -206,10 +258,21 @@
 
     &.active {
       color: $accent;
+
       &:before {
         transform: scaleX(1);
       }
     }
+  }
+
+  &__box {
+   position: relative;
+   border-bottom: 1px solid $grey;
+   margin-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
   }
 
   &__info {
@@ -219,13 +282,15 @@
       display: none;
     }
 
+    margin-bottom: 20px;
+
 
   }
 
   &__info-list {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   &__info-item {
@@ -245,7 +310,7 @@
 
   &__button {
     margin-left: auto;
-  } 
+  }
 
   &__info-inner {
     display: flex;
@@ -255,7 +320,7 @@
   &__txt-content {
     max-width: 770px;
     width: 100%;
-    margin-right: 100px; 
+    margin-right: 100px;
   }
 
   &__tabs-item {
@@ -263,7 +328,7 @@
     padding-left: 20px;
     max-width: 410px;
     width: 100%;
-    
+
 
     &:before {
       position: absolute;
@@ -299,9 +364,9 @@
 
   &__size-item {
     width: calc((100% - 30px) / 2);
-    
+
   }
- 
+
   &__size-txt {
     font-weight: 500;
     color: $accent;
@@ -326,26 +391,49 @@
   }
 
   &__link {
-    bottom: 30px;
+    margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 10px;
+    }
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+
+    @include tablet {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x;
+      gap: 20px;
+      -webkit-overflow-scrolling: touch;
+    }
   }
 
   &__item {
-    max-width: 237px;
+    max-width: 270px;
     width: 100%;
+    height: auto;
 
-    &--big {
-      max-width: 370px;
+    @include tablet {
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
     }
 
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include tablet {
+        margin-right: 20px;
+      }
     }
+  }
+
+  &__img {
+    object-fit: cover;
+
   }
 }
 

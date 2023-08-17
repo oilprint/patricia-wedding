@@ -79,20 +79,34 @@ console.log("test");
         loopedSledes: 4,
         freeMode: true,
         loop: true,
-        direction: 'vertical',
+        direction: 'vertical'
     });
 
     let mySwiper = new Swiper(slider, {
-      spaceBetween: 10,
+      slidesPerView: 2,
+      spaceBetween: 20,
       loopedSledes: 4,
       loop: true,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+
+      scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+
       thumbs: {
         swiper: mySwiperNav, 
+      },
+
+      breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        }
       }
+
     });
 
     //swiper review
@@ -112,7 +126,7 @@ console.log("test");
         scrollbar: {
           el: '.swiper-scrollbar',
         },
-        
+    
     });
 
 

@@ -410,7 +410,7 @@
         <label class="sr-only" for="search">Search</label>
         <input class="form__input header__input " type="text" name="search" id="search" placeholder="Search">
         <button class="icon-button form__btn">
-          <svg class="icon-button__icon" width="28" height="28">
+          <svg class="icon-button__icon" width="20" height="20">
             <use href="./images/symbol-defs.svg#icon-search"></use>
           </svg>
         </button>
@@ -525,7 +525,7 @@
   </div>
 </header>
 
-  
+
   <main>
     <div class="wrapper">
 
@@ -558,7 +558,7 @@
         </div>
       </div>
 
-      <section class="product-item">
+      <section class="product-item section">
         <div class="container">
           <div class="product-item__inner">
             <div class="product-item__slider slider">
@@ -594,7 +594,7 @@
               </div>
 
               <div class="slider__main swiper">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper" pagination="true">
 
                   <div class="swiper-slide">
                     <img class="swiper__img" src="images/product/calliope/img-01.jpg" alt="Aurora Collection Calliope">
@@ -613,7 +613,10 @@
                   </div>
 
                 </div>
+
+                <div class="swiper-scrollbar slider__main-scrollbar"></div>
               </div>
+
             </div>
 
             <div class="product-item__content">
@@ -796,130 +799,146 @@
               </li>
             </ul>
             <div class="product-tabs__content">
-              <div class="product-tabs__info hidden" id="tab-1" data-tab-content>
 
-                <div class="product-tabs__info-inner">
-                  <div class="product-tabs__txt-content">
-                    <p class="product-tabs__info-txt">
-                      Experience timeless beauty and unmatched elegance with our A-line silhouette gown, crafted from
-                      luxurious ivory fabric. Adorned with delicate hand-embroidered lace appliqués, Swarovski crystals,
-                      and
-                      pearls, it exudes sophistication and glamour.
-                    </p>
-                    <p class="product-tabs__info-txt">
-                      The sweetheart neckline and illusion sleeves add a modern
-                      twist, while the chapel-length train adds grandeur to your entrance. This dress is designed to
-                      make
-                      every bride feel like a true vision of grace on her special day, available exclusively through
-                      our
-                      e-commerce store.
-                    </p>
+              <div class="product-tabs__box">
+                <h2 class="product-tabs__item product-tabs__title hidden" data-tab="tab-1">
+                  Product description
+                </h2>
+                <div class="product-tabs__info hidden" id="tab-1" data-tab-content>
+                  <div class="product-tabs__info-inner">
+                    <div class="product-tabs__txt-content">
+                      <p class="product-tabs__info-txt">
+                        Experience timeless beauty and unmatched elegance with our A-line silhouette gown, crafted from
+                        luxurious ivory fabric. Adorned with delicate hand-embroidered lace appliqués, Swarovski
+                        crystals,
+                        and
+                        pearls, it exudes sophistication and glamour.
+                      </p>
+                      <p class="product-tabs__info-txt">
+                        The sweetheart neckline and illusion sleeves add a modern
+                        twist, while the chapel-length train adds grandeur to your entrance. This dress is designed to
+                        make
+                        every bride feel like a true vision of grace on her special day, available exclusively through
+                        our
+                        e-commerce store.
+                      </p>
+                    </div>
+                    <ul class="product-tabs__txt-list">
+                      <li class="product-tabs__tabs-item">
+                        Lined
+                      </li>
+                      <li class="product-tabs__tabs-item">
+                        Dress measures 8" longer at back
+                      </li>
+                      <li class="product-tabs__tabs-item">
+                        Shell: 95% Polyester, 5% Spandex
+                      </li>
+                      <li class="product-tabs__tabs-item">
+                        Lining: 100% Polyester
+                      </li>
+                      <li class="product-tabs__tabs-item">
+                        Hand Wash Cold. Do Not Bleach. Line Dry. Iron Low Heat.
+                      </li>
+                    </ul>
                   </div>
-                  <ul class="product-tabs__txt-list">
-                    <li class="product-tabs__tabs-item">
-                      Lined
+                </div>
+              </div>
+
+              <div class="product-tabs__box">
+                <h2 class="product-tabs__item product-tabs__title hidden" data-tab="tab-2">
+                  Size and Fit
+                </h2>
+                <div class="product-tabs__info hidden" id="tab-2" data-tab-content>
+                  <a class="product-tabs__size-link link" href="#">
+                    SIZE CHART
+                  </a>
+                  <ul class="product-tabs__size">
+                    <li class="product-tabs__size-item">
+                      <span class="product-tabs__size-txt"> Fit:
+                      </span>
+                      This garment fits true to size.
                     </li>
-                    <li class="product-tabs__tabs-item">
-                      Dress measures 8" longer at back
+                    <li class="product-tabs__size-item">
+                      <span class="product-tabs__size-txt"> Length:
+                      </span>
+                      Floor length. Size small measures 67.5" from shoulder to hem.
                     </li>
-                    <li class="product-tabs__tabs-item">
-                      Shell: 95% Polyester, 5% Spandex
+                    <li class="product-tabs__size-item">
+                      <span class="product-tabs__size-txt"> Bust:
+                      </span>
+                      Great for any cup size.
                     </li>
-                    <li class="product-tabs__tabs-item">
-                      Lining: 100% Polyester
+                    <li class="product-tabs__size-item">
+                      <span class="product-tabs__size-txt"> Waist:
+                      </span>
+                      Fitted - stretchy fabric allows custom fit.
                     </li>
-                    <li class="product-tabs__tabs-item">
-                      Hand Wash Cold. Do Not Bleach. Line Dry. Iron Low Heat.
+                    <li class="product-tabs__size-item">
+                      <span class="product-tabs__size-txt"> Hip:
+                      </span>
+                      Fitted - stretchy fabric allows room for hips.
+                    </li>
+                    <li class="product-tabs__size-item">
+                      <span class="product-tabs__size-txt"> Undergarments:
+                      </span>
+                      May be worn with an adhesive bra, petals, or no bra.
+                    </li>
+                    <li class="product-tabs__size-item">
+                      <span class="product-tabs__size-txt"> Fabric:
+                      </span>
+                      Fabric is very stretchy.
                     </li>
                   </ul>
-
                 </div>
+              </div>
 
-              </div>
-              <div class="product-tabs__info hidden" id="tab-2" data-tab-content>
-                <a class="product-tabs__size-link link" href="#">
-                  SIZE CHART
-                </a>
-                <ul class="product-tabs__size">
-                  <li class="product-tabs__size-item">
-                    <span class="product-tabs__size-txt"> Fit:
-                    </span>
-                    This garment fits true to size.
-                  </li>
-                  <li class="product-tabs__size-item">
-                    <span class="product-tabs__size-txt"> Length:
-                    </span>
-                    Floor length. Size small measures 67.5" from shoulder to hem.
-                  </li>
-                  <li class="product-tabs__size-item">
-                    <span class="product-tabs__size-txt"> Bust:
-                    </span>
-                    Great for any cup size.
-                  </li>
-                  <li class="product-tabs__size-item">
-                    <span class="product-tabs__size-txt"> Waist:
-                    </span>
-                    Fitted - stretchy fabric allows custom fit.
-                  </li>
-                  <li class="product-tabs__size-item">
-                    <span class="product-tabs__size-txt"> Hip:
-                    </span>
-                    Fitted - stretchy fabric allows room for hips.
-                  </li>
-                  <li class="product-tabs__size-item">
-                    <span class="product-tabs__size-txt"> Undergarments:
-                    </span>
-                    May be worn with an adhesive bra, petals, or no bra.
-                  </li>
-                  <li class="product-tabs__size-item">
-                    <span class="product-tabs__size-txt"> Fabric:
-                    </span>
-                    Fabric is very stretchy.
-                  </li>
-                </ul>
-              </div>
-              <div class="product-tabs__info" id="tab-3" data-tab-content>
-                <ul class="product-tabs__info-list">
-                  <li class="product-tabs__info-item">
-                    <h2 class="product-tabs__info-title">
-                      Standart delivery
-                    </h2>
-                    <div class="product-tabs__txt-box">
-                      <p class="product-tabs__info-txt">
-                        Business Days: 9-12
-                      </p>
-                      <p class="product-tabs__info-txt">
-                        Cost: Free
-                      </p>
-                    </div>
-                  </li>
-                  <li class="product-tabs__info-item">
-                    <h2 class="product-tabs__info-title">
-                      Express delivery
-                    </h2>
-                    <div class="product-tabs__txt-box">
-                      <p class="product-tabs__info-txt">
-                        Business Days: 1-2
-                      </p>
-                      <p class="product-tabs__info-txt">
-                        Cost: $25
-                      </p>
-                    </div>
-                  </li>
-                  <li class="product-tabs__info-item">
-                    <h2 class="product-tabs__info-title">
-                      Return
-                    </h2>
-                    <div class="product-tabs__txt-box">
-                      <p class="product-tabs__info-txt">
-                        Extended return policy during the Holidays
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-                <button class="product-tabs__button button button--light">
-                  Detailed information
-                </button>
+              <div class="product-tabs__box">
+                <h2 class="product-tabs__item product-tabs__title  hidden" data-tab="tab-3">
+                  Delivery & Returns
+                </h2>
+                <div class="product-tabs__info" id="tab-3" data-tab-content>
+                  <ul class="product-tabs__info-list">
+                    <li class="product-tabs__info-item">
+                      <h2 class="product-tabs__info-title">
+                        Standart delivery
+                      </h2>
+                      <div class="product-tabs__txt-box">
+                        <p class="product-tabs__info-txt">
+                          Business Days: 9-12
+                        </p>
+                        <p class="product-tabs__info-txt">
+                          Cost: Free
+                        </p>
+                      </div>
+                    </li>
+                    <li class="product-tabs__info-item">
+                      <h2 class="product-tabs__info-title">
+                        Express delivery
+                      </h2>
+                      <div class="product-tabs__txt-box">
+                        <p class="product-tabs__info-txt">
+                          Business Days: 1-2
+                        </p>
+                        <p class="product-tabs__info-txt">
+                          Cost: $25
+                        </p>
+                      </div>
+                    </li>
+                    <li class="product-tabs__info-item">
+                      <h2 class="product-tabs__info-title">
+                        Return
+                      </h2>
+                      <div class="product-tabs__txt-box">
+                        <p class="product-tabs__info-txt">
+                          Extended return policy during the Holidays
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <button class="product-tabs__button button button--light">
+                    Detailed information
+                  </button>
+                </div>
               </div>
 
             </div>
@@ -928,7 +947,7 @@
         </div>
       </section>
 
-      <section class="extra-item section-content">
+      <!-- <section class="extra-item section section--big">
         <div class="container">
           <div class="extra-item__top">
             <h2 class="title">
@@ -945,7 +964,7 @@
                 <a class="accessories-card__link" href="#">
                   <div class="accessories-card__img-box">
                     <img class="accessories-card__img" src="images/product/accessories/nicola.jpg"
-                      alt="Nicola Bathie Perry" width="237" height="290">
+                      alt="Nicola Bathie Perry" width="270" height="350">
                   </div>
                   <div class="accessories-card__content">
                     <h3 class="accessories-card__title">
@@ -982,7 +1001,7 @@
                 <a class="accessories-card__link" href="#">
                   <div class="accessories-card__img-box">
                     <img class="accessories-card__img" src="images/product/accessories/pear-hair.jpg"
-                      alt="aruba long pearl hair vine" width="237" height="290">
+                      alt="aruba long pearl hair vine" width="270" height="350">
                   </div>
                   <div class="accessories-card__content">
                     <h3 class="accessories-card__title">
@@ -1008,12 +1027,12 @@
                 </button>
               </article>
             </li>
-            <li class="extra-item__item extra-item__item--big">
+            <li class="extra-item__item ">
               <article class="accessories-card">
                 <a class="accessories-card__link" href="#">
                   <div class="accessories-card__img-box">
                     <img class="accessories-card__img" src="images/product/accessories/ceramic-big.jpg"
-                      alt="paradise ivory ceramic flower hair pins" width="370" height="290">
+                      alt="paradise ivory ceramic flower hair pins" width="270" height="350">
                   </div>
                   <div class="accessories-card__content">
                     <h3 class="accessories-card__title">
@@ -1039,12 +1058,12 @@
                 </button>
               </article>
             </li>
-            <li class="extra-item__item">
+            <li class="extra-item__item extra-item__item--hidden">
               <article class="accessories-card">
                 <a class="accessories-card__link" href="#">
                   <div class="accessories-card__img-box">
                     <img class="accessories-card__img" src="images/product/accessories/ceramic-hair.jpg"
-                      alt="ceramic flower hair pins" width="237" height="290">
+                      alt="ceramic flower hair pins" width="270" height="350">
                   </div>
                   <div class="accessories-card__content">
                   </div>
@@ -1078,9 +1097,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
-      <section class="review section-content">
+      <!-- <section class="review section">
         <div class="container">
           <div class="review__top">
             <h2 class="review__title title">
@@ -1223,7 +1242,7 @@
         </div>
       </section>
 
-      <section class="viewed section-content">
+      <section class="viewed section section--big">
         <div class="container">
           <h2 class="title viewed__title">
             Recently viewed
@@ -1407,7 +1426,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </div>
   </main>
 
