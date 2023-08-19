@@ -14,6 +14,7 @@
 		el.addEventListener('click', (e) => {
 			let currentBtn = e.currentTarget;
 			let drop = currentBtn.closest('.header__item').querySelector('.dropdown-menu');
+      bodyLock.classList.add('lock')
 
     
 			menuBtns.forEach(el => {
@@ -26,6 +27,7 @@
 			drops.forEach(el => {
 				if (el !== drop) {
 					el.classList.remove('dropdown-menu--active');
+          bodyLock.classList.remove('lock')
 				}
 			});
 
@@ -43,6 +45,8 @@
 			drops.forEach(el => {
 				el.classList.remove('dropdown-menu--active');
 			});
+
+      bodyLock.classList.remove('lock')
 		}
 	});
 

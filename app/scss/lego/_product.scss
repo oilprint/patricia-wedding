@@ -443,7 +443,7 @@
 
 .extra-item {
 
-  &__accessories-card {
+  &__product-extra {
 
     @include tablet {
       width: 200px;
@@ -596,6 +596,15 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+
+     @include tablet {
+       display: flex;
+       justify-content: flex-start;
+       overflow-x: auto;
+       scroll-snap-type: x;
+       -webkit-overflow-scrolling: touch;
+     }
+    
   }
 
   &__item {
@@ -603,6 +612,24 @@
 
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include tablet {
+        margin-right: 20px;
+      }
     }
+
+     @include tablet {
+      width: 200px;
+     }
   }
+
+  &__product-card {
+    .product-card__link {
+       @include tablet {
+        height: 250px;
+       }
+    }
+
+  }
+
 }

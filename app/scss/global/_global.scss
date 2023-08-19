@@ -184,6 +184,29 @@ main {
   }
 }
 
+.cart-title {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 17px;
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__txt {
+    display: flex;
+  }
+
+  &__stars {
+    margin-right: 10px;
+  }
+}
+
 .product-card {
   position: relative;
   display: flex;
@@ -232,13 +255,26 @@ main {
   }
 
   &__image {
+    width: 100%;
     object-fit: cover;
     transition: transform 0.4s;
+
+    @include mobile {
+      height: 300px;
+    } 
+
+    @include mini  {
+      height: auto;
+    }
   }
 
   &__content-box {
     flex-grow: 1;
     padding: 20px 10px;
+
+    @include mobile {
+      padding: 10px;
+    }
   }
 
   &__content {
@@ -250,19 +286,23 @@ main {
 
   &__subtitle {
     font-size: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
+    color: rgba($primary, 0.7);
   }
 
   &__title {
+    margin-bottom: 10px;
     font-size: 20px;
     font-weight: 500;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    transition: color 0.4s;
+    color: $accent;
   }
 
   &__stars {
     margin-bottom: 10px;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__price {
@@ -273,6 +313,10 @@ main {
     font-size: 20px;
     font-weight: 400;
     color: $accent;
+
+    @include mobile {
+      font-size: 15px;
+    }
   }
 
   &__price-current {
@@ -315,7 +359,13 @@ main {
 
   &--line {
     flex-direction: row;
+    align-items: flex-start;
     min-width: 100%;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
 
     .product-card__link {
       width: 220px;
@@ -328,6 +378,10 @@ main {
 
     .product-card__content-box {
       padding: 20px 30px;
+      
+      @include mobile {
+        padding: 10px 10px 30px;
+      }
     }
 
     .product-card__content {
@@ -347,6 +401,12 @@ main {
       margin-right: 0;
       order: 1;
       margin-left: 20px;
+    }
+
+    .product-card__description {
+      @include mobile {
+        margin-bottom: 10px;
+      }
     }
 
     .product-card__wishlist {
@@ -379,11 +439,10 @@ main {
   }
 }
 
-.accessories-card {
+.product-extra {
   position: relative;
   font-size: 24px;
   font-weight: 500;
-  height: 100%;
 
   &__link {
     display: flex;
@@ -410,10 +469,6 @@ main {
 
   &__img-box {
     overflow: hidden;
-
-    @include tablet {
-      height: 300px;
-    }
   }
 
   &__img {
@@ -430,26 +485,24 @@ main {
   }
 
   &__title {
-    font-size: 20px;
-    text-transform: uppercase;
     margin-bottom: 10px;
   }
 
   &__txt {
-   
+
     color: $grey;
   }
 
   &__price-current {
     display: inline-block;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     color: $accent;
     margin-right: 20px;
   }
 
   &__price-old {
-    font-size: 24px;
+    font-size: 17px;
     font-weight: 400;
     text-decoration: line-through;
   }
@@ -468,19 +521,6 @@ main {
     .product-card-small__title {
       font-size: 17px;
     }
-  }
-}
-
-.stars {
-  display: flex;
-  align-items: center;
-
-  &__txt {
-    display: flex;
-  }
-
-  &__stars {
-    margin-right: 10px;
   }
 }
 
@@ -531,10 +571,14 @@ main {
 
 .pagination {
 
-  &__txt {
+  &__headline {
     text-align: center;
     font-size: 22px;
     margin-bottom: 20px;
+
+    @include minitablet {
+      margin-bottom: 10px;
+    }
   }
 
   &__inner {
@@ -544,6 +588,10 @@ main {
     padding: 20px 0;
     border-top: 1px solid $devider;
     border-bottom: 1px solid $devider;
+
+    @include minitablet {
+      margin-bottom: 40px;
+    }
   }
 
   &__btn {
@@ -593,6 +641,12 @@ main {
     }
   }
 
+  &__text {
+    @include mobile {
+      display: none;
+    }
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
@@ -601,6 +655,10 @@ main {
 
   &__item:not(:last-child) {
     margin-right: 20px;
+
+    @include mobile {
+      margin-right: 10px;
+    }
   }
 
   &__link {
