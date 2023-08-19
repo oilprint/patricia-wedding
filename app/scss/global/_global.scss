@@ -410,7 +410,10 @@ main {
 
   &__img-box {
     overflow: hidden;
-  
+
+    @include tablet {
+      height: 300px;
+    }
   }
 
   &__img {
@@ -430,6 +433,11 @@ main {
     font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 10px;
+  }
+
+  &__txt {
+   
+    color: $grey;
   }
 
   &__price-current {

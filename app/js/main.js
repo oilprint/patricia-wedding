@@ -101,7 +101,7 @@ console.log("test");
       },
 
       breakpoints: {
-        768: {
+        769: {
           slidesPerView: 1,
           spaceBetween: 0,
         }

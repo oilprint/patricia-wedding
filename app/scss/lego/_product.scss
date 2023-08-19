@@ -33,6 +33,8 @@
     font-size: 30px;
     text-transform: uppercase;
     margin-bottom: 10px;
+    color: $accent;
+    font-weight: 600;
   }
 
   &__stars {
@@ -441,18 +443,32 @@
 
 .extra-item {
 
+  &__accessories-card {
+
+    @include tablet {
+      width: 200px;
+    }
+  }
+  
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 30px;
+
+    @include minitablet {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
   }
 
   &__link {
-    margin-bottom: 30px;
 
-    @include tablet {
-      margin-bottom: 10px;
+    @include minitablet {
+      margin-left: auto;
+      padding: 10px 0;
     }
   }
 
@@ -463,19 +479,18 @@
 
     @include tablet {
       display: flex;
+      justify-content: flex-start;
       overflow-x: auto;
       scroll-snap-type: x;
-      gap: 20px;
       -webkit-overflow-scrolling: touch;
     }
   }
 
   &__item {
-    max-width: 270px;
-    width: 100%;
-    height: auto;
+    width: calc((100% - 3 * 30px) / 4);
 
     @include tablet {
+      width: 270px;
       scroll-snap-align: start;
       scroll-snap-stop: always;
     }
@@ -491,7 +506,6 @@
 
   &__img {
     object-fit: cover;
-
   }
 }
 
