@@ -51,10 +51,10 @@ const bodyLock = document.querySelector('body');
 
 openBurger.addEventListener('click', function() {
   menuBurger.classList.add('active')
-  bodyLock.classList.add('lock')
+  bodyLock.classList.add('locked')
 })
 
 closeBurger.addEventListener('click', function() {
   menuBurger.classList.remove('active')
-  bodyLock.classList.remove('lock');
+  bodyLock.classList.remove('locked');
 })

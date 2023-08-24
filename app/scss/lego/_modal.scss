@@ -19,12 +19,12 @@
   }
 
   @include mini {
-   position: fixed;
-   left: 0;
-   right: 0;
-   top: 0;
-   width: 100%;
-   padding: 40px 20px 20px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    padding: 40px 20px 20px;
 
   }
 
@@ -146,10 +146,38 @@
 
   }
 
-  &__close-btn {
+  &__btn {
     position: absolute;
     top: 10px;
-    right: 30px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    &:focus {
+      border: 1px solid $grey;
+    }
+
+    &:hover {
+      border: 1px solid $accent;
+
+      .modal__btn-icon {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+     background-color: $bg-accent;
+    }
+
+
+  }
+
+  &__btn-icon {
+    fill: $primary;
   }
 }
 
@@ -189,6 +217,10 @@
   transition: transform 0.5s, opacity 0.5s;
 
   &.modal__txt {
+    margin-bottom: 20px;
+  }
+
+  &__button {
     margin-bottom: 20px;
   }
 }

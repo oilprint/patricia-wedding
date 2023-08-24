@@ -319,9 +319,6 @@
   transform: translateX(-100%);
   transition: transform 0.4s ease-in-out;
 
-
-
-
   &.active {
     transform: translateX(0);
   }
@@ -385,8 +382,6 @@
         transform: scale(1);
       }
     }
-
-
   }
 
   &__form {
@@ -401,15 +396,12 @@
   }
 
   @include mobile {
-    padding: 150px 20px;
+    padding: 50px 20px;
 
     @media (orientation: landscape) {
       background-color: red;
     }
-
-
   }
-
 }
 
 .header {

@@ -14,7 +14,7 @@
 		el.addEventListener('click', (e) => {
 			let currentBtn = e.currentTarget;
 			let drop = currentBtn.closest('.header__item').querySelector('.dropdown-menu');
-      bodyLock.classList.add('lock')
+      bodyLock.classList.add('locked')
 
     
 			menuBtns.forEach(el => {
@@ -46,7 +46,7 @@
 				el.classList.remove('dropdown-menu--active');
 			});
 
-      bodyLock.classList.remove('lock')
+      bodyLock.classList.remove('locked')
 		}
 	});
 
@@ -56,17 +56,18 @@
   const button = document.querySelector('[data-modal-button]');
   const modal = document.querySelector('[data-modal]');
   const buttonClose = document.querySelectorAll('[data-modal-close]');
+  
 
   button.addEventListener('click', function () {
     modal.classList.toggle('modal--active')
-    bodyLock.classList.add('lock')
+    bodyLock.classList.add('locked')
   });
 
   buttonClose.forEach(function (item) {
     item.addEventListener('click', function () {
     
       modal.classList.remove('modal--active')
-      bodyLock.classList.remove('lock')
+      bodyLock.classList.remove('locked')
     })
   });
 
@@ -85,13 +86,14 @@
       const btnSoldOpen = document.querySelector('[data-sold-open]');
       const modalSold = document.querySelector('[data-sold]');
       const btnSoldClose = document.querySelectorAll('[data-sold-close]');
-      const bodyLock = document.querySelector('body'); 
+      // const bodyLock = document.querySelector('body'); 
 
       
      
       btnSoldOpen.addEventListener('click', function () {
         modalSold.classList.remove('hidden');
-         bodyLock.classList.add('lock');
+        bodyLock.classList.add('lock')
+         
       });
 
       btnSoldClose.forEach(function (item) {
@@ -103,7 +105,7 @@
 
       modalSold.addEventListener('click', function ( ) {
         modalSold.classList.add('hidden');
-        bodyLock.classList.remove('lock');
+        bodyLock.classList.remove('locked');
       });
 
       modalSold.querySelector('.modal').addEventListener('click', function (e) {
