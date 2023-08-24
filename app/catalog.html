@@ -19,14 +19,21 @@
 <body>
   <header class="header">
   <div class="container">
+    <!-- <div class="block">
+      test
+    </div> -->
     <div class="header__top">
-      <div class="language">
+
+      <div class="language header__language">
         <button class="language__button" type="button" data-value="en">
           En
         </button>
 
         <ul class="language__list">
           <li class="language__item">
+            <a class="language__link active" href="#">
+              En
+            </a>
             <a class="language__link" href="#">
               Uk
             </a>
@@ -35,22 +42,33 @@
         </ul>
 
       </div>
-      <a class="logo" href="index.html">
+
+      <button class="burger header__burger" data-open-burger>
+        <svg class="burger__icon" width="32" height="32">
+          <use href="./images/symbol-defs.svg#icon-burger"></use>
+        </svg>
+      </button>
+      
+      <a class="logo header__logo" href="index.html">
         <img class="logo__img" src="images/logo.svg" alt="Patriia Wedding Logo" width="320" height="80">
       </a>
-      <ul class="usernav">
+      <ul class="usernav header__usernav">
         <li class="usernav__item">
-          <a class="usernav__link" href="#">
-            <span class="sr-only">Your account page</span>
-            <svg class="usernav__icon" width="28" height="28">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Your account page
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-account"></use>
             </svg>
           </a>
         </li>
         <li class="usernav__item">
-          <a class="usernav__link" href="#">
-            <span class="sr-only">Wishlist</span>
-            <svg class="usernav__icon" width="28" height="28">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Wishlist
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-wishlist">
               </use>
             </svg>
@@ -60,15 +78,19 @@
           </a>
         </li>
         <li class="usernav__item">
-          <button class="usernav__link" type="button" data-modal-button="modal-1">
-            <span class="sr-only">shopping bag</span>
-            <svg class="usernav__icon" width="28" height="28">
+          <button class="icon-button" type="button" data-modal-button="modal-1">
+            <span class="sr-only">
+              shopping bag
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-bag"></use>
             </svg>
             <span class="usernav__number">
               2
             </span>
           </button>
+
+
           <div class="modal" id="modal-1" data-modal>
 
             <h2 class="modal__title">
@@ -80,16 +102,13 @@
             </h2>
             <ul class="modal__list">
               <li class="modal__item">
-                <article class="shopping-card">
-                  <img class="shopping-card__img" src="images/product/small/calliope.jpg" alt="Wedding dress Calliope"
+                <article class="shopping-card modal__shopping-card">
+                  <img class="shopping-card__img"src="images/product/catalog/dress-02.jpg" alt="Wedding dress Calliope"
                     width="100" height="150">
                   <div class="shopping-card__content">
                     <h3 class="shopping-card__headline">
                       Calliope
                     </h3>
-                    <p class="shopping-card__txt">
-                      Flared satin wedding dress with halter neck and slit.
-                    </p>
                     <ul class="shopping-card__info">
                       <li class="shopping-card__info-item">
                         Color:
@@ -128,6 +147,52 @@
                     </span>
                 </article>
               </li>
+              <li class="modal__item">
+                <article class="shopping-card modal__shopping-card">
+                  <img class="shopping-card__img" src="images/product/accessories/nicola.jpg"
+                    alt="Wedding accessories nicola" width="100" height="150">
+                  <div class="shopping-card__content">
+                    <h3 class="shopping-card__headline">
+                      Nicola Bathie Perry
+                    </h3>
+                    <ul class="shopping-card__info">
+                      <li class="shopping-card__info-item">
+                        Color:
+                        <span class="shopping-card__value">
+                          White
+                        </span>
+                      </li>
+                      <li class="shopping-card__info-item">
+                        Size:
+                        <span class="shopping-card__value">
+                          M
+                        </span>
+                      </li>
+                    </ul>
+                    <div class="shopping-card__links">
+                      <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
+                        Edit
+                      </a>
+                      <button class="shopping-card__btn" type="button">
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                  <div class="shopping-card__price">
+                    <span class="shopping-card__price-current">
+                      <span class="currency">
+                        $
+                      </span>
+                      25.00
+                    </span>
+                    <span class="shopping-card__price-old">
+                      <span class="currency">
+                        $
+                      </span>
+                      30.00
+                    </span>
+                </article>
+              </li>
 
             </ul>
             <div class="modal__sum">
@@ -149,7 +214,7 @@
             </button>
 
             <button class="modal__btn" type="button" data-modal-close>
-              <svg class="modal__icon" width="24" height="24">
+              <svg class="close-btn__icon" width="24" height="24">
                 <use href="images/symbol-defs.svg#icon-close">
                 </use>
               </svg>
@@ -160,14 +225,14 @@
     </div>
     <div class="header__bottom">
       <nav class="header__menu">
-        <ul class="header__list list-reset">
+        <ul class="header__list">
           <li class="header__item">
-            <a class="header__link" href="index.html">
+            <a class="header__link @@home" href="index.html">
               Home
             </a>
           </li>
           <li class="header__item">
-            <button class="header__link" id="dropmenu" type="button">
+            <button class="header__link current" id="dropmenu" type="button">
               Dresses
               <svg class="header__link-icon" width="16" height="16">
                 <use href="./images/symbol-defs.svg#icon-chevron"></use>
@@ -201,7 +266,7 @@
                         </a>
                       </li>
                       <li class="dropdown-menu__box">
-                        <a class="dropdown-menu__box-link" href="#">
+                        <a class="dropdown-menu__box-link" href="catalog.html">
                           <img class="dropdown-menu__img" src="images/dropdown/sheath.jpg" alt="Sheath style">
                           Sheath
                         </a>
@@ -217,42 +282,42 @@
                         </h3>
                         <ul class="dropdown-menu__list">
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Civil Wedding
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Simple
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Elegant
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Boho
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Beach
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Romantic
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Embroidery
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Modern
                             </a>
                           </li>
@@ -264,37 +329,37 @@
                         </h3>
                         <ul class="dropdown-menu__list">
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Long sleeves
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Open Back
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Champagne
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Effetto Tattooz
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Pink
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Lace
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Effetto Tattoo
                             </a>
                           </li>
@@ -315,1008 +380,1106 @@
             </div>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">
-              Wedding party
+            <a class="header__link" href="catalog.html">
+              Bridesmaid
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">
+            <a class="header__link" href="catalog.html">
               Accessories
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">
+            <a class="header__link @@gallery" href="gallery.html">
               Gallery
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="contact.html">
+            <a class="header__lin " href="contact.html">
               Contact us
             </a>
           </li>
         </ul>
       </nav>
 
-      <form class="header__form" action="#">
+      <form class="header__form form" action="#">
         <label class="sr-only" for="search">Search</label>
-        <input class="header__input" type="text" name="search" id="search" placeholder="Search">
-        <button class="header__btn">
-          <svg class="usernav__btn-icon" width="28" height="20">
+        <input class="form__input header__input " type="text" name="search" id="search" placeholder="Search">
+        <button class="icon-button form__btn">
+          <svg class="icon-button__icon" width="20" height="20">
             <use href="./images/symbol-defs.svg#icon-search"></use>
           </svg>
         </button>
-
       </form>
 
+      <button class="icon-button header__btn" type="button">
+        <span class="sr-only">
+          Search
+        </span>
+        <svg class="icon-button__icon" width="28" height="28">
+          <use href="./images/symbol-defs.svg#icon-search"></use>
+        </svg>
+      </button>
     </div>
   </div>
 
-</header>
+  <div class="burger-menu" data-menu-burger>
+    <div class="burger-menu__top">
+      <div class="language burger-menu__language">
+        <button class="language__button" type="button" data-value="en">
+          En
+        </button>
 
-  <div class="breadcrumbs ">
-    <div class="container">
-      <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a href="#" class="breadcrumbs__link">
-            Home
+        <ul class="language__list">
+          <li class="language__item">
+            <a class="language__link active" href="#">
+              En
+            </a>
+            <a class="language__link" href="#">
+              Uk
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+      <ul class="usernav">
+        <li class="usernav__item">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Your account page
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-account"></use>
+            </svg>
           </a>
         </li>
-
-        <li class="breadcrumbs__item">
-          <a href="#" class="breadcrumbs__link">
-            Dresses
+        <li class="usernav__item">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Wishlist
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-wishlist">
+              </use>
+            </svg>
+            <span class="usernav__number">
+              10
+            </span>
           </a>
         </li>
-        <li class="breadcrumbs__item">
-          <a href="#" class="breadcrumbs__link">
-            The wilderly bride collection
-          </a>
-        </li>
-
       </ul>
     </div>
+    <ul class="burger-menu__list">
+      <li class="burger-menu__item">
+        <a class="burger-menu__link @@home" href="index.html">
+          Home
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link current" href="catalog.html">
+          Dresses
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link" href="#">
+          Wedding party
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link" href="#">
+          Accessories
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link @@gallery" href="gallery.html">
+          Gallery
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link @@contact" href="contact.html">
+          Contact us
+        </a>
+      </li>
+    </ul>
+    <form class="burger-menu__form form" action="#">
+      <label class="sr-only" for="search">Search</label>
+      <input class="form__input" type="text" name="search" id="search" placeholder="Search">
+      <button class="icon-button form__btn">
+        <svg class="icon-button__icon" width="28" height="28">
+          <use href="./images/symbol-defs.svg#icon-search"></use>
+        </svg>
+      </button>
+    </form>
+
+    <button class="close-btn burger-menu__close-btn" type="button" data-close-burger>
+      <svg class="close-btn__icon" width="24" height="24">
+        <use href="images/symbol-defs.svg#icon-close">
+        </use>
+      </svg>
+    </button>
   </div>
+</header>
+
+
 
   <main>
-    <section class="catalog">
-      <div class="container">
-        <h1 class="title catalog__title">
-          The wilderly bride catalog
-        </h1>
-        <div class="catalog__wrapper">
-          <aside class="filter">
-            <div class="filter__item filter-price">
-              <h3 class="filter__title">
-                Price filter
-              </h3>
-              <form class="filter-price__form" action="#">
-                <div class="filter-price__inner">
-                  <label class="filter-price__label filter-price__label--check" for="sale">
-                    <input class="filter-price__checkbox" id="sale" type="checkbox">
-                    <span class="filter-price__fake-checkbox"></span>
-                    <span class="filter-price__checkbox-txt">
-                      Sale
-                    </span>
-                  </label>
-                  <label class="filter-price__label" for="price-1">
-                    <input class="filter-price__checkbox" id="price-1" type="checkbox">
-                    <span class="filter-price__fake-checkbox"></span>
-                    <span class="filter-price__checkbox-txt">
-                      $0 - $200
-                    </span>
-                  </label>
-                  <label class="filter-price__label" for="price-2">
-                    <input class="filter-price__checkbox" id="price-2" type="checkbox">
-                    <span class="filter-price__fake-checkbox"></span>
-                    <span class="filter-price__checkbox-txt">
-                      $200 - $500
-                    </span>
-                  </label>
+    <div class="wrapper">
+      <div class="breadcrumbs ">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">
+                Home
+              </a>
+            </li>
 
-                </div>
-                <input class="filter-price__slider" type="text">
-                <div class="filter-price__extra-controls">
-                  <div class="filter-price__input-box">
-                    $
-                    <input type="text" class="filter-price__input filter-price__input-from" value="0" />
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">
+                Dresses
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a href="#" class="breadcrumbs__link">
+                The wilderly bride collection
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <section class="catalog">
+        <div class="container">
+          <h1 class="title catalog__title">
+            The wilderly bride catalog
+          </h1>
+          <div class="catalog__wrapper">
+            <aside class="filter">
+              <div class="filter__item filter-price">
+                <h3 class="filter__title">
+                  Price filter
+                </h3>
+                <form class="filter-price__form" action="#">
+                  <div class="filter-price__inner">
+                    <label class="filter-price__label filter-price__label--check" for="sale">
+                      <input class="filter-price__checkbox" id="sale" type="checkbox">
+                      <span class="filter-price__fake-checkbox"></span>
+                      <span class="filter-price__checkbox-txt">
+                        Sale
+                      </span>
+                    </label>
+                    <label class="filter-price__label" for="price-1">
+                      <input class="filter-price__checkbox" id="price-1" type="checkbox">
+                      <span class="filter-price__fake-checkbox"></span>
+                      <span class="filter-price__checkbox-txt">
+                        $0 - $200
+                      </span>
+                    </label>
+                    <label class="filter-price__label" for="price-2">
+                      <input class="filter-price__checkbox" id="price-2" type="checkbox">
+                      <span class="filter-price__fake-checkbox"></span>
+                      <span class="filter-price__checkbox-txt">
+                        $200 - $500
+                      </span>
+                    </label>
+
                   </div>
+                  <input class="filter-price__slider" type="text">
+                  <div class="filter-price__extra-controls">
+                    <div class="filter-price__input-box">
+                      $
+                      <input type="text" class="filter-price__input filter-price__input-from" value="0" />
+                    </div>
 
-                  <span class="filter-price__txt">
-                    to
-                  </span>
+                    <span class="filter-price__txt">
+                      to
+                    </span>
 
-                  <div class="filter-price__input-box">
-                    $
-                    <input type="text" class="filter-price__input filter-price__input-to" value="0" />
+                    <div class="filter-price__input-box">
+                      $
+                      <input type="text" class="filter-price__input filter-price__input-to" value="0" />
+                    </div>
+
+
                   </div>
-
-
-                </div>
-                <button class="button button--light filter-price__button" type="submit">
-                  Filter
-                </button>
-              </form>
-            </div>
-
-            <div class="filter__item ">
-              <h3 class="filter__title">
-                Color
-              </h3>
-              <form class="filter-color" action="#">
-                <label class="filter-color__label">
-                  <input class="filter-color__input" type="checkbox" checked>
-                  <span class="filter-color__fake-input">
-                  </span>
-                  <span class="filter-color__text">
-                    White
-                  </span>
-                </label>
-
-                <label class="filter-color__label">
-                  <input class="filter-color__input" type="checkbox">
-                  <span class="filter-color__fake-input">
-                  </span>
-                  <span class="filter-color__text">
-                    Ivory
-                  </span>
-                </label>
-                <label class="filter-color__label">
-                  <input class="filter-color__input" type="checkbox">
-                  <span class="filter-color__fake-input">
-                  </span>
-                  <span class="filter-color__text">
-                    Pink
-                  </span>
-                </label>
-                <label class="filter-color__label">
-                  <input class="filter-color__input" type="checkbox">
-                  <span class="filter-color__fake-input">
-                  </span>
-                  <span class="filter-color__text">
-                    Blue
-                  </span>
-                </label>
-              </form>
-            </div>
-
-            <div class="filter__item">
-              <h3 class="filter__title">
-                Size
-              </h3>
-              <form class="filter-size" action="#">
-                <label class="filter-size__label">
-                  <input class="filter-size__input" type="checkbox">
-                  <span class="filter-size__fake-size">
-                    XS
-                  </span>
-                </label>
-                <label class="filter-size__label">
-                  <input class="filter-size__input" type="checkbox">
-                  <span class="filter-size__fake-size">
-                    S
-                  </span>
-                </label>
-                <label class="filter-size__label">
-                  <input class="filter-size__input" type="checkbox" checked>
-                  <span class="filter-size__fake-size">
-                    M
-                  </span>
-                </label>
-                <label class="filter-size__label">
-                  <input class="filter-size__input" type="checkbox">
-                  <span class="filter-size__fake-size">
-                    L
-                  </span>
-
-                </label>
-                <label class="filter-size__label">
-                  <input class="filter-size__input" type="checkbox">
-                  <span class="filter-size__fake-size">
-                    XL
-                  </span>
-
-                </label>
-                <label class="filter-size__label">
-                  <input class="filter-size__input" type="checkbox">
-                  <span class="filter-size__fake-size">
-                    2L
-                  </span>
-
-                </label>
-
-              </form>
-            </div>
-
-            <div class="filter__item filter-style">
-              <h3 class="filter__title">
-                Style
-              </h3>
-
-              <form class="filter-style__form" action="#">
-                <label class="filter-style__label">
-                  <input class="filter-style__checkbox" type="checkbox" checked>
-                  <span class="filter-style__fake-checkbox"></span>
-                  <span class="filter-style__txt">
-                    Civil Wedding
-                  </span>
-                </label>
-                <label class="filter-style__label">
-                  <input class="filter-style__checkbox" type="checkbox">
-                  <span class="filter-style__fake-checkbox"></span>
-                  <span class="filter-style__txt">
-                    Simple
-                  </span>
-                </label>
-                <label class="filter-style__label">
-                  <input class="filter-style__checkbox" type="checkbox">
-                  <span class="filter-style__fake-checkbox"></span>
-                  <span class="filter-style__txt">
-                    Elegant
-                  </span>
-                </label>
-                <label class="filter-style__label">
-                  <input class="filter-style__checkbox" type="checkbox">
-                  <span class="filter-style__fake-checkbox"></span>
-                  <span class="filter-style__txt">
-                    Boho
-                  </span>
-                </label>
-                <label class="filter-style__label">
-                  <input class="filter-style__checkbox" type="checkbox">
-                  <span class="filter-style__fake-checkbox"></span>
-                  <span class="filter-style__txt">
-                    Beach
-                  </span>
-                </label>
-                <label class="filter-style__label">
-                  <input class="filter-style__checkbox" type="checkbox">
-                  <span class="filter-style__fake-checkbox"></span>
-                  <span class="filter-style__txt">
-                    Romantic
-                  </span>
-                </label>
-                <label class="filter-style__label">
-                  <input class="filter-style__checkbox" type="checkbox">
-                  <span class="filter-style__fake-checkbox"></span>
-                  <span class="filter-style__txt">
-                    Embroidery
-                  </span>
-                </label>
-                <label class="filter-style__label">
-                  <input class="filter-style__checkbox" type="checkbox">
-                  <span class="filter-style__fake-checkbox"></span>
-                  <span class="filter-style__txt">
-                    Modern
-                  </span>
-                </label>
-              </form>
-            </div>
-
-
-
-          </aside>
-
-          <div class="catalog__content">
-            <div class="catalog__sort">
-              <div class="dropdown-sort">
-                <button class="dropdown-sort__button" type="button">
-                  Sort by
-                </button>
-                <ul class="dropdown-sort__list">
-                  <li class="dropdown-sort__item">
-                    Most Popular
-                  </li>
-                  <li class="dropdown-sort__item">
-                    Recommended
-                  </li>
-                  <li class="dropdown-sort__item">
-                    New in
-                  </li>
-                  <li class="dropdown-sort__item">
-                    Price High to Low
-                  </li>
-                  <li class="dropdown-sort__item">
-                    Price Low to High
-                  </li>
-                </ul>
+                  <button class="button button--light filter-price__button" type="submit">
+                    Filter
+                  </button>
+                </form>
               </div>
 
-              <button class="catalog__sort-btn active button__grid">
-                <svg class="catalog__sort-icon" width="24" height="24">
-                  <use href="./images/symbol-defs.svg#icon-tile"></use>
-                </svg>
-              </button>
-              <button class="catalog__sort-btn" id="list">
-                <svg class="catalog__sort-icon" width="24" height="24">
-                  <use href="./images/symbol-defs.svg#icon-tabl"></use>
-                </svg>
-              </button>
+              <div class="filter__item ">
+                <h3 class="filter__title">
+                  Color
+                </h3>
+                <form class="filter-color" action="#">
+                  <label class="filter-color__label">
+                    <input class="filter-color__input" type="checkbox" checked>
+                    <span class="filter-color__fake-input">
+                    </span>
+                    <span class="filter-color__text">
+                      White
+                    </span>
+                  </label>
+
+                  <label class="filter-color__label">
+                    <input class="filter-color__input" type="checkbox">
+                    <span class="filter-color__fake-input">
+                    </span>
+                    <span class="filter-color__text">
+                      Ivory
+                    </span>
+                  </label>
+                  <label class="filter-color__label">
+                    <input class="filter-color__input" type="checkbox">
+                    <span class="filter-color__fake-input">
+                    </span>
+                    <span class="filter-color__text">
+                      Pink
+                    </span>
+                  </label>
+                  <label class="filter-color__label">
+                    <input class="filter-color__input" type="checkbox">
+                    <span class="filter-color__fake-input">
+                    </span>
+                    <span class="filter-color__text">
+                      Blue
+                    </span>
+                  </label>
+                </form>
+              </div>
+
+              <div class="filter__item">
+                <h3 class="filter__title">
+                  Size
+                </h3>
+                <form class="filter-size" action="#">
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__fake-size">
+                      XS
+                    </span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__fake-size">
+                      S
+                    </span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox" checked>
+                    <span class="filter-size__fake-size">
+                      M
+                    </span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__fake-size">
+                      L
+                    </span>
+
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__fake-size">
+                      XL
+                    </span>
+
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox">
+                    <span class="filter-size__fake-size">
+                      2L
+                    </span>
+
+                  </label>
+
+                </form>
+              </div>
+
+              <div class="filter__item filter-style">
+                <h3 class="filter__title">
+                  Style
+                </h3>
+
+                <form class="filter-style__form" action="#">
+                  <label class="filter-style__label">
+                    <input class="filter-style__checkbox" type="checkbox" checked>
+                    <span class="filter-style__fake-checkbox"></span>
+                    <span class="filter-style__txt">
+                      Civil Wedding
+                    </span>
+                  </label>
+                  <label class="filter-style__label">
+                    <input class="filter-style__checkbox" type="checkbox">
+                    <span class="filter-style__fake-checkbox"></span>
+                    <span class="filter-style__txt">
+                      Simple
+                    </span>
+                  </label>
+                  <label class="filter-style__label">
+                    <input class="filter-style__checkbox" type="checkbox">
+                    <span class="filter-style__fake-checkbox"></span>
+                    <span class="filter-style__txt">
+                      Elegant
+                    </span>
+                  </label>
+                  <label class="filter-style__label">
+                    <input class="filter-style__checkbox" type="checkbox">
+                    <span class="filter-style__fake-checkbox"></span>
+                    <span class="filter-style__txt">
+                      Boho
+                    </span>
+                  </label>
+                  <label class="filter-style__label">
+                    <input class="filter-style__checkbox" type="checkbox">
+                    <span class="filter-style__fake-checkbox"></span>
+                    <span class="filter-style__txt">
+                      Beach
+                    </span>
+                  </label>
+                  <label class="filter-style__label">
+                    <input class="filter-style__checkbox" type="checkbox">
+                    <span class="filter-style__fake-checkbox"></span>
+                    <span class="filter-style__txt">
+                      Romantic
+                    </span>
+                  </label>
+                  <label class="filter-style__label">
+                    <input class="filter-style__checkbox" type="checkbox">
+                    <span class="filter-style__fake-checkbox"></span>
+                    <span class="filter-style__txt">
+                      Embroidery
+                    </span>
+                  </label>
+                  <label class="filter-style__label">
+                    <input class="filter-style__checkbox" type="checkbox">
+                    <span class="filter-style__fake-checkbox"></span>
+                    <span class="filter-style__txt">
+                      Modern
+                    </span>
+                  </label>
+                </form>
+              </div>
+
+
+
+            </aside>
+
+            <div class="catalog__content">
+              <div class="catalog__sort">
+                <div class="dropdown-sort">
+                  <button class="dropdown-sort__button" type="button">
+                    Sort by
+                  </button>
+                  <ul class="dropdown-sort__list">
+                    <li class="dropdown-sort__item">
+                      Most Popular
+                    </li>
+                    <li class="dropdown-sort__item">
+                      Recommended
+                    </li>
+                    <li class="dropdown-sort__item">
+                      New in
+                    </li>
+                    <li class="dropdown-sort__item">
+                      Price High to Low
+                    </li>
+                    <li class="dropdown-sort__item">
+                      Price Low to High
+                    </li>
+                  </ul>
+                </div>
+
+                <button class="catalog__sort-btn active button__grid">
+                  <svg class="catalog__sort-icon" width="24" height="24">
+                    <use href="./images/symbol-defs.svg#icon-tile"></use>
+                  </svg>
+                </button>
+                <button class="catalog__sort-btn" id="list">
+                  <svg class="catalog__sort-icon" width="24" height="24">
+                    <use href="./images/symbol-defs.svg#icon-tabl"></use>
+                  </svg>
+                </button>
+              </div>
+              <ul class="catalog__list">
+                <li class="catalog__item ">
+                  <article class="product-card">
+                    <a class="product-card__link" href="product-one.html">
+                      <img class="product-card__image" src="images/product/catalog/dress-01.jpg"
+                        alt="Aurora Collection Emanuela" width="270" height="400">
+                    </a>
+                    <div class="product-card__content-box">
+                      <div class="product-card__content">
+                        <div class="product-card__content-top">
+                          <p class="product-card__subtitle">
+                            New Aurora Collection
+                          </p>
+                          <h2 class="product-card__title">
+                            Emanuela
+                          </h2>
+                          <div class="stars product-card__stars">
+                            <div class="stars__rating rating " data-rateyo-rating="4"></div>
+                            <span class="stars__txt">
+                              (
+                              <span class="stars__value-number">
+                                26
+                              </span>
+                              )
+                            </span>
+                          </div>
+                        </div>
+
+                        <span class="product-card__price">
+                          <span class="product-card__price-current">
+                            <span class="currency">
+                              $
+                            </span>
+                            900.00
+                          </span>
+                          <span class="product-card__price-old">
+                            <span class="currency">
+                              $
+                            </span>
+                            1,100.00
+                          </span>
+                        </span>
+                      </div>
+
+                      <div class="product-card__content-extra">
+                        <p class="product-card__description">
+                          Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
+                          neckline.
+                          The dress is
+                          covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the
+                          tulle
+                          cape
+                          with lace details
+                          on the shoulders.
+                        </p>
+                        <p class="product-card__info">
+                          Color:
+                          <span class="product-card__txt">
+                            White, Ivoty
+                          </span>
+                        </p>
+
+                        <a href="#" class="button product-card__button">
+                          Shop now
+                        </a>
+                      </div>
+                    </div>
+                    <button class="wishlist product-card__wishlist" type="button">
+                      <span class="sr-only">
+                        Add to wishlist
+                      </span>
+                      <svg class="wishlist__icon" width="24" height="24">
+                        <use href="images/symbol-defs.svg#icon-wish"></use>
+                      </svg>
+                    </button>
+                  </article>
+                </li>
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="product-one.html">
+                      <img class="product-card__image" src="images/product/catalog/dress-02.jpg"
+                        alt="Aurora Collection Calliope" width="270" height="400">
+                    </a>
+                    <div class="product-card__content-box">
+                      <div class="product-card__content">
+                        <div class="product-card__content-top">
+                          <p class="product-card__subtitle">
+                            New Aurora Collection
+                          </p>
+                          <h2 class="product-card__title">
+                            Calliope
+                          </h2>
+                          <div class="stars product-card__stars">
+                            <div class="stars__rating rating" data-rateyo-rating="5"></div>
+                            <span class="stars__txt">
+                              (
+                              <span class="stars__value-number">
+                                10
+                              </span>
+                              )
+                            </span>
+                          </div>
+                        </div>
+
+                        <span class="product-card__price">
+                          <span class="product-card__price-current">
+                            <span class="currency">
+                              $
+                            </span>
+                            449.00
+                          </span>
+                          <span class="product-card__price-old">
+                            <span class="currency">
+                              $
+                            </span>
+                            600.00
+                          </span>
+                        </span>
+                      </div>
+
+                      <div class="product-card__content-extra">
+                        <p class="product-card__description">
+                          Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
+                          neckline.
+                          The dress is
+                          covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the
+                          tulle
+                          cape
+                          with lace details
+                          on the shoulders.
+                        </p>
+                        <p class="product-card__info">
+                          Color:
+                          <span class="product-card__txt">
+                            White, Ivoty
+                          </span>
+                        </p>
+
+                        <a href="#" class="button product-card__button">
+                          Shop now
+                        </a>
+                      </div>
+                    </div>
+                    <button class="wishlist product-card__wishlist" type="button">
+                      <span class="sr-only">
+                        Add to wishlist
+                      </span>
+                      <svg class="wishlist__icon" width="24" height="24">
+                        <use href="images/symbol-defs.svg#icon-wish"></use>
+                      </svg>
+                    </button>
+                  </article>
+                </li>
+                <li class="catalog__item ">
+                  <article class="product-card">
+                    <a class="product-card__link" href="product-one.html">
+                      <img class="product-card__image" src="images/product/catalog/dress-03.jpg"
+                        alt="Aurora Collection Iona" width="270" height="400">
+                    </a>
+                    <div class="product-card__content-box">
+                      <div class="product-card__content">
+                        <div class="product-card__content-top">
+                          <p class="product-card__subtitle">
+                            New Aurora Collection
+                          </p>
+                          <h2 class="product-card__title">
+                            Iona
+                          </h2>
+                          <div class="stars product-card__stars">
+                            <div class="stars__rating rating" data-rateyo-rating="4"></div>
+                            <span class="stars__txt">
+                              (
+                              <span class="stars__value-number">
+                                12
+                              </span>
+                              )
+                            </span>
+                          </div>
+                        </div>
+
+                        <span class="product-card__price">
+                          <span class="product-card__price-current">
+                            <span class="currency">
+                              $
+                            </span>
+                            489.00
+                          </span>
+                        </span>
+                      </div>
+
+                      <div class="product-card__content-extra">
+                        <p class="product-card__description">
+                          Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
+                          neckline.
+                          The dress is
+                          covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the
+                          tulle
+                          cape
+                          with lace details
+                          on the shoulders.
+                        </p>
+                        <p class="product-card__info">
+                          Color:
+                          <span class="product-card__txt">
+                            White, Ivoty
+                          </span>
+                        </p>
+
+                        <a href="#" class="button product-card__button">
+                          Shop now
+                        </a>
+                      </div>
+                    </div>
+                    <button class="wishlist product-card__wishlist" type="button">
+                      <span class="sr-only">
+                        Add to wishlist
+                      </span>
+                      <svg class="wishlist__icon" width="24" height="24">
+                        <use href="images/symbol-defs.svg#icon-wish"></use>
+                      </svg>
+                    </button>
+                  </article>
+                </li>
+                <li class="catalog__item ">
+                  <article class="product-card">
+                    <a class="product-card__link" href="product-one.html">
+                      <img class="product-card__image" src="images/product/catalog/dress-04.jpg"
+                        alt="Aurora Collection Menhit" width="270" height="400">
+                    </a>
+                    <div class="product-card__content-box">
+                      <div class="product-card__content">
+                        <div class="product-card__content-top">
+                          <p class="product-card__subtitle">
+                            New Aurora Collection
+                          </p>
+                          <h2 class="product-card__title">
+                            Menhit
+                          </h2>
+                          <div class="stars product-card__stars">
+                            <div class="stars__rating rating" data-rateyo-rating="4"></div>
+                            <span class="stars__txt">
+                              (
+                              <span class="stars__value-number">
+                                26
+                              </span>
+                              )
+                            </span>
+                          </div>
+                        </div>
+
+                        <span class="product-card__price">
+                          <span class="product-card__price-current">
+                            <span class="currency">
+                              $
+                            </span>
+                            485.00
+                          </span>
+                        </span>
+                      </div>
+
+                      <div class="product-card__content-extra">
+                        <p class="product-card__description">
+                          Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
+                          neckline.
+                          The dress is
+                          covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the
+                          tulle
+                          cape
+                          with lace details
+                          on the shoulders.
+                        </p>
+                        <p class="product-card__info">
+                          Color:
+                          <span class="product-card__txt">
+                            White, Ivoty
+                          </span>
+                        </p>
+
+                        <a href="#" class="button product-card__button">
+                          Shop now
+                        </a>
+                      </div>
+                    </div>
+                    <button class="wishlist product-card__wishlist" type="button">
+                      <span class="sr-only">
+                        Add to wishlist
+                      </span>
+                      <svg class="wishlist__icon" width="24" height="24">
+                        <use href="images/symbol-defs.svg#icon-wish"></use>
+                      </svg>
+                    </button>
+                  </article>
+                </li>
+                <li class="catalog__item ">
+                  <article class="product-card">
+                    <a class="product-card__link" href="product-one.html">
+                      <img class="product-card__image" src="images/product/catalog/dress-05.jpg"
+                        alt="Aurora Collection Iona" width="270" height="400">
+                    </a>
+                    <div class="product-card__content-box">
+                      <div class="product-card__content">
+                        <div class="product-card__content-top">
+                          <p class="product-card__subtitle">
+                            New Aurora Collection
+                          </p>
+                          <h2 class="product-card__title">
+                            Jumala
+                          </h2>
+                          <div class="stars product-card__stars">
+                            <div class="stars__rating rating" data-rateyo-rating="3.7"></div>
+                            <span class="stars__txt">
+                              (
+                              <span class="stars__value-number">
+                                5
+                              </span>
+                              )
+                            </span>
+                          </div>
+                        </div>
+
+                        <span class="product-card__price">
+                          <span class="product-card__price-current">
+                            <span class="currency">
+                              $
+                            </span>
+                            235.00
+                          </span>
+                          <span class="product-card__price-old">
+                            <span class="currency">
+                              $
+                            </span>
+                            600.00
+                          </span>
+                        </span>
+                      </div>
+
+                      <div class="product-card__content-extra">
+                        <p class="product-card__description">
+                          Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
+                          neckline.
+                          The dress is
+                          covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the
+                          tulle
+                          cape
+                          with lace details
+                          on the shoulders.
+                        </p>
+                        <p class="product-card__info">
+                          Color:
+                          <span class="product-card__txt">
+                            White, Ivoty
+                          </span>
+                        </p>
+
+                        <a href="#" class="button product-card__button">
+                          Shop now
+                        </a>
+                      </div>
+                    </div>
+                    <button class="wishlist product-card__wishlist" type="button">
+                      <span class="sr-only">
+                        Add to wishlist
+                      </span>
+                      <svg class="wishlist__icon" width="24" height="24">
+                        <use href="images/symbol-defs.svg#icon-wish"></use>
+                      </svg>
+                    </button>
+                  </article>
+                </li>
+                <li class="catalog__item ">
+                  <article class="product-card">
+                    <a class="product-card__link" href="product-one.html">
+                      <img class="product-card__image" src="images/product/catalog/dress-06.jpg"
+                        alt="Aurora Collection Giglio" width="270" height="400">
+                    </a>
+                    <div class="product-card__content-box">
+                      <div class="product-card__content">
+                        <div class="product-card__content-top">
+                          <p class="product-card__subtitle">
+                            New Aurora Collection
+                          </p>
+                          <h2 class="product-card__title">
+                            Giglio
+                          </h2>
+                          <div class="stars product-card__stars">
+                            <div class="stars__rating rating" data-rateyo-rating="4.8"></div>
+                            <span class="stars__txt">
+                              (
+                              <span class="stars__value-number">
+                                5
+                              </span>
+                              )
+                            </span>
+                          </div>
+                        </div>
+
+                        <span class="product-card__price">
+                          <span class="product-card__price-current">
+                            <span class="currency">
+                              $
+                            </span>
+                            1,150.00
+                          </span>
+                        </span>
+                      </div>
+
+                      <div class="product-card__content-extra">
+                        <p class="product-card__description">
+                          Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
+                          neckline.
+                          The dress is
+                          covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the
+                          tulle
+                          cape
+                          with lace details
+                          on the shoulders.
+                        </p>
+                        <p class="product-card__info">
+                          Color:
+                          <span class="product-card__txt">
+                            White, Ivoty
+                          </span>
+                        </p>
+
+                        <a href="#" class="button product-card__button">
+                          Shop now
+                        </a>
+                      </div>
+                    </div>
+                    <button class="wishlist product-card__wishlist" type="button">
+                      <span class="sr-only">
+                        Add to wishlist
+                      </span>
+                      <svg class="wishlist__icon" width="24" height="24">
+                        <use href="images/symbol-defs.svg#icon-wish"></use>
+                      </svg>
+                    </button>
+                  </article>
+                </li>
+                <li class="catalog__item ">
+                  <article class="product-card">
+                    <a class="product-card__link" href="product-one.html">
+                      <img class="product-card__image" src="images/product/catalog/dress-03.jpg"
+                        alt="Aurora Collection Iona" width="270" height="400">
+                    </a>
+                    <div class="product-card__content-box">
+                      <div class="product-card__content">
+                        <div class="product-card__content-top">
+                          <p class="product-card__subtitle">
+                            New Aurora Collection
+                          </p>
+                          <h2 class="product-card__title">
+                            Iona
+                          </h2>
+                          <div class="stars product-card__stars">
+                            <div class="stars__rating rating" data-rateyo-rating="4"></div>
+                            <span class="stars__txt">
+                              (
+                              <span class="stars__value-number">
+                                23
+                              </span>
+                              )
+                            </span>
+                          </div>
+                        </div>
+
+                        <span class="product-card__price">
+                          <span class="product-card__price-current">
+                            <span class="currency">
+                              $
+                            </span>
+                            900.00
+                          </span>
+                          <span class="product-card__price-old">
+                            <span class="currency">
+                              $
+                            </span>
+                            900.00
+                          </span>
+                        </span>
+                      </div>
+
+                      <div class="product-card__content-extra">
+                        <p class="product-card__description">
+                          Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
+                          neckline.
+                          The dress is
+                          covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the
+                          tulle
+                          cape
+                          with lace details
+                          on the shoulders.
+                        </p>
+                        <p class="product-card__info">
+                          Color:
+                          <span class="product-card__txt">
+                            White, Ivoty
+                          </span>
+                        </p>
+
+                        <a href="#" class="button product-card__button">
+                          Shop now
+                        </a>
+                      </div>
+                    </div>
+                    <button class="wishlist product-card__wishlist" type="button">
+                      <span class="sr-only">
+                        Add to wishlist
+                      </span>
+                      <svg class="wishlist__icon" width="24" height="24">
+                        <use href="images/symbol-defs.svg#icon-wish"></use>
+                      </svg>
+                    </button>
+                  </article>
+                </li>
+                <li class="catalog__item ">
+                  <article class="product-card">
+                    <a class="product-card__link" href="product-one.html">
+                      <img class="product-card__image" src="images/product/catalog/dress-07.jpg"
+                        alt="Aurora Collection Iona" width="270" height="400">
+                    </a>
+                    <div class="product-card__content-box">
+                      <div class="product-card__content">
+                        <div class="product-card__content-top">
+                          <p class="product-card__subtitle">
+                            New Aurora Collection
+                          </p>
+                          <h2 class="product-card__title">
+                            Calliope
+                          </h2>
+                          <div class="stars product-card__stars">
+                            <div class="stars__rating rating" data-rateyo-rating="4"></div>
+                            <span class="stars__txt">
+                              (
+                              <span class="stars__value-number">
+                                26
+                              </span>
+                              )
+                            </span>
+                          </div>
+                        </div>
+
+                        <span class="product-card__price">
+                          <span class="product-card__price-current">
+                            <span class="currency">
+                              $
+                            </span>
+                            900.00
+                          </span>
+                          <span class="product-card__price-old">
+                            <span class="currency">
+                              $
+                            </span>
+                            900.00
+                          </span>
+                        </span>
+                      </div>
+
+                      <div class="product-card__content-extra">
+                        <p class="product-card__description">
+                          Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
+                          neckline.
+                          The dress is
+                          covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the
+                          tulle
+                          cape
+                          with lace details
+                          on the shoulders.
+                        </p>
+                        <p class="product-card__info">
+                          Color:
+                          <span class="product-card__txt">
+                            White, Ivoty
+                          </span>
+                        </p>
+
+                        <a href="#" class="button product-card__button">
+                          Shop now
+                        </a>
+                      </div>
+                    </div>
+                    <button class="wishlist product-card__wishlist" type="button">
+                      <span class="sr-only">
+                        Add to wishlist
+                      </span>
+                      <svg class="wishlist__icon" width="24" height="24">
+                        <use href="images/symbol-defs.svg#icon-wish"></use>
+                      </svg>
+                    </button>
+                  </article>
+                </li>
+                <li class="catalog__item ">
+                  <article class="product-card">
+                    <a class="product-card__link" href="product-one.html">
+                      <img class="product-card__image" src="images/product/catalog/dress-04.jpg"
+                        alt="Aurora Collection Iona" width="270" height="400">
+                    </a>
+                    <div class="product-card__content-box">
+                      <div class="product-card__content">
+                        <div class="product-card__content-top">
+                          <p class="product-card__subtitle">
+                            New Aurora Collection
+                          </p>
+                          <h2 class="product-card__title">
+                            Iona
+                          </h2>
+                          <div class="stars product-card__stars">
+                            <div class="stars__rating rating" data-rateyo-rating="4"></div>
+                            <span class="stars__txt">
+                              (
+                              <span class="stars__value-number">
+                                26
+                              </span>
+                              )
+                            </span>
+                          </div>
+                        </div>
+
+                        <span class="product-card__price">
+                          <span class="product-card__price-current">
+                            <span class="currency">
+                              $
+                            </span>
+                            900.00
+                          </span>
+                          <span class="product-card__price-old">
+                            <span class="currency">
+                              $
+                            </span>
+                            900.00
+                          </span>
+                        </span>
+                      </div>
+
+                      <div class="product-card__content-extra">
+                        <p class="product-card__description">
+                          Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
+                          neckline.
+                          The dress is
+                          covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the
+                          tulle
+                          cape
+                          with lace details
+                          on the shoulders.
+                        </p>
+                        <p class="product-card__info">
+                          Color:
+                          <span class="product-card__txt">
+                            White, Ivoty
+                          </span>
+                        </p>
+
+                        <a href="#" class="button product-card__button">
+                          Shop now
+                        </a>
+                      </div>
+                    </div>
+                    <button class="wishlist product-card__wishlist" type="button">
+                      <span class="sr-only">
+                        Add to wishlist
+                      </span>
+                      <svg class="wishlist__icon" width="24" height="24">
+                        <use href="images/symbol-defs.svg#icon-wish"></use>
+                      </svg>
+                    </button>
+                  </article>
+                </li>
+              </ul>
             </div>
-            <ul class="catalog__list">
-              <li class="catalog__item ">
-               <article class="product-card">
-                 <a class="product-card__link" href="product-one.html">
-                   <img class="product-card__image" src="images/product/catalog/dress-03.jpg"
-                     alt="Aurora Collection Iona" width="300" height="450">
-                 </a>
-                 <div class="product-card__content-box">
-                   <div class="product-card__content">
-                     <div class="product-card__content-top">
-                       <p class="product-card__subtitle">
-                         New Aurora Collection
-                       </p>
-                       <h2 class="product-card__title">
-                         Iona
-                       </h2>
-                       <div class="stars product-card__stars">
-                         <div class="stars__rating rating " data-rateyo-rating="4"></div>
-                         <span class="stars__txt">
-                           (
-                           <span class="stars__value-number">
-                             26
-                           </span>
-                           )
-                         </span>
-                       </div>
-                     </div>
-
-                     <span class="product-card__price">
-                       <span class="product-card__price-current">
-                         <span class="currency">
-                           $
-                         </span>
-                         900.00
-                       </span>
-                       <span class="product-card__price-old">
-                         <span class="currency">
-                           $
-                         </span>
-                         900.00
-                       </span>
-                     </span>
-                   </div>
-
-                   <div class="product-card__content-extra">
-                     <p class="product-card__description">
-                       Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
-                       neckline.
-                       The dress is
-                       covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the tulle
-                       cape
-                       with lace details
-                       on the shoulders.
-                     </p>
-                     <p class="product-card__info">
-                       Color:
-                       <span class="product-card__txt">
-                         White, Ivoty
-                       </span>
-                     </p>
-
-                     <a href="#" class="button product-card__button">
-                       Shop now
-                     </a>
-                   </div>
-                 </div>
-                 <button class="wishlist product-card__wishlist" type="button">
-                   <span class="sr-only">
-                     Add to wishlist
-                   </span>
-                   <svg class="wishlist__icon" width="24" height="24">
-                     <use href="images/symbol-defs.svg#icon-wish"></use>
-                   </svg>
-                 </button>
-               </article>
-              </li>
-              <li class="catalog__item ">
-                <article class="product-card">
-                  <a class="product-card__link" href="product-one.html">
-                    <img class="product-card__image" src="images/product/catalog/dress-03.jpg"
-                      alt="Aurora Collection Iona" width="300" height="450">
-                  </a>
-                  <div class="product-card__content-box">
-                    <div class="product-card__content">
-                      <div class="product-card__content-top">
-                        <p class="product-card__subtitle">
-                          New Aurora Collection
-                        </p>
-                        <h2 class="product-card__title">
-                          Iona
-                        </h2>
-                        <div class="stars product-card__stars">
-                          <div class="stars__rating rating" data-rateyo-rating="4"></div>
-                          <span class="stars__txt">
-                            (
-                            <span class="stars__value-number">
-                              26
-                            </span>
-                            )
-                          </span>
-                        </div>
-                      </div>
-
-                      <span class="product-card__price">
-                        <span class="product-card__price-current">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                        <span class="product-card__price-old">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                      </span>
-                    </div>
-
-                    <div class="product-card__content-extra">
-                      <p class="product-card__description">
-                        Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
-                        neckline.
-                        The dress is
-                        covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the tulle
-                        cape
-                        with lace details
-                        on the shoulders.
-                      </p>
-                      <p class="product-card__info">
-                        Color:
-                        <span class="product-card__txt">
-                          White, Ivoty
-                        </span>
-                      </p>
-
-                      <a href="#" class="button product-card__button">
-                        Shop now
-                      </a>
-                    </div>
-                  </div>
-                  <button class="wishlist product-card__wishlist" type="button">
-                    <span class="sr-only">
-                      Add to wishlist
-                    </span>
-                    <svg class="wishlist__icon" width="24" height="24">
-                      <use href="images/symbol-defs.svg#icon-wish"></use>
-                    </svg>
-                  </button>
-                </article>
-              </li>
-              <li class="catalog__item ">
-                <article class="product-card">
-                  <a class="product-card__link" href="product-one.html">
-                    <img class="product-card__image" src="images/product/catalog/dress-03.jpg"
-                      alt="Aurora Collection Iona" width="300" height="450">
-                  </a>
-                  <div class="product-card__content-box">
-                    <div class="product-card__content">
-                      <div class="product-card__content-top">
-                        <p class="product-card__subtitle">
-                          New Aurora Collection
-                        </p>
-                        <h2 class="product-card__title">
-                          Iona
-                        </h2>
-                        <div class="stars product-card__stars">
-                          <div class="stars__rating rating" data-rateyo-rating="4"></div>
-                          <span class="stars__txt">
-                            (
-                            <span class="stars__value-number">
-                              26
-                            </span>
-                            )
-                          </span>
-                        </div>
-                      </div>
-
-                      <span class="product-card__price">
-                        <span class="product-card__price-current">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                        <span class="product-card__price-old">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                      </span>
-                    </div>
-
-                    <div class="product-card__content-extra">
-                      <p class="product-card__description">
-                        Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
-                        neckline.
-                        The dress is
-                        covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the tulle
-                        cape
-                        with lace details
-                        on the shoulders.
-                      </p>
-                      <p class="product-card__info">
-                        Color:
-                        <span class="product-card__txt">
-                          White, Ivoty
-                        </span>
-                      </p>
-
-                      <a href="#" class="button product-card__button">
-                        Shop now
-                      </a>
-                    </div>
-                  </div>
-                  <button class="wishlist product-card__wishlist" type="button">
-                    <span class="sr-only">
-                      Add to wishlist
-                    </span>
-                    <svg class="wishlist__icon" width="24" height="24">
-                      <use href="images/symbol-defs.svg#icon-wish"></use>
-                    </svg>
-                  </button>
-                </article>
-              </li>
-              <li class="catalog__item ">
-                <article class="product-card">
-                  <a class="product-card__link" href="product-one.html">
-                    <img class="product-card__image" src="images/product/catalog/dress-03.jpg"
-                      alt="Aurora Collection Iona" width="300" height="450">
-                  </a>
-                  <div class="product-card__content-box">
-                    <div class="product-card__content">
-                      <div class="product-card__content-top">
-                        <p class="product-card__subtitle">
-                          New Aurora Collection
-                        </p>
-                        <h2 class="product-card__title">
-                          Iona
-                        </h2>
-                        <div class="stars product-card__stars">
-                          <div class="stars__rating rating" data-rateyo-rating="4"></div>
-                          <span class="stars__txt">
-                            (
-                            <span class="stars__value-number">
-                              26
-                            </span>
-                            )
-                          </span>
-                        </div>
-                      </div>
-
-                      <span class="product-card__price">
-                        <span class="product-card__price-current">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                        <span class="product-card__price-old">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                      </span>
-                    </div>
-
-                    <div class="product-card__content-extra">
-                      <p class="product-card__description">
-                        Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
-                        neckline.
-                        The dress is
-                        covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the tulle
-                        cape
-                        with lace details
-                        on the shoulders.
-                      </p>
-                      <p class="product-card__info">
-                        Color:
-                        <span class="product-card__txt">
-                          White, Ivoty
-                        </span>
-                      </p>
-
-                      <a href="#" class="button product-card__button">
-                        Shop now
-                      </a>
-                    </div>
-                  </div>
-                  <button class="wishlist product-card__wishlist" type="button">
-                    <span class="sr-only">
-                      Add to wishlist
-                    </span>
-                    <svg class="wishlist__icon" width="24" height="24">
-                      <use href="images/symbol-defs.svg#icon-wish"></use>
-                    </svg>
-                  </button>
-                </article>
-              </li>
-              <li class="catalog__item ">
-                <article class="product-card">
-                  <a class="product-card__link" href="product-one.html">
-                    <img class="product-card__image" src="images/product/catalog/dress-03.jpg"
-                      alt="Aurora Collection Iona" width="300" height="450">
-                  </a>
-                  <div class="product-card__content-box">
-                    <div class="product-card__content">
-                      <div class="product-card__content-top">
-                        <p class="product-card__subtitle">
-                          New Aurora Collection
-                        </p>
-                        <h2 class="product-card__title">
-                          Iona
-                        </h2>
-                        <div class="stars product-card__stars">
-                          <div class="stars__rating rating" data-rateyo-rating="4"></div>
-                          <span class="stars__txt">
-                            (
-                            <span class="stars__value-number">
-                              26
-                            </span>
-                            )
-                          </span>
-                        </div>
-                      </div>
-
-                      <span class="product-card__price">
-                        <span class="product-card__price-current">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                        <span class="product-card__price-old">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                      </span>
-                    </div>
-
-                    <div class="product-card__content-extra">
-                      <p class="product-card__description">
-                        Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
-                        neckline.
-                        The dress is
-                        covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the tulle
-                        cape
-                        with lace details
-                        on the shoulders.
-                      </p>
-                      <p class="product-card__info">
-                        Color:
-                        <span class="product-card__txt">
-                          White, Ivoty
-                        </span>
-                      </p>
-
-                      <a href="#" class="button product-card__button">
-                        Shop now
-                      </a>
-                    </div>
-                  </div>
-                  <button class="wishlist product-card__wishlist" type="button">
-                    <span class="sr-only">
-                      Add to wishlist
-                    </span>
-                    <svg class="wishlist__icon" width="24" height="24">
-                      <use href="images/symbol-defs.svg#icon-wish"></use>
-                    </svg>
-                  </button>
-                </article>
-              </li>
-              <li class="catalog__item ">
-                <article class="product-card">
-                  <a class="product-card__link" href="product-one.html">
-                    <img class="product-card__image" src="images/product/catalog/dress-03.jpg"
-                      alt="Aurora Collection Iona" width="300" height="450">
-                  </a>
-                  <div class="product-card__content-box">
-                    <div class="product-card__content">
-                      <div class="product-card__content-top">
-                        <p class="product-card__subtitle">
-                          New Aurora Collection
-                        </p>
-                        <h2 class="product-card__title">
-                          Iona
-                        </h2>
-                        <div class="stars product-card__stars">
-                          <div class="stars__rating rating" data-rateyo-rating="4"></div>
-                          <span class="stars__txt">
-                            (
-                            <span class="stars__value-number">
-                              26
-                            </span>
-                            )
-                          </span>
-                        </div>
-                      </div>
-
-                      <span class="product-card__price">
-                        <span class="product-card__price-current">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                        <span class="product-card__price-old">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                      </span>
-                    </div>
-
-                    <div class="product-card__content-extra">
-                      <p class="product-card__description">
-                        Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
-                        neckline.
-                        The dress is
-                        covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the tulle
-                        cape
-                        with lace details
-                        on the shoulders.
-                      </p>
-                      <p class="product-card__info">
-                        Color:
-                        <span class="product-card__txt">
-                          White, Ivoty
-                        </span>
-                      </p>
-
-                      <a href="#" class="button product-card__button">
-                        Shop now
-                      </a>
-                    </div>
-                  </div>
-                  <button class="wishlist product-card__wishlist" type="button">
-                    <span class="sr-only">
-                      Add to wishlist
-                    </span>
-                    <svg class="wishlist__icon" width="24" height="24">
-                      <use href="images/symbol-defs.svg#icon-wish"></use>
-                    </svg>
-                  </button>
-                </article>
-              </li>
-              <li class="catalog__item ">
-                <article class="product-card">
-                  <a class="product-card__link" href="product-one.html">
-                    <img class="product-card__image" src="images/product/catalog/dress-03.jpg"
-                      alt="Aurora Collection Iona" width="300" height="450">
-                  </a>
-                  <div class="product-card__content-box">
-                    <div class="product-card__content">
-                      <div class="product-card__content-top">
-                        <p class="product-card__subtitle">
-                          New Aurora Collection
-                        </p>
-                        <h2 class="product-card__title">
-                          Iona
-                        </h2>
-                        <div class="stars product-card__stars">
-                          <div class="stars__rating rating" data-rateyo-rating="4"></div>
-                          <span class="stars__txt">
-                            (
-                            <span class="stars__value-number">
-                              26
-                            </span>
-                            )
-                          </span>
-                        </div>
-                      </div>
-
-                      <span class="product-card__price">
-                        <span class="product-card__price-current">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                        <span class="product-card__price-old">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                      </span>
-                    </div>
-
-                    <div class="product-card__content-extra">
-                      <p class="product-card__description">
-                        Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
-                        neckline.
-                        The dress is
-                        covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the tulle
-                        cape
-                        with lace details
-                        on the shoulders.
-                      </p>
-                      <p class="product-card__info">
-                        Color:
-                        <span class="product-card__txt">
-                          White, Ivoty
-                        </span>
-                      </p>
-
-                      <a href="#" class="button product-card__button">
-                        Shop now
-                      </a>
-                    </div>
-                  </div>
-                  <button class="wishlist product-card__wishlist" type="button">
-                    <span class="sr-only">
-                      Add to wishlist
-                    </span>
-                    <svg class="wishlist__icon" width="24" height="24">
-                      <use href="images/symbol-defs.svg#icon-wish"></use>
-                    </svg>
-                  </button>
-                </article>
-              </li>
-              <li class="catalog__item ">
-                <article class="product-card">
-                  <a class="product-card__link" href="product-one.html">
-                    <img class="product-card__image" src="images/product/catalog/dress-03.jpg"
-                      alt="Aurora Collection Iona" width="300" height="450">
-                  </a>
-                  <div class="product-card__content-box">
-                    <div class="product-card__content">
-                      <div class="product-card__content-top">
-                        <p class="product-card__subtitle">
-                          New Aurora Collection
-                        </p>
-                        <h2 class="product-card__title">
-                          Iona
-                        </h2>
-                        <div class="stars product-card__stars">
-                          <div class="stars__rating rating" data-rateyo-rating="4"></div>
-                          <span class="stars__txt">
-                            (
-                            <span class="stars__value-number">
-                              26
-                            </span>
-                            )
-                          </span>
-                        </div>
-                      </div>
-
-                      <span class="product-card__price">
-                        <span class="product-card__price-current">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                        <span class="product-card__price-old">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                      </span>
-                    </div>
-
-                    <div class="product-card__content-extra">
-                      <p class="product-card__description">
-                        Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
-                        neckline.
-                        The dress is
-                        covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the tulle
-                        cape
-                        with lace details
-                        on the shoulders.
-                      </p>
-                      <p class="product-card__info">
-                        Color:
-                        <span class="product-card__txt">
-                          White, Ivoty
-                        </span>
-                      </p>
-
-                      <a href="#" class="button product-card__button">
-                        Shop now
-                      </a>
-                    </div>
-                  </div>
-                  <button class="wishlist product-card__wishlist" type="button">
-                    <span class="sr-only">
-                      Add to wishlist
-                    </span>
-                    <svg class="wishlist__icon" width="24" height="24">
-                      <use href="images/symbol-defs.svg#icon-wish"></use>
-                    </svg>
-                  </button>
-                </article>
-              </li>
-              <li class="catalog__item ">
-                <article class="product-card">
-                  <a class="product-card__link" href="product-one.html">
-                    <img class="product-card__image" src="images/product/catalog/dress-03.jpg"
-                      alt="Aurora Collection Iona" width="300" height="450">
-                  </a>
-                  <div class="product-card__content-box">
-                    <div class="product-card__content">
-                      <div class="product-card__content-top">
-                        <p class="product-card__subtitle">
-                          New Aurora Collection
-                        </p>
-                        <h2 class="product-card__title">
-                          Iona
-                        </h2>
-                        <div class="stars product-card__stars">
-                          <div class="stars__rating rating" data-rateyo-rating="4"></div>
-                          <span class="stars__txt">
-                            (
-                            <span class="stars__value-number">
-                              26
-                            </span>
-                            )
-                          </span>
-                        </div>
-                      </div>
-
-                      <span class="product-card__price">
-                        <span class="product-card__price-current">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                        <span class="product-card__price-old">
-                          <span class="currency">
-                            $
-                          </span>
-                          900.00
-                        </span>
-                      </span>
-                    </div>
-
-                    <div class="product-card__content-extra">
-                      <p class="product-card__description">
-                        Beautiful sleeveless mermaid wedding dress of light pink embroidered tulle with a sweetheart
-                        neckline.
-                        The dress is
-                        covered with a cascade of 3D flowers and beads for a romantic effect, highlighted with the tulle
-                        cape
-                        with lace details
-                        on the shoulders.
-                      </p>
-                      <p class="product-card__info">
-                        Color:
-                        <span class="product-card__txt">
-                          White, Ivoty
-                        </span>
-                      </p>
-
-                      <a href="#" class="button product-card__button">
-                        Shop now
-                      </a>
-                    </div>
-                  </div>
-                  <button class="wishlist product-card__wishlist" type="button">
-                    <span class="sr-only">
-                      Add to wishlist
-                    </span>
-                    <svg class="wishlist__icon" width="24" height="24">
-                      <use href="images/symbol-defs.svg#icon-wish"></use>
-                    </svg>
-                  </button>
-                </article>
-              </li>
-            </ul>
           </div>
-        </div>
-    </section>
+      </section>
+    </div>
   </main>
 
   <div class="pagination">
     <div class="container">
-      <p class="pagination__txt">
+      <p class="pagination__headline">
         More to love
       </p>
       <div class="pagination__inner">
@@ -1325,7 +1488,9 @@
           <svg class="pagination__icon" width="24" height="24">
             <use href="images/symbol-defs.svg#icon-chevron"></use>
           </svg>
-          Previos
+          <span class="pagination__text">
+            Previos
+          </span>
         </button>
 
         <ul class="pagination__list">
@@ -1355,7 +1520,9 @@
         </ul>
 
         <button class="pagination__btn pagination__btn--next" id="next">
-          Next
+          <span class="pagination__text">
+            Next
+          </span>
           <svg class="pagination__icon" width="24" height="24">
             <use href="images/symbol-defs.svg#icon-chevron"></use>
           </svg>
@@ -1366,167 +1533,182 @@
 
   <footer class="footer">
   <div class="container">
-    <div class="footer__inner">
-      <div class="footer__content">
-        <div class="footer__top">
-          <a class="logo" href="#">
-            <img class="logo footer__logo"  src="images/logo-white.svg" alt="Logo Patricia Wedding" width="300" height="75">
-          </a>
-          <address class="footer__address">
-            <ul class="footer__contacts">
-              <li class="footer__contacts-item">
-                <a class="footer__link footer__link--big" href="tel:+19179586921"
-                  class="footer__link">
-                  +19179586921
-                </a>
-              </li>
-              <li class="footer__contacts-item">
-                <a href="#" class="footer__link">
+    <div class="footer__top">
+      <div class="footer__contacts">
+        <a class="logo" href="#">
+          <img class="logo footer__logo" src="images/logo-white.svg" alt="Logo Patricia Wedding" width="300"
+            height="75">
+        </a>
+        <address class="footer__address">
+          <ul class="address address--white">
+            <li class="address__item">
+              <a class="address__link" href="tel: +19179586921">
+                +1 (917) 958-69-21
+              </a>
+            </li>
+            <li class="address__item">
+              <a class="address__link" href="googleapis: +19179586921">
+                <p class="address__txt">
                   123 5th Ave, 3th floor,
-                  <span class="footer__contacts-city">
-                    New York, NY 10003, USA
-                  </span>
-                </a>
-              </li>
-              <li class="footer__contacts-item">
-                <a href="mailto:info@patriciaweddig.com" class="footer__link">
-                  info@patriciaweddig.com
-                </a>
-              </li>
-            </ul>
-          </address>
-        </div>
-        <p class="footer__txt">
-          2021@PatriciaWedding
-        </p>
+                </p>
+                <p class="address__txt">
+                  New York, NY 10003, USA
+                </p>
+              </a>
+            </li>
+            <li class="address__item">
+              <a class="address__link" href="mailto: info@patriciaweddig.com">
+                info@patriciaweddig.com
+              </a>
+            </li>
+          </ul>
+        </address>
       </div>
 
-      <div class="footer__content footer__content--list">
-        <ul class="footer__top">
-          <li class="footer__info">
-            <h2 class="footer__title">
-              Online orders
-            </h2>
-            <ul class="footer__list">
-               <li class="footer__item">
-                 <a class="footer__link" href="#">
-                   Order Status
-                 </a>
-               </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Shipping Information
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Secure payment
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Returns and Exchanges
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  International Orders
-                </a>
-              </li>
-            </ul>
-        </ul>
-        <a class="footer__link footer__link--color" href="#">
-          Privacy policy
-        </a>
-      </div>
+      <ul class="footer__info">
+        <li class="footer__content">
+          <button class="footer__btn" aria-expanded="false">
+            Online orders
+            <svg class="footer__btn-icon" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-chevron"></use>
+            </svg>
+          </button>
 
-      <div class="footer__content footer__content--list">
-        <ul class="footer__top">
-          <li class="footer__info">
-            <h2 class="footer__title">
-              Help center
-            </h2>
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  FAQ
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Site map
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Virtual Appointment
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Share your wedding pictures
-                </a>
-              </li>
-            </ul>
-        </ul>
-        <a class="footer__link footer__link--color" href="#">
-          Website Terms of Use
-        </a>
-      </div>
+          <ul class="footer__list" aria-hidden="true" id="list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Order Status
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Shipping Information
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Secure payment
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Returns and Exchanges
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                International Orders
+              </a>
+            </li>
+          </ul>
+        </li>
 
-      <div class="footer__content footer__content--list">
-        <ul class="footer__top">
-          <li class="footer__info">
-            <h2 class="footer__title">
-              Follow us
-            </h2>
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Instagram
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Facebook
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Pinterest
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Twitter
-                </a>
-              </li>
-            </ul>
-        </ul>
+        <li class="footer__content">
+          <button class="footer__btn" aria-expanded="false">
+            Help center
+            <svg class="footer__btn-icon" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-chevron"></use>
+            </svg>
+          </button>
 
+          <ul class="footer__list hidden" aria-hidden="true">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                FAQ
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Site map
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Virtual Appointment
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Share your wedding pictures
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Privacy policy
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Website Terms of Use
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="footer__content">
+          <button class="footer__btn" aria-expanded="false">
+            Follow us
+            <svg class="footer__btn-icon" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-chevron"></use>
+            </svg>
+          </button>
+          <ul class="footer__list hidden" aria-hidden="true">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Instagram
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Facebook
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Pinterest
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Twitter
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <ul class="footer__bottom">
+      <li class="footer__bottom-item">
         <ul class="footer__payment">
           <li class="footer__payment-item">
-            <svg class="footer__icon" width="44" height="44">
+            <svg class="footer__icon" width="44" height="28">
               <use href="./images/symbol-defs.svg#icon-mastercard"></use>
             </svg>
           </li>
           <li class="footer__payment-item">
-            <svg class="footer__icon" width="44" height="44">
+            <svg class="footer__icon" width="44" height="28">
               <use href="./images/symbol-defs.svg#icon-visa"></use>
             </svg>
           </li>
           <li class="footer__payment-item">
-            <svg class="footer__icon" width="44" height="44">
+            <svg class="footer__icon" width="44" height="28">
               <use href="./images/symbol-defs.svg#icon-paypal"></use>
             </svg>
           </li>
-
-
         </ul>
-      </div>
-    </div>
+      </li>
+      <li class="footer__bottom-item">
+          2021@PatriciaWedding
+      </li>
+      <li class="footer__bottom-item">
+        <a class="footer__bottom-link"
+          href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=irynakozlova.k@gmail.com" target="_blank">
+          created by iryna kozlova
+        </a>
+      </li>
+    </ul>
   </div>
-
 </footer>
 
 

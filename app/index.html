@@ -22,14 +22,21 @@
 
   <header class="header">
   <div class="container">
+    <!-- <div class="block">
+      test
+    </div> -->
     <div class="header__top">
-      <div class="language">
+
+      <div class="language header__language">
         <button class="language__button" type="button" data-value="en">
           En
         </button>
 
         <ul class="language__list">
           <li class="language__item">
+            <a class="language__link active" href="#">
+              En
+            </a>
             <a class="language__link" href="#">
               Uk
             </a>
@@ -38,22 +45,33 @@
         </ul>
 
       </div>
-      <a class="logo" href="index.html">
+
+      <button class="burger header__burger" data-open-burger>
+        <svg class="burger__icon" width="32" height="32">
+          <use href="./images/symbol-defs.svg#icon-burger"></use>
+        </svg>
+      </button>
+      
+      <a class="logo header__logo" href="index.html">
         <img class="logo__img" src="images/logo.svg" alt="Patriia Wedding Logo" width="320" height="80">
       </a>
-      <ul class="usernav">
+      <ul class="usernav header__usernav">
         <li class="usernav__item">
-          <a class="usernav__link" href="#">
-            <span class="sr-only">Your account page</span>
-            <svg class="usernav__icon" width="28" height="28">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Your account page
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-account"></use>
             </svg>
           </a>
         </li>
         <li class="usernav__item">
-          <a class="usernav__link" href="#">
-            <span class="sr-only">Wishlist</span>
-            <svg class="usernav__icon" width="28" height="28">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Wishlist
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-wishlist">
               </use>
             </svg>
@@ -63,15 +81,19 @@
           </a>
         </li>
         <li class="usernav__item">
-          <button class="usernav__link" type="button" data-modal-button="modal-1">
-            <span class="sr-only">shopping bag</span>
-            <svg class="usernav__icon" width="28" height="28">
+          <button class="icon-button" type="button" data-modal-button="modal-1">
+            <span class="sr-only">
+              shopping bag
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-bag"></use>
             </svg>
             <span class="usernav__number">
               2
             </span>
           </button>
+
+
           <div class="modal" id="modal-1" data-modal>
 
             <h2 class="modal__title">
@@ -83,16 +105,13 @@
             </h2>
             <ul class="modal__list">
               <li class="modal__item">
-                <article class="shopping-card">
-                  <img class="shopping-card__img" src="images/product/small/calliope.jpg" alt="Wedding dress Calliope"
+                <article class="shopping-card modal__shopping-card">
+                  <img class="shopping-card__img"src="images/product/catalog/dress-02.jpg" alt="Wedding dress Calliope"
                     width="100" height="150">
                   <div class="shopping-card__content">
                     <h3 class="shopping-card__headline">
                       Calliope
                     </h3>
-                    <p class="shopping-card__txt">
-                      Flared satin wedding dress with halter neck and slit.
-                    </p>
                     <ul class="shopping-card__info">
                       <li class="shopping-card__info-item">
                         Color:
@@ -131,6 +150,52 @@
                     </span>
                 </article>
               </li>
+              <li class="modal__item">
+                <article class="shopping-card modal__shopping-card">
+                  <img class="shopping-card__img" src="images/product/accessories/nicola.jpg"
+                    alt="Wedding accessories nicola" width="100" height="150">
+                  <div class="shopping-card__content">
+                    <h3 class="shopping-card__headline">
+                      Nicola Bathie Perry
+                    </h3>
+                    <ul class="shopping-card__info">
+                      <li class="shopping-card__info-item">
+                        Color:
+                        <span class="shopping-card__value">
+                          White
+                        </span>
+                      </li>
+                      <li class="shopping-card__info-item">
+                        Size:
+                        <span class="shopping-card__value">
+                          M
+                        </span>
+                      </li>
+                    </ul>
+                    <div class="shopping-card__links">
+                      <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
+                        Edit
+                      </a>
+                      <button class="shopping-card__btn" type="button">
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                  <div class="shopping-card__price">
+                    <span class="shopping-card__price-current">
+                      <span class="currency">
+                        $
+                      </span>
+                      25.00
+                    </span>
+                    <span class="shopping-card__price-old">
+                      <span class="currency">
+                        $
+                      </span>
+                      30.00
+                    </span>
+                </article>
+              </li>
 
             </ul>
             <div class="modal__sum">
@@ -152,7 +217,7 @@
             </button>
 
             <button class="modal__btn" type="button" data-modal-close>
-              <svg class="modal__icon" width="24" height="24">
+              <svg class="close-btn__icon" width="24" height="24">
                 <use href="images/symbol-defs.svg#icon-close">
                 </use>
               </svg>
@@ -163,14 +228,14 @@
     </div>
     <div class="header__bottom">
       <nav class="header__menu">
-        <ul class="header__list list-reset">
+        <ul class="header__list">
           <li class="header__item">
-            <a class="header__link" href="index.html">
+            <a class="header__link current" href="index.html">
               Home
             </a>
           </li>
           <li class="header__item">
-            <button class="header__link" id="dropmenu" type="button">
+            <button class="header__link @@dresses" id="dropmenu" type="button">
               Dresses
               <svg class="header__link-icon" width="16" height="16">
                 <use href="./images/symbol-defs.svg#icon-chevron"></use>
@@ -204,7 +269,7 @@
                         </a>
                       </li>
                       <li class="dropdown-menu__box">
-                        <a class="dropdown-menu__box-link" href="#">
+                        <a class="dropdown-menu__box-link" href="catalog.html">
                           <img class="dropdown-menu__img" src="images/dropdown/sheath.jpg" alt="Sheath style">
                           Sheath
                         </a>
@@ -220,42 +285,42 @@
                         </h3>
                         <ul class="dropdown-menu__list">
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Civil Wedding
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Simple
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Elegant
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Boho
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Beach
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Romantic
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Embroidery
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Modern
                             </a>
                           </li>
@@ -267,37 +332,37 @@
                         </h3>
                         <ul class="dropdown-menu__list">
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Long sleeves
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Open Back
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Champagne
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Effetto Tattooz
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Pink
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Lace
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Effetto Tattoo
                             </a>
                           </li>
@@ -318,379 +383,543 @@
             </div>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">
-              Wedding party
+            <a class="header__link" href="catalog.html">
+              Bridesmaid
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">
+            <a class="header__link" href="catalog.html">
               Accessories
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">
+            <a class="header__link @@gallery" href="gallery.html">
               Gallery
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="contact.html">
+            <a class="header__lin " href="contact.html">
               Contact us
             </a>
           </li>
         </ul>
       </nav>
 
-      <form class="header__form" action="#">
+      <form class="header__form form" action="#">
         <label class="sr-only" for="search">Search</label>
-        <input class="header__input" type="text" name="search" id="search" placeholder="Search">
-        <button class="header__btn">
-          <svg class="usernav__btn-icon" width="28" height="20">
+        <input class="form__input header__input " type="text" name="search" id="search" placeholder="Search">
+        <button class="icon-button form__btn">
+          <svg class="icon-button__icon" width="20" height="20">
             <use href="./images/symbol-defs.svg#icon-search"></use>
           </svg>
         </button>
-
       </form>
 
+      <button class="icon-button header__btn" type="button">
+        <span class="sr-only">
+          Search
+        </span>
+        <svg class="icon-button__icon" width="28" height="28">
+          <use href="./images/symbol-defs.svg#icon-search"></use>
+        </svg>
+      </button>
     </div>
   </div>
 
+  <div class="burger-menu" data-menu-burger>
+    <div class="burger-menu__top">
+      <div class="language burger-menu__language">
+        <button class="language__button" type="button" data-value="en">
+          En
+        </button>
+
+        <ul class="language__list">
+          <li class="language__item">
+            <a class="language__link active" href="#">
+              En
+            </a>
+            <a class="language__link" href="#">
+              Uk
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+      <ul class="usernav">
+        <li class="usernav__item">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Your account page
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-account"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="usernav__item">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Wishlist
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-wishlist">
+              </use>
+            </svg>
+            <span class="usernav__number">
+              10
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <ul class="burger-menu__list">
+      <li class="burger-menu__item">
+        <a class="burger-menu__link current" href="index.html">
+          Home
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link @@dresses" href="catalog.html">
+          Dresses
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link" href="#">
+          Wedding party
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link" href="#">
+          Accessories
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link @@gallery" href="gallery.html">
+          Gallery
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link @@contact" href="contact.html">
+          Contact us
+        </a>
+      </li>
+    </ul>
+    <form class="burger-menu__form form" action="#">
+      <label class="sr-only" for="search">Search</label>
+      <input class="form__input" type="text" name="search" id="search" placeholder="Search">
+      <button class="icon-button form__btn">
+        <svg class="icon-button__icon" width="28" height="28">
+          <use href="./images/symbol-defs.svg#icon-search"></use>
+        </svg>
+      </button>
+    </form>
+
+    <button class="close-btn burger-menu__close-btn" type="button" data-close-burger>
+      <svg class="close-btn__icon" width="24" height="24">
+        <use href="images/symbol-defs.svg#icon-close">
+        </use>
+      </svg>
+    </button>
+  </div>
 </header>
 
   <main>
-    <section class="hero hero__section" style="background-image: url('images/decor/hero-bg.jpg');">
-      <div class="container hero__container">
-        <div class="hero__content">
-          <h1 class="title hero__title">
-            Wedding dresses to fall in love
-          </h1>
-          <p class="hero__text">
-            Every bridesmaid has her dream dress
-          </p>
-          <a class="button" href="#">
-            Shop now
-          </a>
+    <div class="wrapper">
+      <section class="hero hero__section">
+        <div class="hero__inner" style="background-image: url('images/decor/hero-bg.jpg');">
         </div>
-      </div>
-    </section>
-
-    <section class="collection section section--small">
-      <div class="container ">
-        <h2 class="title collection__title">
-          The wilderly bride collection
-        </h2>
-        <div class="collection__inner">
-          <div class="collection__content">
-            <p class="subtitle collection__subtitle">
-              Explore our Dresses
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="title hero__title">
+              Wedding dresses to fall in love
+            </h1>
+            <p class="hero__text">
+              Every bridesmaid has her dream dress
             </p>
-            <div class="collection__info">
-              <p class="collection__txt">
-                Dreamed up for the bride who's searching for fluttering silhouettes and unique, delicate detailing.
-                Thoughtfully curated to embody a sense of carefree elegance and uniqueness
-              </p>
-            </div>
-            <a class="button button--light" href="#">
-              View all dresses
-            </a>
-          </div>
-          <div class="collection__photo">
-            <img class="collection__img" src="images/decor/about-1.jpg" alt="The wilderly bride collection" width="340"
-              height="470">
-            <img class="collection__img" src="images/decor/about-2.jpg" alt="The wilderly bride collection" width="300"
-              height="580">
-            <img class="collection__img collection__img--corner" src="images/decor/about-3.jpg"
-              alt="The wilderly bride collection" width="470" height="820">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="collection section">
-      <div class="container ">
-        <h2 class="title collection__title">
-          Bridesmaids dresses
-        </h2>
-        <div class="collection__inner">
-          <div class="collection__content">
-            <p class="subtitle collection__subtitle">
-              Unique and affordable Dresses
-            </p>
-            <div class="collection__info">
-              <p class="collection__txt">
-                Bridesmaid dresses are one of the most exciting aspects of any wedding.
-              </p>
-              <p class="collection__txt">
-                Kitting out your bridal party in the right dress has the potential to enhance your own Wedding Dress, as
-                well as deepening the impact of your wedding theme.
-              </p>
-            </div>
-
-            <a class="button button--light" href="#">
-              View all dresses
-            </a>
-          </div>
-          <div class="collection__photo">
-            <img class="collection__img" src="images/decor/dresses-01.jpg" alt="The wilderly bride collection"
-              width="570" height="420">
-            <img class="collection__img collection__img--corner" src="images/decor/dresses-02.jpg"
-              alt="The wilderly bride collection" width="570" height="820">
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="accessories section">
-      <div class="container">
-        <h2 class="title accessories__title">
-          Wedding hair accessories
-        </h2>
-        <div class="accessories__inner">
-          <div class="accessories__content">
-            <div class="accessories__top">
-              <img class="accessories__img" src="images/decor/acceessory-02.jpg" alt="hair accessories" width="270"
-                height="460">
-              <img class="accessories__img" src="images/decor/acceessory-01.jpg" alt="hair accessories" width="270"
-                height="460">
-            </div>
-
-            <p class="subtitle accessories__subtitle">
-              Time to shine
-            </p>
-            <p class="accessories__txt">
-              Discover wedding hair accessories to complete your dream look. From decadent bridal hair pieces to simple
-              pins, our hair accessories for weddings have been handpicked to bring bridal luxury for every taste and
-              style.
-            </p>
-
-            <a class="link" href="#">
-              Look more
+            <a class="button hero__button" href="catalog.html">
+              Shop now
             </a>
 
           </div>
-          <img class="accessories__img accessories__img--corner" src="images/decor/acceessory-03.jpg"
-            alt="White hair accessories" width="570" height="800">
         </div>
-      </div>
+      </section>
 
-    </section>
-
-    <section class="gallery section">
-      <div class="container">
-        <h2 class="title gallery__title">
-          Share with us your love story!
-        </h2>
-        <div class="gallery__inner" style="background-image: url('images/decor/gallery-bg.jpg');">
-          <div class="gallery__content">
-            <p class="subtitle">
-              Inspired by your
-              story
-            </p>
-            <p class="gallery__txt">
-              Share your happiest moments with us and other brides by mentioning
-              <a href="#" class="link link--txt">
-                @patriciawedding
-              </a>
-              on Instagram or adding a photo to
-              your product review.
-            </p>
-            <a class="link" href="#">
-              Show me more brides
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="subscribe">
-      <div class="container">
-        <div class="subscribe__inner">
-          <h2 class="title subscribe__title">
-            Sign up to our newsletter
+      <section class="collection section section--small">
+        <div class="container ">
+          <h2 class="title collection__title" data-aos="fade-right">
+            The wilderly bride collection
           </h2>
-          <form class="subscribe__form">
-            <label for="email" class="sr-only">
-              Your email address
-            </label>
-            <input type="email" class="subscribe__input" id="email" name="email" placeholder="Your email address">
-            <button class="subscribe__btn">
-              Subscribe
-            </button>
-          </form>
-          <p class="subscribe__txt">
-            Sign up to receive style advice on wedding wear that just fits — your style, your vision, you.
-          </p>
+          <div class="collection__inner">
+            <div class="collection__inner-left">
+              <div class="collection__content">
+                <p class="subtitle collection__subtitle" data-aos="fade-right">
+                  Explore our Dresses
+                </p>
+                <div class="collection__info">
+                  <p class="collection__txt" data-aos="fade-right" data-aos-delay="50">
+                    Dreamed up for the bride who's searching for fluttering silhouettes and unique, delicate detailing.
+                    Thoughtfully curated to embody a sense of carefree elegance and uniqueness
+                  </p>
+                </div>
+                <a class="button button--light" href="catalog.html">
+                  View all dresses
+                </a>
+              </div>
+              <ul class="collection__photo">
+                <li class="collection__photo-item">
+                  <img class="collection__photo-img" src="images/decor/about-1.jpg" alt="The wilderly bride collection"
+                    width="340" height="470">
+                </li>
+                <li class="collection__photo-item">
+                  <img class="collection__photo-img" src="images/decor/about-2.jpg" alt="The wilderly bride collection"
+                    width="300" height="520">
+                </li>
+              </ul>
+
+
+            </div>
+
+
+            <div class="collection__inner-right">
+              <img class="collection__right-img" src="images/decor/about-3.jpg" alt="The wilderly bride collection"
+                width="470" height="780">
+            </div>
+
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+      <section class="collection section section--big">
+        <div class="container ">
+          <h2 class="title collection__title" data-aos="fade-right">
+            Bridesmaids dresses
+          </h2>
+          <div class="collection__inner">
+            <div class="collection__inner-left">
+              <div class="collection__content">
+                <p class="subtitle collection__subtitle" data-aos="fade-right">
+                  Affordable Dresses
+                </p>
+                <div class="collection__info">
+                  <p class="collection__txt" data-aos="fade-right" data-aos-delay="50">
+                    Bridesmaid dresses are one of the most exciting aspects of any wedding.
+                  </p>
+                  <p class="collection__txt" data-aos="fade-right" data-aos-delay="50">
+                    Kitting out your bridal party in the right dress has the potential to enhance your own Wedding
+                    Dress,
+                    as
+                    well as deepening the impact of your wedding theme.
+                  </p>
+                </div>
+                <a class="button button--light" href="catalog.html">
+                  View all dresses
+                </a>
+              </div>
+              <div class="collection__photo">
+                <img class="collection__photo-img" src="images/decor/dresses-01.jpg" alt="The wilderly bride collection"
+                  width="570" height="420">
+              </div>
+            </div>
 
+            <div class="collection__inner-right collection__inner-right--big">
+              <img class="collection__right-img" src="images/decor/dresses-02.jpg" alt="The wilderly bride collection"
+                width="570" height="820">
+            </div>
 
+          </div>
+        </div>
+      </section>
+
+      <section class="accessories section section--big">
+        <div class="container">
+          <h2 class="title accessories__title" data-aos="fade-right">
+            Wedding hair accessories
+          </h2>
+          <div class="accessories__inner">
+            <div class="accessories__content">
+              <ul class="accessories__top">
+                <li class="accessories__img-box">
+                  <img class="accessories__img" src="images/decor/acceessory-02.jpg" alt="hair accessories" width="270"
+                    height="460">
+                </li>
+                <li class="accessories__img-box accessories__img-box--hidden">
+                  <img class="accessories__img" src="images/decor/acceessory-01.jpg" alt="hair accessories" width="270"
+                    height="460">
+                </li>
+              </ul>
+
+              <div class="accessories__content-box">
+                <p class="subtitle accessories__subtitle" data-aos="fade-right">
+                  Time to shine
+                </p>
+                <p class="accessories__txt" data-aos="fade-right" data-aos-delay="50">
+                  Discover wedding hair accessories to complete your dream look. From decadent bridal hair pieces to
+                  simple
+                  pins, our hair accessories for weddings have been handpicked to bring bridal luxury for every taste
+                  and
+                  style.
+                </p>
+
+                <a class="link" href="#" data-aos="fade-right" data-aos-delay="50">
+                  Look more
+                </a>
+              </div>
+            </div>
+            <div class="accessories__img-big">
+              <img class="accessories__img accessories__img--corner" src="images/decor/acceessory-03.jpg"
+                alt="White hair accessories" width="570" height="800">
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="gallery section">
+        <div class="container">
+
+          <h2 class="title gallery__title" data-aos="fade-right">
+            Share with us your love story!
+          </h2>
+
+          <div class="gallery__inner">
+            <div class="gallery__inner-left">
+              <img class="gallery__img gallery__img--first" src="images/decor/gallery-02.jpg" alt="Wedding day"
+                width="570" height="570">
+
+              <img class="gallery__img" src="images/decor/gallery-01.jpg" alt="Wedding day" width="570" height="570">
+            </div>
+
+            <div class="gallery__inner-right">
+              <div class="gallery__content">
+                <p class="subtitle gallery__subtitle" data-aos="fade-right">
+                  Inspired by your
+                  story
+                </p>
+                <p class="gallery__txt" data-aos="fade-right" data-aos-delay="50">
+                  Share your happiest moments with us and other brides by mentioning
+                  <a href="#" class="link link--txt">
+                    @patriciawedding
+                  </a>
+                  on Instagram or adding a photo to
+                  your product review.
+                </p>
+                <a class="gallery__link link" href="gallery.html" data-aos="fade-right" data-aos-delay="50">
+                  Show me more brides
+                </a>
+              </div>
+
+              <img class="gallery__img gallery__img--third" src="images/decor/gallery-03.jpg" alt="Wedding day"
+                width="570" height="870">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscribe section section--big">
+        <div class="container">
+          <div class="subscribe__inner">
+            <h2 class="title subscribe__title">
+              Sign up to our newsletter
+            </h2>
+            <form class="subscribe__form">
+              <label for="email" class="sr-only">
+                Your email address
+              </label>
+              <input type="email" class="subscribe__input" id="email" name="email" placeholder="Your email address">
+              <button class="subscribe__btn">
+                Subscribe
+              </button>
+            </form>
+            <p class="subscribe__txt">
+              Sign up to receive style advice on wedding wear that just fits — your style, your vision, you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </div>
   </main>
 
   <footer class="footer">
   <div class="container">
-    <div class="footer__inner">
-      <div class="footer__content">
-        <div class="footer__top">
-          <a class="logo" href="#">
-            <img class="logo footer__logo"  src="images/logo-white.svg" alt="Logo Patricia Wedding" width="300" height="75">
-          </a>
-          <address class="footer__address">
-            <ul class="footer__contacts">
-              <li class="footer__contacts-item">
-                <a class="footer__link footer__link--big" href="tel:+19179586921"
-                  class="footer__link">
-                  +19179586921
-                </a>
-              </li>
-              <li class="footer__contacts-item">
-                <a href="#" class="footer__link">
+    <div class="footer__top">
+      <div class="footer__contacts">
+        <a class="logo" href="#">
+          <img class="logo footer__logo" src="images/logo-white.svg" alt="Logo Patricia Wedding" width="300"
+            height="75">
+        </a>
+        <address class="footer__address">
+          <ul class="address address--white">
+            <li class="address__item">
+              <a class="address__link" href="tel: +19179586921">
+                +1 (917) 958-69-21
+              </a>
+            </li>
+            <li class="address__item">
+              <a class="address__link" href="googleapis: +19179586921">
+                <p class="address__txt">
                   123 5th Ave, 3th floor,
-                  <span class="footer__contacts-city">
-                    New York, NY 10003, USA
-                  </span>
-                </a>
-              </li>
-              <li class="footer__contacts-item">
-                <a href="mailto:info@patriciaweddig.com" class="footer__link">
-                  info@patriciaweddig.com
-                </a>
-              </li>
-            </ul>
-          </address>
-        </div>
-        <p class="footer__txt">
-          2021@PatriciaWedding
-        </p>
+                </p>
+                <p class="address__txt">
+                  New York, NY 10003, USA
+                </p>
+              </a>
+            </li>
+            <li class="address__item">
+              <a class="address__link" href="mailto: info@patriciaweddig.com">
+                info@patriciaweddig.com
+              </a>
+            </li>
+          </ul>
+        </address>
       </div>
 
-      <div class="footer__content footer__content--list">
-        <ul class="footer__top">
-          <li class="footer__info">
-            <h2 class="footer__title">
-              Online orders
-            </h2>
-            <ul class="footer__list">
-               <li class="footer__item">
-                 <a class="footer__link" href="#">
-                   Order Status
-                 </a>
-               </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Shipping Information
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Secure payment
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Returns and Exchanges
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  International Orders
-                </a>
-              </li>
-            </ul>
-        </ul>
-        <a class="footer__link footer__link--color" href="#">
-          Privacy policy
-        </a>
-      </div>
+      <ul class="footer__info">
+        <li class="footer__content">
+          <button class="footer__btn" aria-expanded="false">
+            Online orders
+            <svg class="footer__btn-icon" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-chevron"></use>
+            </svg>
+          </button>
 
-      <div class="footer__content footer__content--list">
-        <ul class="footer__top">
-          <li class="footer__info">
-            <h2 class="footer__title">
-              Help center
-            </h2>
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  FAQ
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Site map
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Virtual Appointment
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Share your wedding pictures
-                </a>
-              </li>
-            </ul>
-        </ul>
-        <a class="footer__link footer__link--color" href="#">
-          Website Terms of Use
-        </a>
-      </div>
+          <ul class="footer__list" aria-hidden="true" id="list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Order Status
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Shipping Information
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Secure payment
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Returns and Exchanges
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                International Orders
+              </a>
+            </li>
+          </ul>
+        </li>
 
-      <div class="footer__content footer__content--list">
-        <ul class="footer__top">
-          <li class="footer__info">
-            <h2 class="footer__title">
-              Follow us
-            </h2>
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Instagram
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Facebook
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Pinterest
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#">
-                  Twitter
-                </a>
-              </li>
-            </ul>
-        </ul>
+        <li class="footer__content">
+          <button class="footer__btn" aria-expanded="false">
+            Help center
+            <svg class="footer__btn-icon" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-chevron"></use>
+            </svg>
+          </button>
 
+          <ul class="footer__list hidden" aria-hidden="true">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                FAQ
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Site map
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Virtual Appointment
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Share your wedding pictures
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Privacy policy
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Website Terms of Use
+              </a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li class="footer__content">
+          <button class="footer__btn" aria-expanded="false">
+            Follow us
+            <svg class="footer__btn-icon" width="24" height="24">
+              <use href="./images/symbol-defs.svg#icon-chevron"></use>
+            </svg>
+          </button>
+          <ul class="footer__list hidden" aria-hidden="true">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Instagram
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Facebook
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Pinterest
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Twitter
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <ul class="footer__bottom">
+      <li class="footer__bottom-item">
         <ul class="footer__payment">
           <li class="footer__payment-item">
-            <svg class="footer__icon" width="44" height="44">
+            <svg class="footer__icon" width="44" height="28">
               <use href="./images/symbol-defs.svg#icon-mastercard"></use>
             </svg>
           </li>
           <li class="footer__payment-item">
-            <svg class="footer__icon" width="44" height="44">
+            <svg class="footer__icon" width="44" height="28">
               <use href="./images/symbol-defs.svg#icon-visa"></use>
             </svg>
           </li>
           <li class="footer__payment-item">
-            <svg class="footer__icon" width="44" height="44">
+            <svg class="footer__icon" width="44" height="28">
               <use href="./images/symbol-defs.svg#icon-paypal"></use>
             </svg>
           </li>
-
-
         </ul>
-      </div>
-    </div>
+      </li>
+      <li class="footer__bottom-item">
+          2021@PatriciaWedding
+      </li>
+      <li class="footer__bottom-item">
+        <a class="footer__bottom-link"
+          href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=irynakozlova.k@gmail.com" target="_blank">
+          created by iryna kozlova
+        </a>
+      </li>
+    </ul>
   </div>
-
 </footer>
 
   <script src="js/main.min.js"></script>

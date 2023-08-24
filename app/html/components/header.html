@@ -1,13 +1,20 @@
 <header class="header">
   <div class="container">
+    <!-- <div class="block">
+      test
+    </div> -->
     <div class="header__top">
-      <div class="language">
+
+      <div class="language header__language">
         <button class="language__button" type="button" data-value="en">
           En
         </button>
 
         <ul class="language__list">
           <li class="language__item">
+            <a class="language__link active" href="#">
+              En
+            </a>
             <a class="language__link" href="#">
               Uk
             </a>
@@ -16,22 +23,33 @@
         </ul>
 
       </div>
-      <a class="logo" href="index.html">
+
+      <button class="burger header__burger" data-open-burger>
+        <svg class="burger__icon" width="32" height="32">
+          <use href="./images/symbol-defs.svg#icon-burger"></use>
+        </svg>
+      </button>
+      
+      <a class="logo header__logo" href="index.html">
         <img class="logo__img" src="images/logo.svg" alt="Patriia Wedding Logo" width="320" height="80">
       </a>
-      <ul class="usernav">
+      <ul class="usernav header__usernav">
         <li class="usernav__item">
-          <a class="usernav__link" href="#">
-            <span class="sr-only">Your account page</span>
-            <svg class="usernav__icon" width="28" height="28">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Your account page
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-account"></use>
             </svg>
           </a>
         </li>
         <li class="usernav__item">
-          <a class="usernav__link" href="#">
-            <span class="sr-only">Wishlist</span>
-            <svg class="usernav__icon" width="28" height="28">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Wishlist
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-wishlist">
               </use>
             </svg>
@@ -41,15 +59,19 @@
           </a>
         </li>
         <li class="usernav__item">
-          <button class="usernav__link" type="button" data-modal-button="modal-1">
-            <span class="sr-only">shopping bag</span>
-            <svg class="usernav__icon" width="28" height="28">
+          <button class="icon-button" type="button" data-modal-button="modal-1">
+            <span class="sr-only">
+              shopping bag
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
               <use href="./images/symbol-defs.svg#icon-bag"></use>
             </svg>
             <span class="usernav__number">
               2
             </span>
           </button>
+
+
           <div class="modal" id="modal-1" data-modal>
 
             <h2 class="modal__title">
@@ -61,16 +83,13 @@
             </h2>
             <ul class="modal__list">
               <li class="modal__item">
-                <article class="shopping-card">
-                  <img class="shopping-card__img" src="images/product/small/calliope.jpg" alt="Wedding dress Calliope"
+                <article class="shopping-card modal__shopping-card">
+                  <img class="shopping-card__img"src="images/product/catalog/dress-02.jpg" alt="Wedding dress Calliope"
                     width="100" height="150">
                   <div class="shopping-card__content">
                     <h3 class="shopping-card__headline">
                       Calliope
                     </h3>
-                    <p class="shopping-card__txt">
-                      Flared satin wedding dress with halter neck and slit.
-                    </p>
                     <ul class="shopping-card__info">
                       <li class="shopping-card__info-item">
                         Color:
@@ -109,6 +128,52 @@
                     </span>
                 </article>
               </li>
+              <li class="modal__item">
+                <article class="shopping-card modal__shopping-card">
+                  <img class="shopping-card__img" src="images/product/accessories/nicola.jpg"
+                    alt="Wedding accessories nicola" width="100" height="150">
+                  <div class="shopping-card__content">
+                    <h3 class="shopping-card__headline">
+                      Nicola Bathie Perry
+                    </h3>
+                    <ul class="shopping-card__info">
+                      <li class="shopping-card__info-item">
+                        Color:
+                        <span class="shopping-card__value">
+                          White
+                        </span>
+                      </li>
+                      <li class="shopping-card__info-item">
+                        Size:
+                        <span class="shopping-card__value">
+                          M
+                        </span>
+                      </li>
+                    </ul>
+                    <div class="shopping-card__links">
+                      <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
+                        Edit
+                      </a>
+                      <button class="shopping-card__btn" type="button">
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                  <div class="shopping-card__price">
+                    <span class="shopping-card__price-current">
+                      <span class="currency">
+                        $
+                      </span>
+                      25.00
+                    </span>
+                    <span class="shopping-card__price-old">
+                      <span class="currency">
+                        $
+                      </span>
+                      30.00
+                    </span>
+                </article>
+              </li>
 
             </ul>
             <div class="modal__sum">
@@ -130,7 +195,7 @@
             </button>
 
             <button class="modal__btn" type="button" data-modal-close>
-              <svg class="modal__icon" width="24" height="24">
+              <svg class="close-btn__icon" width="24" height="24">
                 <use href="images/symbol-defs.svg#icon-close">
                 </use>
               </svg>
@@ -141,14 +206,14 @@
     </div>
     <div class="header__bottom">
       <nav class="header__menu">
-        <ul class="header__list list-reset">
+        <ul class="header__list">
           <li class="header__item">
-            <a class="header__link" href="index.html">
+            <a class="header__link @@home" href="index.html">
               Home
             </a>
           </li>
           <li class="header__item">
-            <button class="header__link" id="dropmenu" type="button">
+            <button class="header__link @@dresses" id="dropmenu" type="button">
               Dresses
               <svg class="header__link-icon" width="16" height="16">
                 <use href="./images/symbol-defs.svg#icon-chevron"></use>
@@ -182,7 +247,7 @@
                         </a>
                       </li>
                       <li class="dropdown-menu__box">
-                        <a class="dropdown-menu__box-link" href="#">
+                        <a class="dropdown-menu__box-link" href="catalog.html">
                           <img class="dropdown-menu__img" src="images/dropdown/sheath.jpg" alt="Sheath style">
                           Sheath
                         </a>
@@ -198,42 +263,42 @@
                         </h3>
                         <ul class="dropdown-menu__list">
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Civil Wedding
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Simple
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Elegant
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Boho
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Beach
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Romantic
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Embroidery
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Modern
                             </a>
                           </li>
@@ -245,37 +310,37 @@
                         </h3>
                         <ul class="dropdown-menu__list">
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Long sleeves
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Open Back
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Champagne
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Effetto Tattooz
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Pink
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Lace
                             </a>
                           </li>
                           <li class="dropdown-menu__item">
-                            <a class="dropdown-menu__link" href="#">
+                            <a class="dropdown-menu__link" href="catalog.html">
                               Effetto Tattoo
                             </a>
                           </li>
@@ -296,40 +361,143 @@
             </div>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">
-              Wedding party
+            <a class="header__link" href="catalog.html">
+              Bridesmaid
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">
+            <a class="header__link" href="catalog.html">
               Accessories
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="#">
+            <a class="header__link @@gallery" href="gallery.html">
               Gallery
             </a>
           </li>
           <li class="header__item">
-            <a class="header__link" href="contact.html">
+            <a class="header__lin " href="contact.html">
               Contact us
             </a>
           </li>
         </ul>
       </nav>
 
-      <form class="header__form" action="#">
+      <form class="header__form form" action="#">
         <label class="sr-only" for="search">Search</label>
-        <input class="header__input" type="text" name="search" id="search" placeholder="Search">
-        <button class="header__btn">
-          <svg class="usernav__btn-icon" width="28" height="20">
+        <input class="form__input header__input " type="text" name="search" id="search" placeholder="Search">
+        <button class="icon-button form__btn">
+          <svg class="icon-button__icon" width="20" height="20">
             <use href="./images/symbol-defs.svg#icon-search"></use>
           </svg>
         </button>
-
       </form>
 
+      <button class="icon-button header__btn" type="button">
+        <span class="sr-only">
+          Search
+        </span>
+        <svg class="icon-button__icon" width="28" height="28">
+          <use href="./images/symbol-defs.svg#icon-search"></use>
+        </svg>
+      </button>
     </div>
   </div>
 
+  <div class="burger-menu" data-menu-burger>
+    <div class="burger-menu__top">
+      <div class="language burger-menu__language">
+        <button class="language__button" type="button" data-value="en">
+          En
+        </button>
+
+        <ul class="language__list">
+          <li class="language__item">
+            <a class="language__link active" href="#">
+              En
+            </a>
+            <a class="language__link" href="#">
+              Uk
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+      <ul class="usernav">
+        <li class="usernav__item">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Your account page
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-account"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="usernav__item">
+          <a class="icon-button" href="#">
+            <span class="sr-only">
+              Wishlist
+            </span>
+            <svg class="icon-button__icon" width="28" height="28">
+              <use href="./images/symbol-defs.svg#icon-wishlist">
+              </use>
+            </svg>
+            <span class="usernav__number">
+              10
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <ul class="burger-menu__list">
+      <li class="burger-menu__item">
+        <a class="burger-menu__link @@home" href="index.html">
+          Home
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link @@dresses" href="catalog.html">
+          Dresses
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link" href="#">
+          Wedding party
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link" href="#">
+          Accessories
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link @@gallery" href="gallery.html">
+          Gallery
+        </a>
+      </li>
+      <li class="burger-menu__item">
+        <a class="burger-menu__link @@contact" href="contact.html">
+          Contact us
+        </a>
+      </li>
+    </ul>
+    <form class="burger-menu__form form" action="#">
+      <label class="sr-only" for="search">Search</label>
+      <input class="form__input" type="text" name="search" id="search" placeholder="Search">
+      <button class="icon-button form__btn">
+        <svg class="icon-button__icon" width="28" height="28">
+          <use href="./images/symbol-defs.svg#icon-search"></use>
+        </svg>
+      </button>
+    </form>
+
+    <button class="close-btn burger-menu__close-btn" type="button" data-close-burger>
+      <svg class="close-btn__icon" width="24" height="24">
+        <use href="images/symbol-defs.svg#icon-close">
+        </use>
+      </svg>
+    </button>
+  </div>
 </header>

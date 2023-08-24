@@ -1,17 +1,33 @@
 .catalog {
-  margin-bottom: 200px;
+  margin-bottom: 90px;
+
+
+  @include mobile {
+    margin-bottom: 50px;
+  }
+
 
   &__title {
     margin-bottom: 10px;
     font-size: 52px;
+
+    @include mobile {
+      font-size: 42px;
+    }
   }
 
   &__wrapper {
     display: flex;
+    justify-content: space-between;
   }
 
   &__content {
+    max-width: 870px;
     width: 100%;
+
+    @include tablet {
+      max-width: 100%;
+    }
   }
 
   &__sort {
@@ -51,9 +67,19 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 
-    &--line {
-      grid-template-columns: repeat(1, 1fr);
-    }
+     @include minitablet {
+       grid-template-columns: repeat(2, 1fr);
+       gap: 20px;
+     }
+
+     @include mini {
+       grid-template-columns: repeat(1, 1fr);
+     }
+
+     &--line {
+       grid-template-columns: repeat(1, 1fr);
+     }
+     
   }
 }
 
@@ -61,7 +87,12 @@
   max-width: 250px;
   width: 100%;
   padding-top: 40px;
-  margin-right: 80px;
+  margin-right: 20px;
+
+  @include tablet {
+    display: none;
+  }
+
 
   &__title {
     font-size: 24px;
@@ -196,9 +227,13 @@
 
 .dropdown-sort {
   position: relative;
-  max-width: 220px;
+  max-width: 190px;
   width: 100%;
-  margin-right: 44px;
+  margin-right: 20px;
+
+  @include tablet {
+    margin-right: 10px;
+  }
 
   &__button {
     position: relative;

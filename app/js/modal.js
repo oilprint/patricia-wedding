@@ -14,6 +14,7 @@
 		el.addEventListener('click', (e) => {
 			let currentBtn = e.currentTarget;
 			let drop = currentBtn.closest('.header__item').querySelector('.dropdown-menu');
+      bodyLock.classList.add('lock')
 
     
 			menuBtns.forEach(el => {
@@ -26,6 +27,7 @@
 			drops.forEach(el => {
 				if (el !== drop) {
 					el.classList.remove('dropdown-menu--active');
+          bodyLock.classList.remove('lock')
 				}
 			});
 
@@ -43,6 +45,8 @@
 			drops.forEach(el => {
 				el.classList.remove('dropdown-menu--active');
 			});
+
+      bodyLock.classList.remove('lock')
 		}
 	});
 
@@ -52,15 +56,18 @@
   const button = document.querySelector('[data-modal-button]');
   const modal = document.querySelector('[data-modal]');
   const buttonClose = document.querySelectorAll('[data-modal-close]');
+  
 
   button.addEventListener('click', function () {
-    modal.classList.toggle('modal--active');
+    modal.classList.toggle('modal--active')
+    bodyLock.classList.add('lock')
   });
 
   buttonClose.forEach(function (item) {
     item.addEventListener('click', function () {
     
-      modal.classList.remove('modal--active');
+      modal.classList.remove('modal--active')
+      bodyLock.classList.remove('lock')
     })
   });
 
@@ -73,16 +80,20 @@
 
   //modal sold
 
-   const btnSoldOpen = document.querySelector('[data-sold-open]');
+   $(function () {
+    if (window.location.pathname === '/product-one.html') {
+
+      const btnSoldOpen = document.querySelector('[data-sold-open]');
       const modalSold = document.querySelector('[data-sold]');
       const btnSoldClose = document.querySelectorAll('[data-sold-close]');
-      const bodyLock = document.querySelector('body'); 
+      // const bodyLock = document.querySelector('body'); 
 
       
      
       btnSoldOpen.addEventListener('click', function () {
         modalSold.classList.remove('hidden');
-         bodyLock.classList.add('lock');
+        bodyLock.classList.add('locked')
+         
       });
 
       btnSoldClose.forEach(function (item) {
@@ -101,35 +112,12 @@
         e.stopPropagation();
       });
 
-
-
-
-
-//lang
-  const langButton = document.querySelector('.language__button');
-  const langList = document.querySelector('.language__list');
-  const langItem = langList.querySelectorAll('.language__link');
-
-  langButton.addEventListener('click', function() {
-    langList.classList.toggle('language__list--show');
-    this.classList.toggle('active');
+    }
   });
+  
 
-  langItem.forEach(function (listItem) {
-    listItem.addEventListener('click', function(e) {
-      langButton.innerText = this.innerText;
 
-      langButton.classList.remove('active');
-      this.classList.add('active');
-    });  
-  });
 
-  document.addEventListener('click', function (e) {
-    if (e.target !== document.querySelector('.language__button')) {
-      langList.classList.remove('language__list--show');
-      // langItem.classList.remove('active');
-    };
-  });
 
 
 

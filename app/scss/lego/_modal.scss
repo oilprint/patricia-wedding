@@ -4,7 +4,7 @@
   top: 0;
   right: 0;
   padding: 50px 40px;
-  width: 700px;
+  width: 540px;
   background-color: $light;
   border-radius: 6px;
   box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
@@ -13,6 +13,16 @@
   visibility: hidden;
   opacity: 0;
   transition: transform 0.5s;
+
+  @include mobile {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 70px;
+    width: 100%;
+    padding: 40px 20px 40px;
+  }
+
 
   &--active {
     transform: rotateX(0deg);
@@ -38,6 +48,54 @@
 
     &--none {
       display: none;
+    }
+  }
+
+  &__shopping-card {
+    @include mobile {
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .shopping-card__img {
+      @include mini {
+        width: 60px;
+        height: auto;
+      }
+    }
+
+    .shopping-card__content {
+      max-width: 200px;
+      margin-right: 0;
+    }
+
+    .shopping-card__txt {
+      @include mini {
+        display: none;
+      }
+    }
+
+    .shopping-card__info {
+      @include mini {
+        justify-content: space-between;
+      }
+    }
+
+    .shopping-card__price {
+      @include mini {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+
+    .shopping-card__price-current {
+      @include mini {
+        margin-bottom: 0;
+        margin-right: 30px;
+      }
     }
   }
 
@@ -74,35 +132,31 @@
 
   &__button {
     width: fit-content;
-    margin: 0 auto 10px;
+    margin: 0 auto 20px;
   }
 
   &__link {
     display: block;
     margin: 0 auto;
-
   }
 
   &__btn {
     position: absolute;
     top: 10px;
-    right: 30px;
-    width: 44px;
-    height: 44px;
+    right: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    border: 1px solid rgba($grey, 0.1);
-    transition: border-color 0.4s, border 0.4s,
-      box-shadow 0.4s, ;
 
     &:focus {
-      border-color: $accent;
+      border: 1px solid $grey;
     }
 
     &:hover {
-      border-color: $accent;
+      border: 1px solid $accent;
 
       .modal__btn-icon {
         fill: $accent;
@@ -110,18 +164,14 @@
     }
 
     &:active {
-      border: 0px solid rgba($primary, 0.1);
-      box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.12);
-
-      .modal__btn-icon {
-        fill: $accent;
-      }
+     background-color: $bg-accent;
     }
+
+
   }
 
   &__btn-icon {
-    fill: $grey;
-    transition: fill 0.3s;
+    fill: $primary;
   }
 }
 
@@ -161,6 +211,10 @@
   transition: transform 0.5s, opacity 0.5s;
 
   &.modal__txt {
+    margin-bottom: 20px;
+  }
+
+  &__button {
     margin-bottom: 20px;
   }
 }

@@ -1,31 +1,109 @@
 .hero {
+  position: relative;
+  background-color: $bg-accent;
 
-  &__section {
+  &__inner {
+    height: 700px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-  }
 
-  &__container {
-    display: flex;
-    align-items: center;
-    height: 70vh;
+    @include tablet {
+      height: 450px;
+    }
+
+    @include minitablet {
+      height: 200px;
+    }
+
+    @include tablet-land {
+      height: 200px;
+    }
   }
 
   &__content {
-    max-width: 750px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 620px;
     width: 100%;
+
+    @include tablet {
+      max-width: 490px;
+    }
+
+    @include minitablet {
+      position: static;
+      max-width: 768px;
+      padding: 20px 0 30px;
+      transform: translateY(0);
+      text-align: center;
+    }
+
+    @include tablet-land {
+      position: static;
+      max-width: 100%;
+      padding: 20px 0 30px;
+      transform: translateY(0);
+      text-align: center;
+    }
   }
 
   &__title {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
+
+    @include tablet {
+      font-size: 57px;
+      margin-bottom: 40px
+    }
+
+    @include minitablet {
+      margin-bottom: 10px;
+      font-size: 48px;
+    }
+
+    @include tablet-land {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    @include mobile {
+      font-size: 40px;
+    }
   }
 
   &__text {
     max-width: 500px;
     font-size: 40px;
     font-style: italic;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+
+    @include tablet {
+      font-size: 24px;
+      max-width: 280px;
+      margin-bottom: 30px;
+    }
+
+    @include minitablet {
+      margin-bottom: 20px;
+      max-width: 768px;
+    }
+
+    @include tablet-land {
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+  }
+
+  &__button {
+
+    @include minitablet {
+      margin: 0 auto;
+    }
+
+    @include tablet-land {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -33,92 +111,317 @@
 
   &__title {
     margin-bottom: 24px;
+
+    @include tablet {
+      margin-bottom: 10px;
+    }
+
+    @include tablet-land {
+      margin-bottom: 10px;
+    }
   }
 
   &__inner {
-    position: relative;
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__inner-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 30px;
+
+    @include tablet {
+      margin-right: 20px;
+    }
+
+    @include minitablet {
+      margin-right: 0;
+    }
+
+    @include tablet-land {
+      flex-direction: row;
+    }
   }
 
   &__content {
-    position: absolute;
-    top: 0;
-    left: 0;
+
+    @include minitablet {
+      margin-bottom: 30px;
+    }
+
+    @include tablet-land {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
   }
 
   &__subtitle {
     margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 10px;
+    }
+
+    @include tablet-land {
+      margin-bottom: 10px;
+    }
   }
 
   &__info {
     max-width: 570px;
     width: 100%;
     margin-bottom: 40px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include minitablet {
+      max-width: 100%;
+    }
+
+    @include tablet-land {
+      max-width: 100%;
+    }
   }
 
-  &__txt:not(:last-child) {
-    margin-bottom: 8px;
-  }
+  &__txt {
 
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    @include minitablet {
+      margin-bottom: 10px;
+    }
+
+    @include tablet-land {
+      margin-bottom: 10px;
+    }
+  }
 
   &__photo {
-    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    max-width: 100%;
+    width: 100%;
+
+    @include minitablet {
+      align-items: stretch;
+    }
+
+    @include tablet-land {
+      width: 180%;
+    }
   }
 
-  &__img {
-    max-width: 100%;
-    object-fit: cover;
-
-    &--corner {
-      border-radius: 300px 0 0 0;
-    }
+  &__photo-item {
+    width: calc((100% - 30px) / 2);
+    height: auto;
 
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include tablet {
+        margin-right: 20px;
+        width: calc((100% - 20px) / 2);
+      }
+
+      @include tablet-land {
+        margin-right: 20px;
+        width: calc((100% - 20px) / 2);
+      }
+    }
+
+    @include minitablet {
+      height: 100%;
+    }
+
+    @include tablet-land {
+      height: 100%;
     }
   }
 
-  &--big {
-    padding: 120px 0;
+  &__photo-img {
+    width: 100%;
+    object-fit: cover;
+
+    @include minitablet {
+      height: 100%;
+    }
+
+    @include tablet-land {
+      height: 100%;
+    }
   }
 
+  &__inner-right {
+    width: 38%;
+    height: auto;
+    flex-shrink: 0;
+    overflow: hidden;
+
+    &--big {
+      width: 48%;
+    }
+
+    @include minitablet {
+      display: none;
+    }
+
+    @include tablet-land {
+      display: none;
+    }
+  }
+
+  &__right-img {
+    border-radius: 300px 0 0 0;
+    object-fit: cover;
+
+    @include tablet {
+      border-radius: 240px 0 0 0;
+    }
+
+
+  }
 }
 
 .accessories {
   background-color: $bg-accent;
 
-
   &__title {
     margin-bottom: 40px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include minitablet {
+      text-align: center;
+    }
+
+    @include tablet-land {
+      margin-bottom: 20px;
+      text-align: center;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
+
+    @include tablet {
+      justify-content: center;
+    }
   }
 
   &__content {
     margin-right: 30px;
+    max-width: 570px;
+    width: 100%;
+
+    @include tablet {
+      margin-right: 20px;
+    }
+
+    @include minitablet {
+      margin-right: 0;
+    }
+
+    @include tablet-land {
+      display: flex;
+      justify-content: space-between;
+      flex-grow: 1;
+      max-width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__img-big {
+    max-width: 570px;
+    width: 100%;
+
+    @include minitablet {
+      display: none;
+    }
+
+    @include tablet-land {
+      display: none;
+    }
   }
 
   &__top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 70px;
+
+    @include tablet {
+      justify-content: center;
+    }
+
+    @include minitablet {
+      margin-bottom: 30px;
+    }
+
+    @include tablet-land {
+      margin-bottom: 0;
+    }
+
+    @include mobile {
+      justify-content: center;
+
+    }
+  }
+
+  &__img-box {
+
+    @include tablet {
+      width: auto;
+      height: 380px;
+      overflow: hidden;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include tablet {
+        margin-right: 20px;
+      }
+
+      @include mobile {
+        margin-right: 0;
+      }
+
+      @include tablet-land {
+        width: 270px;
+        margin-right: 20px;
+      }
+
+    }
+
+    &--hidden {
+      @include mobile {
+        display: none;
+      }
+
+      @include tablet-land {
+        display: none;
+      }
+    }
   }
 
   &__img {
     object-fit: cover;
 
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
-
     &--corner {
       border-radius: 0 300px 0 0;
+
+      @include tablet {
+        border-radius: 0 240px 0 0;
+      }
     }
   }
 
@@ -126,57 +429,222 @@
     color: $accent;
     font-size: 90px;
     margin-bottom: 20px;
+
+    @include minitablet {
+      margin-bottom: 4px;
+    }
   }
 
   &__txt {
     margin-bottom: 40px;
+
+    @include minitablet {
+      margin-bottom: 10px;
+    }
+
+    @include tablet-land {
+      margin-bottom: 10px;
+    }
   }
 
 }
 
 .gallery {
 
+  &__title {
+    margin-bottom: 40px;
+
+    @include minitablet {
+      margin-bottom: 20px;
+    }
+
+    @include tablet-land {
+      margin-bottom: 20px;
+    }
+  }
+
   &__inner {
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: cover;
-    height: 1390px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @include minitablet {
+      flex-direction: column;
+    }
+
+    @include tablet-land {
+      flex-direction: column;
+    }
+  }
+
+  &__inner-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 50px;
+    max-width: 570px;
+    width: 100%;
+
+    @include tablet {
+      margin-right: 20px;
+    }
+
+    @include minitablet {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 100%;
+      margin-right: 0;
+    }
+
+    @include tablet-land {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__inner-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 570px;
+    width: 100%;
+
+    @include minitablet {
+      order: -1;
+      max-width: 100%;
+    }
+
+    @include tablet-land {
+      order: -1;
+      max-width: 100%;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+
+    &--first {
+      border-radius: 0 300px 0 0;
+      margin-bottom: 50px;
+
+
+      @include tablet {
+        border-radius: 0 240px 0 0;
+        margin-bottom: 20px;
+      }
+
+      @include minitablet {
+        border-radius: 0;
+        margin-bottom: 0;
+      }
+
+      @include tablet-land {
+        border-radius: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    &--third {
+      border-radius: 300px 0 0 0;
+
+      @include tablet {
+        border-radius: 240px 0 0 0
+      }
+
+      @include minitablet {
+        display: none;
+      }
+
+      @include tablet-land {
+        display: none;
+      }
+    }
+
+    @include minitablet {
+      height: auto;
+      width: calc((100% - 20px) / 2);
+    }
+
+    @include tablet-land {
+      height: auto;
+      width: calc((100% - 20px) / 2);
+    }
   }
 
   &__content {
-    max-width: 500px;
-    width: 100%;
-    margin-left: auto;
-  }
+    margin-bottom: 62px;
 
-  &__title {
-    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 52px;
+    }
+
+    @include minitablet {
+      margin-bottom: 30px;
+    }
+
+    @include tablet-land {
+      margin-bottom: 30px;
+    }
+
   }
 
   &__subtitle {
     margin-bottom: 30px;
+
+    @include minitablet {
+      margin-bottom: 20px;
+    }
+
+    @include minitablet {
+      margin-bottom: 10px;
+    }
+
+    @include tablet-land {
+       margin-bottom: 10px;
+    }
   }
 
   &__txt {
     margin-bottom: 40px;
-  }
 
+    @include tablet {
+      margin-bottom: 20px;
+    }
+
+    @include minitablet {
+      margin-bottom: 10px;
+    }
+
+     @include tablet-land {
+      margin-bottom: 10px;
+     }
+  }
 }
 
 .subscribe {
 
   &__inner {
-    padding: 80px 190px;
-    max-width: 1070px;
-    width: 100%;
+    padding: 80px 140px;
     background-color: $bg-accent;
     margin: 0 auto;
-    margin-bottom: 120px;
+
+    @include tablet {
+      padding: 60px 80px;
+    }
+
+    @include minitablet {
+      padding: 30px 20px;
+    }
   }
 
   &__title {
-    font-size: 46px;
     margin-bottom: 40px;
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__form {
@@ -184,6 +652,12 @@
     justify-content: space-between;
     border-bottom: 1px solid $accent;
     margin-bottom: 10px;
+
+    @include mobile {
+      flex-direction: column;
+      border-bottom: none;
+      margin-bottom: 20px;
+    }
   }
 
   &__input {
@@ -197,17 +671,28 @@
 
     &:focus {
       outline: solid 1px $accent;
+
+      &::placeholder {
+        color: $bg-accent;
+      }
     }
 
     &:hover {
-    
+
       &::placeholder {
         color: $primary;
       }
     }
+
+    @include mobile {
+      border: 1px solid $accent;
+      margin-bottom: 10px;
+      text-align: center;
+    }
   }
 
   &__btn {
+    width: fit-content;
     text-transform: uppercase;
     color: $primary;
     transition: color 0.4s,
@@ -229,6 +714,22 @@
       color: $primary;
       outline: solid 1px $accent;
     }
+
+    @include mobile {
+      margin: 0 auto;
+      padding: 10px 20px;
+      text-align: center;
+      background-color: $accent;
+      color: $light;
+    }
+
+      @include tablet-land {
+        margin: 0 auto;
+        padding: 10px 20px;
+        text-align: center;
+        background-color: $accent;
+        color: $light;
+      }
   }
 
   &__txt {

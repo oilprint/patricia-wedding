@@ -14,9 +14,9 @@ body {
   line-height: 1.3;
   color: $primary;
 
-   &.lock {
-     overflow-y: hidden;
-   }
+  &.lock {
+    overflow-y: hidden;
+  }
 }
 
 main {
@@ -34,6 +34,21 @@ main {
   border: 0;
 }
 
+.wrapper {
+
+  &.scroll {
+    margin-top: 183px;
+
+    @include tablet {
+      margin-top: 81px;
+    }
+
+    @include mini {
+      margin-top: 66px;
+    }
+  }
+}
+
 .container {
   max-width: 1200px;
   width: 100%;
@@ -42,15 +57,71 @@ main {
 }
 
 .section {
-  padding: 120px 0;
+  padding-top: 90px;
 
   &--small {
     padding-bottom: 0;
   }
+
+  &--big {
+    padding: 90px 0;
+
+    @include minidesk {
+      padding: 70px 0;
+    }
+
+    @include tablet {
+      padding: 50px 0;
+    }
+
+    @include tablet-land {
+      padding: 50px 0;
+    }
+  }
+
+  @include minidesk {
+    padding-top: 70px;
+  }
+
+  @include tablet {
+    padding-top: 50px;
+  }
+
+  @include tablet-land {
+    padding-top: 50px;
+  }
 }
 
-.section-content {
-  padding: 90px 0;
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 190px;
+  width: 100%;
+
+  &__input {
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid $accent;
+
+    &::placeholder {
+      font-size: 17px;
+      text-transform: uppercase;
+      color: $grey;
+    }
+
+    &:focus {
+      outline: solid 1px $accent;
+    }
+
+    &:hover {
+      background-color: $bg-accent;
+    }
+  }
+
+  &__btn {
+    flex-shrink: 0;
+  }
 }
 
 .title {
@@ -61,6 +132,30 @@ main {
   font-size: 72px;
   line-height: 1.3;
   color: $accent;
+
+  @include minidesk {
+    font-size: 68px;
+  }
+
+  @include tablet {
+    font-size: 52px;
+  }
+
+  @include minitablet {
+    font-size: 38px;
+  }
+
+  @include tablet-land {
+    font-size: 32px;
+  }
+
+  @include mobile {
+    font-size: 32px;
+  }
+
+  @include mini {
+    font-size: 30px;
+  }
 }
 
 .subtitle {
@@ -70,6 +165,46 @@ main {
   font-style: normal;
   color: $grey;
   line-height: 0.7;
+  display: block;
+
+  @include tablet {
+    font-size: 100px;
+  }
+
+  @include minitablet {
+    font-size: 80px;
+  }
+
+  @include tablet-land {
+    font-size: 80px;
+  }
+
+  @include mini {
+    font-size: 60px;
+  }
+}
+
+.cart-title {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 17px;
+  }
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+
+  &__txt {
+    display: flex;
+  }
+
+  &__stars {
+    margin-right: 10px;
+  }
 }
 
 .product-card {
@@ -120,13 +255,26 @@ main {
   }
 
   &__image {
+    width: 100%;
     object-fit: cover;
     transition: transform 0.4s;
+
+    @include mobile {
+      height: 300px;
+    }
+
+    @include mini {
+      height: auto;
+    }
   }
 
   &__content-box {
     flex-grow: 1;
     padding: 20px 10px;
+
+    @include mobile {
+      padding: 10px;
+    }
   }
 
   &__content {
@@ -138,19 +286,23 @@ main {
 
   &__subtitle {
     font-size: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
+    color: rgba($primary, 0.7);
   }
 
   &__title {
+    margin-bottom: 10px;
     font-size: 20px;
     font-weight: 500;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    transition: color 0.4s;
+    color: $accent;
   }
 
   &__stars {
     margin-bottom: 10px;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__price {
@@ -161,6 +313,10 @@ main {
     font-size: 20px;
     font-weight: 400;
     color: $accent;
+
+    @include mobile {
+      font-size: 15px;
+    }
   }
 
   &__price-current {
@@ -170,6 +326,7 @@ main {
   }
 
   &__price-old {
+    display: inline-block;
     color: $primary;
     text-decoration: line-through;
   }
@@ -203,7 +360,13 @@ main {
 
   &--line {
     flex-direction: row;
+    align-items: flex-start;
     min-width: 100%;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
 
     .product-card__link {
       width: 220px;
@@ -216,6 +379,10 @@ main {
 
     .product-card__content-box {
       padding: 20px 30px;
+
+      @include mobile {
+        padding: 10px 10px 30px;
+      }
     }
 
     .product-card__content {
@@ -235,6 +402,12 @@ main {
       margin-right: 0;
       order: 1;
       margin-left: 20px;
+    }
+
+    .product-card__description {
+      @include mobile {
+        margin-bottom: 10px;
+      }
     }
 
     .product-card__wishlist {
@@ -267,29 +440,17 @@ main {
   }
 }
 
-.accessories-card {
+.product-extra {
   position: relative;
+  height: 100%;
   font-size: 24px;
   font-weight: 500;
-  height: 100%;
 
   &__link {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-
-    &:before {
-      position: absolute;
-      content: '';
-      z-index: 2;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background-color: transparent;
-      transition: background-color 0.2s;
-    }
 
     &:focus {
       box-shadow: 0px 0px 0px 1px $accent;
@@ -304,9 +465,7 @@ main {
     }
 
     &:active {
-      &:before {
-        background-color: rgba($bg-accent, 0.7);
-      }
+      opacity: 0.7;
     }
   }
 
@@ -328,21 +487,25 @@ main {
   }
 
   &__title {
-    font-size: 20px;
-    text-transform: uppercase;
     margin-bottom: 10px;
+  }
+
+  &__txt {
+
+    color: $grey;
   }
 
   &__price-current {
     display: inline-block;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     color: $accent;
     margin-right: 20px;
   }
 
   &__price-old {
-    font-size: 24px;
+    display: inline-block;
+    font-size: 17px;
     font-weight: 400;
     text-decoration: line-through;
   }
@@ -361,19 +524,6 @@ main {
     .product-card-small__title {
       font-size: 17px;
     }
-  }
-}
-
-.stars {
-  display: flex;
-  align-items: center;
-
-  &__txt {
-    display: flex;
-  }
-
-  &__stars {
-    margin-right: 10px;
   }
 }
 
@@ -404,7 +554,7 @@ main {
 
   &.active {
     .wishlist__icon {
-      fill: $light;
+      fill: $accent;
     }
 
     &:hover {
@@ -424,10 +574,14 @@ main {
 
 .pagination {
 
-  &__txt {
+  &__headline {
     text-align: center;
     font-size: 22px;
     margin-bottom: 20px;
+
+    @include minitablet {
+      margin-bottom: 10px;
+    }
   }
 
   &__inner {
@@ -437,6 +591,10 @@ main {
     padding: 20px 0;
     border-top: 1px solid $devider;
     border-bottom: 1px solid $devider;
+
+    @include minitablet {
+      margin-bottom: 40px;
+    }
   }
 
   &__btn {
@@ -486,6 +644,12 @@ main {
     }
   }
 
+  &__text {
+    @include mobile {
+      display: none;
+    }
+  }
+
   &__list {
     display: flex;
     justify-content: space-between;
@@ -494,6 +658,10 @@ main {
 
   &__item:not(:last-child) {
     margin-right: 20px;
+
+    @include mobile {
+      margin-right: 10px;
+    }
   }
 
   &__link {
@@ -640,16 +808,30 @@ main {
 
 .breadcrumbs {
   position: relative;
-  display: inline-flex;
+  display: flex;
   padding: 30px 0;
+
+  @include tablet {
+    padding: 20px 0;
+  }
+
+  @include minitablet {
+    padding: 10px 0;
+  }
+
+  @include mobile {
+    display: none;
+  }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {
     padding: 0 10px;
     position: relative;
+
 
     &::after {
       position: absolute;
@@ -679,6 +861,7 @@ main {
   }
 
   &__link {
+    display: inline-block;
     font-size: 14px;
     text-transform: uppercase;
     color: inherit;
@@ -696,7 +879,6 @@ main {
       color: $primary
     }
   }
-
 }
 
 .shopping-card {
@@ -705,15 +887,27 @@ main {
   justify-content: space-between;
   padding: 20px 0;
 
+  @include mobile {
+    flex-wrap: wrap;
+  }
+
   &__img {
     height: auto;
     margin-right: 20px;
     object-fit: cover;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__content {
     flex-grow: 1;
     margin-right: 20px;
+
+    @include mobile {
+      margin: 0 0 20px 0;
+    }
   }
 
   &__headline {
@@ -725,7 +919,6 @@ main {
   }
 
   &__txt {
-    font-size: 15px;
     margin-bottom: 15px;
   }
 
@@ -750,7 +943,7 @@ main {
 
   &__links {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   &__price {
@@ -759,17 +952,31 @@ main {
     width: 120px;
     font-size: 20px;
     text-align: right;
+
+    @include mobile {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+    }
   }
 
   &__price-current {
-    display: block;
+    display: flex;
     margin-bottom: 10px;
+
+    @include mobile {
+      margin-bottom: 0;
+    }
   }
 
   &__price-old {
-    display: block;
+    display: flex;
     font-size: 17px;
     text-decoration: line-through;
+
+    @include mobile {
+      margin-left: 20px;
+    }
 
   }
 
@@ -778,10 +985,13 @@ main {
     width: fit-content;
     color: $grey;
     border-bottom: 1px solid $light;
-
     transition: outline 0.4s,
       color 0.4s,
       border-color 0.4s;
+
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
 
     &--border {
       border-bottom: 1px solid $grey;
@@ -811,6 +1021,91 @@ main {
 
     .shopping-card__price-current {
       font-size: 24px;
+    }
+  }
+}
+
+.address {
+  width: 100%;
+
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    font-size: 20px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: -4px;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      background-color: $accent;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s;
+    }
+
+    &:focus {
+      outline: solid 1px $accent;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    &:hover {
+      color: $accent;
+
+      &:before {
+        transform: scaleX(1);
+      }
+    }
+
+    &:active {
+      color: $primary;
+    }
+  }
+
+  &__txt {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &--white {
+
+    .address__item:first-child {
+      .address__link {
+        font-size: 28px;
+      }
+    }
+
+    .address__link {
+      font-size: 17px;
+      color: $light;
+
+      &::before {
+        background-color: $light;
+      }
+
+      &:focus {
+        outline: solid 1px $secondary;
+      }
+
+      &:hover {
+        color: $light;
+
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+
+      &:active {
+        color: $secondary;
+      }
     }
   }
 }

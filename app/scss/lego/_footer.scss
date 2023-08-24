@@ -1,40 +1,106 @@
 .footer {
   background-color: $accent;
+  padding: 80px 0;
 
-  &__inner {
+  @include tablet {
+    padding: 40px 0;
+  }
+
+  &__top {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
-    padding: 80px 0;
+    margin-bottom: 40px;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 60px;
+
+    @include tablet {
+      width: 230px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__address {
+    width: 270px;
+  }
+
+  &__contacts {
+    max-width: 300px;
+    width: 100%;
+    margin-right: 30px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 56px;
+    max-width: 770px;
+    width: 100%;
+
+    @include tablet {
+      display: block;
+      padding-top: 100px;
+    }
+
+    @include mobile {
+      padding-top: 0;
+    }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    max-width: 300px;
+    width: fit-content;
     width: 100%;
 
-    &--list {
-      max-width: 220px;
-      padding-top: 37px;
-    }
-
     &:not(:last-child) {
+
       margin-right: 50px;
     }
+
+    &:last-child {
+      width: 150px;
+      flex-shrink: 0;
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    @include tablet {
+      border-bottom: 1px solid rgba($light, 0.5);
+    }
   }
 
-  &__top {
-    margin-bottom: 40px;
+  &__list {
+    opacity: 1;
+    will-change: max-height;
+    overflow: hidden;
+    transition: height 0.3s ease-out,
+      opacity 0.3s ease-out,
+      overflow 0.3s ease-out;
+
+    &.hidden {
+      max-height: 0;
+      opacity: 0;
+    }
   }
 
-  &__logo {
-    margin-bottom: 60px;
-  }
-
-  &__contacts-item:not(:last-child) {
+  &__item:not(:last-child) {
     margin-bottom: 20px;
+
+    @include tablet {
+      margin-bottom: 0;
+    }
   }
 
   &__link {
@@ -57,9 +123,8 @@
       transition: transform 0.4s;
     }
 
-
     &:focus {
-      outline: solid 1px $light;
+      outline: solid 1px $secondary;
       outline-offset: 2px;
       border-radius: 4px;
     }
@@ -72,8 +137,7 @@
     }
 
     &:active {
-      background-color: $secondary;
-      color: $light;
+      color: $secondary;
     }
 
     &--big {
@@ -88,35 +152,71 @@
       }
     }
 
-    &:not(:last-child) {
-      margin-bottom: 20px;
+    @include tablet {
+      padding: 10px 0;
     }
   }
 
-  &__contacts-city {
-    display: block;
-    margin-top: 4px;
-  }
-
-  &__txt {
-    color: $secondary;
-  }
-
-  &__title {
+  &__btn {
+    cursor: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 12px 0;
     margin-bottom: 30px;
     font-size: 24px;
     color: $light;
+
+    &.active {
+
+      .footer__btn-icon {
+        transform: rotate(180deg);
+      }
+    }
+
+    @include tablet {
+      pointer-events: auto;
+       cursor: pointer;
+      padding: 10px 0;
+      margin-bottom: 0;
+    }
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: 20px;
+  &__btn-icon {
+    display: none;
+    fill: $light;
+    margin-left: 30px;
+
+    transition: transform 0.3s;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 10px;
+
+    @include tablet {
+      justify-content: space-around;
+    }
   }
 
   &__payment {
+    flex-shrink: 0;
     display: flex;
     align-items: flex-end;
-    flex-wrap: wrap;
-    width: 170px;
+    justify-content: flex-start;
+
+    @include minitablet {
+      justify-content: center;
+    }
+
   }
 
   &__payment-item {
@@ -127,6 +227,31 @@
     &:not(:last-child) {
       margin-right: 18px;
     }
+  }
+
+  &__bottom-item {
+    text-align: center;
+    color: $secondary;
+    min-width: 250px;
+  }
+
+  &__bottom-link {
+    color: $secondary;
+
+    &:focus {
+      outline: solid 1px $secondary;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    &:hover {
+      color: $light;
+    }
+
+    &:active {
+      color: $secondary;
+    }
+
   }
 
 }

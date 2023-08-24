@@ -9,8 +9,10 @@
   "author": "Iryna Kozlova",
   "license": "ISC",
   "devDependencies": {
+    "aos": "^3.0.0-beta.6",
     "browser-sync": "^2.27.11",
     "del": "^6.0.0",
+    "fslightbox": "^3.4.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",

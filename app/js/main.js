@@ -1,5 +1,16 @@
 console.log("test");
- // pagination
+
+  AOS.init({
+    disable: function () {
+      var maxWidth = 1024;
+      return window.innerWidth < maxWidth;
+    }
+  });
+
+  
+  
+ 
+// pagination
 
   const prevNext = document.querySelectorAll('.pagination__btn');
   const  numbers = document.querySelectorAll('.pagination__link');
@@ -35,8 +46,7 @@ console.log("test");
     button.addEventListener('click', (e) => {
       currentStep += e.target.id === 'next' ? 1 : -1;
       numbers.forEach((number, numIndex) => {
-        console.log(numIndex, currentStep);
-
+       
         number.classList.toggle('pagination__link--active', numIndex === currentStep);
         updateBtn();
 
@@ -69,20 +79,34 @@ console.log("test");
         loopedSledes: 4,
         freeMode: true,
         loop: true,
-        direction: 'vertical',
+        direction: 'vertical'
     });
 
     let mySwiper = new Swiper(slider, {
-      spaceBetween: 10,
+      slidesPerView: 2,
+      spaceBetween: 20,
       loopedSledes: 4,
       loop: true,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+
+      scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+
       thumbs: {
         swiper: mySwiperNav, 
+      },
+
+      breakpoints: {
+        769: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        }
       }
+
     });
 
     //swiper review
@@ -102,7 +126,25 @@ console.log("test");
         scrollbar: {
           el: '.swiper-scrollbar',
         },
-        
+
+         breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    // when window width is >= 480px
+    576: {
+      slidesPerView: 2,
+      spaceBetween: 20
+    },
+    // when window width is >= 640px
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30
+    }
+  }
+    
     });
 
 
@@ -193,7 +235,6 @@ $(function () {
       const sortButton = document.querySelector('.dropdown-sort__button');
       const sortList = document.querySelector('.dropdown-sort__list');
       const sortItem = document.querySelectorAll('.dropdown-sort__item');
-      console.log(sortItem);
 
       sortButton.addEventListener('click', function() {
         sortList.classList.toggle('visible');
@@ -254,12 +295,38 @@ $(function () {
 
         catalogList.classList.add('catalog__list--line');
       });
-
-
-
       }
     });
 
-});
+  });
 
-  
+
+  //lang
+  const langButton = document.querySelector('.language__button');
+  const langList = document.querySelector('.language__list');
+  const langItem = langList.querySelectorAll('.language__link');
+
+  langButton.addEventListener('click', function() {
+    langList.classList.toggle('language__list--show');
+    this.classList.toggle('active');
+  });
+
+  langItem.forEach(function (listItem) {
+    listItem.addEventListener('click', function(e) {
+      langButton.innerText = this.innerText;
+
+      langItem.forEach(function (item) {
+        item.classList.remove('active');
+      });
+      
+      langButton.classList.remove('active');
+      this.classList.add('active');
+    });  
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target !== document.querySelector('.language__button')) {
+      langList.classList.remove('language__list--show');
+      // langItem.classList.remove('active');
+    };
+  });

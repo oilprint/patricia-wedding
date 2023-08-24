@@ -1,24 +1,47 @@
 .shopping-bag {
-  padding:0  0 200px;
+  padding-bottom: 90px;;
+
+  @include tablet {
+    padding-bottom: 50px;
+  }
+
+  @include mobile {
+    padding: 20px 0 50px;
+  }
 
   &__title {
     margin-bottom: 20px;
     font-size: 51px;
+
+    @include mobile {
+      font-size: 42px;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      align-items: center;
+    }
   }
 
   &__list {
     flex-grow: 1;
     margin-right: 50px;
+
+    @include tablet {
+     margin: 0 0 30px;
+    }
   }
 
   &__item {
     position: relative;
-    padding-right: 70px;
     border-top: 1px solid $grey;
 
     &:last-child {
@@ -27,39 +50,17 @@
   }
 
   &__checkout {
-    width: 370px;
-  }
+    max-width: 370px;
+    width: 100%;
+    flex-shrink: 0;
 
-  &__btn-close {
-    position: absolute;
-    content: '';
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 4px;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: border 0.4s;
-
-     &:focus {
-      outline: solid 1px $grey;
-     }
-
-    &:hover {
-      .shopping-bag__icon {
-        fill: $accent;
-      }
+    @include tablet {
+      margin-left: auto;
     }
 
-     &:focus {
-       border: 1px solid $primary;
-       .shopping-bag__icon {
-         fill: $primary;
-       }
-     }
+    @include mobile {
+      flex-shrink: 1;
+    }  
   }
 
   &__icon {
@@ -69,6 +70,7 @@
 
   &__checkout-list {
     margin-bottom: 20px;
+
   }
 
   &__checkout-item {
@@ -95,7 +97,6 @@
   &__checkout-price {
     text-transform: uppercase;
   }
-  
 
   &__button {
     width: 100%;

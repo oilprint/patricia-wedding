@@ -2,6 +2,8 @@
 @import 'global/reset';
 
 @import 'global/vars';
+@import 'global/mixins';
+@import '../../node_modules/aos/dist/aos';
 @import 'global/global';
 @import 'global/ints';
 
@@ -9,3 +11,7 @@
 @import 'lego/index';
 @import 'lego/footer';
 @import 'lego/modal';
+
+
+
+
