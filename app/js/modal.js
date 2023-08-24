@@ -14,7 +14,7 @@
 		el.addEventListener('click', (e) => {
 			let currentBtn = e.currentTarget;
 			let drop = currentBtn.closest('.header__item').querySelector('.dropdown-menu');
-      bodyLock.classList.add('locked')
+      bodyLock.classList.add('lock')
 
     
 			menuBtns.forEach(el => {
@@ -46,7 +46,7 @@
 				el.classList.remove('dropdown-menu--active');
 			});
 
-      bodyLock.classList.remove('locked')
+      bodyLock.classList.remove('lock')
 		}
 	});
 
@@ -60,14 +60,14 @@
 
   button.addEventListener('click', function () {
     modal.classList.toggle('modal--active')
-    bodyLock.classList.add('locked')
+    bodyLock.classList.add('lock')
   });
 
   buttonClose.forEach(function (item) {
     item.addEventListener('click', function () {
     
       modal.classList.remove('modal--active')
-      bodyLock.classList.remove('locked')
+      bodyLock.classList.remove('lock')
     })
   });
 
@@ -92,7 +92,7 @@
      
       btnSoldOpen.addEventListener('click', function () {
         modalSold.classList.remove('hidden');
-        bodyLock.classList.add('lock')
+        bodyLock.classList.add('locked')
          
       });
 
@@ -105,7 +105,7 @@
 
       modalSold.addEventListener('click', function ( ) {
         modalSold.classList.add('hidden');
-        bodyLock.classList.remove('locked');
+        bodyLock.classList.remove('lock');
       });
 
       modalSold.querySelector('.modal').addEventListener('click', function (e) {

@@ -58,6 +58,14 @@
     }
   }
 
+  &__headline {
+    font-size: 50px;
+
+    @include tablet {
+      font-size: 32px;
+    }
+  }
+
   &__form-box {
     flex-grow: 1;
   }

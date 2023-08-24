@@ -14,7 +14,7 @@ body {
   line-height: 1.3;
   color: $primary;
 
-  &.locked {
+  &.lock {
     overflow-y: hidden;
   }
 }
