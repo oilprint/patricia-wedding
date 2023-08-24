@@ -261,9 +261,9 @@ main {
 
     @include mobile {
       height: 300px;
-    } 
+    }
 
-    @include mini  {
+    @include mini {
       height: auto;
     }
   }
@@ -326,6 +326,7 @@ main {
   }
 
   &__price-old {
+    display: inline-block;
     color: $primary;
     text-decoration: line-through;
   }
@@ -378,7 +379,7 @@ main {
 
     .product-card__content-box {
       padding: 20px 30px;
-      
+
       @include mobile {
         padding: 10px 10px 30px;
       }
@@ -441,6 +442,7 @@ main {
 
 .product-extra {
   position: relative;
+  height: 100%;
   font-size: 24px;
   font-weight: 500;
 
@@ -502,6 +504,7 @@ main {
   }
 
   &__price-old {
+    display: inline-block;
     font-size: 17px;
     font-weight: 400;
     text-decoration: line-through;
@@ -808,13 +811,27 @@ main {
   display: flex;
   padding: 30px 0;
 
+  @include tablet {
+    padding: 20px 0;
+  }
+
+  @include minitablet {
+    padding: 10px 0;
+  }
+
+  @include mini {
+    display: none;
+  }
+
   &__list {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {
     padding: 0 10px;
     position: relative;
+
 
     &::after {
       position: absolute;
@@ -844,9 +861,14 @@ main {
   }
 
   &__link {
+    display: inline-block;
     font-size: 14px;
     text-transform: uppercase;
     color: inherit;
+
+    @include minitablet {
+      font-size: 10px;
+    }
 
     &:focus {
       outline: solid 1px $grey;

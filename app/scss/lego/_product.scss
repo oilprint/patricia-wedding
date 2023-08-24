@@ -358,6 +358,10 @@
 
   &__button {
     margin-left: auto;
+
+    @include minitablet {
+      margin-left: 0;
+    }
   }
 
   &__info-inner {
