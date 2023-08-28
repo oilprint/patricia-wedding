@@ -1,4 +1,6 @@
 
+
+ 
   // modal
 
   const button = document.querySelector('[data-modal-button]');
@@ -14,7 +16,7 @@
   buttonClose.forEach(function (item) {
     item.addEventListener('click', function () {
     
-      modal.classList.remove('modal--active')
+      modal.classList.remove('modal--active');
       bodyLock.classList.remove('lock')
     })
   });
@@ -22,6 +24,7 @@
   document.addEventListener('click', (e) => {
 		if (!e.target.closest('.usernav')) {
 			modal.classList.remove('modal--active');
+      bodyLock.classList.remove('lock')
       
 		}
 	});

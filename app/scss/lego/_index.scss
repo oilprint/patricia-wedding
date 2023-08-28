@@ -7,6 +7,43 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-image: url('../images/decor/hero/hero-desktop.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url('../images/decor/hero/hero-desktop@2x.jpg');
+    }
+
+    @media (max-width:1024px) {
+      background-image: url('../images/decor/hero/hero-tab.jpg');
+
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url('../images/decor/hero/hero-tab@2x.jpg');
+      }
+    }
+
+    @media (max-width:768px) {
+      background-image: url('../images/decor/hero/hero-minitablet.jpg');
+
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url('../images/decor/hero/hero-minitablet@2x.jpg');
+      }
+    }
+
+    @media (max-width:576px) {
+      background-image: url('../images/decor/hero/hero-mobile.jpg');
+
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        background-image: url('../images/decor/hero/hero-mobile@2x.jpg');
+      }
+    }
 
     @include tablet {
       height: 450px;
@@ -602,7 +639,7 @@
     }
 
     @include tablet-land {
-       margin-bottom: 10px;
+      margin-bottom: 10px;
     }
   }
 
@@ -617,9 +654,9 @@
       margin-bottom: 10px;
     }
 
-     @include tablet-land {
+    @include tablet-land {
       margin-bottom: 10px;
-     }
+    }
   }
 }
 
@@ -641,8 +678,8 @@
 
   &__title {
     margin-bottom: 40px;
-   font-size: 52px;
-    
+    font-size: 52px;
+
 
     @include tablet {
       margin-bottom: 20px;
@@ -725,13 +762,13 @@
       color: $light;
     }
 
-      @include tablet-land {
-        margin: 0 auto;
-        padding: 10px 20px;
-        text-align: center;
-        background-color: $accent;
-        color: $light;
-      }
+    @include tablet-land {
+      margin: 0 auto;
+      padding: 10px 20px;
+      text-align: center;
+      background-color: $accent;
+      color: $light;
+    }
   }
 
   &__txt {
