@@ -55,7 +55,7 @@
             The wilderly bride catalog
           </h1>
           <div class="catalog__wrapper">
-            <aside class="filter">
+            <aside class="filter catalog__filter" data-filter-modal>
               <div class="filter__item filter-price">
                 <h3 class="filter__title">
                   Price filter
@@ -269,39 +269,48 @@
 
             <div class="catalog__content">
               <div class="catalog__sort">
-                <div class="dropdown-sort">
-                  <button class="dropdown-sort__button" type="button">
-                    Sort by
+
+                <button class="catalog__sort-btn catalog__filter-btn" type="button" data-filter-btn>
+                  <svg class="catalog__sort-icon" width="24" height="24">
+                    <use href="./images/symbol-defs.svg#icon-filter"></use>
+                  </svg>
+                </button>
+
+                <div class="catalog__sort-right">
+                  <div class="dropdown-sort catalog__dropdown-sort ">
+                    <button class="dropdown-sort__button" type="button">
+                      Sort by
+                    </button>
+                    <ul class="dropdown-sort__list">
+                      <li class="dropdown-sort__item">
+                        Most Popular
+                      </li>
+                      <li class="dropdown-sort__item">
+                        Recommended
+                      </li>
+                      <li class="dropdown-sort__item">
+                        New in
+                      </li>
+                      <li class="dropdown-sort__item">
+                        Price High to Low
+                      </li>
+                      <li class="dropdown-sort__item">
+                        Price Low to High
+                      </li>
+                    </ul>
+                  </div>
+                  <button class="catalog__sort-btn active" id="grid">
+                    <svg class="catalog__sort-icon" width="24" height="24">
+                      <use href="./images/symbol-defs.svg#icon-tile"></use>
+                    </svg>
                   </button>
-                  <ul class="dropdown-sort__list">
-                    <li class="dropdown-sort__item">
-                      Most Popular
-                    </li>
-                    <li class="dropdown-sort__item">
-                      Recommended
-                    </li>
-                    <li class="dropdown-sort__item">
-                      New in
-                    </li>
-                    <li class="dropdown-sort__item">
-                      Price High to Low
-                    </li>
-                    <li class="dropdown-sort__item">
-                      Price Low to High
-                    </li>
-                  </ul>
+                  <button class="catalog__sort-btn  catalog__sort-btn--line" id="list">
+                    <svg class="catalog__sort-icon" width="24" height="24">
+                      <use href="./images/symbol-defs.svg#icon-tabl"></use>
+                    </svg>
+                  </button>
                 </div>
 
-                <button class="catalog__sort-btn active button__grid">
-                  <svg class="catalog__sort-icon" width="24" height="24">
-                    <use href="./images/symbol-defs.svg#icon-tile"></use>
-                  </svg>
-                </button>
-                <button class="catalog__sort-btn" id="list">
-                  <svg class="catalog__sort-icon" width="24" height="24">
-                    <use href="./images/symbol-defs.svg#icon-tabl"></use>
-                  </svg>
-                </button>
               </div>
               <ul class="catalog__list">
                 <li class="catalog__item ">

@@ -17,8 +17,13 @@
   }
 
   &__wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
+  }
+
+  &__filter {
+    margin-right: 20px;
   }
 
   &__content {
@@ -32,10 +37,18 @@
 
   &__sort {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__sort-right {
+    display: flex;
     justify-content: flex-end;
     align-items: center;
+    width: 298px;
     margin-left: auto;
-    margin-bottom: 16px;
+
   }
 
   &__sort-filter {
@@ -46,9 +59,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
 
-    &:not(:last-child) {
-      margin-right: 8px;
+    &--line {
+      @include mini {
+        display: none;
+      }
+    }
+
+    &:focus {
+      border: 1px solid $grey;
+    }
+
+    &:hover {
+      .catalog__sort-icon {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      .catalog__sort-icon {
+        fill: $accent;
+      }
     }
 
     &.active {
@@ -58,8 +92,17 @@
     }
   }
 
+  &__filter__btn {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
   &__sort-icon {
     fill: $grey;
+    transition: fill 0.3s;
   }
 
   &__list {
@@ -67,30 +110,42 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 
-     @include minitablet {
-       grid-template-columns: repeat(2, 1fr);
-       gap: 20px;
-     }
+    @include minitablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
 
-     @include mini {
-       grid-template-columns: repeat(1, 1fr);
-     }
+    @include mini {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
-     &--line {
-       grid-template-columns: repeat(1, 1fr);
-     }
-     
+    &--line {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
   }
 }
 
 .filter {
-  max-width: 250px;
-  width: 100%;
+  width: 250px;
   padding-top: 40px;
-  margin-right: 20px;
+  background-color: $light;
 
   @include tablet {
-    display: none;
+    position: absolute;
+    z-index: 50;
+    top: 40px;
+    left: 0;
+    width: 320px;
+    padding: 40px 20px 40px;
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+
+    &.active {
+      transform: translateX(0);
+      box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
+    }
+
   }
 
 
@@ -229,10 +284,10 @@
   position: relative;
   max-width: 190px;
   width: 100%;
-  margin-right: 20px;
+  border: 1px solid $grey;
 
-  @include tablet {
-    margin-right: 10px;
+  @include mini {
+    max-width: 170px;
   }
 
   &__button {
@@ -246,7 +301,11 @@
     font-size: 15px;
     color: $primary;
     transition: background-color 0.4s,
-    outline 0.4s;
+      outline 0.4s;
+
+    @include mini {
+      padding: 4px;
+    }
 
     &:before {
       position: absolute;
@@ -260,10 +319,15 @@
       background-position: center right;
       width: 24px;
       height: 24px;
+
+      @include mini {
+        right: 2px;
+      }
     }
 
     &.active {
       color: $accent;
+
       &:before {
         transform: rotate(180deg);
       }
@@ -278,7 +342,7 @@
       color: $accent;
     }
 
-    &:active  {
+    &:active {
       background-color: $bg-accent;
     }
   }
@@ -302,7 +366,7 @@
     visibility: hidden;
     opacity: 0;
     transition: transform 0.4s ease-in-out,
-    visibility 0.4s ease-in-out;
+      visibility 0.4s ease-in-out;
 
     &.visible {
       transform: rotateX(0deg);
@@ -315,7 +379,7 @@
     padding: 10px 16px;
     border-bottom: 1px solid $devider;
     font-size: 15px;
-    
+
     cursor: pointer;
 
     &:first-child {

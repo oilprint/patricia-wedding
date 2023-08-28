@@ -1,56 +1,4 @@
 
-
-  /*
-  всплывающее меню
-		1. по клику на пункты верхнего меню открывать дропдаун
-		2. по клику (повторному) на эти пункты - закрывать дропдаун
-		3. по клику в любое место сайта, кроме меню - закрывать дропдаун
-	*/
-
-	const menuBtns = document.querySelectorAll('#dropmenu');
-	const drops = document.querySelectorAll('.dropdown-menu');
-
-	menuBtns.forEach(el => {
-		el.addEventListener('click', (e) => {
-			let currentBtn = e.currentTarget;
-			let drop = currentBtn.closest('.header__item').querySelector('.dropdown-menu');
-      bodyLock.classList.add('lock')
-
-    
-			menuBtns.forEach(el => {
-				if (el !== currentBtn) {
-					el.classList.remove('header__link--active');
-				}
-			});
-        
-
-			drops.forEach(el => {
-				if (el !== drop) {
-					el.classList.remove('dropdown-menu--active');
-          bodyLock.classList.remove('lock')
-				}
-			});
-
-      drop.classList.toggle('dropdown-menu--active');
-      currentBtn.classList.toggle('header__link--active');
-		});
-	});
-
-  document.addEventListener('click', (e) => {
-		if (!e.target.closest('.header__list')) {
-			menuBtns.forEach(el => {
-				el.classList.remove('header__link--active');
-			});
-
-			drops.forEach(el => {
-				el.classList.remove('dropdown-menu--active');
-			});
-
-      bodyLock.classList.remove('lock')
-		}
-	});
-
-
   // modal
 
   const button = document.querySelector('[data-modal-button]');
@@ -115,6 +63,15 @@
     }
   });
   
+
+  ///filter
+
+  // const filterBtn = document.querySelector('[data-filter-btn]');
+  // const filterContent = document.querySelector('[data-filter-modal]');
+  
+  // filterBtn.addEventListener('click', function () {
+  //   filterContent.classList.add('active')
+  // });
 
 
 

@@ -150,6 +150,7 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    transition: background-color 0.3s, border-color 0.3s;
 
     &:focus {
       border: 1px solid $grey;
@@ -167,11 +168,11 @@
      background-color: $bg-accent;
     }
 
-
   }
 
   &__btn-icon {
     fill: $primary;
+    transition: fill 0.3s;
   }
 }
 
