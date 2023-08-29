@@ -1,4 +1,3 @@
-console.log('test2')
 
 const accordion = document.querySelectorAll('.footer__content');
 const content = document.querySelectorAll('.footer__list');
@@ -36,8 +35,6 @@ const controlBtn = document.querySelectorAll('.footer__btn');
   const elements = document.querySelectorAll('.footer__list');
   
   elements.forEach(element => {
-
-    console.log(elements);
 
     if (window.innerWidth <= 1024) {
       if (!element.classList.contains('hidden')) {

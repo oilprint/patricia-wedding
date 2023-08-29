@@ -76,14 +76,6 @@
       transform: translateY(0);
       text-align: center;
     }
-
-    @include tablet-land {
-      position: static;
-      max-width: 100%;
-      padding: 20px 0 30px;
-      transform: translateY(0);
-      text-align: center;
-    }
   }
 
   &__title {
@@ -247,11 +239,9 @@
 
     @include minitablet {
       align-items: stretch;
+      justify-content: center;
     }
 
-    @include tablet-land {
-      width: 180%;
-    }
   }
 
   &__photo-item {
@@ -486,7 +476,7 @@
 
 }
 
-.gallery {
+.love-story {
 
   &__title {
     margin-bottom: 40px;
@@ -505,11 +495,7 @@
     justify-content: space-between;
     align-items: stretch;
 
-    @include minitablet {
-      flex-direction: column;
-    }
-
-    @include tablet-land {
+    @include tablet {
       flex-direction: column;
     }
   }
@@ -523,10 +509,6 @@
     width: 100%;
 
     @include tablet {
-      margin-right: 20px;
-    }
-
-    @include minitablet {
       flex-direction: row;
       justify-content: space-between;
       max-width: 100%;
@@ -538,6 +520,17 @@
       justify-content: space-between;
       max-width: 100%;
       margin-right: 0;
+    }
+  }
+
+  &__photo-left {
+    margin-bottom: 50px;
+
+    @include tablet {
+      &:not(:last-child) {
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -548,7 +541,7 @@
     max-width: 570px;
     width: 100%;
 
-    @include minitablet {
+    @include tablet {
       order: -1;
       max-width: 100%;
     }
@@ -559,27 +552,24 @@
     }
   }
 
+  &__photo-right {
+    display: block;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
   &__img {
     object-fit: cover;
+    width: 100%;
+    height: auto;
 
     &--first {
       border-radius: 0 300px 0 0;
-      margin-bottom: 50px;
-
 
       @include tablet {
-        border-radius: 0 240px 0 0;
-        margin-bottom: 20px;
-      }
-
-      @include minitablet {
         border-radius: 0;
-        margin-bottom: 0;
-      }
-
-      @include tablet-land {
-        border-radius: 0;
-        margin-bottom: 0;
       }
     }
 
@@ -598,16 +588,6 @@
         display: none;
       }
     }
-
-    @include minitablet {
-      height: auto;
-      width: calc((100% - 20px) / 2);
-    }
-
-    @include tablet-land {
-      height: auto;
-      width: calc((100% - 20px) / 2);
-    }
   }
 
   &__content {
@@ -615,10 +595,6 @@
 
     @include tablet {
       margin-bottom: 52px;
-    }
-
-    @include minitablet {
-      margin-bottom: 30px;
     }
 
     @include tablet-land {

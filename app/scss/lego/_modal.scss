@@ -23,7 +23,6 @@
     padding: 40px 20px 40px;
   }
 
-
   &--active {
     transform: rotateX(0deg);
     visibility: visible;
@@ -140,39 +139,10 @@
     margin: 0 auto;
   }
 
-  &__btn {
+  &__close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    transition: background-color 0.3s, border-color 0.3s;
-
-    &:focus {
-      border: 1px solid $grey;
-    }
-
-    &:hover {
-      border: 1px solid $accent;
-
-      .modal__btn-icon {
-        fill: $accent;
-      }
-    }
-
-    &:active {
-     background-color: $bg-accent;
-    }
-
-  }
-
-  &__btn-icon {
-    fill: $primary;
-    transition: fill 0.3s;
+    top: 20px;
+    right: 20px;
   }
 }
 

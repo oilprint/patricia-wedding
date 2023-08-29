@@ -48,7 +48,7 @@
           <use href="./images/symbol-defs.svg#icon-burger"></use>
         </svg>
       </button>
-      
+
       <a class="logo header__logo" href="index.html">
         <img class="logo__img" src="images/logo.svg" alt="Patriia Wedding Logo" width="320" height="80">
       </a>
@@ -103,7 +103,7 @@
             <ul class="modal__list">
               <li class="modal__item">
                 <article class="shopping-card modal__shopping-card">
-                  <img class="shopping-card__img"src="images/product/catalog/dress-02.jpg" alt="Wedding dress Calliope"
+                  <img class="shopping-card__img" src="images/product/catalog/dress-02.jpg" alt="Wedding dress Calliope"
                     width="100" height="150">
                   <div class="shopping-card__content">
                     <h3 class="shopping-card__headline">
@@ -213,8 +213,8 @@
               Keep shopping
             </button>
 
-            <button class="modal__btn" type="button" data-modal-close>
-              <svg class="modal__btn-icon" width="24" height="24">
+            <button class="modal__close-btn close-btn" type="button" data-modal-close>
+              <svg class="close-btn__icon" width="24" height="24">
                 <use href="images/symbol-defs.svg#icon-close">
                 </use>
               </svg>
@@ -233,7 +233,7 @@
           </li>
           <li class="header__item">
             <a class="header__link" href="catalog.html">
-               Dresses
+              Dresses
             </a>
           </li>
           <li class="header__item">
@@ -370,7 +370,7 @@
     </form>
 
     <button class="close-btn burger-menu__close-btn" type="button" data-close-burger>
-      <svg class="close-btn__icon" width="24" height="24">
+      <svg class="close-btn__icon" width="32" height="32">
         <use href="images/symbol-defs.svg#icon-close">
         </use>
       </svg>
@@ -422,24 +422,82 @@
               </div>
               <ul class="collection__photo">
                 <li class="collection__photo-item">
-                  <img class="collection__photo-img" src="images/decor/about-1.jpg" alt="The wilderly bride collection"
-                    width="340" height="470">
+
+                  <picture>
+                    <source srcset="./images/decor/collection/col-1-mobile.webp 1x,
+                        ./images/decor/collection/col-1-mobile@2x.webp 2x" type="image/webp"
+                      media="(max-width: 576px)">
+                    <source srcset="./images/decor/collection/col-1-mobile.jpg 1x,
+                        ./images/decor/collection/col-1-mobile@2x.jpg 2x" media="(max-width: 576px)">
+
+                    <source
+                      srcset="./images/decor/collection/col-1-tab.webp 1x, ./images/decor/collection/col-1-tab@2x.webp 2x"
+                      type="image/webp" media="(max-width: 1024px)">
+                    <source
+                      srcset="./images/decor/collection/col-1-tab.jpg 1x, ./images/decor/collection/col-1-tab@2x.jpg 2x"
+                      media="(max-width: 1024px)">
+
+                    <source
+                      srcset="./images/decor/collection/col-1-desktop.webp 1x, ./images/decor/collection/col-1-desktop@2x.webp 2x"
+                      type="image/webp">
+                    <source srcset="./images/decor/collection/col-1-desktop.jpg 1x,
+                       ./images/decor/collection/col-1-desktop@2x.jpg
+                       2x">
+
+                    <img class="collection__photo-img" src="./images/decor/collection/col-1-desktop.jpg"
+                      alt="The wilderly bride collection" width="340" height="470">
+                  </picture>
                 </li>
+
                 <li class="collection__photo-item">
-                  <img class="collection__photo-img" src="images/decor/about-2.jpg" alt="The wilderly bride collection"
-                    width="300" height="520">
+                  <picture>
+                    <source srcset="./images/decor/collection/col-2-mobile.webp 1x,
+                        ./images/decor/collection/col-2-mobile@2x.webp 2x" type="image/webp"
+                      media="(max-width: 576px)">
+                    <source srcset="./images/decor/collection/col-2-mobile.jpg 1x,
+                        ./images/decor/collection/col-2-mobile@2x.jpg 2x" media="(max-width: 576px)">
+
+                    <source
+                      srcset="./images/decor/collection/col-2-tab.webp 1x, ./images/decor/collection/col-2-tab@2x.webp 2x"
+                      type="image/webp" media="(max-width: 1024px)">
+                    <source
+                      srcset="./images/decor/collection/col-2-tab.jpg 1x, ./images/decor/collection/col-2-tab@2x.jpg 2x"
+                      media="(max-width: 1024px)">
+
+                    <source
+                      srcset="./images/decor/collection/col-2-desktop.webp 1x, ./images/decor/collection/col-2-desktop@2x.webp 2x"
+                      type="image/webp">
+                    <source srcset="./images/decor/collection/col-2-desktop.jpg 1x,
+                       ./images/decor/collection/col-2-desktop@2x.jpg
+                       2x">
+
+                    <img class="collection__photo-img" src="./images/decor/collection/col-2-desktop.jpg"
+                      alt="The wilderly bride collection" width="300" height="520">
+                  </picture>
                 </li>
               </ul>
-
-
             </div>
-
 
             <div class="collection__inner-right">
-              <img class="collection__right-img" src="images/decor/about-3.jpg" alt="The wilderly bride collection"
-                width="470" height="780">
-            </div>
+              <picture>
+                <source
+                  srcset="./images/decor/collection/col-3-tab.webp 1x, ./images/decor/collection/col-3-tab@2x.webp 2x"
+                  type="image/webp" media="(max-width: 1024px)">
+                <source
+                  srcset="./images/decor/collection/col-3-tab.jpg 1x, ./images/decor/collection/col-3-tab@2x.jpg 2x"
+                  media="(max-width: 1024px)">
 
+                <source
+                  srcset="./images/decor/collection/col-3-desktop.webp 1x, ./images/decor/collection/col-3-desktop@2x.webp 2x"
+                  type="image/webp">
+                <source srcset="./images/decor/collection/col-3-desktop.jpg 1x,
+                       ./images/decor/collection/col-3-desktop@2x.jpg
+                       2x">
+
+                <img class="collection__right-img" src="./images/decor/collection/col-3-desktop.jpg"
+                  alt="The wilderly bride collection" width="470" height="780">
+              </picture>
+            </div>
           </div>
         </div>
       </section>
@@ -471,16 +529,45 @@
                 </a>
               </div>
               <div class="collection__photo">
-                <img class="collection__photo-img" src="images/decor/dresses-01.jpg" alt="The wilderly bride collection"
-                  width="570" height="420">
+
+                <picture>
+                  <source srcset="./images/decor/bride/bride-1-mobile.webp 1x,
+                        ./images/decor/bride/bride-1-mobile@2x.webp 2x" type="image/webp" media="(max-width: 576px)">
+                  <source srcset="./images/decor/bride/bride-1-mobile.jpg 1x,
+                        ./images/decor/bride/bride-1-mobile@2x.jpg 2x" media="(max-width: 576px)">
+
+                  <source srcset="./images/decor/bride/bride-1-desktop.webp 1x,
+                    ./images/decor/bride/bride-1-desktop@2x.webp 2x" type="image/webp">
+                  <source srcset="./images/decor/bride/bride-1-desktop.jpg 1x,
+                       ./images/decor/bride/bride-1-desktop@2x.jpg
+                       2x">
+
+                  <img class="collection__photo-img" src="./images/decor/bride/bride-1-desktop.jpg"
+                    alt="The wilderly bride collection" width="570" height="420">
+                </picture>
               </div>
             </div>
 
             <div class="collection__inner-right collection__inner-right--big">
-              <img class="collection__right-img" src="images/decor/dresses-02.jpg" alt="The wilderly bride collection"
-                width="570" height="820">
-            </div>
 
+              <picture>
+                <source
+                  srcset="./images/decor/bride/bride-2-mobile.webp 1x, ./images/decor/bride/bride-2-mobile@2x.webp 2x"
+                  type="image/webp" media="(max-width: 576px)">
+                <source
+                  srcset="./images/decor/bride/bride-2-mobile.jpg 1x, ./images/decor/bride/bride-2-mobile@2x.jpg 2x"
+                  media="(max-width: 576px)">
+
+                <source srcset="./images/decor/bride/bride-2-desktop.webp 1x,
+                    ./images/decor/bride/bride-2-desktop@2x.webp 2x" type="image/webp">
+                <source srcset="./images/decor/bride/bride-2-desktop.jpg 1x,
+                       ./images/decor/bride/bride-2-desktop@2x.jpg
+                       2x">
+
+                <img class="collection__right-img" src="./images/decor/bride/bride-2-desktop.jpg"
+                  alt="The wilderly bride collection" width="570" height="820">
+              </picture>
+            </div>
           </div>
         </div>
       </section>
@@ -494,12 +581,47 @@
             <div class="accessories__content">
               <ul class="accessories__top">
                 <li class="accessories__img-box">
-                  <img class="accessories__img" src="images/decor/acceessory-02.jpg" alt="hair accessories" width="270"
-                    height="460">
+                  <picture>
+
+                    <source srcset="./images/decor/accessory/acc-1-tab.webp 1x,
+                      ./images/decor/accessory/acc-1-tab@2x.webp 2x" type="image/webp" media="(max-width: 1024px)">
+                    <source
+                      srcset="./images/decor/accessory/acc-1-tab.jpg 1x, ./images/decor/accessory/acc-1-tab@2x.jpg 2x"
+                      media="(max-width: 1024px)">
+
+                    <source srcset="./images/decor/accessory/acc-1-desktop.webp 1x,
+                    ./images/decor/accessory/acc-1-desktop@2x.webp 2x" type="image/webp">
+                    <source srcset="./images/decor/accessory/acc-1-desktop.jpg 1x,
+                       ./images/decor/accessory/acc-1-desktop@2x.jpg
+                       2x">
+
+                    <img class="accessories__img" src="./images/decor/accessory/acc-1-desktop.jpg"
+                      alt="hair accessories" width="270" height="460">
+                  </picture>
                 </li>
+
                 <li class="accessories__img-box accessories__img-box--hidden">
-                  <img class="accessories__img" src="images/decor/acceessory-01.jpg" alt="hair accessories" width="270"
-                    height="460">
+                  <picture>
+                    <source srcset="./images/decor/accessory/acc-2-mobile.webp 1x,
+                      ./images/decor/accessory/acc-2-mobile@2x.webp 2x" type="image/webp" media="(max-width: 576px)">
+                    <source srcset="./images/decor/accessory/acc-2-mobile.jpg 1x, ./images/decor/accessory/acc-2-mobile@2x.jpg
+                      2x" media="(max-width: 576px)">
+
+                    <source srcset="./images/decor/accessory/acc-2-tab.webp 1x,
+                      ./images/decor/accessory/acc-2-tab@2x.webp 2x" type="image/webp" media="(max-width: 1024px)">
+                    <source
+                      srcset="./images/decor/accessory/acc-2-tab.jpg 1x, ./images/decor/accessory/acc-2-tab@2x.jpg 2x"
+                      media="(max-width: 1024px)">
+
+                    <source srcset="./images/decor/accessory/acc-2-desktop.webp 1x,
+                    ./images/decor/accessory/acc-2-desktop@2x.webp 2x" type="image/webp">
+                    <source srcset="./images/decor/accessory/acc-2-desktop.jpg 1x,
+                       ./images/decor/accessory/acc-2-desktop@2x.jpg
+                       2x">
+
+                    <img class="accessories__img" src="./images/decor/accessory/acc-2-desktop.jpg"
+                      alt="hair accessories" width="270" height="460">
+                  </picture>
                 </li>
               </ul>
 
@@ -521,37 +643,90 @@
               </div>
             </div>
             <div class="accessories__img-big">
-              <img class="accessories__img accessories__img--corner" src="images/decor/acceessory-03.jpg"
-                alt="White hair accessories" width="570" height="800">
-            </div>
 
+              <picture>
+                <source srcset="./images/decor/accessory/acc-3-desktop.webp 1x,
+                    ./images/decor/accessory/acc-3-desktop@2x.webp 2x" type="image/webp">
+                <source srcset="./images/decor/accessory/acc-3-desktop.jpg 1x,
+                       ./images/decor/accessory/acc-3-desktop@2x.jpg
+                       2x">
+
+                <img class="accessories__img accessories__img--corner" src="./images/decor/accessory/acc-3-desktop.jpg"
+                  alt="White hair accessories" width="570" height="800">
+              </picture>
+
+            </div>
           </div>
         </div>
 
       </section>
 
-      <section class="gallery section">
+      <section class="love-story section">
         <div class="container">
 
-          <h2 class="title gallery__title" data-aos="fade-right">
+          <h2 class="title love-story__title" data-aos="fade-right">
             Share with us your love story!
           </h2>
 
-          <div class="gallery__inner">
-            <div class="gallery__inner-left">
-              <img class="gallery__img gallery__img--first" src="images/decor/gallery-02.jpg" alt="Wedding day"
-                width="570" height="570">
+          <div class="love-story__inner">
+            <div class="love-story__inner-left">
+              <div class="love-story__photo-left">
+                <picture>
+                  <source srcset="./images/love-story/lovestory-1-mobile.webp 1x,
+                        ./images/decor/love-story/lovestory-1-mobile@2x.webp 2x" type="image/webp"
+                    media="(max-width: 576px)">
+                  <source srcset="./images/decor/love-story/lovestory-1-mobile.jpg 1x,
+                        ./images/decor/love-story/lovestory-1-mobile@2x.jpg 2x" media="(max-width: 576px)">
 
-              <img class="gallery__img" src="images/decor/gallery-01.jpg" alt="Wedding day" width="570" height="570">
+                  <source srcset="./images/decor/love-story/lovestory-1-tab.webp 1x,
+                  ./images/decor/love-story/lovestory-1-tab@2x.webp
+                  2x" type="image/webp" media="(max-width: 1024px)">
+                  <source srcset="./images/decor/love-story/lovestory-1-tab.jpg 1x, ./images/decor/love-story/lovestory-1-tab@2x.jpg
+                  2x" media="(max-width: 1024px)">
+
+                  <source srcset="./images/decor/love-story/lovestory-1-desktop.webp 1x,
+                  ./images/decor/love-story/lovestory-1-desktop@2x.webp 2x" type="image/webp">
+                  <source srcset="./images/decor/love-story/lovestory-1-desktop.jpg 1x,
+                       ./images/decor/love-story/lovestory-1-desktop@2x.jpg
+                       2x">
+
+                  <img class="love-story__img love-story__img--first" src="./images/decorlove-story/lovestory-1-desktop.jpg"
+                    alt="Wedding day" width="570" height="570">
+                </picture>
+              </div>
+              <div class="love-story__photo-left">
+                <picture>
+                  <source srcset="./images/love-story/lovestory-2-mobile.webp 1x,
+                        ./images/decor/love-story/lovestory-2-mobile@2x.webp 2x" type="image/webp"
+                    media="(max-width: 576px)">
+                  <source srcset="./images/decor/love-story/lovestory-2-mobile.jpg 1x,
+                        ./images/decor/love-story/lovestory-2-mobile@2x.jpg 2x" media="(max-width: 576px)">
+
+                  <source srcset="./images/decor/love-story/lovestory-2-tab.webp 1x,
+                  ./images/decor/love-story/lovestory-2-tab@2x.webp
+                  2x" type="image/webp" media="(max-width: 1024px)">
+                  <source srcset="./images/decor/love-story/lovestory-2-tab.jpg 1x, ./images/decor/love-story/lovestory-2-tab@2x.jpg
+                  2x" media="(max-width: 1024px)">
+
+                  <source srcset="./images/decor/love-story/lovestory-2-desktop.webp 1x,
+                  ./images/decor/love-story/lovestory-2-desktop@2x.webp 2x" type="image/webp">
+                  <source srcset="./images/decorlove-story/lovestory-2-desktop.jpg 1x,
+                       ./images/decor/love-story/lovestory-2-desktop@2x.jpg
+                       2x">
+
+                  <img class="love-story__img" src="./images/decorlove-story/lovestory-2-desktop.jpg" alt="Wedding day"
+                    width="570" height="570">
+                </picture>
+              </div>
             </div>
 
-            <div class="gallery__inner-right">
-              <div class="gallery__content">
-                <p class="subtitle gallery__subtitle" data-aos="fade-right">
+            <div class="love-story__inner-right">
+              <div class="love-story__content">
+                <p class="subtitle love-story__subtitle" data-aos="fade-right">
                   Inspired by your
                   story
                 </p>
-                <p class="gallery__txt" data-aos="fade-right" data-aos-delay="50">
+                <p class="love-story__txt" data-aos="fade-right" data-aos-delay="50">
                   Share your happiest moments with us and other brides by mentioning
                   <a href="#" class="link link--txt">
                     @patriciawedding
@@ -559,13 +734,30 @@
                   on Instagram or adding a photo to
                   your product review.
                 </p>
-                <a class="gallery__link link" href="gallery.html" data-aos="fade-right" data-aos-delay="50">
+                <a class="love-story__link link" href="love-story.html" data-aos="fade-right" data-aos-delay="50">
                   Show me more brides
                 </a>
               </div>
 
-              <img class="gallery__img gallery__img--third" src="images/decor/gallery-03.jpg" alt="Wedding day"
-                width="570" height="870">
+              <div class="love-story__photo-right">
+                <picture>
+
+                  <source srcset="./images/decor/love-story/lovestory-3-tab.webp 1x,
+                  ./images/decor/love-story/lovestory-3-tab@2x.webp
+                  2x" type="image/webp" media="(max-width: 1024px)">
+                  <source srcset="./images/decor/love-story/lovestory-3-tab.jpg 1x, ./images/decor/love-story/lovestory-3-tab@2x.jpg
+                  2x" media="(max-width: 1024px)">
+
+                  <source srcset="./images/decor/love-story/lovestory-3-desktop.webp 1x,
+                  ./images/decor/love-story/lovestory-3-desktop@2x.webp 2x" type="image/webp">
+                  <source srcset="./images/decorlove-story/lovestory-3-desktop.jpg 1x,
+                       ./images/decor/love-story/lovestory-3-desktop@2x.jpg
+                       2x">
+
+                  <img class="love-story__img love-story__img--third" src="./images/decorlove-story/lovestory-3-desktop.jpg"
+                    alt="Wedding day" width="570" height="870">
+                </picture>
+              </div>
             </div>
           </div>
         </div>

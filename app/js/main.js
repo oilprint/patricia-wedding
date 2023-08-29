@@ -261,31 +261,33 @@ $(function () {
         };
       });
 
-    //END dropdown-sort
+   
 
-    // //view
-    const viewButton = document.querySelectorAll('.catalog__sort-btn');
-    const lineButton = document.querySelector('#list');
-    const catalogList = document.querySelector('.catalog__list');
-    const catalogItem = document.querySelectorAll('.product-card');
+      //END dropdown-sort
 
-    viewButton.forEach(function (item) {
-      item.addEventListener('click', function () {
+      // //view
+      const viewButton = document.querySelectorAll('.catalog__sort-btn');
+      const lineButton = document.querySelector('#list');
+      const catalogList = document.querySelector('.catalog__list');
+      const catalogItem = document.querySelectorAll('.product-card');
 
-        viewButton.forEach(function (item) {
-          item.classList.remove('active');
-        });
+      viewButton.forEach(function (item) {
+        item.addEventListener('click', function () {
 
-        this.classList.add('active');
+          viewButton.forEach(function (item) {
+            item.classList.remove('active');
+          });
+
+          this.classList.add('active');
 
           catalogItem.forEach(function (item) {
-          item.classList.remove('product-card--line');
+            item.classList.remove('product-card--line');
+          });
+
+          catalogList.classList.remove('catalog__list--line');
+
         });
-
-        catalogList.classList.remove('catalog__list--line');
-
       });
-    });
 
       lineButton.addEventListener('click', function () {
         
@@ -295,10 +297,10 @@ $(function () {
 
         catalogList.classList.add('catalog__list--line');
       });
-      }
-    });
-
+    }
   });
+
+});
 
 
   //lang

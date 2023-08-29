@@ -69,14 +69,28 @@
 
   ///filter
 
-  // const filterBtn = document.querySelector('[data-filter-btn]');
-  // const filterContent = document.querySelector('[data-filter-modal]');
-  
-  // filterBtn.addEventListener('click', function () {
-  //   filterContent.classList.add('active')
-  // });
+  if (window.location.pathname === '/catalog.html') {
 
+    const openFilter = document.querySelector('.catalog__filter-btn');
+    const closeFilter = document.querySelector('.filter__close-btn');
+    const menuFilter = document.querySelector('.catalog__filter');
+    const applyBtn = document.querySelector('.filter__button');
 
+    console.log(menuFilter);
+
+    openFilter.addEventListener('click', function() {
+      menuFilter.classList.add('active');
+    });
+
+    closeFilter.addEventListener('click', function() {
+      menuFilter.classList.remove('active');
+    });
+
+    applyBtn.addEventListener('click', function() {
+      menuFilter.classList.remove('active');
+    });
+
+  }
 
 
 

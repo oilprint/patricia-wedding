@@ -1,11 +1,9 @@
 .catalog {
   margin-bottom: 90px;
 
-
   @include mobile {
     margin-bottom: 50px;
   }
-
 
   &__title {
     margin-bottom: 10px;
@@ -48,7 +46,6 @@
     align-items: center;
     width: 298px;
     margin-left: auto;
-
   }
 
   &__sort-filter {
@@ -63,8 +60,8 @@
     width: 44px;
     height: 44px;
 
-    &--line {
-      @include mini {
+    &--view {
+      @include mobile {
         display: none;
       }
     }
@@ -122,11 +119,11 @@
     &--line {
       grid-template-columns: repeat(1, 1fr);
     }
-
   }
 }
 
 .filter {
+  position: relative;
   width: 250px;
   padding-top: 40px;
   background-color: $light;
@@ -148,7 +145,6 @@
 
   }
 
-
   &__title {
     font-size: 24px;
     margin-bottom: 20px;
@@ -156,6 +152,18 @@
 
   &__item:not(:last-child) {
     margin-bottom: 30px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+
   }
 }
 
