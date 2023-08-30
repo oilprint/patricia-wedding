@@ -1,0 +1,410 @@
+.catalog {
+  margin-bottom: 90px;
+
+  @include mobile {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 52px;
+
+    @include mobile {
+      font-size: 42px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__filter {
+    margin-right: 20px;
+  }
+
+  &__content {
+    max-width: 870px;
+    width: 100%;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__sort-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 298px;
+    margin-left: auto;
+  }
+
+  &__sort-filter {
+    margin-right: 44px;
+  }
+
+  &__sort-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+
+    &--view {
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &:focus {
+      border: 1px solid $grey;
+    }
+
+    &:hover {
+      .catalog__sort-icon {
+        fill: $accent;
+      }
+    }
+
+    &:active {
+      .catalog__sort-icon {
+        fill: $accent;
+      }
+    }
+
+    &.active {
+      .catalog__sort-icon {
+        fill: $accent;
+      }
+    }
+  }
+
+  &__filter__btn {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__sort-icon {
+    fill: $grey;
+    transition: fill 0.3s;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include minitablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @include mini {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &--line {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+.filter {
+  position: relative;
+  width: 250px;
+  padding-top: 40px;
+  background-color: $light;
+
+  @include tablet {
+    position: absolute;
+    z-index: 50;
+    top: 40px;
+    left: 0;
+    width: 320px;
+    padding: 40px 20px 40px;
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+
+    &.active {
+      transform: translateX(0);
+      box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
+    }
+
+  }
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+
+  }
+}
+
+.filter-price {
+
+  &__inner {
+    margin-bottom: 20px;
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__checkbox {
+    @extend %checkbox;
+
+    &:checked+.filter-price__fake-checkbox {
+      background-image: url('../images/icons/check-on.svg');
+      background-repeat: no-repeat;
+      background-size: 10px 8px;
+      background-position: center;
+      background-color: $accent;
+    }
+  }
+
+  &__fake-checkbox {
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $primary;
+  }
+
+  &__extra-controls {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input-box {
+    display: flex;
+    width: 100px;
+    padding: 12px 10px;
+    border: 1px solid $grey;
+    background-color: $light;
+    color: $primary;
+  }
+
+  &__input {
+    display: block;
+    width: 70px;
+    background-color: transparent;
+    color: $primary;
+    margin-left: 4px;
+  }
+
+  &__txt {
+    margin: 0 5px;
+  }
+
+  &__extra-controls {
+    margin-bottom: 20px;
+  }
+
+  &__button {
+    padding: 10px 73px;
+  }
+
+}
+
+.irs--round {
+  margin-bottom: 16px;
+}
+
+.irs--round .irs-min,
+.irs--round .irs-max {
+
+  display: none;
+}
+
+.irs-handle {
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: $accent;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.irs--round .irs-from,
+.irs--round .irs-to,
+.irs--round .irs-single {
+  background-color: $accent;
+}
+
+.irs--round .irs-bar {
+  background-color: $accent;
+}
+
+.irs--round .irs-handle {
+  border: 3px solid $accent;
+  box-shadow: none;
+}
+
+.irs--round .irs-from:before,
+.irs--round .irs-to:before,
+.irs--round .irs-single:before {
+  border-top-color: $accent;
+}
+
+
+
+.dropdown-sort {
+  position: relative;
+  max-width: 190px;
+  width: 100%;
+  border: 1px solid $grey;
+
+  @include mini {
+    max-width: 170px;
+  }
+
+  &__button {
+    position: relative;
+    padding: 10px 8px 10px 16px;
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: $primary;
+    transition: background-color 0.4s,
+      outline 0.4s;
+
+    @include mini {
+      padding: 4px;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      z-index: 1;
+      right: 8px;
+      top: 9px;
+      background-image: url('../../images/icons/chevron.svg');
+      background-repeat: no-repeat;
+      background-size: 24px 24px;
+      background-position: center right;
+      width: 24px;
+      height: 24px;
+
+      @include mini {
+        right: 2px;
+      }
+    }
+
+    &.active {
+      color: $accent;
+
+      &:before {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:focus {
+      outline: solid 1px $grey;
+    }
+
+    &:hover {
+      outline: solid 1px $accent;
+      color: $accent;
+    }
+
+    &:active {
+      background-color: $bg-accent;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+    transition: fill 0.4s;
+    pointer-events: none;
+  }
+
+  &__list {
+    position: absolute;
+    content: '';
+    z-index: 5;
+    width: 100%;
+    background-color: $light;
+    border-radius: 10px;
+    box-shadow: 4px 5px 12px rgba(0, 0, 0, .12);
+    transform-origin: 0 0;
+    transform: rotateX(-90deg);
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-in-out,
+      visibility 0.4s ease-in-out;
+
+    &.visible {
+      transform: rotateX(0deg);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__item {
+    padding: 10px 16px;
+    border-bottom: 1px solid $devider;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    &:first-child {
+      border-radius: 10px 10px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 10px 10px;
+      border-bottom: none;
+    }
+
+    &.active {
+      border-left: 2px solid $accent;
+    }
+
+    &:hover {
+      background-color: $bg-accent;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import 'global/fonts';
+@import 'global/reset';
+
+@import 'global/vars';
+@import 'global/mixins';
+@import '../../node_modules/rateyo/src/jquery.rateyo';
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/navigation/navigation.scss';
+@import '../../node_modules/swiper/modules/pagination/pagination.scss';
+@import '../../node_modules/swiper/modules/scrollbar/scrollbar.scss';
+@import 'global/ints';
+@import 'global/global';
+
+@import 'lego/header';
+@import 'lego/modal';
+@import 'lego/product';
+@import 'lego/footer';
