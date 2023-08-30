@@ -129,6 +129,8 @@
 
   &--txt {
     text-transform: lowercase;
+    font-weight: 600;
+    color: $accent;
 
     &::before {
       width: 0;
