@@ -71,14 +71,11 @@
 
   ///filter
 
-  if (window.location.pathname === '/catalog.html') {
-
+ 
     const openFilter = document.querySelector('.catalog__filter-btn');
     const closeFilter = document.querySelector('.filter__close-btn');
     const menuFilter = document.querySelector('.catalog__filter');
     const applyBtn = document.querySelector('.filter__button');
-
-    console.log(menuFilter);
 
     openFilter.addEventListener('click', function() {
       menuFilter.classList.add('active');
@@ -92,7 +89,9 @@
       menuFilter.classList.remove('active');
     });
 
-  }
+
+    ///end filter
+ 
 
 
 

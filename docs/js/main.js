@@ -128,107 +128,142 @@ console.log("test");
         },
 
          breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    // when window width is >= 480px
-    576: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    // when window width is >= 640px
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 30
-    }
-  }
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          // when window width is >= 480px
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          // when window width is >= 640px
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          }
+        }
     
     });
 
-
-
-$(function () {
-
-  //filter-slider
-
-  var $range = $(".filter-price__slider"),
-    $inputFrom = $(".filter-price__input-from"),
-    $inputTo = $(".filter-price__input-to"),
-    instance,
-    min = 0,
-    max = 2000,
-    from = 0,
-    to = 0;
-
-  $range.ionRangeSlider({
-	  skin: "round",
-      type: "double",
-      min: min,
-      max: max,
-      from: 200,
-      to: 800,
-      onStart: updateInputs,
-      onChange: updateInputs
-  });
-  instance = $range.data("ionRangeSlider");
-
-  function updateInputs (data) {
-  
-	  from = data.from;
-      to = data.to;
-    
-      $inputFrom.prop("value", from);
-      $inputTo.prop("value", to);	
-  }
-
-  $inputFrom.on("input", function () {
-    var val = $(this).prop("value");
-    
-    // validate
-    if (val < min) {
-        val = min;
-        
-    } else if (val > to) {
-        val = to;
-    }
-    
-    instance.update({
-        from: val
-    });
-    
-  });
-
-  $inputTo.on("input", function () {
-      var val = $(this).prop("value");
-    
-     // validate
-      if (val < from) {
-         val = from;
-      } else if (val > max) {
-          val = max;
-      }
-    
-      instance.update({
-          to: val
-      });
-  });
-
-  //Rate Yo!
-
-  $('.rating').rateYo({
-    starWidth: "21px",
-    normalFill: "#BBB9B9",
-    ratedFill: "#82334E",
-    readOnly: true,
-    spacing: "4px",
-    starSvg: '<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 0L12.9687 6.42574L20.4861 6.56434L14.4944 10.6743L16.6717 17.1857L10.5 13.3L4.32825 17.1857L6.50556 10.6743L0.513906 6.56434L8.0313 6.42574L10.5 0Z"/></svg>',  
-  });
 
 
   $(function () {
-    if (window.location.pathname === '/catalog.html') {
+
+    //filter-slider
+
+    var $range = $(".filter-price__slider"),
+      $inputFrom = $(".filter-price__input-from"),
+      $inputTo = $(".filter-price__input-to"),
+      instance,
+      min = 0,
+      max = 2000,
+      from = 0,
+      to = 0;
+
+    $range.ionRangeSlider({
+      skin: "round",
+        type: "double",
+        min: min,
+        max: max,
+        from: 200,
+        to: 800,
+        onStart: updateInputs,
+        onChange: updateInputs
+    });
+    instance = $range.data("ionRangeSlider");
+
+    function updateInputs (data) {
+    
+      from = data.from;
+        to = data.to;
+      
+        $inputFrom.prop("value", from);
+        $inputTo.prop("value", to);	
+    }
+
+    $inputFrom.on("input", function () {
+      var val = $(this).prop("value");
+      
+      // validate
+      if (val < min) {
+          val = min;
+          
+      } else if (val > to) {
+          val = to;
+      }
+      
+      instance.update({
+          from: val
+      });
+      
+    });
+
+    $inputTo.on("input", function () {
+        var val = $(this).prop("value");
+      
+      // validate
+        if (val < from) {
+          val = from;
+        } else if (val > max) {
+            val = max;
+        }
+      
+        instance.update({
+            to: val
+        });
+    });
+
+    //Rate Yo!
+
+    $('.rating').rateYo({
+      starWidth: "21px",
+      normalFill: "#BBB9B9",
+      ratedFill: "#82334E",
+      readOnly: true,
+      spacing: "4px",
+      starSvg: '<svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 0L12.9687 6.42574L20.4861 6.56434L14.4944 10.6743L16.6717 17.1857L10.5 13.3L4.32825 17.1857L6.50556 10.6743L0.513906 6.56434L8.0313 6.42574L10.5 0Z"/></svg>',  
+    });
+  });
+
+
+
+  //lang
+  const langButton = document.querySelector('.language__button');
+  const langList = document.querySelector('.language__list');
+  const langItem = langList.querySelectorAll('.language__link');
+
+  langButton.addEventListener('click', function() {
+    langList.classList.toggle('language__list--show');
+    this.classList.toggle('active');
+  });
+
+  langItem.forEach(function (listItem) {
+    listItem.addEventListener('click', function(e) {
+      langButton.innerText = this.innerText;
+
+      langItem.forEach(function (item) {
+        item.classList.remove('active');
+      });
+      
+      langButton.classList.remove('active');
+      this.classList.add('active');
+    });  
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target !== document.querySelector('.language__button')) {
+      langList.classList.remove('language__list--show');
+      // langItem.classList.remove('active');
+    };
+  });
+
+
+
+
+
+
         
       //dropdown-sort
 
@@ -237,9 +272,9 @@ $(function () {
       const sortItem = document.querySelectorAll('.dropdown-sort__item');
 
       sortButton.addEventListener('click', function() {
+        console.log('dropdown-sort');
         sortList.classList.toggle('visible');
         this.classList.toggle('active');
-
       });
 
       sortItem.forEach(function (listItem) {
@@ -274,6 +309,8 @@ $(function () {
       viewButton.forEach(function (item) {
         item.addEventListener('click', function () {
 
+          console.log('sort-view');
+
           viewButton.forEach(function (item) {
             item.classList.remove('active');
           });
@@ -297,38 +334,4 @@ $(function () {
 
         catalogList.classList.add('catalog__list--line');
       });
-    }
-  });
-
-});
-
-
-  //lang
-  const langButton = document.querySelector('.language__button');
-  const langList = document.querySelector('.language__list');
-  const langItem = langList.querySelectorAll('.language__link');
-
-  langButton.addEventListener('click', function() {
-    langList.classList.toggle('language__list--show');
-    this.classList.toggle('active');
-  });
-
-  langItem.forEach(function (listItem) {
-    listItem.addEventListener('click', function(e) {
-      langButton.innerText = this.innerText;
-
-      langItem.forEach(function (item) {
-        item.classList.remove('active');
-      });
-      
-      langButton.classList.remove('active');
-      this.classList.add('active');
-    });  
-  });
-
-  document.addEventListener('click', function (e) {
-    if (e.target !== document.querySelector('.language__button')) {
-      langList.classList.remove('language__list--show');
-      // langItem.classList.remove('active');
-    };
-  });
+  
