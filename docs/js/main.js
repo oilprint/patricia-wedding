@@ -189,7 +189,6 @@
       const sortItem = document.querySelectorAll('.dropdown-sort__item');
 
       sortButton.addEventListener('click', function() {
-        console.log('dropdown-sort');
         sortList.classList.toggle('visible');
         this.classList.toggle('active');
       });
@@ -225,8 +224,6 @@
 
       viewButton.forEach(function (item) {
         item.addEventListener('click', function () {
-
-          console.log('sort-view');
 
           viewButton.forEach(function (item) {
             item.classList.remove('active');

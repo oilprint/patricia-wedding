@@ -1,8 +1,5 @@
 
-
- 
   // modal
-
 
     const button = document.querySelector('[data-modal-button]');
     const modal = document.querySelector('[data-modal]');
@@ -31,46 +28,8 @@
     });
 
 
-  //modal sold
-
-  //  $(function () {
-  //   if (window.location.pathname === '/product-one.html') {
-
-  //     const btnSoldOpen = document.querySelector('[data-sold-open]');
-  //     const modalSold = document.querySelector('[data-sold]');
-  //     const btnSoldClose = document.querySelectorAll('[data-sold-close]');
-  //     // const bodyLock = document.querySelector('body'); 
-
-      
-     
-  //     btnSoldOpen.addEventListener('click', function () {
-  //       modalSold.classList.remove('hidden');
-  //       bodyLock.classList.add('locked')
-         
-  //     });
-
-  //     btnSoldClose.forEach(function (item) {
-  //       item.addEventListener('click', function () {
-  //         modalSold.classList.add('hidden');
-  //         bodyLock.classList.remove('lock');
-  //       });
-  //     });
-
-  //     modalSold.addEventListener('click', function ( ) {
-  //       modalSold.classList.add('hidden');
-  //       bodyLock.classList.remove('lock');
-  //     });
-
-  //     modalSold.querySelector('.modal').addEventListener('click', function (e) {
-  //       e.stopPropagation();
-  //     });
-
-  //   }
-  // });
-  
-
   ///filter
-  
+
    $(function () {
       if (window.location.pathname === '/catalog.html') {
 
