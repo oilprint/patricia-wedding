@@ -198,21 +198,21 @@
   right: 0;
   width: 100px;
   height: 30px;
-  background-color: rgba($accent, 0.7);
+  background-color: rgba($light, 0.7);
   transition: background-color 0.4s;
 
   &:hover {
-    background-color: rgba($light, 0.7);
+    background-color: rgba($accent, 0.7);
 
     .swiper-button__icon {
-      fill: $accent;
+      fill: $light;
     }
   }
 
 }
 
 .swiper-button__icon {
-  fill: $light;
+  fill: $accent;
   transition: fill 0.4s;
 
 }
