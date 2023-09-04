@@ -47,6 +47,7 @@ function scripts() {
     'app/js/header.js',  
     'app/js/modal.js',  
     'app/js/tab.js',
+    'app/js/swiper.js',
     'app/js/footer-accordeon.js',
     'app/js/main.js'  
   ])
