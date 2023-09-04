@@ -39,15 +39,15 @@
         const menuFilter = document.querySelector('.catalog__filter');
         const applyBtn = document.querySelector('.filter__button');
 
-        openFilter.addEventListener('click', function() {
+        openFilter.addEventListener('click', function () {
           menuFilter.classList.add('active');
         });
 
-        closeFilter.addEventListener('click', function() {
+        closeFilter.addEventListener('click', function () {
           menuFilter.classList.remove('active');
         });
 
-        applyBtn.addEventListener('click', function() {
+        applyBtn.addEventListener('click', function () {
           menuFilter.classList.remove('active');
         });
     
@@ -55,6 +55,9 @@
     });
 
     ///end filter
+
+
+      
  
 
 
