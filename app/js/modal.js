@@ -69,28 +69,28 @@
 
   ///filter
 
-  if (window.location.pathname === '/catalog.html') {
+  // if (window.location.pathname === '/catalog.html') {
 
-    const openFilter = document.querySelector('.catalog__filter-btn');
-    const closeFilter = document.querySelector('.filter__close-btn');
-    const menuFilter = document.querySelector('.catalog__filter');
-    const applyBtn = document.querySelector('.filter__button');
+  //   const openFilter = document.querySelector('.catalog__filter-btn');
+  //   const closeFilter = document.querySelector('.filter__close-btn');
+  //   const menuFilter = document.querySelector('.catalog__filter');
+  //   const applyBtn = document.querySelector('.filter__button');
 
-    console.log(menuFilter);
+  //   console.log(menuFilter);
 
-    openFilter.addEventListener('click', function() {
-      menuFilter.classList.add('active');
-    });
+  //   openFilter.addEventListener('click', function() {
+  //     menuFilter.classList.add('active');
+  //   });
 
-    closeFilter.addEventListener('click', function() {
-      menuFilter.classList.remove('active');
-    });
+  //   closeFilter.addEventListener('click', function() {
+  //     menuFilter.classList.remove('active');
+  //   });
 
-    applyBtn.addEventListener('click', function() {
-      menuFilter.classList.remove('active');
-    });
+  //   applyBtn.addEventListener('click', function() {
+  //     menuFilter.classList.remove('active');
+  //   });
 
-  }
+  // }
 
 
 
