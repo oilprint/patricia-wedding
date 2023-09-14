@@ -1,4 +1,4 @@
-
+console.log('modal');
   // modal
 
     const button = document.querySelector('[data-modal-button]');
