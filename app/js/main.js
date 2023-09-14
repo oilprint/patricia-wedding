@@ -69,10 +69,6 @@
       });
     });
 
-
-    
-
-
   $(function () {
 
     //filter-slider
@@ -249,6 +245,8 @@
         catalogList.classList.add('catalog__list--line');
       });
 
+
+      
 
 
 

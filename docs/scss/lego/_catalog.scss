@@ -91,12 +91,13 @@
 
   &__filter-btn {
     display: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  
     @include tablet {
-      display: block;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 44px;
+       height: 44px;
     }
   }
 
