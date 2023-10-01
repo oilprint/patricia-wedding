@@ -13,9 +13,9 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
 
-     <link rel="icon" href="favicon/favicon.ico" sizes="any">
-     <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
-     <link rel="apple-touch-icon" href="favicon/afavicon/pple-touch-icon.png/">
+  <link rel="icon" href="favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon/afavicon/pple-touch-icon.png/">
 
   <link rel="stylesheet" href="css/catalog.min.css">
 </head>
@@ -59,232 +59,234 @@
             The wilderly bride catalog
           </h1>
           <div class="catalog__wrapper">
-            <aside class="filter catalog__filter" data-menu-filter>
-              <div class="filter__item filter-price">
-                <h3 class="filter__title">
-                  Price filter
-                </h3>
-                <form class="filter-price__form" action="#">
-                  <div class="filter-price__inner">
-                    <label class="filter-price__label filter-price__label--check" for="sale">
-                      <input class="filter-price__checkbox" id="sale" type="checkbox">
-                      <span class="filter-price__fake-checkbox"></span>
-                      <span class="filter-price__checkbox-txt">
-                        Sale
-                      </span>
-                    </label>
-                    <label class="filter-price__label" for="price-1">
-                      <input class="filter-price__checkbox" id="price-1" type="checkbox">
-                      <span class="filter-price__fake-checkbox"></span>
-                      <span class="filter-price__checkbox-txt">
-                        $0 - $200
-                      </span>
-                    </label>
-                    <label class="filter-price__label" for="price-2">
-                      <input class="filter-price__checkbox" id="price-2" type="checkbox">
-                      <span class="filter-price__fake-checkbox"></span>
-                      <span class="filter-price__checkbox-txt">
-                        $200 - $500
-                      </span>
-                    </label>
+            <aside id="filter" class="filter catalog__filter" data-modal>
+              <div class="modal-inner catalog__modal-inner">
+                <div class="filter__item filter-price">
+                  <h3 class="filter__title">
+                    Price filter
+                  </h3>
+                  <form class="filter-price__form" action="#">
+                    <div class="filter-price__inner">
+                      <label class="filter-price__label filter-price__label--check" for="sale">
+                        <input class="filter-price__checkbox" id="sale" type="checkbox">
+                        <span class="filter-price__fake-checkbox"></span>
+                        <span class="filter-price__checkbox-txt">
+                          Sale
+                        </span>
+                      </label>
+                      <label class="filter-price__label" for="price-1">
+                        <input class="filter-price__checkbox" id="price-1" type="checkbox">
+                        <span class="filter-price__fake-checkbox"></span>
+                        <span class="filter-price__checkbox-txt">
+                          $0 - $200
+                        </span>
+                      </label>
+                      <label class="filter-price__label" for="price-2">
+                        <input class="filter-price__checkbox" id="price-2" type="checkbox">
+                        <span class="filter-price__fake-checkbox"></span>
+                        <span class="filter-price__checkbox-txt">
+                          $200 - $500
+                        </span>
+                      </label>
 
-                  </div>
-                  <input class="filter-price__slider" type="text">
-                  <div class="filter-price__extra-controls">
-                    <div class="filter-price__input-box">
-                      $
-                      <input type="text" class="filter-price__input filter-price__input-from" value="0" />
                     </div>
+                    <input class="filter-price__slider" type="text">
+                    <div class="filter-price__extra-controls">
+                      <div class="filter-price__input-box">
+                        $
+                        <input type="text" class="filter-price__input filter-price__input-from" value="0" />
+                      </div>
 
-                    <span class="filter-price__txt">
-                      to
-                    </span>
+                      <span class="filter-price__txt">
+                        to
+                      </span>
 
-                    <div class="filter-price__input-box">
-                      $
-                      <input type="text" class="filter-price__input filter-price__input-to" value="0" />
+                      <div class="filter-price__input-box">
+                        $
+                        <input type="text" class="filter-price__input filter-price__input-to" value="0" />
+                      </div>
+
                     </div>
+                    <button class="button button--light filter-price__button" type="submit">
+                      Filter
+                    </button>
+                  </form>
+                </div>
 
-                  </div>
-                  <button class="button button--light filter-price__button" type="submit">
-                    Filter
-                  </button>
-                </form>
+                <div class="filter__item ">
+                  <h3 class="filter__title">
+                    Color
+                  </h3>
+                  <form class="filter-color" action="#">
+                    <label class="filter-color__label">
+                      <input class="filter-color__input" type="checkbox" checked>
+                      <span class="filter-color__fake-input">
+                      </span>
+                      <span class="filter-color__text">
+                        White
+                      </span>
+                    </label>
+
+                    <label class="filter-color__label">
+                      <input class="filter-color__input" type="checkbox">
+                      <span class="filter-color__fake-input">
+                      </span>
+                      <span class="filter-color__text">
+                        Ivory
+                      </span>
+                    </label>
+                    <label class="filter-color__label">
+                      <input class="filter-color__input" type="checkbox">
+                      <span class="filter-color__fake-input">
+                      </span>
+                      <span class="filter-color__text">
+                        Pink
+                      </span>
+                    </label>
+                    <label class="filter-color__label">
+                      <input class="filter-color__input" type="checkbox">
+                      <span class="filter-color__fake-input">
+                      </span>
+                      <span class="filter-color__text">
+                        Blue
+                      </span>
+                    </label>
+                  </form>
+                </div>
+
+                <div class="filter__item">
+                  <h3 class="filter__title">
+                    Size
+                  </h3>
+                  <form class="filter-size" action="#">
+                    <label class="filter-size__label">
+                      <input class="filter-size__input" type="checkbox">
+                      <span class="filter-size__fake-size">
+                        XS
+                      </span>
+                    </label>
+                    <label class="filter-size__label">
+                      <input class="filter-size__input" type="checkbox">
+                      <span class="filter-size__fake-size">
+                        S
+                      </span>
+                    </label>
+                    <label class="filter-size__label">
+                      <input class="filter-size__input" type="checkbox" checked>
+                      <span class="filter-size__fake-size">
+                        M
+                      </span>
+                    </label>
+                    <label class="filter-size__label">
+                      <input class="filter-size__input" type="checkbox">
+                      <span class="filter-size__fake-size">
+                        L
+                      </span>
+
+                    </label>
+                    <label class="filter-size__label">
+                      <input class="filter-size__input" type="checkbox">
+                      <span class="filter-size__fake-size">
+                        XL
+                      </span>
+
+                    </label>
+                    <label class="filter-size__label">
+                      <input class="filter-size__input" type="checkbox">
+                      <span class="filter-size__fake-size">
+                        2L
+                      </span>
+
+                    </label>
+
+                  </form>
+                </div>
+
+                <div class="filter__item filter-style">
+                  <h3 class="filter__title">
+                    Style
+                  </h3>
+
+                  <form class="filter-style__form" action="#">
+                    <label class="filter-style__label">
+                      <input class="filter-style__checkbox" type="checkbox" checked>
+                      <span class="filter-style__fake-checkbox"></span>
+                      <span class="filter-style__txt">
+                        Civil Wedding
+                      </span>
+                    </label>
+                    <label class="filter-style__label">
+                      <input class="filter-style__checkbox" type="checkbox">
+                      <span class="filter-style__fake-checkbox"></span>
+                      <span class="filter-style__txt">
+                        Simple
+                      </span>
+                    </label>
+                    <label class="filter-style__label">
+                      <input class="filter-style__checkbox" type="checkbox">
+                      <span class="filter-style__fake-checkbox"></span>
+                      <span class="filter-style__txt">
+                        Elegant
+                      </span>
+                    </label>
+                    <label class="filter-style__label">
+                      <input class="filter-style__checkbox" type="checkbox">
+                      <span class="filter-style__fake-checkbox"></span>
+                      <span class="filter-style__txt">
+                        Boho
+                      </span>
+                    </label>
+                    <label class="filter-style__label">
+                      <input class="filter-style__checkbox" type="checkbox">
+                      <span class="filter-style__fake-checkbox"></span>
+                      <span class="filter-style__txt">
+                        Beach
+                      </span>
+                    </label>
+                    <label class="filter-style__label">
+                      <input class="filter-style__checkbox" type="checkbox">
+                      <span class="filter-style__fake-checkbox"></span>
+                      <span class="filter-style__txt">
+                        Romantic
+                      </span>
+                    </label>
+                    <label class="filter-style__label">
+                      <input class="filter-style__checkbox" type="checkbox">
+                      <span class="filter-style__fake-checkbox"></span>
+                      <span class="filter-style__txt">
+                        Embroidery
+                      </span>
+                    </label>
+                    <label class="filter-style__label">
+                      <input class="filter-style__checkbox" type="checkbox">
+                      <span class="filter-style__fake-checkbox"></span>
+                      <span class="filter-style__txt">
+                        Modern
+                      </span>
+                    </label>
+                  </form>
+                </div>
+
+                <button class="button button--light filter__button" type="submit" data-modal-close>
+                  Apply
+                </button>
+
+                <button class="filter__close-btn close-btn" type="button" data-modal-close>
+                  <svg class="close-btn__icon" width="32" height="32">
+                    <use href="images/symbol-defs.svg#icon-close">
+                    </use>
+                  </svg>
+                  <span class="sr-only">
+                    Close this window
+                  </span>
+                </button>
               </div>
-
-              <div class="filter__item ">
-                <h3 class="filter__title">
-                  Color
-                </h3>
-                <form class="filter-color" action="#">
-                  <label class="filter-color__label">
-                    <input class="filter-color__input" type="checkbox" checked>
-                    <span class="filter-color__fake-input">
-                    </span>
-                    <span class="filter-color__text">
-                      White
-                    </span>
-                  </label>
-
-                  <label class="filter-color__label">
-                    <input class="filter-color__input" type="checkbox">
-                    <span class="filter-color__fake-input">
-                    </span>
-                    <span class="filter-color__text">
-                      Ivory
-                    </span>
-                  </label>
-                  <label class="filter-color__label">
-                    <input class="filter-color__input" type="checkbox">
-                    <span class="filter-color__fake-input">
-                    </span>
-                    <span class="filter-color__text">
-                      Pink
-                    </span>
-                  </label>
-                  <label class="filter-color__label">
-                    <input class="filter-color__input" type="checkbox">
-                    <span class="filter-color__fake-input">
-                    </span>
-                    <span class="filter-color__text">
-                      Blue
-                    </span>
-                  </label>
-                </form>
-              </div>
-
-              <div class="filter__item">
-                <h3 class="filter__title">
-                  Size
-                </h3>
-                <form class="filter-size" action="#">
-                  <label class="filter-size__label">
-                    <input class="filter-size__input" type="checkbox">
-                    <span class="filter-size__fake-size">
-                      XS
-                    </span>
-                  </label>
-                  <label class="filter-size__label">
-                    <input class="filter-size__input" type="checkbox">
-                    <span class="filter-size__fake-size">
-                      S
-                    </span>
-                  </label>
-                  <label class="filter-size__label">
-                    <input class="filter-size__input" type="checkbox" checked>
-                    <span class="filter-size__fake-size">
-                      M
-                    </span>
-                  </label>
-                  <label class="filter-size__label">
-                    <input class="filter-size__input" type="checkbox">
-                    <span class="filter-size__fake-size">
-                      L
-                    </span>
-
-                  </label>
-                  <label class="filter-size__label">
-                    <input class="filter-size__input" type="checkbox">
-                    <span class="filter-size__fake-size">
-                      XL
-                    </span>
-
-                  </label>
-                  <label class="filter-size__label">
-                    <input class="filter-size__input" type="checkbox">
-                    <span class="filter-size__fake-size">
-                      2L
-                    </span>
-
-                  </label>
-
-                </form>
-              </div>
-
-              <div class="filter__item filter-style">
-                <h3 class="filter__title">
-                  Style
-                </h3>
-
-                <form class="filter-style__form" action="#">
-                  <label class="filter-style__label">
-                    <input class="filter-style__checkbox" type="checkbox" checked>
-                    <span class="filter-style__fake-checkbox"></span>
-                    <span class="filter-style__txt">
-                      Civil Wedding
-                    </span>
-                  </label>
-                  <label class="filter-style__label">
-                    <input class="filter-style__checkbox" type="checkbox">
-                    <span class="filter-style__fake-checkbox"></span>
-                    <span class="filter-style__txt">
-                      Simple
-                    </span>
-                  </label>
-                  <label class="filter-style__label">
-                    <input class="filter-style__checkbox" type="checkbox">
-                    <span class="filter-style__fake-checkbox"></span>
-                    <span class="filter-style__txt">
-                      Elegant
-                    </span>
-                  </label>
-                  <label class="filter-style__label">
-                    <input class="filter-style__checkbox" type="checkbox">
-                    <span class="filter-style__fake-checkbox"></span>
-                    <span class="filter-style__txt">
-                      Boho
-                    </span>
-                  </label>
-                  <label class="filter-style__label">
-                    <input class="filter-style__checkbox" type="checkbox">
-                    <span class="filter-style__fake-checkbox"></span>
-                    <span class="filter-style__txt">
-                      Beach
-                    </span>
-                  </label>
-                  <label class="filter-style__label">
-                    <input class="filter-style__checkbox" type="checkbox">
-                    <span class="filter-style__fake-checkbox"></span>
-                    <span class="filter-style__txt">
-                      Romantic
-                    </span>
-                  </label>
-                  <label class="filter-style__label">
-                    <input class="filter-style__checkbox" type="checkbox">
-                    <span class="filter-style__fake-checkbox"></span>
-                    <span class="filter-style__txt">
-                      Embroidery
-                    </span>
-                  </label>
-                  <label class="filter-style__label">
-                    <input class="filter-style__checkbox" type="checkbox">
-                    <span class="filter-style__fake-checkbox"></span>
-                    <span class="filter-style__txt">
-                      Modern
-                    </span>
-                  </label>
-                </form>
-              </div>
-
-              <button class="button button--light filter__button" type="submit">
-                Apply
-              </button>
-
-              <button class="filter__close-btn close-btn" type="button">
-                <svg class="close-btn__icon" width="32" height="32">
-                  <use href="images/symbol-defs.svg#icon-close">
-                  </use>
-                </svg>
-                <span class="sr-only">
-                  Close this window
-                </span>
-              </button>
             </aside>
 
             <div class="catalog__content">
               <div class="catalog__sort">
 
-                <button class="catalog__filter-btn" type="button" data-open-filter>
+                <button class="catalog__filter-btn" type="button" data-modal-button="filter">
                   <svg class="catalog__sort-icon" width="24" height="24">
                     <use href="./images/symbol-defs.svg#icon-filter"></use>
                   </svg>

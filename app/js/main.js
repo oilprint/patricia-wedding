@@ -245,6 +245,8 @@
         catalogList.classList.add('catalog__list--line');
       });
 
+    
+
 
       
 

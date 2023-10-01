@@ -1,65 +1,52 @@
 console.log('modal');
-  // modal
-
-    const button = document.querySelector('[data-modal-button]');
-    const modal = document.querySelector('[data-modal]');
-    const buttonClose = document.querySelectorAll('[data-modal-close]');
-    
-
-    button.addEventListener('click', function () {
-      modal.classList.toggle('modal--active')
-      bodyLock.classList.add('lock')
-    });
-
-    buttonClose.forEach(function (item) {
-      item.addEventListener('click', function () {
-      
-        modal.classList.remove('modal--active');
-        bodyLock.classList.remove('lock')
-      })
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.usernav')) {
-        modal.classList.remove('modal--active');
-        bodyLock.classList.remove('lock')
-        
-      }
-    });
-
-
-  ///filter
-
-   $(function () {
-      if (window.location.pathname === '/catalog.html') {
-
-
-        const openFilter = document.querySelector('.catalog__filter-btn');
-        const closeFilter = document.querySelector('.filter__close-btn');
-        const menuFilter = document.querySelector('.catalog__filter');
-        const applyBtn = document.querySelector('.filter__button');
-
-        openFilter.addEventListener('click', function () {
-          menuFilter.classList.add('active');
-        });
-
-        closeFilter.addEventListener('click', function () {
-          menuFilter.classList.remove('active');
-        });
-
-        applyBtn.addEventListener('click', function () {
-          menuFilter.classList.remove('active');
-        });
-    
-      }
-    });
-
-    ///end filter
-
-
-      
  
+  // modals
+    const modalButtons = document.querySelectorAll('[data-modal-button]');
+    const modalCloseButtons = document.querySelectorAll('[data-modal-close]');
+    const allModals = document.querySelectorAll ('[data-modal]');
+    const bodyLock = document.querySelector('body'); 
 
+    console.log(modalButtons);
+    console.log(modalCloseButtons);
+    // // Кнопки открытия модалки
+    modalButtons.forEach(function (item) {
+      item.addEventListener('click', function () {
+        console.log("clickkkk");
+
+        const modalId = this.dataset.modalButton;
+        const modal = document.querySelector('#' + modalId);
+
+        console.log(modal);
+        modal.classList.toggle('active');
+        bodyLock.classList.add('lock');
+
+        //     // Делаем так, чтобы внутри модалки коик не передавался выше родителю: находим внутри открываемой модалки блок modal-inner и запрещаем ему передавать клики наверх (его родителю)
+
+            modal.querySelector('.modal-inner').addEventListener('click', function (e) {
+              e.stopPropagation();
+            });
+      });
+    });
+
+      // // Кнопки закрытия модалки
+    modalCloseButtons.forEach(function (item) {
+      item.addEventListener('click', function () {
+    
+        const modal = this.closest('[data-modal]');
+        console.log(modal);
+  
+        modal.classList.remove('active');
+        bodyLock.classList.remove('lock');
+      });
+    });
+
+// // Закрытие по клику по всему экрану
+    allModals.forEach(function (item) {
+      item.addEventListener('click', function () {
+        this.classList.remove('active');
+        bodyLock.classList.remove('lock');
+      });
+    });
 
 
 

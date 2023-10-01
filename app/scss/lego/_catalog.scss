@@ -24,6 +24,10 @@
     margin-right: 20px;
   }
 
+  &__modal-inner {
+
+  }
+
   &__content {
     max-width: 870px;
     width: 100%;
@@ -131,6 +135,7 @@
   width: 250px;
   padding-top: 40px;
   background-color: $light;
+  
 
   @include tablet {
     position: absolute;
@@ -169,6 +174,13 @@
     }
 
   }
+}
+
+.modal-inner {
+ overflow: hidden;
+ overflow-y: scroll;
+ -webkit-overflow-scrolling: touch;
+
 }
 
 .filter-price {

@@ -182,6 +182,10 @@
     transform: translateX(0);
   }
 
+  &__inner {
+    height: 100vh;
+  }
+
   &__top {
     display: flex;
     justify-content: space-around;
