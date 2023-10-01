@@ -1,8 +1,8 @@
 <div align="center">
-<img src="https://github.com/oilprint/bulldogclub/blob/main/bulldog.jpg" target="_blank" align="center" style="width: 100%" />
+<img src="https://github.com/oilprint/patricia-wedding/blob/main/wedding.jpg" target="_blank" align="center" style="width: 100%" />
 </div>  
 
-# [website](https://oilprint.github.io/bulldogclub/ )
+# [website](https://oilprint.github.io/patricia-wedding/ )
 
 This repository contains a stunning e-commerce website specializing in bridal gowns.
 
