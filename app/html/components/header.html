@@ -27,98 +27,98 @@
         </svg>
       </button>
 
-      <!-- <div class="backdrop hidden" data-modal> -->
-      <div id="mobile" class="burger-menu" data-modal>
-        <div class="modal-inner burger-menu__inner">
-          <div class="burger-menu__top">
-            <div class="language burger-menu__language">
-              <button class="language__button" type="button" data-value="en">
-                En
-              </button>
+      <div id="mobile" class="backdrop hidden" data-modal>
+        <div class="modal modal--mobile">
+          <div class="mobile-menu">
+            <div class="mobile-menu__top">
+              <div class="language mobile-menu__language">
+                <button class="language__button" type="button" data-value="en">
+                  En
+                </button>
 
-              <ul class="language__list">
-                <li class="language__item">
-                  <a class="language__link active" href="#">
-                    En
-                  </a>
-                  <a class="language__link" href="#">
-                    Uk
+                <ul class="language__list">
+                  <li class="language__item">
+                    <a class="language__link active" href="#">
+                      En
+                    </a>
+                    <a class="language__link" href="#">
+                      Uk
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+              <ul class="usernav">
+                <li class="usernav__item">
+                  <a class="icon-button" href="#">
+                    <span class="sr-only">
+                      Your account page
+                    </span>
+                    <svg class="icon-button__icon" width="28" height="28">
+                      <use href="./images/symbol-defs.svg#icon-account"></use>
+                    </svg>
                   </a>
                 </li>
-
+                <li class="usernav__item">
+                  <a class="icon-button" href="#">
+                    <span class="sr-only">
+                      Wishlist
+                    </span>
+                    <svg class="icon-button__icon" width="28" height="28">
+                      <use href="./images/symbol-defs.svg#icon-wishlist">
+                      </use>
+                    </svg>
+                    <span class="usernav__number">
+                      10
+                    </span>
+                  </a>
+                </li>
               </ul>
-
             </div>
-            <ul class="usernav">
-              <li class="usernav__item">
-                <a class="icon-button" href="#">
-                  <span class="sr-only">
-                    Your account page
-                  </span>
-                  <svg class="icon-button__icon" width="28" height="28">
-                    <use href="./images/symbol-defs.svg#icon-account"></use>
-                  </svg>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link @@home" href="index.html">
+                  Home
                 </a>
               </li>
-              <li class="usernav__item">
-                <a class="icon-button" href="#">
-                  <span class="sr-only">
-                    Wishlist
-                  </span>
-                  <svg class="icon-button__icon" width="28" height="28">
-                    <use href="./images/symbol-defs.svg#icon-wishlist">
-                    </use>
-                  </svg>
-                  <span class="usernav__number">
-                    10
-                  </span>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link @@dresses" href="catalog.html">
+                  Dresses
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                  Wedding party
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                  Accessories
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link @@gallery" href="gallery.html">
+                  Gallery
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link @@contact" href="contact.html">
+                  Contact us
                 </a>
               </li>
             </ul>
+            <form class="mobile-menu__form form" action="#">
+              <label class="sr-only" for="search">Search</label>
+              <input class="form__input" type="text" name="search" id="search" placeholder="Search">
+              <button class="icon-button form__btn">
+                <svg class="icon-button__icon" width="28" height="28">
+                  <use href="./images/symbol-defs.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
           </div>
-          <ul class="burger-menu__list">
-            <li class="burger-menu__item">
-              <a class="burger-menu__link @@home" href="index.html">
-                Home
-              </a>
-            </li>
-            <li class="burger-menu__item">
-              <a class="burger-menu__link @@dresses" href="catalog.html">
-                Dresses
-              </a>
-            </li>
-            <li class="burger-menu__item">
-              <a class="burger-menu__link" href="#">
-                Wedding party
-              </a>
-            </li>
-            <li class="burger-menu__item">
-              <a class="burger-menu__link" href="#">
-                Accessories
-              </a>
-            </li>
-            <li class="burger-menu__item">
-              <a class="burger-menu__link @@gallery" href="gallery.html">
-                Gallery
-              </a>
-            </li>
-            <li class="burger-menu__item">
-              <a class="burger-menu__link @@contact" href="contact.html">
-                Contact us
-              </a>
-            </li>
-          </ul>
-          <form class="burger-menu__form form" action="#">
-            <label class="sr-only" for="search">Search</label>
-            <input class="form__input" type="text" name="search" id="search" placeholder="Search">
-            <button class="icon-button form__btn">
-              <svg class="icon-button__icon" width="28" height="28">
-                <use href="./images/symbol-defs.svg#icon-search"></use>
-              </svg>
-            </button>
-          </form>
-
-          <button class="close-btn burger-menu__close-btn" type="button" data-modal-close>
+          <button class="close-btn mobile-menu__close-btn" type="button" data-modal-close>
             <svg class="close-btn__icon" width="32" height="32">
               <use href="images/symbol-defs.svg#icon-close">
               </use>
@@ -126,9 +126,6 @@
           </button>
         </div>
       </div>
-      <!-- </div> -->
-
-
 
       <a class="logo header__logo" href="index.html">
         <img class="logo__img" src="images/logo.svg" alt="Patriia Wedding Logo" width="320" height="80">
@@ -159,7 +156,7 @@
           </a>
         </li>
         <li class="usernav__item">
-          <button class="icon-button" type="button" data-modal-button="modal">
+          <button class="icon-button" type="button" data-modal-button="shipping-modal">
             <span class="sr-only">
               shopping bag
             </span>
@@ -171,130 +168,130 @@
             </span>
           </button>
 
-          <!-- <div class="backdrop hidden"> -->
-          <div id="modal" class="modal" data-modal>
-            <div class="modal-inner">
-              <h2 class="modal__title">
-                Shopping bag (
-                <span class="modal__quantity">
-                  2
-                </span>
-                )
-              </h2>
-              <ul class="modal__list">
-                <li class="modal__item">
-                  <article class="shopping-card modal__shopping-card">
-                    <img class="shopping-card__img" src="images/product/catalog/dress-02.jpg"
-                      alt="Wedding dress Calliope" width="100" height="150">
-                    <div class="shopping-card__content">
-                      <h3 class="shopping-card__headline">
-                        Calliope
-                      </h3>
-                      <ul class="shopping-card__info">
-                        <li class="shopping-card__info-item">
-                          Color:
-                          <span class="shopping-card__value">
-                            White
+          <div id="shipping-modal" class="backdrop hidden" data-modal>
+            <div class="modal modal--shipping">
+              <div id="shipping-modal">
+                  <h2 class="shipping-modal__title">
+                    Shopping bag (
+                    <span class="shipping-modal__quantity">
+                      2
+                    </span>
+                    )
+                  </h2>
+                  <ul class="shipping-modal__list">
+                    <li class="shipping-modal__item">
+                      <article class="shopping-card modal__shopping-card">
+                        <img class="shopping-card__img" src="images/product/catalog/dress-02.jpg"
+                          alt="Wedding dress Calliope" width="100" height="150">
+                        <div class="shopping-card__content">
+                          <h3 class="shopping-card__headline">
+                            Calliope
+                          </h3>
+                          <ul class="shopping-card__info">
+                            <li class="shopping-card__info-item">
+                              Color:
+                              <span class="shopping-card__value">
+                                White
+                              </span>
+                            </li>
+                            <li class="shopping-card__info-item">
+                              Size:
+                              <span class="shopping-card__value">
+                                M
+                              </span>
+                            </li>
+                          </ul>
+                          <div class="shopping-card__links">
+                            <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
+                              Edit
+                            </a>
+                            <button class="shopping-card__btn" type="button">
+                              Remove
+                            </button>
+                          </div>
+                        </div>
+                        <div class="shopping-card__price">
+                          <span class="shopping-card__price-current">
+                            <span class="currency">
+                              $
+                            </span>
+                            900.00
                           </span>
-                        </li>
-                        <li class="shopping-card__info-item">
-                          Size:
-                          <span class="shopping-card__value">
-                            M
+                          <span class="shopping-card__price-old">
+                            <span class="currency">
+                              $
+                            </span>
+                            900.00
                           </span>
-                        </li>
-                      </ul>
-                      <div class="shopping-card__links">
-                        <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
-                          Edit
-                        </a>
-                        <button class="shopping-card__btn" type="button">
-                          Remove
-                        </button>
-                      </div>
-                    </div>
-                    <div class="shopping-card__price">
-                      <span class="shopping-card__price-current">
-                        <span class="currency">
-                          $
-                        </span>
-                        900.00
-                      </span>
-                      <span class="shopping-card__price-old">
-                        <span class="currency">
-                          $
-                        </span>
-                        900.00
-                      </span>
-                  </article>
-                </li>
-                <li class="modal__item">
-                  <article class="shopping-card modal__shopping-card">
-                    <img class="shopping-card__img" src="images/product/accessories/nicola.jpg"
-                      alt="Wedding accessories nicola" width="100" height="150">
-                    <div class="shopping-card__content">
-                      <h3 class="shopping-card__headline">
-                        Nicola Bathie Perry
-                      </h3>
-                      <ul class="shopping-card__info">
-                        <li class="shopping-card__info-item">
-                          Color:
-                          <span class="shopping-card__value">
-                            White
+                      </article>
+                    </li>
+                    <li class="shipping-modal__item">
+                      <article class="shopping-card modal__shopping-card">
+                        <img class="shopping-card__img" src="images/product/accessories/nicola.jpg"
+                          alt="Wedding accessories nicola" width="100" height="150">
+                        <div class="shopping-card__content">
+                          <h3 class="shopping-card__headline">
+                            Nicola Bathie Perry
+                          </h3>
+                          <ul class="shopping-card__info">
+                            <li class="shopping-card__info-item">
+                              Color:
+                              <span class="shopping-card__value">
+                                White
+                              </span>
+                            </li>
+                            <li class="shopping-card__info-item">
+                              Size:
+                              <span class="shopping-card__value">
+                                M
+                              </span>
+                            </li>
+                          </ul>
+                          <div class="shopping-card__links">
+                            <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
+                              Edit
+                            </a>
+                            <button class="shopping-card__btn" type="button">
+                              Remove
+                            </button>
+                          </div>
+                        </div>
+                        <div class="shopping-card__price">
+                          <span class="shopping-card__price-current">
+                            <span class="currency">
+                              $
+                            </span>
+                            25.00
                           </span>
-                        </li>
-                        <li class="shopping-card__info-item">
-                          Size:
-                          <span class="shopping-card__value">
-                            M
+                          <span class="shopping-card__price-old">
+                            <span class="currency">
+                              $
+                            </span>
+                            30.00
                           </span>
-                        </li>
-                      </ul>
-                      <div class="shopping-card__links">
-                        <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
-                          Edit
-                        </a>
-                        <button class="shopping-card__btn" type="button">
-                          Remove
-                        </button>
-                      </div>
-                    </div>
-                    <div class="shopping-card__price">
-                      <span class="shopping-card__price-current">
-                        <span class="currency">
-                          $
-                        </span>
-                        25.00
-                      </span>
-                      <span class="shopping-card__price-old">
-                        <span class="currency">
-                          $
-                        </span>
-                        30.00
-                      </span>
-                  </article>
-                </li>
+                      </article>
+                    </li>
 
-              </ul>
-              <div class="modal__sum">
-                <p class="modal__subtitle">
-                  TOTAL:
-                </p>
-                <span class="modal__price">
-                  <span class="curency">
-                    $
-                  </span>
-                  1,225.00
-                </span>
+                  </ul>
+                  <div class="shipping-modal__sum">
+                    <p class="shipping-modal__subtitle">
+                      TOTAL:
+                    </p>
+                    <span class="shipping-modal__price">
+                      <span class="curency">
+                        $
+                      </span>
+                      1,225.00
+                    </span>
+                  </div>
+                  <a class="button shipping-modal__button" href="shopping-bag.html">
+                    Proceed to checkout
+                  </a>
+                  <button class="shipping-modal__link link" data-modal-close>
+                    Keep shopping
+                  </button>
               </div>
-              <a class="button modal__button" href="shopping-bag.html">
-                Proceed to checkout
-              </a>
-              <button class="modal__link link" data-modal-close>
-                Keep shopping
-              </button>
-
-              <button class="modal__close-btn close-btn" type="button" data-modal-close>
+              <button class="shipping-modal__close-btn close-btn" type="button" data-modal-close>
                 <svg class="close-btn__icon" width="24" height="24">
                   <use href="images/symbol-defs.svg#icon-close">
                   </use>
@@ -302,7 +299,6 @@
               </button>
             </div>
           </div>
-          <!-- </div> -->
         </li>
       </ul>
     </div>

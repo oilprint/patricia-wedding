@@ -59,6 +59,18 @@ main {
 .section {
   padding-top: 90px;
 
+  @include minidesk {
+    padding-top: 70px;
+  }
+
+  @include tablet {
+    padding-top: 50px;
+  }
+
+  @include minitablet {
+    padding-top: 20px;
+  }
+
   &--small {
     padding-bottom: 0;
   }
@@ -79,17 +91,7 @@ main {
     }
   }
 
-  @include minidesk {
-    padding-top: 70px;
-  }
-
-  @include tablet {
-    padding-top: 50px;
-  }
-
-  @include tablet-land {
-    padding-top: 50px;
-  }
+  
 }
 
 .form {
