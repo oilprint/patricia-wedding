@@ -1,37 +1,188 @@
-.modal {
-  position: absolute;
-  z-index: 50;
+.backdrop {
+  position: fixed;
+  left: 0;
   top: 0;
-  right: 0;
-  padding: 50px 40px;
-  width: 540px;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: rgba($black, 0.3);
+  backdrop-filter: blur(1px);
+  transition: opacity 0.5s;
+
+  &.hidden {
+    opacity: 0;
+    pointer-events: none;
+
+    .modal {
+
+      transform: translateX(-100%);
+
+      &--shopping {
+        transform: translateX(100%);
+      }
+
+      &--sold {
+        transform: scale(0);
+      }
+    }
+  }
+}
+
+.modal {
+  position: relative;
+  padding: 40px;
   background-color: $light;
   border-radius: 6px;
   box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
-  transform-origin: 0 0;
-  transform: rotateX(-90deg);
-  visibility: hidden;
-  opacity: 0;
-  transition: transform 0.5s;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  transition: transform 0.4s ease-in-out;
 
-  @include mobile {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 70px;
-    width: 100%;
-    padding: 40px 20px 40px;
+  @media (max-width: 375px) and (orientation: landscape) {
+    margin: 20px auto;
+    overflow-y: scroll;
   }
 
-  &--active {
-    transform: rotateX(0deg);
-    visibility: visible;
-    opacity: 1;
+  &--mobile {
+    width: 100%;
+    padding-top: 60px;
+    transform: translateX(0);
+  }
+
+  &--shopping {
+    margin-left: auto;
+    margin-bottom: auto;
+    transform: translateX(0);
+  }
+
+  &--filter {
+    margin-right: auto;
+    transform: translateX(0);
+  }
+
+  &--sold {
+    margin: auto;
+    transform: scale(1);
+  }
+
+   &__btn {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+
+     &--mobile {
+      right: 0;
+      left: 10px;
+     }
+   }
+}
+
+.mobile-menu {
+  background-color: $light;
+
+  &__top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @include mobile {
+      @media (orientation: landscape) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__language {
+    margin-right: 20px;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+
+    &::before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $accent;
+      transform: scale(0);
+      transition: transform 0.4s;
+    }
+
+    &:focus {
+      outline: solid 1px $accent;
+      outline-offset: 4px;
+      border-radius: 4px;
+    }
+
+    &:active {
+      background-color: $accent;
+      color: $light;
+    }
+
+    &.current {
+      color: $accent;
+
+      &::before {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &__form {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.burger {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  &__icon {
+    fill: $primary;
+  }
+
+  @include tablet {
+    display: flex;
+  }
+}
+
+.shopping-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 540px;
+
+  @include mobile {   
+    width: 100%;
+    padding: 40px 20px 40px;
   }
 
   &__title {
     font-size: 24px;
     margin-bottom: 20px;
+
+    &--center {
+      text-align: center;
+    }
+
   }
 
   &__list {
@@ -139,34 +290,6 @@
     margin: 0 auto;
   }
 
-  &__close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-}
-
-.backdrop {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 999;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  background-color: rgba($black, 0.3);
-  backdrop-filter: blur(1px);
-  transition: opacity 0.5s;
-
-  &.hidden {
-    opacity: 0;
-    pointer-events: none;
-
-    .modal-sold {
-      transform: scale(0);
-      opacity: 0;
-    }
-  }
 }
 
 .modal-sold {
@@ -175,9 +298,9 @@
   width: 90%;
   margin: auto;
   text-align: center;
-  transform: scale(1);
+  transform: scale(0);
   visibility: visible;
-  opacity: 1;
+  opacity: 0;
   box-shadow: none;
   transition: transform 0.5s, opacity 0.5s;
 

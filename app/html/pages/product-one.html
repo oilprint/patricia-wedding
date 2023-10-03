@@ -13,9 +13,9 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
 
-     <link rel="icon" href="favicon/favicon.ico" sizes="any">
-     <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
-     <link rel="apple-touch-icon" href="favicon/afavicon/pple-touch-icon.png/">
+  <link rel="icon" href="favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon/afavicon/pple-touch-icon.png/">
 
   <link rel="stylesheet" href="css/product.min.css">
 </head>
@@ -64,12 +64,12 @@
             <div class="product-item__slider slider">
 
               <div class="slider__nav swiper">
-                <div class="swiper-button-prev">
+                <div class="swiper-button swiper-button-prev">
                   <svg class="swiper-button__icon" width="24" height="24">
                     <use href="images/symbol-defs.svg#icon-chevron"></use>
                   </svg>
                 </div>
-                <div class="swiper-button-next">
+                <div class="swiper-button swiper-button-next">
                   <svg class="swiper-button__icon" width="24" height="24">
                     <use href="images/symbol-defs.svg#icon-chevron"></use>
                   </svg>
@@ -94,7 +94,7 @@
               </div>
 
               <div class="slider__main swiper">
-                <div class="swiper-wrapper" pagination="true">
+                <div class="swiper-wrapper">
 
                   <div class="swiper-slide">
                     <img class="swiper__img" src="images/product/calliope/img-01.jpg" alt="Aurora Collection Calliope">
@@ -237,15 +237,58 @@
                 Add to card
               </button>
 
-              <button class="wishlist product-item__wishlist" type="button">
-                <span class="sr-only">
-                  Add to wishlist
-                </span>
-                <svg class="wishlist__icon" width="24" height="24">
-                  <use href="images/symbol-defs.svg#icon-wish"></use>
-                </svg>
-              </button>
+              <div id="sold" class="backdrop hidden" data-modal>
+                <div class="modal modal--sold">
+                  <button class="modal__btn close-btn" type="button" data-modal-close>
+                    <svg class="close-btn__icon" width="32" height="32">
+                      <use href="images/symbol-defs.svg#icon-close">
+                      </use>
+                    </svg>
+                    <span class="sr-only">
+                      Close this window
+                    </span>
+                  </button>
 
+                  <div class="shopping-modal shopping-modal--sold">
+                    <h2 class="shopping-modal__title shopping-modal__title--center">
+                      Product Successfully Added To Your Shopping Cart
+                    </h2>
+                    <div class="shopping-modal__box-txt">
+                      <p class="shopping-modal__txt">
+                        There are 2 items in your cart
+                      </p>
+                      <p class="shopping-modal__txt">
+                        Total Price:
+                        <span class="shopping-modal__price-current">
+                          <span class="currency">
+                            $
+                          </span>
+                          1,200.00
+                        </span>
+                      </p>
+                    </div>
+                    <a class="button shopping-modal__button" href="shopping-bag.html">
+                      Checkout
+                    </a>
+                    <button class="modal__link link">
+                      Keep shopping
+                    </button>
+                  </div>
+
+                </div>
+
+
+
+                <button class="wishlist product-item__wishlist" type="button">
+                  <span class="sr-only">
+                    Add to wishlist
+                  </span>
+                  <svg class="wishlist__icon" width="24" height="24">
+                    <use href="images/symbol-defs.svg#icon-wish"></use>
+                  </svg>
+                </button>
+
+              </div>
             </div>
           </div>
 
@@ -271,7 +314,8 @@
                   <div class="product-tabs__info-inner">
                     <div class="product-tabs__txt-content">
                       <p class="product-tabs__info-txt">
-                        Experience timeless beauty and unmatched elegance with our A-line silhouette gown, crafted from
+                        Experience timeless beauty and unmatched elegance with our A-line silhouette gown, crafted
+                        from
                         luxurious ivory fabric. Adorned with delicate hand-embroidered lace appliqués, Swarovski
                         crystals,
                         and
@@ -279,9 +323,11 @@
                       </p>
                       <p class="product-tabs__info-txt">
                         The sweetheart neckline and illusion sleeves add a modern
-                        twist, while the chapel-length train adds grandeur to your entrance. This dress is designed to
+                        twist, while the chapel-length train adds grandeur to your entrance. This dress is designed
+                        to
                         make
-                        every bride feel like a true vision of grace on her special day, available exclusively through
+                        every bride feel like a true vision of grace on her special day, available exclusively
+                        through
                         our
                         e-commerce store.
                       </p>
@@ -428,7 +474,7 @@
               <article class="product-extra extra-item__product-extra">
                 <a class="product-extra__link" href="#">
                   <div class="product-extra__img-box">
-                    <img class="product-extra__img" src="images/product/accessories/nicola.jpg"
+                    <img class="product-extra__image" src="images/product/accessories/nicola.jpg"
                       alt="Nicola Bathie Perry" width="270" height="350">
                   </div>
                   <div class="product-extra__content">
@@ -471,7 +517,7 @@
               <article class="product-extra extra-item__product-extra">
                 <a class="product-extra__link" href="#">
                   <div class="product-extra__img-box">
-                    <img class="product-extra__img" src="images/product/accessories/pear-hair.jpg"
+                    <img class="product-extra__image" src="images/product/accessories/pear-hair.jpg"
                       alt="aruba long pearl hair vine" width="270" height="350">
                   </div>
                   <div class="product-extra__content">
@@ -509,7 +555,7 @@
               <article class="product-extra extra-item__product-extra">
                 <a class="product-extra__link" href="#">
                   <div class="product-extra__img-box">
-                    <img class="product-extra__img" src="images/product/accessories/ceramic-big.jpg"
+                    <img class="product-extra__image" src="images/product/accessories/ceramic-big.jpg"
                       alt="paradise ivory ceramic flower hair pins" width="270" height="350">
                   </div>
                   <div class="product-extra__content">
@@ -547,7 +593,7 @@
               <article class="product-extra extra-item__product-extra">
                 <a class="product-extra__link" href="#">
                   <div class="product-extra__img-box">
-                    <img class="product-extra__img" src="images/product/accessories/ceramic-hair.jpg"
+                    <img class="product-extra__image" src="images/product/accessories/ceramic-hair.jpg"
                       alt="paradise ivory ceramic flower hair pins" width="270" height="350">
                   </div>
                   <div class="product-extra__content">
@@ -584,7 +630,7 @@
         </div>
       </section>
 
-      <section class="review section--big">
+      <section class="review section section--big">
         <div class="container">
           <div class="review__top">
             <h2 class="review__title title">
@@ -740,7 +786,7 @@
               <article class="product-extra extra-item__product-extra">
                 <a class="product-extra__link" href="#">
                   <div class="product-extra__img-box">
-                    <img class="product-card__image" src="images/product/catalog/dress-01.jpg"
+                    <img class="product-extra__image" src="images/product/catalog/dress-01.jpg"
                       alt="Aurora Collection Emanuela" width="210" height="280">
                   </div>
                   <div class="product-extra__content">
@@ -780,7 +826,7 @@
               <article class="product-extra extra-item__product-extra">
                 <a class="product-extra__link" href="#">
                   <div class="product-extra__img-box">
-                    <img class="product-card__image" src="images/product/catalog/dress-06.jpg"
+                    <img class="product-extra__image" src="images/product/catalog/dress-06.jpg"
                       alt="Aurora Collection Giglio" width="210" height="280">
                   </div>
                   <div class="product-extra__content">
@@ -815,7 +861,7 @@
               <article class="product-extra extra-item__product-extra">
                 <a class="product-extra__link" href="#">
                   <div class="product-extra__img-box">
-                    <img class="product-card__image" src="images/product/accessories/nicola.jpg"
+                    <img class="product-extra__image" src="images/product/accessories/nicola.jpg"
                       alt="Nicola Bathie Morwen" width="210" height="280">
                   </div>
                   <div class="product-extra__content">
@@ -849,7 +895,7 @@
               <article class="product-extra extra-item__product-extra">
                 <a class="product-extra__link" href="#">
                   <div class="product-extra__img-box">
-                    <img class="product-card__image" src="images/product/catalog/dress-05.jpg"
+                    <img class="product-extra__image" src="images/product/catalog/dress-05.jpg"
                       alt="Aurora Collection Jumala" width="210" height="280">
                   </div>
                   <div class="product-extra__content">
@@ -883,7 +929,7 @@
               <article class="product-extra extra-item__product-extra">
                 <a class="product-extra__link" href="#">
                   <div class="product-extra__img-box">
-                    <img class="product-card__image" src="images/product/catalog/dress-03.jpg"
+                    <img class="product-extra__image" src="images/product/catalog/dress-03.jpg"
                       alt="Aurora Collection Iona" width="210" height="280">
                   </div>
                   <div class="product-extra__content">

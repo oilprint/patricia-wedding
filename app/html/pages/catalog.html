@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      <section class="catalog section">
+      <section class="catalog">
         <div class="container">
           <h1 class="title catalog__title">
             The wilderly bride catalog
@@ -94,7 +94,7 @@
                   <div class="filter-price__extra-controls">
                     <div class="filter-price__input-box">
                       $
-                      <input type="text" class="filter-price__input filter-price__input-from" value="0" />
+                      <input type="text" class="filter-price__input filter-price__input-from" value="0">
                     </div>
 
                     <span class="filter-price__txt">
@@ -103,7 +103,7 @@
 
                     <div class="filter-price__input-box">
                       $
-                      <input type="text" class="filter-price__input filter-price__input-to" value="0" />
+                      <input type="text" class="filter-price__input filter-price__input-to" value="0">
                     </div>
 
                   </div>
@@ -274,7 +274,7 @@
             <div id="filter" class="backdrop hidden" data-modal>
               <div class="modal modal--filter">
 
-                <button class="filter__close-btn close-btn" type="button" data-modal-close>
+                <button class="modal__btn close-btn" type="button" data-modal-close>
                   <svg class="close-btn__icon" width="32" height="32">
                     <use href="images/symbol-defs.svg#icon-close">
                     </use>
@@ -291,22 +291,22 @@
                     </h3>
                     <form class="filter-price__form" action="#">
                       <div class="filter-price__inner">
-                        <label class="filter-price__label filter-price__label--check" for="sale">
-                          <input class="filter-price__checkbox" id="sale" type="checkbox">
+                        <label class="filter-price__label filter-price__label--check" for="sale-1">
+                          <input class="filter-price__checkbox" id="sale-1" type="checkbox">
                           <span class="filter-price__fake-checkbox"></span>
                           <span class="filter-price__checkbox-txt">
                             Sale
                           </span>
                         </label>
-                        <label class="filter-price__label" for="price-1">
-                          <input class="filter-price__checkbox" id="price-1" type="checkbox">
+                        <label class="filter-price__label" for="price-11">
+                          <input class="filter-price__checkbox" id="price-11" type="checkbox">
                           <span class="filter-price__fake-checkbox"></span>
                           <span class="filter-price__checkbox-txt">
                             $0 - $200
                           </span>
                         </label>
-                        <label class="filter-price__label" for="price-2">
-                          <input class="filter-price__checkbox" id="price-2" type="checkbox">
+                        <label class="filter-price__label" for="price-21">
+                          <input class="filter-price__checkbox" id="price-21" type="checkbox">
                           <span class="filter-price__fake-checkbox"></span>
                           <span class="filter-price__checkbox-txt">
                             $200 - $500
@@ -318,7 +318,7 @@
                       <div class="filter-price__extra-controls">
                         <div class="filter-price__input-box">
                           $
-                          <input type="text" class="filter-price__input filter-price__input-from" value="0" />
+                          <input type="text" class="filter-price__input filter-price__input-from" value="0">
                         </div>
 
                         <span class="filter-price__txt">
@@ -327,7 +327,7 @@
 
                         <div class="filter-price__input-box">
                           $
-                          <input type="text" class="filter-price__input filter-price__input-to" value="0" />
+                          <input type="text" class="filter-price__input filter-price__input-to" value="0">
                         </div>
 
                       </div>
@@ -537,7 +537,7 @@
                       <use href="./images/symbol-defs.svg#icon-tile"></use>
                     </svg>
                   </button>
-                  <button class="catalog__sort-btn  catalog__sort-btn--view" id="list">
+                  <button class="catalog__sort-btn  catalog__sort-btn--view">
                     <svg class="catalog__sort-icon" width="24" height="24">
                       <use href="./images/symbol-defs.svg#icon-tabl"></use>
                     </svg>
@@ -1215,6 +1215,7 @@
               </ul>
             </div>
           </div>
+        </div>
       </section>
     </div>
   </main>
@@ -1235,31 +1236,31 @@
           </span>
         </button>
 
-        <ul class="pagination__list">
-          <li class="pagination__item" value="1">
+        <div class="pagination__list">
+          <div class="pagination__item">
             <a class="pagination__link pagination__link--active" href="#">
               1
             </a>
-          </li>
+          </div>
 
-          <li class="pagination__item" value="2">
+          <div class="pagination__item">
             <a class="pagination__link" href="#">
               2
             </a>
-          </li>
+          </div>
 
-          <li class="pagination__item" value="3">
+          <div class="pagination__item">
             <a class="pagination__link" href="#">
               3
             </a>
-          </li>
+          </div>
 
-          <li class="pagination__item" value="4">
+          <div class="pagination__item">
             <a class="pagination__link" href="#">
               4
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
 
         <button class="pagination__btn pagination__btn--next" id="next">
           <span class="pagination__text">

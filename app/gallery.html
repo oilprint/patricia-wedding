@@ -133,7 +133,7 @@
             </ul>
             <form class="mobile-menu__form form" action="#">
               <label class="sr-only" for="search">Search</label>
-              <input class="form__input" type="text" name="search" id="search" placeholder="Search">
+              <input class="form__input" type="text" name="search" placeholder="Search">
               <button class="icon-button form__btn">
                 <svg class="icon-button__icon" width="28" height="28">
                   <use href="./images/symbol-defs.svg#icon-search"></use>
@@ -141,7 +141,7 @@
               </button>
             </form>
           </div>
-          <button class="close-btn mobile-menu__close-btn" type="button" data-modal-close>
+          <button class="close-btn modal__btn modal__btn--mobile" type="button" data-modal-close>
             <svg class="close-btn__icon" width="32" height="32">
               <use href="images/symbol-defs.svg#icon-close">
               </use>
@@ -179,7 +179,7 @@
           </a>
         </li>
         <li class="usernav__item">
-          <button class="icon-button" type="button" data-modal-button="shipping-modal">
+          <button class="icon-button" type="button" data-modal-button="shopping-modal">
             <span class="sr-only">
               shopping bag
             </span>
@@ -191,130 +191,132 @@
             </span>
           </button>
 
-          <div id="shipping-modal" class="backdrop hidden" data-modal>
-            <div class="modal modal--shipping">
-              <div id="shipping-modal">
-                  <h2 class="shipping-modal__title">
-                    Shopping bag (
-                    <span class="shipping-modal__quantity">
-                      2
-                    </span>
-                    )
-                  </h2>
-                  <ul class="shipping-modal__list">
-                    <li class="shipping-modal__item">
-                      <article class="shopping-card modal__shopping-card">
-                        <img class="shopping-card__img" src="images/product/catalog/dress-02.jpg"
-                          alt="Wedding dress Calliope" width="100" height="150">
-                        <div class="shopping-card__content">
-                          <h3 class="shopping-card__headline">
-                            Calliope
-                          </h3>
-                          <ul class="shopping-card__info">
-                            <li class="shopping-card__info-item">
-                              Color:
-                              <span class="shopping-card__value">
-                                White
-                              </span>
-                            </li>
-                            <li class="shopping-card__info-item">
-                              Size:
-                              <span class="shopping-card__value">
-                                M
-                              </span>
-                            </li>
-                          </ul>
-                          <div class="shopping-card__links">
-                            <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
-                              Edit
-                            </a>
-                            <button class="shopping-card__btn" type="button">
-                              Remove
-                            </button>
-                          </div>
+          <div id="shopping-modal" class="backdrop hidden" data-modal>
+            <div class="modal modal--shopping">
+              <div class="shopping-modal">
+                <h2 class="shopping-modal__title">
+                  Shopping bag (
+                  <span class="shopping-modal__quantity">
+                    2
+                  </span>
+                  )
+                </h2>
+                <ul class="shopping-modal__list">
+                  <li class="shopping-modal__item">
+                    <article class="shopping-card modal__shopping-card">
+                      <img class="shopping-card__img" src="images/product/catalog/dress-02.jpg"
+                        alt="Wedding dress Calliope" width="100" height="150">
+                      <div class="shopping-card__content">
+                        <h3 class="shopping-card__headline">
+                          Calliope
+                        </h3>
+                        <ul class="shopping-card__info">
+                          <li class="shopping-card__info-item">
+                            Color:
+                            <span class="shopping-card__value">
+                              White
+                            </span>
+                          </li>
+                          <li class="shopping-card__info-item">
+                            Size:
+                            <span class="shopping-card__value">
+                              M
+                            </span>
+                          </li>
+                        </ul>
+                        <div class="shopping-card__links">
+                          <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
+                            Edit
+                          </a>
+                          <button class="shopping-card__btn" type="button">
+                            Remove
+                          </button>
                         </div>
-                        <div class="shopping-card__price">
-                          <span class="shopping-card__price-current">
-                            <span class="currency">
-                              $
-                            </span>
-                            900.00
+                      </div>
+                      <div class="shopping-card__price">
+                        <span class="shopping-card__price-current">
+                          <span class="currency">
+                            $
                           </span>
-                          <span class="shopping-card__price-old">
-                            <span class="currency">
-                              $
-                            </span>
-                            900.00
+                          900.00
+                        </span>
+                        <span class="shopping-card__price-old">
+                          <span class="currency">
+                            $
                           </span>
-                      </article>
-                    </li>
-                    <li class="shipping-modal__item">
-                      <article class="shopping-card modal__shopping-card">
-                        <img class="shopping-card__img" src="images/product/accessories/nicola.jpg"
-                          alt="Wedding accessories nicola" width="100" height="150">
-                        <div class="shopping-card__content">
-                          <h3 class="shopping-card__headline">
-                            Nicola Bathie Perry
-                          </h3>
-                          <ul class="shopping-card__info">
-                            <li class="shopping-card__info-item">
-                              Color:
-                              <span class="shopping-card__value">
-                                White
-                              </span>
-                            </li>
-                            <li class="shopping-card__info-item">
-                              Size:
-                              <span class="shopping-card__value">
-                                M
-                              </span>
-                            </li>
-                          </ul>
-                          <div class="shopping-card__links">
-                            <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
-                              Edit
-                            </a>
-                            <button class="shopping-card__btn" type="button">
-                              Remove
-                            </button>
-                          </div>
+                          900.00
+                        </span>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="shopping-modal__item">
+                    <article class="shopping-card modal__shopping-card">
+                      <img class="shopping-card__img" src="images/product/accessories/nicola.jpg"
+                        alt="Wedding accessories nicola" width="100" height="150">
+                      <div class="shopping-card__content">
+                        <h3 class="shopping-card__headline">
+                          Nicola Bathie Perry
+                        </h3>
+                        <ul class="shopping-card__info">
+                          <li class="shopping-card__info-item">
+                            Color:
+                            <span class="shopping-card__value">
+                              White
+                            </span>
+                          </li>
+                          <li class="shopping-card__info-item">
+                            Size:
+                            <span class="shopping-card__value">
+                              M
+                            </span>
+                          </li>
+                        </ul>
+                        <div class="shopping-card__links">
+                          <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
+                            Edit
+                          </a>
+                          <button class="shopping-card__btn" type="button">
+                            Remove
+                          </button>
                         </div>
-                        <div class="shopping-card__price">
-                          <span class="shopping-card__price-current">
-                            <span class="currency">
-                              $
-                            </span>
-                            25.00
+                      </div>
+                      <div class="shopping-card__price">
+                        <span class="shopping-card__price-current">
+                          <span class="currency">
+                            $
                           </span>
-                          <span class="shopping-card__price-old">
-                            <span class="currency">
-                              $
-                            </span>
-                            30.00
+                          25.00
+                        </span>
+                        <span class="shopping-card__price-old">
+                          <span class="currency">
+                            $
                           </span>
-                      </article>
-                    </li>
+                          30.00
+                        </span>
+                      </div>
+                    </article>
+                  </li>
 
-                  </ul>
-                  <div class="shipping-modal__sum">
-                    <p class="shipping-modal__subtitle">
-                      TOTAL:
-                    </p>
-                    <span class="shipping-modal__price">
-                      <span class="curency">
-                        $
-                      </span>
-                      1,225.00
+                </ul>
+                <div class="shopping-modal__sum">
+                  <p class="shopping-modal__subtitle">
+                    TOTAL:
+                  </p>
+                  <span class="shopping-modal__price">
+                    <span class="curency">
+                      $
                     </span>
-                  </div>
-                  <a class="button shipping-modal__button" href="shopping-bag.html">
-                    Proceed to checkout
-                  </a>
-                  <button class="shipping-modal__link link" data-modal-close>
-                    Keep shopping
-                  </button>
+                    1,225.00
+                  </span>
+                </div>
+                <a class="button shopping-modal__button" href="shopping-bag.html">
+                  Proceed to checkout
+                </a>
+                <button class="shopping-modal__link link" data-modal-close>
+                  Keep shopping
+                </button>
               </div>
-              <button class="shipping-modal__close-btn close-btn" type="button" data-modal-close>
+              <button class="modal__btn close-btn" type="button" data-modal-close>
                 <svg class="close-btn__icon" width="24" height="24">
                   <use href="images/symbol-defs.svg#icon-close">
                   </use>
@@ -469,12 +471,12 @@
         <address class="footer__address">
           <ul class="address address--white">
             <li class="address__item">
-              <a class="address__link" href="tel: +19179586921">
+              <a class="address__link" href="tel:+19179586921">
                 +1 (917) 958-69-21
               </a>
             </li>
             <li class="address__item">
-              <a class="address__link" href="googleapis: +19179586921">
+              <a class="address__link" href="googleapis:+19179586921">
                 <p class="address__txt">
                   123 5th Ave, 3th floor,
                 </p>
@@ -484,7 +486,7 @@
               </a>
             </li>
             <li class="address__item">
-              <a class="address__link" href="mailto: info@patriciaweddig.com">
+              <a class="address__link" href="mailto:info@patriciaweddig.com">
                 info@patriciaweddig.com
               </a>
             </li>
@@ -639,7 +641,6 @@
 </footer>
 
 
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
   <script src="js/main.min.js"></script>
 </body>
 

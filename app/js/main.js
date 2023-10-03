@@ -1,7 +1,4 @@
 
-  
-  console.log("test");
-
   AOS.init({
     disable: function () {
       var maxWidth = 1024;

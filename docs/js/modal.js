@@ -1,70 +1,43 @@
-console.log('modal');
-  // modal
 
-    const button = document.querySelector('[data-modal-button]');
-    const modal = document.querySelector('[data-modal]');
-    const buttonClose = document.querySelectorAll('[data-modal-close]');
-    
+  const modalButtons = document.querySelectorAll('[data-modal-button]');
+  const modalCloseButtons = document.querySelectorAll('[data-modal-close]');
+  const allModals = document.querySelectorAll ('[data-modal]');
+  const bodyLock = document.querySelector('body'); 
 
-    button.addEventListener('click', function () {
-      modal.classList.toggle('modal--active')
+  modalButtons.forEach(function (item) {
+    item.addEventListener('click', function () {
+
+      const modalId = this.dataset.modalButton;
+      const modal = document.querySelector('#' + modalId);
+
+      modal.classList.remove('hidden');
       bodyLock.classList.add('lock')
+
+      //     // Делаем так, чтобы внутри модалки коик не передавался выше родителю: находим внутри открываемой модалки блок modal-inner и запрещаем ему передавать клики наверх (его родителю)
+
+      modal.querySelector('.modal').addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
     });
-
-    buttonClose.forEach(function (item) {
-      item.addEventListener('click', function () {
-      
-        modal.classList.remove('modal--active');
-        bodyLock.classList.remove('lock')
-      })
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.usernav')) {
-        modal.classList.remove('modal--active');
-        bodyLock.classList.remove('lock')
-        
-      }
-    });
+  });
 
 
-  ///filter
-
-   $(function () {
-      if (window.location.pathname === '/catalog.html') {
-
-
-        const openFilter = document.querySelector('.catalog__filter-btn');
-        const closeFilter = document.querySelector('.filter__close-btn');
-        const menuFilter = document.querySelector('.catalog__filter');
-        const applyBtn = document.querySelector('.filter__button');
-
-        openFilter.addEventListener('click', function () {
-          menuFilter.classList.add('active');
-        });
-
-        closeFilter.addEventListener('click', function () {
-          menuFilter.classList.remove('active');
-        });
-
-        applyBtn.addEventListener('click', function () {
-          menuFilter.classList.remove('active');
-        });
-    
-      }
-    });
-
-    ///end filter
-
-
-      
- 
-
-
-
-
-
- 
-
-
+  modalCloseButtons.forEach(function (item) {
+    item.addEventListener('click', function () {
   
+      const modal = this.closest('[data-modal]');
+      
+      modal.classList.add('hidden');
+      bodyLock.classList.remove('lock');
+    });
+  });
+
+
+  allModals.forEach(function (item) {
+    item.addEventListener('click', function () {
+      this.classList.add('hidden');
+      bodyLock.classList.remove('lock');
+    });
+  }); 
+
+

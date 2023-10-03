@@ -15,60 +15,71 @@
     pointer-events: none;
 
     .modal {
-      
+
       transform: translateX(-100%);
-      &--shipping {
+
+      &--shopping {
         transform: translateX(100%);
       }
-      
+
+      &--sold {
+        transform: scale(0);
+      }
     }
   }
 }
 
 .modal {
-    position: relative;
-    // max-width: 450px;
-    // width: 90%;
-    padding: 40px;
-    // text-align: center;
-    background-color: $light;
-    border-radius: 6px;
-    box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
-    overflow-y: scroll;
-    // margin: 20px auto;
-    scroll-behavior: smooth;
-    transition: transform 0.4s ease-in-out;
-
-    &--mobile {
-      width: 100%;
-      padding-top: 60px;
-      transform: translateX(0);   
-    }
-
-    &--shipping {
-      margin-left: auto;
-      margin-bottom: auto;
-      transform: translateX(0);
-    }
-
-    &--filter {
-      margin-right: auto;
-      transform: translateX(0);
-    }
-
+  position: relative;
+  padding: 40px;
+  background-color: $light;
+  border-radius: 6px;
+  box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  transition: transform 0.4s ease-in-out;
 
   @media (max-width: 375px) and (orientation: landscape) {
     margin: 20px auto;
     overflow-y: scroll;
   }
+
+  &--mobile {
+    width: 100%;
+    padding-top: 60px;
+    transform: translateX(0);
+  }
+
+  &--shopping {
+    margin-left: auto;
+    margin-bottom: auto;
+    transform: translateX(0);
+  }
+
+  &--filter {
+    margin-right: auto;
+    transform: translateX(0);
+  }
+
+  &--sold {
+    margin: auto;
+    transform: scale(1);
+  }
+
+   &__btn {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+
+     &--mobile {
+      right: 0;
+      left: 10px;
+     }
+   }
 }
 
 .mobile-menu {
-  
   background-color: $light;
-  // transform: translateX(-100%);
-  // transition: transform 0.4s ease-in-out;
-
 
   &__top {
     display: flex;
@@ -135,12 +146,6 @@
     max-width: 300px;
     margin: 0 auto;
   }
-
-  &__close-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
 }
 
 .burger {
@@ -159,40 +164,25 @@
   }
 }
 
-.shipping-modal {
-  // position: absolute;
-  // z-index: 50;
-  // top: 0;
-  // right: 0;
-  // padding: 50px 40px;
+.shopping-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 540px;
-  background-color: $light;
-  border-radius: 6px;
-  box-shadow: 8px 8px 3px rgba(0, 0, 0, 0.12);
-  transform-origin: 0 0;
-  transform: rotateX(-90deg);
-  visibility: hidden;
-  opacity: 0;
-  transition: transform 0.5s;
 
-  @include mobile {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 70px;
+  @include mobile {   
     width: 100%;
     padding: 40px 20px 40px;
-  }
-
-  &.active {
-    transform: rotateX(0deg);
-    visibility: visible;
-    opacity: 1;
   }
 
   &__title {
     font-size: 24px;
     margin-bottom: 20px;
+
+    &--center {
+      text-align: center;
+    }
+
   }
 
   &__list {
@@ -300,11 +290,6 @@
     margin: 0 auto;
   }
 
-  &__close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
 }
 
 .modal-sold {
