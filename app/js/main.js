@@ -1,7 +1,4 @@
 
-  
-  console.log("test");
-
   AOS.init({
     disable: function () {
       var maxWidth = 1024;
@@ -244,6 +241,8 @@
 
         catalogList.classList.add('catalog__list--line');
       });
+
+    
 
 
       

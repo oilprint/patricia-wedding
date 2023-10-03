@@ -13,9 +13,9 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
 
-     <link rel="icon" href="favicon/favicon.ico" sizes="any">
-     <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
-     <link rel="apple-touch-icon" href="favicon/afavicon/pple-touch-icon.png/">
+  <link rel="icon" href="favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicon/afavicon/pple-touch-icon.png/">
 
   <link rel="stylesheet" href="css/catalog.min.css">
 </head>
@@ -44,11 +44,111 @@
 
       </div>
 
-      <button class="burger header__burger" data-open-burger>
+      <button class="burger header__burger" data-modal-button="mobile">
         <svg class="burger__icon" width="32" height="32">
           <use href="./images/symbol-defs.svg#icon-burger"></use>
         </svg>
       </button>
+
+      <div id="mobile" class="backdrop hidden" data-modal>
+        <div class="modal modal--mobile">
+          <div class="mobile-menu">
+            <div class="mobile-menu__top">
+              <div class="language mobile-menu__language">
+                <button class="language__button" type="button" data-value="en">
+                  En
+                </button>
+
+                <ul class="language__list">
+                  <li class="language__item">
+                    <a class="language__link active" href="#">
+                      En
+                    </a>
+                    <a class="language__link" href="#">
+                      Uk
+                    </a>
+                  </li>
+
+                </ul>
+
+              </div>
+              <ul class="usernav">
+                <li class="usernav__item">
+                  <a class="icon-button" href="#">
+                    <span class="sr-only">
+                      Your account page
+                    </span>
+                    <svg class="icon-button__icon" width="28" height="28">
+                      <use href="./images/symbol-defs.svg#icon-account"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="usernav__item">
+                  <a class="icon-button" href="#">
+                    <span class="sr-only">
+                      Wishlist
+                    </span>
+                    <svg class="icon-button__icon" width="28" height="28">
+                      <use href="./images/symbol-defs.svg#icon-wishlist">
+                      </use>
+                    </svg>
+                    <span class="usernav__number">
+                      10
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link @@home" href="index.html">
+                  Home
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link current" href="catalog.html">
+                  Dresses
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                  Wedding party
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">
+                  Accessories
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link @@gallery" href="gallery.html">
+                  Gallery
+                </a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link @@contact" href="contact.html">
+                  Contact us
+                </a>
+              </li>
+            </ul>
+            <form class="mobile-menu__form form" action="#">
+              <label class="sr-only" for="search">Search</label>
+              <input class="form__input" type="text" name="search" placeholder="Search">
+              <button class="icon-button form__btn">
+                <svg class="icon-button__icon" width="28" height="28">
+                  <use href="./images/symbol-defs.svg#icon-search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+          <button class="close-btn modal__btn modal__btn--mobile" type="button" data-modal-close>
+            <svg class="close-btn__icon" width="32" height="32">
+              <use href="images/symbol-defs.svg#icon-close">
+              </use>
+            </svg>
+          </button>
+        </div>
+      </div>
 
       <a class="logo header__logo" href="index.html">
         <img class="logo__img" src="images/logo.svg" alt="Patriia Wedding Logo" width="320" height="80">
@@ -79,7 +179,7 @@
           </a>
         </li>
         <li class="usernav__item">
-          <button class="icon-button" type="button" data-modal-button="modal-1">
+          <button class="icon-button" type="button" data-modal-button="shopping-modal">
             <span class="sr-only">
               shopping bag
             </span>
@@ -91,135 +191,138 @@
             </span>
           </button>
 
+          <div id="shopping-modal" class="backdrop hidden" data-modal>
+            <div class="modal modal--shopping">
+              <div class="shopping-modal">
+                <h2 class="shopping-modal__title">
+                  Shopping bag (
+                  <span class="shopping-modal__quantity">
+                    2
+                  </span>
+                  )
+                </h2>
+                <ul class="shopping-modal__list">
+                  <li class="shopping-modal__item">
+                    <article class="shopping-card modal__shopping-card">
+                      <img class="shopping-card__img" src="images/product/catalog/dress-02.jpg"
+                        alt="Wedding dress Calliope" width="100" height="150">
+                      <div class="shopping-card__content">
+                        <h3 class="shopping-card__headline">
+                          Calliope
+                        </h3>
+                        <ul class="shopping-card__info">
+                          <li class="shopping-card__info-item">
+                            Color:
+                            <span class="shopping-card__value">
+                              White
+                            </span>
+                          </li>
+                          <li class="shopping-card__info-item">
+                            Size:
+                            <span class="shopping-card__value">
+                              M
+                            </span>
+                          </li>
+                        </ul>
+                        <div class="shopping-card__links">
+                          <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
+                            Edit
+                          </a>
+                          <button class="shopping-card__btn" type="button">
+                            Remove
+                          </button>
+                        </div>
+                      </div>
+                      <div class="shopping-card__price">
+                        <span class="shopping-card__price-current">
+                          <span class="currency">
+                            $
+                          </span>
+                          900.00
+                        </span>
+                        <span class="shopping-card__price-old">
+                          <span class="currency">
+                            $
+                          </span>
+                          900.00
+                        </span>
+                      </div>
+                    </article>
+                  </li>
+                  <li class="shopping-modal__item">
+                    <article class="shopping-card modal__shopping-card">
+                      <img class="shopping-card__img" src="images/product/accessories/nicola.jpg"
+                        alt="Wedding accessories nicola" width="100" height="150">
+                      <div class="shopping-card__content">
+                        <h3 class="shopping-card__headline">
+                          Nicola Bathie Perry
+                        </h3>
+                        <ul class="shopping-card__info">
+                          <li class="shopping-card__info-item">
+                            Color:
+                            <span class="shopping-card__value">
+                              White
+                            </span>
+                          </li>
+                          <li class="shopping-card__info-item">
+                            Size:
+                            <span class="shopping-card__value">
+                              M
+                            </span>
+                          </li>
+                        </ul>
+                        <div class="shopping-card__links">
+                          <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
+                            Edit
+                          </a>
+                          <button class="shopping-card__btn" type="button">
+                            Remove
+                          </button>
+                        </div>
+                      </div>
+                      <div class="shopping-card__price">
+                        <span class="shopping-card__price-current">
+                          <span class="currency">
+                            $
+                          </span>
+                          25.00
+                        </span>
+                        <span class="shopping-card__price-old">
+                          <span class="currency">
+                            $
+                          </span>
+                          30.00
+                        </span>
+                      </div>
+                    </article>
+                  </li>
 
-          <div class="modal" id="modal-1" data-modal>
-
-            <h2 class="modal__title">
-              Shopping bag (
-              <span class="modal__quantity">
-                2
-              </span>
-              )
-            </h2>
-            <ul class="modal__list">
-              <li class="modal__item">
-                <article class="shopping-card modal__shopping-card">
-                  <img class="shopping-card__img" src="images/product/catalog/dress-02.jpg" alt="Wedding dress Calliope"
-                    width="100" height="150">
-                  <div class="shopping-card__content">
-                    <h3 class="shopping-card__headline">
-                      Calliope
-                    </h3>
-                    <ul class="shopping-card__info">
-                      <li class="shopping-card__info-item">
-                        Color:
-                        <span class="shopping-card__value">
-                          White
-                        </span>
-                      </li>
-                      <li class="shopping-card__info-item">
-                        Size:
-                        <span class="shopping-card__value">
-                          M
-                        </span>
-                      </li>
-                    </ul>
-                    <div class="shopping-card__links">
-                      <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
-                        Edit
-                      </a>
-                      <button class="shopping-card__btn" type="button">
-                        Remove
-                      </button>
-                    </div>
-                  </div>
-                  <div class="shopping-card__price">
-                    <span class="shopping-card__price-current">
-                      <span class="currency">
-                        $
-                      </span>
-                      900.00
+                </ul>
+                <div class="shopping-modal__sum">
+                  <p class="shopping-modal__subtitle">
+                    TOTAL:
+                  </p>
+                  <span class="shopping-modal__price">
+                    <span class="curency">
+                      $
                     </span>
-                    <span class="shopping-card__price-old">
-                      <span class="currency">
-                        $
-                      </span>
-                      900.00
-                    </span>
-                </article>
-              </li>
-              <li class="modal__item">
-                <article class="shopping-card modal__shopping-card">
-                  <img class="shopping-card__img" src="images/product/accessories/nicola.jpg"
-                    alt="Wedding accessories nicola" width="100" height="150">
-                  <div class="shopping-card__content">
-                    <h3 class="shopping-card__headline">
-                      Nicola Bathie Perry
-                    </h3>
-                    <ul class="shopping-card__info">
-                      <li class="shopping-card__info-item">
-                        Color:
-                        <span class="shopping-card__value">
-                          White
-                        </span>
-                      </li>
-                      <li class="shopping-card__info-item">
-                        Size:
-                        <span class="shopping-card__value">
-                          M
-                        </span>
-                      </li>
-                    </ul>
-                    <div class="shopping-card__links">
-                      <a href="product-one.html" class="shopping-card__btn shopping-card__btn--border">
-                        Edit
-                      </a>
-                      <button class="shopping-card__btn" type="button">
-                        Remove
-                      </button>
-                    </div>
-                  </div>
-                  <div class="shopping-card__price">
-                    <span class="shopping-card__price-current">
-                      <span class="currency">
-                        $
-                      </span>
-                      25.00
-                    </span>
-                    <span class="shopping-card__price-old">
-                      <span class="currency">
-                        $
-                      </span>
-                      30.00
-                    </span>
-                </article>
-              </li>
-
-            </ul>
-            <div class="modal__sum">
-              <p class="modal__subtitle">
-                TOTAL:
-              </p>
-              <span class="modal__price">
-                <span class="curency">
-                  $
-                </span>
-                1,225.00
-              </span>
+                    1,225.00
+                  </span>
+                </div>
+                <a class="button shopping-modal__button" href="shopping-bag.html">
+                  Proceed to checkout
+                </a>
+                <button class="shopping-modal__link link" data-modal-close>
+                  Keep shopping
+                </button>
+              </div>
+              <button class="modal__btn close-btn" type="button" data-modal-close>
+                <svg class="close-btn__icon" width="24" height="24">
+                  <use href="images/symbol-defs.svg#icon-close">
+                  </use>
+                </svg>
+              </button>
             </div>
-            <a class="button modal__button" href="shopping-bag.html" data-modal-close>
-              Proceed to checkout
-            </a>
-            <button class="modal__link link" data-modal-close>
-              Keep shopping
-            </button>
-
-            <button class="modal__close-btn close-btn" type="button" data-modal-close>
-              <svg class="close-btn__icon" width="24" height="24">
-                <use href="images/symbol-defs.svg#icon-close">
-                </use>
-              </svg>
-            </button>
           </div>
         </li>
       </ul>
@@ -280,103 +383,6 @@
       </button>
     </div>
   </div>
-
-  <div class="burger-menu" data-menu-burger>
-    <div class="burger-menu__top">
-      <div class="language burger-menu__language">
-        <button class="language__button" type="button" data-value="en">
-          En
-        </button>
-
-        <ul class="language__list">
-          <li class="language__item">
-            <a class="language__link active" href="#">
-              En
-            </a>
-            <a class="language__link" href="#">
-              Uk
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-      <ul class="usernav">
-        <li class="usernav__item">
-          <a class="icon-button" href="#">
-            <span class="sr-only">
-              Your account page
-            </span>
-            <svg class="icon-button__icon" width="28" height="28">
-              <use href="./images/symbol-defs.svg#icon-account"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="usernav__item">
-          <a class="icon-button" href="#">
-            <span class="sr-only">
-              Wishlist
-            </span>
-            <svg class="icon-button__icon" width="28" height="28">
-              <use href="./images/symbol-defs.svg#icon-wishlist">
-              </use>
-            </svg>
-            <span class="usernav__number">
-              10
-            </span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <ul class="burger-menu__list">
-      <li class="burger-menu__item">
-        <a class="burger-menu__link @@home" href="index.html">
-          Home
-        </a>
-      </li>
-      <li class="burger-menu__item">
-        <a class="burger-menu__link current" href="catalog.html">
-          Dresses
-        </a>
-      </li>
-      <li class="burger-menu__item">
-        <a class="burger-menu__link" href="#">
-          Wedding party
-        </a>
-      </li>
-      <li class="burger-menu__item">
-        <a class="burger-menu__link" href="#">
-          Accessories
-        </a>
-      </li>
-      <li class="burger-menu__item">
-        <a class="burger-menu__link @@gallery" href="gallery.html">
-          Gallery
-        </a>
-      </li>
-      <li class="burger-menu__item">
-        <a class="burger-menu__link @@contact" href="contact.html">
-          Contact us
-        </a>
-      </li>
-    </ul>
-    <form class="burger-menu__form form" action="#">
-      <label class="sr-only" for="search">Search</label>
-      <input class="form__input" type="text" name="search" id="search" placeholder="Search">
-      <button class="icon-button form__btn">
-        <svg class="icon-button__icon" width="28" height="28">
-          <use href="./images/symbol-defs.svg#icon-search"></use>
-        </svg>
-      </button>
-    </form>
-
-    <button class="close-btn burger-menu__close-btn" type="button" data-close-burger>
-      <svg class="close-btn__icon" width="32" height="32">
-        <use href="images/symbol-defs.svg#icon-close">
-        </use>
-      </svg>
-    </button>
-  </div>
 </header>
 
 
@@ -413,7 +419,8 @@
             The wilderly bride catalog
           </h1>
           <div class="catalog__wrapper">
-            <aside class="filter catalog__filter" data-menu-filter>
+
+            <aside class="filter catalog__filter">
               <div class="filter__item filter-price">
                 <h3 class="filter__title">
                   Price filter
@@ -447,7 +454,7 @@
                   <div class="filter-price__extra-controls">
                     <div class="filter-price__input-box">
                       $
-                      <input type="text" class="filter-price__input filter-price__input-from" value="0" />
+                      <input type="text" class="filter-price__input filter-price__input-from" value="0">
                     </div>
 
                     <span class="filter-price__txt">
@@ -456,7 +463,7 @@
 
                     <div class="filter-price__input-box">
                       $
-                      <input type="text" class="filter-price__input filter-price__input-to" value="0" />
+                      <input type="text" class="filter-price__input filter-price__input-to" value="0">
                     </div>
 
                   </div>
@@ -619,26 +626,244 @@
                   </label>
                 </form>
               </div>
-
               <button class="button button--light filter__button" type="submit">
                 Apply
               </button>
-
-              <button class="filter__close-btn close-btn" type="button">
-                <svg class="close-btn__icon" width="32" height="32">
-                  <use href="images/symbol-defs.svg#icon-close">
-                  </use>
-                </svg>
-                <span class="sr-only">
-                  Close this window
-                </span>
-              </button>
             </aside>
+
+            <div id="filter" class="backdrop hidden" data-modal>
+              <div class="modal modal--filter">
+
+                <button class="modal__btn close-btn" type="button" data-modal-close>
+                  <svg class="close-btn__icon" width="32" height="32">
+                    <use href="images/symbol-defs.svg#icon-close">
+                    </use>
+                  </svg>
+                  <span class="sr-only">
+                    Close this window
+                  </span>
+                </button>
+
+                <div class="filter">
+                  <div class="filter__item filter-price">
+                    <h3 class="filter__title">
+                      Price filter
+                    </h3>
+                    <form class="filter-price__form" action="#">
+                      <div class="filter-price__inner">
+                        <label class="filter-price__label filter-price__label--check" for="sale-1">
+                          <input class="filter-price__checkbox" id="sale-1" type="checkbox">
+                          <span class="filter-price__fake-checkbox"></span>
+                          <span class="filter-price__checkbox-txt">
+                            Sale
+                          </span>
+                        </label>
+                        <label class="filter-price__label" for="price-11">
+                          <input class="filter-price__checkbox" id="price-11" type="checkbox">
+                          <span class="filter-price__fake-checkbox"></span>
+                          <span class="filter-price__checkbox-txt">
+                            $0 - $200
+                          </span>
+                        </label>
+                        <label class="filter-price__label" for="price-21">
+                          <input class="filter-price__checkbox" id="price-21" type="checkbox">
+                          <span class="filter-price__fake-checkbox"></span>
+                          <span class="filter-price__checkbox-txt">
+                            $200 - $500
+                          </span>
+                        </label>
+
+                      </div>
+                      <input class="filter-price__slider" type="text">
+                      <div class="filter-price__extra-controls">
+                        <div class="filter-price__input-box">
+                          $
+                          <input type="text" class="filter-price__input filter-price__input-from" value="0">
+                        </div>
+
+                        <span class="filter-price__txt">
+                          to
+                        </span>
+
+                        <div class="filter-price__input-box">
+                          $
+                          <input type="text" class="filter-price__input filter-price__input-to" value="0">
+                        </div>
+
+                      </div>
+                      <button class="button button--light filter-price__button" type="submit">
+                        Filter
+                      </button>
+                    </form>
+                  </div>
+
+                  <div class="filter__item ">
+                    <h3 class="filter__title">
+                      Color
+                    </h3>
+                    <form class="filter-color" action="#">
+                      <label class="filter-color__label">
+                        <input class="filter-color__input" type="checkbox" checked>
+                        <span class="filter-color__fake-input">
+                        </span>
+                        <span class="filter-color__text">
+                          White
+                        </span>
+                      </label>
+
+                      <label class="filter-color__label">
+                        <input class="filter-color__input" type="checkbox">
+                        <span class="filter-color__fake-input">
+                        </span>
+                        <span class="filter-color__text">
+                          Ivory
+                        </span>
+                      </label>
+                      <label class="filter-color__label">
+                        <input class="filter-color__input" type="checkbox">
+                        <span class="filter-color__fake-input">
+                        </span>
+                        <span class="filter-color__text">
+                          Pink
+                        </span>
+                      </label>
+                      <label class="filter-color__label">
+                        <input class="filter-color__input" type="checkbox">
+                        <span class="filter-color__fake-input">
+                        </span>
+                        <span class="filter-color__text">
+                          Blue
+                        </span>
+                      </label>
+                    </form>
+                  </div>
+
+                  <div class="filter__item">
+                    <h3 class="filter__title">
+                      Size
+                    </h3>
+                    <form class="filter-size" action="#">
+                      <label class="filter-size__label">
+                        <input class="filter-size__input" type="checkbox">
+                        <span class="filter-size__fake-size">
+                          XS
+                        </span>
+                      </label>
+                      <label class="filter-size__label">
+                        <input class="filter-size__input" type="checkbox">
+                        <span class="filter-size__fake-size">
+                          S
+                        </span>
+                      </label>
+                      <label class="filter-size__label">
+                        <input class="filter-size__input" type="checkbox" checked>
+                        <span class="filter-size__fake-size">
+                          M
+                        </span>
+                      </label>
+                      <label class="filter-size__label">
+                        <input class="filter-size__input" type="checkbox">
+                        <span class="filter-size__fake-size">
+                          L
+                        </span>
+
+                      </label>
+                      <label class="filter-size__label">
+                        <input class="filter-size__input" type="checkbox">
+                        <span class="filter-size__fake-size">
+                          XL
+                        </span>
+
+                      </label>
+                      <label class="filter-size__label">
+                        <input class="filter-size__input" type="checkbox">
+                        <span class="filter-size__fake-size">
+                          2L
+                        </span>
+
+                      </label>
+
+                    </form>
+                  </div>
+
+                  <div class="filter__item filter-style">
+                    <h3 class="filter__title">
+                      Style
+                    </h3>
+
+                    <form class="filter-style__form" action="#">
+                      <label class="filter-style__label">
+                        <input class="filter-style__checkbox" type="checkbox" checked>
+                        <span class="filter-style__fake-checkbox"></span>
+                        <span class="filter-style__txt">
+                          Civil Wedding
+                        </span>
+                      </label>
+                      <label class="filter-style__label">
+                        <input class="filter-style__checkbox" type="checkbox">
+                        <span class="filter-style__fake-checkbox"></span>
+                        <span class="filter-style__txt">
+                          Simple
+                        </span>
+                      </label>
+                      <label class="filter-style__label">
+                        <input class="filter-style__checkbox" type="checkbox">
+                        <span class="filter-style__fake-checkbox"></span>
+                        <span class="filter-style__txt">
+                          Elegant
+                        </span>
+                      </label>
+                      <label class="filter-style__label">
+                        <input class="filter-style__checkbox" type="checkbox">
+                        <span class="filter-style__fake-checkbox"></span>
+                        <span class="filter-style__txt">
+                          Boho
+                        </span>
+                      </label>
+                      <label class="filter-style__label">
+                        <input class="filter-style__checkbox" type="checkbox">
+                        <span class="filter-style__fake-checkbox"></span>
+                        <span class="filter-style__txt">
+                          Beach
+                        </span>
+                      </label>
+                      <label class="filter-style__label">
+                        <input class="filter-style__checkbox" type="checkbox">
+                        <span class="filter-style__fake-checkbox"></span>
+                        <span class="filter-style__txt">
+                          Romantic
+                        </span>
+                      </label>
+                      <label class="filter-style__label">
+                        <input class="filter-style__checkbox" type="checkbox">
+                        <span class="filter-style__fake-checkbox"></span>
+                        <span class="filter-style__txt">
+                          Embroidery
+                        </span>
+                      </label>
+                      <label class="filter-style__label">
+                        <input class="filter-style__checkbox" type="checkbox">
+                        <span class="filter-style__fake-checkbox"></span>
+                        <span class="filter-style__txt">
+                          Modern
+                        </span>
+                      </label>
+                    </form>
+                  </div>
+
+                  <button class="button button--light filter__button" type="submit" data-modal-close>
+                    Apply
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
 
             <div class="catalog__content">
               <div class="catalog__sort">
 
-                <button class="catalog__filter-btn" type="button" data-open-filter>
+                <button class="catalog__filter-btn" type="button" data-modal-button="filter">
                   <svg class="catalog__sort-icon" width="24" height="24">
                     <use href="./images/symbol-defs.svg#icon-filter"></use>
                   </svg>
@@ -672,7 +897,7 @@
                       <use href="./images/symbol-defs.svg#icon-tile"></use>
                     </svg>
                   </button>
-                  <button class="catalog__sort-btn  catalog__sort-btn--view" id="list">
+                  <button class="catalog__sort-btn  catalog__sort-btn--view">
                     <svg class="catalog__sort-icon" width="24" height="24">
                       <use href="./images/symbol-defs.svg#icon-tabl"></use>
                     </svg>
@@ -1350,6 +1575,7 @@
               </ul>
             </div>
           </div>
+        </div>
       </section>
     </div>
   </main>
@@ -1370,31 +1596,31 @@
           </span>
         </button>
 
-        <ul class="pagination__list">
-          <li class="pagination__item" value="1">
+        <div class="pagination__list">
+          <div class="pagination__item">
             <a class="pagination__link pagination__link--active" href="#">
               1
             </a>
-          </li>
+          </div>
 
-          <li class="pagination__item" value="2">
+          <div class="pagination__item">
             <a class="pagination__link" href="#">
               2
             </a>
-          </li>
+          </div>
 
-          <li class="pagination__item" value="3">
+          <div class="pagination__item">
             <a class="pagination__link" href="#">
               3
             </a>
-          </li>
+          </div>
 
-          <li class="pagination__item" value="4">
+          <div class="pagination__item">
             <a class="pagination__link" href="#">
               4
             </a>
-          </li>
-        </ul>
+          </div>
+        </div>
 
         <button class="pagination__btn pagination__btn--next" id="next">
           <span class="pagination__text">
@@ -1419,12 +1645,12 @@
         <address class="footer__address">
           <ul class="address address--white">
             <li class="address__item">
-              <a class="address__link" href="tel: +19179586921">
+              <a class="address__link" href="tel:+19179586921">
                 +1 (917) 958-69-21
               </a>
             </li>
             <li class="address__item">
-              <a class="address__link" href="googleapis: +19179586921">
+              <a class="address__link" href="googleapis:+19179586921">
                 <p class="address__txt">
                   123 5th Ave, 3th floor,
                 </p>
@@ -1434,7 +1660,7 @@
               </a>
             </li>
             <li class="address__item">
-              <a class="address__link" href="mailto: info@patriciaweddig.com">
+              <a class="address__link" href="mailto:info@patriciaweddig.com">
                 info@patriciaweddig.com
               </a>
             </li>

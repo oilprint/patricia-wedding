@@ -37,25 +37,8 @@ window.addEventListener('scroll', ()=> {
           item.classList.add('scroll');
         }
       )
-  }
-
-  
+  }  
 })
 
-//burger 
 
-const openBurger = document.querySelector('[data-open-burger]');
-const closeBurger = document.querySelector ('[data-close-burger]');
-const menuBurger = document.querySelector('[data-menu-burger]');
-const bodyLock = document.querySelector('body'); 
-
-openBurger.addEventListener('click', function() {
-  menuBurger.classList.add('active')
-  bodyLock.classList.add('lock')
-})
-
-closeBurger.addEventListener('click', function() {
-  menuBurger.classList.remove('active')
-  bodyLock.classList.remove('lock');
-})
 
